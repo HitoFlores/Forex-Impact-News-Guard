@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forex-impact-news-guard"
+version = "0.1.0"
+description = "Alertas para noticias economicas de alto impacto y ventanas de riesgo."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "apscheduler>=3.10,<4.0",
+    "beautifulsoup4>=4.13,<5.0",
+    "cloudscraper>=1.2.71,<2.0",
+    "fastapi>=0.116,<0.117",
+    "httpx>=0.28,<0.29",
+    "pydantic-settings>=2.10,<3.0",
+    "tzdata>=2025.2",
+    "uvicorn[standard]>=0.35,<0.36",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4,<9.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]

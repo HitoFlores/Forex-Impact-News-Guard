@@ -1,11 +1,104 @@
-﻿# Forex-Impact-News-Guard
+# Forex-Impact-News-Guard
+
+Sistema de avisos para noticias economicas del calendario de Forex Factory y ventanas de riesgo para trading/fondeo.
 
 ## Objetivo
-Sistema de avisos para noticias economicas de alto impacto y ventanas de riesgo para trading/fondeo.
 
-## Stack sugerido
-Backend Python (FastAPI + scheduler), notificaciones Telegram + Web Push.
+Este proyecto busca vigilar eventos publicados en Forex Factory para:
 
-## Estado
-Scaffold inicial creado el 2026-05-25.
+- detectar noticias relevantes en el calendario segun impacto y moneda;
+- avisar cuantos minutos antes debe llegar la alerta;
+- revalidar el evento poco antes del aviso;
+- consultar resultados despues de la noticia si el usuario lo desea;
+- leer la fuente real de Forex Factory sin automatizacion de navegador.
 
+## Stack
+
+- Backend: Python + FastAPI
+- Scheduler: base de planificacion por evento lista
+- Notificaciones: Telegram + Web Push en siguientes iteraciones
+
+## Estado actual
+
+Scaffold reiniciado el 2026-05-26 con:
+
+- configuracion base del servicio;
+- modelos de dominio para eventos y alertas;
+- motor inicial para planificar alertas de calendario por evento;
+- endpoint para previsualizar alertas;
+- cliente HTTP real para Forex Factory y endpoint de previsualizacion live;
+- persistencia SQLite limitada a hoy y manana;
+- scheduler base con precheck, alerta y result-check;
+- pruebas unitarias y de API.
+
+## Estructura
+
+```text
+src/forex_news_guard/
+  api/
+  core/
+  domain/
+  storage/
+  services/
+tests/
+```
+
+## Ejecutar localmente
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e .[dev]
+uvicorn forex_news_guard.main:app --reload
+```
+
+## Endpoints
+
+- `GET /health`
+- `GET /api/v1/settings`
+- `PUT /api/v1/settings`
+- `GET /api/v1/events/relevant`
+- `GET /api/v1/events/schedules/upcoming`
+- `POST /api/v1/alerts/preview`
+- `POST /api/v1/alerts/forex-factory/live-preview`
+
+## Variables de entorno utiles
+
+- `FOREX_GUARD_DEFAULT_TIMEZONE=America/Chihuahua`
+- `FOREX_GUARD_FOREX_FACTORY_BASE_URL=https://www.forexfactory.com`
+- `FOREX_GUARD_FOREX_FACTORY_NEWS_URL=https://www.forexfactory.com/news?sc_lang=en`
+- `FOREX_GUARD_FOREX_FACTORY_USER_AGENT=...`
+- `FOREX_GUARD_EVENTS_DB_PATH=.state/forex_news_guard.db`
+- `FOREX_GUARD_SCHEDULER_SYNC_INTERVAL_MINUTES=30`
+- `FOREX_GUARD_SCHEDULER_TICK_SECONDS=30`
+- `FOREX_GUARD_TELEGRAM_BOT_TOKEN=...`
+- `FOREX_GUARD_TELEGRAM_CHAT_ID=...`
+
+Nota: al 2026-05-26, `requests` normal devolvio `403` por Cloudflare para rutas como `calendar/json`, `calendar/xml`, `calendar/csv` y `news/rss`. En este proyecto cambiamos a un cliente HTTP no-browser compatible con Cloudflare para consumir el HTML real de Forex Factory sin automatizacion de navegador.
+
+## Flujo pensado
+
+1. sincronizar calendario de Forex Factory en periodos amplios;
+2. guardar solo eventos relevantes de hoy y manana;
+3. programar `precheck`, `alert` y `result-check` por evento;
+4. revalidar antes del aviso y consultar resultados despues del release.
+
+## Siguiente paso recomendado
+
+Probar el worker continuo con la configuracion de usuario deseada y luego preparar el despliegue.
+
+## Documentacion de handoff
+
+Para retomar el proyecto en otro chat, empezar por:
+
+1. [docs/START_HERE.md](/C:/Users/rullo/Documents/Proyectos%20IA/Forex-Impact-News-Guard/docs/START_HERE.md)
+2. [docs/PROJECT_CONTEXT.md](/C:/Users/rullo/Documents/Proyectos%20IA/Forex-Impact-News-Guard/docs/PROJECT_CONTEXT.md)
+3. [docs/PENDING.md](/C:/Users/rullo/Documents/Proyectos%20IA/Forex-Impact-News-Guard/docs/PENDING.md)
+
+## Worker
+
+Para correr el scheduler continuo:
+
+```bash
+python -m forex_news_guard.worker
+```
