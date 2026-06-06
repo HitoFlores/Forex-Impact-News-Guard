@@ -35,7 +35,7 @@ def sync_relevant_calendar_events(
     source_client = client or ForexFactoryClient.from_settings(settings)
     events = source_client.fetch_calendar_events(reference_time=generated_at)
     relevant_events = filter_relevant_events(events, alert_policy)
-    event_repository = repository or EventRepository(settings.events_db_path)
+    event_repository = repository or EventRepository(settings.events_state_path)
     event_repository.replace_relevant_events(relevant_events, reference_time=generated_at)
     stored_events = event_repository.list_relevant_events(reference_time=generated_at)
     schedules = build_event_schedules([item.event for item in stored_events], alert_policy)

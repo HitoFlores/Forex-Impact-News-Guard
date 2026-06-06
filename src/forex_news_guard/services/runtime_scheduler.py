@@ -45,8 +45,8 @@ class RuntimeSchedulerService:
         self.settings_service = settings_service or SettingsService()
         self.policy = policy or self.settings_service.get_policy()
         self.client = client or ForexFactoryClient.from_settings(settings)
-        self.event_repository = event_repository or EventRepository(settings.events_db_path)
-        self.runtime_repository = runtime_repository or RuntimeRepository(settings.events_db_path)
+        self.event_repository = event_repository or EventRepository(settings.events_state_path)
+        self.runtime_repository = runtime_repository or RuntimeRepository(settings.runtime_state_path)
         self.notifier = notifier or self._build_notifier()
         self.scheduler = BackgroundScheduler(timezone=self.policy.timezone)
 
@@ -71,10 +71,13 @@ class RuntimeSchedulerService:
     def shutdown(self) -> None:
         self.scheduler.shutdown(wait=False)
 
-    def run_cycle(self) -> RuntimeSyncResult:
+    def run_once(self) -> RuntimeSyncResult:
         self._reload_policy()
         reference_time = datetime.now(tz=self.policy.timezone_info)
         return self.run_cycle_at(reference_time)
+
+    def run_cycle(self) -> RuntimeSyncResult:
+        return self.run_once()
 
     def run_cycle_at(self, reference_time: datetime) -> RuntimeSyncResult:
         stored_events, schedules = sync_relevant_calendar_events(

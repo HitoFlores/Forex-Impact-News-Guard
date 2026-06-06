@@ -27,7 +27,7 @@ Scaffold reiniciado el 2026-05-26 con:
 - motor inicial para planificar alertas de calendario por evento;
 - endpoint para previsualizar alertas;
 - cliente HTTP real para Forex Factory y endpoint de previsualizacion live;
-- persistencia SQLite limitada a hoy y manana;
+- persistencia JSON para eventos, runtime y settings;
 - scheduler base con precheck, alerta y result-check;
 - pruebas unitarias y de API.
 
@@ -69,7 +69,10 @@ uvicorn forex_news_guard.main:app --reload
 - `FOREX_GUARD_FOREX_FACTORY_BASE_URL=https://www.forexfactory.com`
 - `FOREX_GUARD_FOREX_FACTORY_NEWS_URL=https://www.forexfactory.com/news?sc_lang=en`
 - `FOREX_GUARD_FOREX_FACTORY_USER_AGENT=...`
-- `FOREX_GUARD_EVENTS_DB_PATH=.state/forex_news_guard.db`
+- `FOREX_GUARD_STATE_DIR=.state`
+- `FOREX_GUARD_EVENTS_STATE_PATH=.state/events.json`
+- `FOREX_GUARD_RUNTIME_STATE_PATH=.state/runtime.json`
+- `FOREX_GUARD_SETTINGS_STATE_PATH=.state/settings.json`
 - `FOREX_GUARD_SCHEDULER_SYNC_INTERVAL_MINUTES=30`
 - `FOREX_GUARD_SCHEDULER_TICK_SECONDS=30`
 - `FOREX_GUARD_TELEGRAM_BOT_TOKEN=...`

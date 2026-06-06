@@ -13,7 +13,7 @@ Conclusion: no conviene seguir apostando deploy a disponibilidad de VM gratuita.
 - `GitHub Actions` como scheduler
 - `GitHub Pages` como dashboard publico
 - `Telegram` como canal real de alertas
-- estado persistido en JSON dentro del repo o branch de estado
+- estado persistido en JSON dentro de `.state/`
 
 ## Cambio de arquitectura esperado
 
@@ -71,6 +71,14 @@ Esto evita loop infinito porque su propio commit no dispara el mismo workflow.
 - crear workflow de keepalive mensual
 - crear dashboard estatico para GitHub Pages
 - preparar publicacion automatica de Pages
+
+## Implementacion local ya montada
+
+- `src/forex_news_guard/worker.py` corre una sola vez.
+- `src/forex_news_guard/storage/*.py` usan JSON atomico.
+- `.github/workflows/cron.yml` sincroniza, publica y persiste estado.
+- `.github/workflows/keepalive.yml` toca `.state/keepalive.json`.
+- `public/` contiene dashboard estatico para Pages.
 
 ### Prioridad media
 

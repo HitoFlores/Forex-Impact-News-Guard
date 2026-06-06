@@ -20,16 +20,11 @@ El sistema monitorea calendario de Forex Factory para:
 ## Lo que ya funciona
 
 - API FastAPI con docs en `/docs`.
-- Persistencia SQLite para:
+- Persistencia JSON para:
   - eventos relevantes;
   - settings del usuario;
   - alertas ya enviadas.
-- Worker continuo con:
-  - sync periodico;
-  - resumen diario;
-  - alertas previas;
-  - consultas de resultado;
-  - deduplicacion.
+- Worker ahora corre `run_once` y deja el cron a GitHub Actions.
 - Mensajes Telegram con banderas, iconos y semaforos visuales.
 - Artefactos base de deploy gratis en Oracle Always Free con Docker Compose.
 - Prueba real de Telegram ya validada con smoke test.
@@ -49,7 +44,7 @@ Usuario puede configurar:
 
 ## Flujo actual
 
-1. Worker lee settings desde SQLite.
+1. Worker lee settings desde JSON.
 2. Sincroniza Forex Factory y filtra eventos relevantes.
 3. Guarda solo hoy y manana.
 4. Calcula `precheck`, `alert` y `result-check`.
@@ -68,4 +63,4 @@ Usuario puede configurar:
 - `precheck` revalida calendario justo antes del alert, pero todavia conviene mejorar observabilidad y manejo fino de fallas upstream.
 - Worker agrupa alertas y resultados por bloque horario, pero no resume por ventana de riesgo mas inteligente.
 - No hay UI frontend; solo API y worker.
-- Ruta GitHub aun no esta implementada; hoy solo esta decidida y documentada.
+- Ruta GitHub ya tiene base de implementacion; falta validar con credenciales reales y publicar Pages.

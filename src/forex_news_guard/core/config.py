@@ -18,7 +18,9 @@ class Settings(BaseSettings):
     forex_factory_cookie: str | None = None
     forex_factory_timeout_seconds: float = 20.0
     state_dir: str = str(Path(".state").resolve())
-    events_db_path: str = str(Path(".state/forex_news_guard.db").resolve())
+    events_state_path: str = str(Path(".state/events.json").resolve())
+    runtime_state_path: str = str(Path(".state/runtime.json").resolve())
+    settings_state_path: str = str(Path(".state/settings.json").resolve())
     scheduler_sync_interval_minutes: int = 30
     scheduler_tick_seconds: int = 30
     telegram_bot_token: str | None = None

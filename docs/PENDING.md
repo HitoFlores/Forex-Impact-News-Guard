@@ -3,11 +3,11 @@
 ## Prioridad alta
 
 - Migrar deploy a GitHub Actions + GitHub Pages.
-  - convertir worker a `run_once`
-  - persistir estado en JSON
-  - crear workflow cron cada 5 minutos
-  - crear workflow `keepalive` mensual
-  - publicar dashboard estatico en Pages
+  - convertir worker a `run_once` [hecho]
+  - persistir estado en JSON [hecho]
+  - crear workflow cron cada 5 minutos [hecho]
+  - crear workflow `keepalive` mensual [hecho]
+  - publicar dashboard estatico en Pages [hecho]
 - Rotar `TELEGRAM_BOT_TOKEN` antes de cualquier deploy.
 
 ## Prioridad media

@@ -14,7 +14,7 @@ router = APIRouter()
 @router.get("/relevant", response_model=list[StoredEvent])
 def get_relevant_events() -> list[StoredEvent]:
     settings = get_settings()
-    repository = EventRepository(settings.events_db_path)
+    repository = EventRepository(settings.events_state_path)
     policy = SettingsService().get_policy()
     now = datetime.now(tz=policy.timezone_info)
     return repository.list_relevant_events(reference_time=now)
@@ -23,7 +23,7 @@ def get_relevant_events() -> list[StoredEvent]:
 @router.get("/schedules/upcoming", response_model=list[EventSchedule])
 def get_upcoming_schedules() -> list[EventSchedule]:
     settings = get_settings()
-    repository = EventRepository(settings.events_db_path)
+    repository = EventRepository(settings.events_state_path)
     policy = SettingsService().get_policy()
     now = datetime.now(tz=policy.timezone_info)
     events = [item.event for item in repository.list_relevant_events(reference_time=now)]

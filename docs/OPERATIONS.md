@@ -31,6 +31,8 @@ En otra terminal:
 python -m forex_news_guard.worker
 ```
 
+Ese comando ahora corre una sola vez. Para repeticion continua local, usa tu propio cron o loop externo.
+
 ## Endpoints utiles
 
 - `GET /health`
@@ -70,7 +72,7 @@ Payload base:
 ## Archivos locales importantes
 
 - `.env`: secretos locales
-- `.state/forex_news_guard.db`: SQLite local de trabajo
+- `.state/`: JSON local de trabajo
 
 Ambos deben quedarse fuera de git.
 
