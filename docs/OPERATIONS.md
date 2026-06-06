@@ -40,6 +40,7 @@ python -m forex_news_guard.worker
 - `GET /api/v1/events/schedules/upcoming`
 - `POST /api/v1/alerts/preview`
 - `POST /api/v1/alerts/forex-factory/live-preview`
+- `POST /api/v1/alerts/telegram/smoke-test`
 
 ## Ejemplo rapido para actualizar settings
 
@@ -72,3 +73,20 @@ Payload base:
 - `.state/forex_news_guard.db`: SQLite local de trabajo
 
 Ambos deben quedarse fuera de git.
+
+## Prueba manual de Telegram
+
+Para forzar envio de mensajes sample:
+
+```bash
+curl -X POST http://127.0.0.1:8000/api/v1/alerts/telegram/smoke-test
+```
+
+## Nota de transicion
+
+Esta operacion sigue describiendo el modo local/API actual.
+
+La estrategia remota decidida para siguiente iteracion ya no es VM continua, sino:
+
+- GitHub Actions para ejecucion programada
+- GitHub Pages para dashboard publico

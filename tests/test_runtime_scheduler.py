@@ -17,11 +17,14 @@ class FakeNotifier:
 
 
 class FakeClient:
-    def __init__(self, events: list[ForexEvent]) -> None:
+    def __init__(self, events: list[ForexEvent], refreshed_events: list[ForexEvent] | None = None) -> None:
         self.events = events
+        self.refreshed_events = refreshed_events if refreshed_events is not None else events
+        self.calls = 0
 
     def fetch_calendar_events(self, reference_time: datetime):  # noqa: ANN202
-        return self.events
+        self.calls += 1
+        return self.events if self.calls == 1 else self.refreshed_events
 
 
 def test_dispatch_due_checks_sends_alert_and_result_once(tmp_path: Path) -> None:
@@ -141,3 +144,49 @@ def test_dispatch_groups_events_with_same_schedule_into_single_message(tmp_path:
     assert len(notifier.messages) == 4
     assert "NEWS BLOCK IN 5 MIN" in notifier.messages[0]
     assert "POST-NEWS UPDATE" in notifier.messages[1]
+
+
+def test_dispatch_due_checks_revalidates_calendar_and_skips_stale_alert(tmp_path: Path) -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    sync_time = datetime(2026, 5, 26, 14, 50, tzinfo=timezone)
+    dispatch_time = datetime(2026, 5, 26, 14, 55, tzinfo=timezone)
+    original_event = ForexEvent(
+        id="usd-high",
+        title="FOMC",
+        currency="USD",
+        impact=ImpactLevel.HIGH,
+        scheduled_at=datetime(2026, 5, 26, 15, 0, tzinfo=timezone),
+    )
+    moved_event = ForexEvent(
+        id="usd-high",
+        title="FOMC",
+        currency="USD",
+        impact=ImpactLevel.HIGH,
+        scheduled_at=datetime(2026, 5, 26, 15, 10, tzinfo=timezone),
+    )
+    event_repository = EventRepository(str(tmp_path / "events.db"))
+    runtime_repository = RuntimeRepository(str(tmp_path / "events.db"))
+    notifier = FakeNotifier()
+    client = FakeClient([original_event], refreshed_events=[moved_event])
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(
+            lead_minutes=5,
+            revalidate_minutes_before_alert=2,
+            result_check_delay_minutes=1,
+            daily_summary_enabled=False,
+        ),
+        client=client,
+        event_repository=event_repository,
+        runtime_repository=runtime_repository,
+        notifier=notifier,
+    )
+
+    service.run_cycle_at(reference_time=sync_time)
+    notifier.messages.clear()
+    result = service.dispatch_due_checks_at(reference_time=dispatch_time)
+    stored = event_repository.list_relevant_events(reference_time=dispatch_time)
+
+    assert client.calls == 2
+    assert notifier.messages == []
+    assert result.dispatched == []
+    assert stored[0].event.scheduled_at == datetime(2026, 5, 26, 15, 10, tzinfo=timezone)

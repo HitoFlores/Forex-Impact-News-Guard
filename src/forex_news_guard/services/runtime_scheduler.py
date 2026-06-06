@@ -6,7 +6,7 @@ from datetime import datetime
 from apscheduler.schedulers.background import BackgroundScheduler
 
 from forex_news_guard.core.config import get_settings
-from forex_news_guard.domain.models import AlertPolicy, EventSchedule, ForexEvent, ScheduledEventCheck
+from forex_news_guard.domain.models import AlertPolicy, EventSchedule, ForexEvent, ScheduledEventCheck, StoredEvent
 from forex_news_guard.domain.runtime import (
     AlertDispatchRecord,
     AlertExecutionKind,
@@ -14,8 +14,8 @@ from forex_news_guard.domain.runtime import (
     RuntimeSyncResult,
 )
 from forex_news_guard.integrations.forex_factory import ForexFactoryClient
+from forex_news_guard.services.event_scheduler import build_event_schedules, filter_relevant_events
 from forex_news_guard.services.forex_factory_monitor import sync_relevant_calendar_events
-from forex_news_guard.services.event_scheduler import build_event_schedules
 from forex_news_guard.services.notification_formatter import (
     build_daily_summary_message,
     build_grouped_pre_alert_message,
@@ -98,8 +98,22 @@ class RuntimeSchedulerService:
         schedules = build_event_schedules([item.event for item in stored_events], self.policy)
         dispatched: list[AlertDispatchRecord] = []
         skipped: list[str] = []
+        stored_events, schedules, blocked_alert_event_ids = self._revalidate_due_prechecks(
+            stored_events=stored_events,
+            schedules=schedules,
+            reference_time=reference_time,
+            dispatched=dispatched,
+            skipped=skipped,
+        )
         event_map = {stored.event.id: stored.event for stored in stored_events}
-        self._dispatch_grouped_alerts(schedules, event_map, reference_time, dispatched, skipped)
+        self._dispatch_grouped_alerts(
+            schedules,
+            event_map,
+            reference_time,
+            dispatched,
+            skipped,
+            blocked_alert_event_ids,
+        )
         self._dispatch_grouped_results(schedules, event_map, reference_time, dispatched, skipped)
 
         return RuntimeSyncResult(
@@ -109,6 +123,67 @@ class RuntimeSchedulerService:
             skipped=skipped,
         )
 
+    def _revalidate_due_prechecks(
+        self,
+        stored_events: list[StoredEvent],
+        schedules: list[EventSchedule],
+        reference_time: datetime,
+        dispatched: list[AlertDispatchRecord],
+        skipped: list[str],
+    ) -> tuple[list[StoredEvent], list[EventSchedule], set[str]]:
+        pending_prechecks = [
+            schedule
+            for schedule in schedules
+            if schedule.precheck.scheduled_for <= reference_time
+            and not self.runtime_repository.has_been_dispatched(
+                event_id=schedule.event.id,
+                kind=AlertExecutionKind.PRECHECK,
+                scheduled_for=schedule.precheck.scheduled_for,
+                attempt=schedule.precheck.attempt,
+            )
+        ]
+        if not pending_prechecks:
+            return stored_events, schedules, set()
+
+        refreshed_stored_events = stored_events
+        refreshed_schedules = schedules
+        try:
+            refreshed_events = self.client.fetch_calendar_events(reference_time=reference_time)
+            relevant_events = filter_relevant_events(refreshed_events, self.policy)
+            self.event_repository.replace_relevant_events(relevant_events, reference_time=reference_time)
+            refreshed_stored_events = self.event_repository.list_relevant_events(reference_time=reference_time)
+            refreshed_schedules = build_event_schedules([item.event for item in refreshed_stored_events], self.policy)
+            logger.info("Revalidated %s events for %s due prechecks", len(relevant_events), len(pending_prechecks))
+        except Exception:
+            logger.exception("Failed to revalidate calendar events before alert dispatch")
+            skipped.append(f"precheck-refresh-failed:{len(pending_prechecks)}")
+            return stored_events, schedules, {schedule.event.id for schedule in pending_prechecks}
+
+        completed_prechecks = [
+            schedule
+            for schedule in refreshed_schedules
+            if schedule.precheck.scheduled_for <= reference_time
+            and not self.runtime_repository.has_been_dispatched(
+                event_id=schedule.event.id,
+                kind=AlertExecutionKind.PRECHECK,
+                scheduled_for=schedule.precheck.scheduled_for,
+                attempt=schedule.precheck.attempt,
+            )
+        ]
+        for schedule in completed_prechecks:
+            record = AlertDispatchRecord(
+                event_id=schedule.event.id,
+                kind=AlertExecutionKind.PRECHECK,
+                attempt=schedule.precheck.attempt,
+                scheduled_for=schedule.precheck.scheduled_for,
+                sent_at=reference_time,
+                channel=DeliveryChannel.TELEGRAM,
+            )
+            self.runtime_repository.record_dispatch(record)
+            dispatched.append(record)
+
+        return refreshed_stored_events, refreshed_schedules, set()
+
     def _dispatch_grouped_alerts(
         self,
         schedules: list[EventSchedule],
@@ -116,6 +191,7 @@ class RuntimeSchedulerService:
         reference_time: datetime,
         dispatched: list[AlertDispatchRecord],
         skipped: list[str],
+        blocked_alert_event_ids: set[str],
     ) -> None:
         grouped: dict[datetime, list[EventSchedule]] = {}
         for schedule in schedules:
@@ -123,6 +199,12 @@ class RuntimeSchedulerService:
 
         for scheduled_for, group in grouped.items():
             due_group = [item for item in group if item.alert.scheduled_for <= reference_time]
+            if not due_group:
+                continue
+            blocked_group = [item for item in due_group if item.event.id in blocked_alert_event_ids]
+            for item in blocked_group:
+                skipped.append(f"{item.event.id}:alert-blocked-precheck")
+            due_group = [item for item in due_group if item.event.id not in blocked_alert_event_ids]
             if not due_group:
                 continue
             events = [event_map.get(item.event.id, item.event) for item in due_group]

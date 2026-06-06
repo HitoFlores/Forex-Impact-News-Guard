@@ -63,3 +63,14 @@ def test_forex_factory_live_preview_endpoint_handles_upstream_block() -> None:
         response = client.post("/api/v1/alerts/forex-factory/live-preview")
 
     assert response.status_code == 502
+
+
+def test_telegram_smoke_test_endpoint() -> None:
+    with patch(
+        "forex_news_guard.api.routes.alerts.send_telegram_smoke_test",
+        return_value={"sent_messages": ["FOREX FACTORY DAILY", "FOREX IMPACT ALERT"]},
+    ):
+        response = client.post("/api/v1/alerts/telegram/smoke-test")
+
+    assert response.status_code == 200
+    assert response.json()["sent_messages"] == ["FOREX FACTORY DAILY", "FOREX IMPACT ALERT"]

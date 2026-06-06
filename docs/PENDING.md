@@ -2,20 +2,22 @@
 
 ## Prioridad alta
 
-- Implementar revalidacion real en `precheck`.
-  - Hoy el scheduler agenda `precheck`, pero no vuelve a consultar Forex Factory justo antes del alert.
-- Preparar deploy.
-  - Dockerfile
-  - archivo para plataforma elegida
-  - health/start commands
+- Migrar deploy a GitHub Actions + GitHub Pages.
+  - convertir worker a `run_once`
+  - persistir estado en JSON
+  - crear workflow cron cada 5 minutos
+  - crear workflow `keepalive` mensual
+  - publicar dashboard estatico en Pages
 - Rotar `TELEGRAM_BOT_TOKEN` antes de cualquier deploy.
 
 ## Prioridad media
 
+- Endurecer observabilidad del `precheck`.
+  - Agregar logs y, si hace falta, metricas/retries mas visibles cuando Forex Factory falle justo antes del alert.
+- Decidir si configuracion de usuario se congela en archivos del repo o si se expone una forma segura de editarla sin API viva.
 - Mejorar agrupacion de eventos del mismo bloque para mostrar una sola ventana de riesgo consolidada.
 - Agregar logs mas claros del worker para produccion.
-- Agregar endpoint o comando para forzar reenvio de resumen diario.
-- Agregar endpoint o flag para enviar mensaje de prueba a Telegram.
+- Mantener smoke test de Telegram accesible aunque la API always-on desaparezca.
 
 ## Prioridad baja
 
@@ -28,4 +30,4 @@
 
 - Forex Factory puede cambiar HTML/JS y romper parsing.
 - `cloudscraper` hoy funciona, pero no es garantia eterna.
-- El timezone debe revisarse bien en entorno remoto.
+- GitHub `schedule` puede retrasarse y se desactiva en repos publicos sin actividad por 60 dias si no existe `keepalive`.

@@ -61,6 +61,7 @@ uvicorn forex_news_guard.main:app --reload
 - `GET /api/v1/events/schedules/upcoming`
 - `POST /api/v1/alerts/preview`
 - `POST /api/v1/alerts/forex-factory/live-preview`
+- `POST /api/v1/alerts/telegram/smoke-test`
 
 ## Variables de entorno utiles
 
@@ -85,7 +86,19 @@ Nota: al 2026-05-26, `requests` normal devolvio `403` por Cloudflare para rutas 
 
 ## Siguiente paso recomendado
 
-Probar el worker continuo con la configuracion de usuario deseada y luego preparar el despliegue.
+Migrar el deploy a GitHub Actions + GitHub Pages y conservar Telegram como salida operativa real.
+
+## Deploy gratis recomendado
+
+Ruta principal:
+
+- [docs/DEPLOY_GITHUB_ACTIONS_PAGES.md](/C:/Users/rullo/Documents/Proyectos%20IA/Forex-Impact-News-Guard/docs/DEPLOY_GITHUB_ACTIONS_PAGES.md)
+
+Ruta fallback ya explorada pero no confiable por capacidad:
+
+- [Dockerfile](/C:/Users/rullo/Documents/Proyectos%20IA/Forex-Impact-News-Guard/Dockerfile)
+- [compose.yml](/C:/Users/rullo/Documents/Proyectos%20IA/Forex-Impact-News-Guard/compose.yml)
+- [docs/DEPLOY_ORACLE_ALWAYS_FREE.md](/C:/Users/rullo/Documents/Proyectos%20IA/Forex-Impact-News-Guard/docs/DEPLOY_ORACLE_ALWAYS_FREE.md)
 
 ## Documentacion de handoff
 

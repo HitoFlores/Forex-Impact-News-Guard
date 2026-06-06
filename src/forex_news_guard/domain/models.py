@@ -116,6 +116,10 @@ class AlertPreviewResponse(BaseModel):
     risk_windows: list[RiskWindow]
 
 
+class TelegramSmokeTestResponse(BaseModel):
+    sent_messages: list[str]
+
+
 class StoredEvent(BaseModel):
     event: ForexEvent
     stored_at: datetime
