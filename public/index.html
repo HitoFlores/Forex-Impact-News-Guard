@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Forex Impact News Guard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">GitHub Actions + Pages</p>
+      <h1>Guard de noticias Forex, vivo en cron y Telegram.</h1>
+      <p class="lede">
+        Estado renderizado desde JSON. Cron corre cada 5 minutos, alertas van a Telegram, y Pages muestra
+        lo ultimo sin API permanente.
+      </p>
+      <div class="hero-grid">
+        <article class="metric">
+          <span class="label">Eventos</span>
+          <strong id="count-events">0</strong>
+        </article>
+        <article class="metric">
+          <span class="label">Alertas</span>
+          <strong id="count-schedules">0</strong>
+        </article>
+        <article class="metric">
+          <span class="label">Dispatches</span>
+          <strong id="count-dispatches">0</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Proximas alertas</h2>
+        <span id="generated-at" class="stamp"></span>
+      </div>
+      <div id="next-alerts" class="stack"></div>
+    </section>
+
+    <section class="panel split">
+      <div>
+        <div class="panel-head"><h2>Eventos recientes</h2></div>
+        <div id="recent-events" class="stack compact"></div>
+      </div>
+      <div>
+        <div class="panel-head"><h2>Ultimos dispatches</h2></div>
+        <div id="recent-dispatches" class="stack compact"></div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
