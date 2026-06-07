@@ -1,0 +1,1 @@
+"""Forex Impact News Guard."""
