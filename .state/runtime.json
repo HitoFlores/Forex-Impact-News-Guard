@@ -1,0 +1,12 @@
+{
+  "dispatched_alerts": [
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "daily-summary-2026-06-06",
+      "kind": "daily_summary",
+      "scheduled_for": "2026-06-06T00:00:00-06:00",
+      "sent_at": "2026-06-06T21:31:24.105274-06:00"
+    }
+  ]
+}

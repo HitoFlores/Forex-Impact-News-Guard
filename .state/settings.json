@@ -1,0 +1,20 @@
+{
+  "allowed_impacts": null,
+  "breaking_enabled": true,
+  "calendar_enabled": true,
+  "currencies": [],
+  "daily_summary_enabled": true,
+  "high_impact_only": true,
+  "include_results": true,
+  "lead_minutes": 15,
+  "result_check_delay_minutes": 1,
+  "result_retry_minutes": [
+    3,
+    5
+  ],
+  "revalidate_minutes_before_alert": 2,
+  "risk_window_after_minutes": 15,
+  "risk_window_before_minutes": 15,
+  "timezone": "America/Chihuahua",
+  "timezone_info": "America/Chihuahua"
+}
