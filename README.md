@@ -63,6 +63,13 @@ uvicorn forex_news_guard.main:app --reload
 - `POST /api/v1/alerts/forex-factory/live-preview`
 - `POST /api/v1/alerts/telegram/smoke-test`
 
+## Operacion remota actual
+
+- `sync-and-publish`: cron principal en GitHub Actions, actualiza `.state/` y publica Pages.
+- `keepalive`: workflow manual/mensual para mantener schedules vivos.
+- `telegram-smoke-test`: workflow manual para forzar envio real de todos los mensajes sample a Telegram sin levantar API local.
+- `public/`: dashboard estatico con salud operativa, proximas ventanas de riesgo y ledger reciente.
+
 ## Variables de entorno utiles
 
 - `FOREX_GUARD_DEFAULT_TIMEZONE=America/Chihuahua`
@@ -86,10 +93,6 @@ Nota: al 2026-05-26, `requests` normal devolvio `403` por Cloudflare para rutas 
 2. guardar solo eventos relevantes de hoy y manana;
 3. programar `precheck`, `alert` y `result-check` por evento;
 4. revalidar antes del aviso y consultar resultados despues del release.
-
-## Siguiente paso recomendado
-
-Migrar el deploy a GitHub Actions + GitHub Pages y conservar Telegram como salida operativa real.
 
 ## Deploy gratis recomendado
 

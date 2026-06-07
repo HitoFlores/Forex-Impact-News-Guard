@@ -84,6 +84,34 @@ Para forzar envio de mensajes sample:
 curl -X POST http://127.0.0.1:8000/api/v1/alerts/telegram/smoke-test
 ```
 
+Eso manda:
+
+- resumen diario;
+- alerta individual;
+- alerta agrupada;
+- resultado individual;
+- resultado agrupado.
+
+## Prueba forzada remota de Telegram
+
+Sin API local, usa workflow manual `telegram-smoke-test` en GitHub Actions.
+
+Ese workflow:
+
+- instala dependencias;
+- usa secretos `FOREX_GUARD_TELEGRAM_BOT_TOKEN` y `FOREX_GUARD_TELEGRAM_CHAT_ID`;
+- ejecuta `python scripts/send_telegram_smoke_test.py`;
+- deja resumen en el job y envia todos los mensajes sample al chat real.
+
+Uso:
+
+1. Abrir `Actions`.
+2. Elegir `telegram-smoke-test`.
+3. `Run workflow` sobre `main`.
+4. Verificar job en verde y mensajes recibidos en Telegram.
+
+Despues de la prueba no hay que revertir nada: es workflow manual, no altera `sync-and-publish`.
+
 ## Nota de transicion
 
 Esta operacion sigue describiendo el modo local/API actual.

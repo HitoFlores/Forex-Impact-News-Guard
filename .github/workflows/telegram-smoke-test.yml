@@ -1,0 +1,28 @@
+name: telegram-smoke-test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e .[dev]
+
+      - name: Send Telegram smoke test
+        env:
+          FOREX_GUARD_TELEGRAM_BOT_TOKEN: ${{ secrets.FOREX_GUARD_TELEGRAM_BOT_TOKEN }}
+          FOREX_GUARD_TELEGRAM_CHAT_ID: ${{ secrets.FOREX_GUARD_TELEGRAM_CHAT_ID }}
+        run: python scripts/send_telegram_smoke_test.py

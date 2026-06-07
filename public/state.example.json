@@ -9,11 +9,34 @@
     "timezone": "America/Chihuahua"
   },
   "counts": {
+    "tracked_currencies": 0,
     "relevant_events": 0,
     "schedules": 0,
     "dispatches": 0
   },
+  "dispatch_breakdown": [],
   "next_alerts": [],
+  "policy_summary": {
+    "breaking_enabled": true,
+    "calendar_enabled": true,
+    "daily_summary_enabled": true,
+    "high_impact_only": true,
+    "include_results": true,
+    "lead_minutes": 10,
+    "monitored_currencies": [],
+    "result_check_delay_minutes": 1,
+    "result_retry_minutes": [3, 5],
+    "revalidate_minutes_before_alert": 2,
+    "timezone": "America/Chihuahua"
+  },
   "recent_events": [],
-  "recent_dispatches": []
+  "recent_dispatches": [],
+  "status": {
+    "generated_at": null,
+    "keepalive_updated_at": null,
+    "last_dispatch_at": null,
+    "latest_event_stored_at": null,
+    "next_alert_at": null,
+    "next_event_at": null
+  }
 }

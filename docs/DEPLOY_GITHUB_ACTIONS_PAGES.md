@@ -41,6 +41,12 @@ Conclusion: no conviene seguir apostando deploy a disponibilidad de VM gratuita.
 6. Actualiza JSON de estado y resumen.
 7. Publica o actualiza dashboard en GitHub Pages.
 
+## Workflows operativos finales
+
+- `sync-and-publish`: cron real de produccion.
+- `keepalive`: validacion manual o mensual para que GitHub no suspenda schedules.
+- `telegram-smoke-test`: prueba forzada de Telegram con todos los formatos sample.
+
 ## Keepalive
 
 GitHub desactiva `scheduled workflows` en repos publicos sin actividad de repo por 60 dias.
@@ -78,6 +84,7 @@ Esto evita loop infinito porque su propio commit no dispara el mismo workflow.
 - `src/forex_news_guard/storage/*.py` usan JSON atomico.
 - `.github/workflows/cron.yml` sincroniza, publica y persiste estado.
 - `.github/workflows/keepalive.yml` toca `.state/keepalive.json`.
+- `.github/workflows/telegram-smoke-test.yml` manda prueba real a Telegram bajo demanda.
 - `public/` contiene dashboard estatico para Pages.
 
 ### Prioridad media

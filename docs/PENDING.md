@@ -22,7 +22,7 @@
 - Decidir si configuracion de usuario se congela en archivos del repo o si se expone una forma segura de editarla sin API viva.
 - Mejorar agrupacion de eventos del mismo bloque para mostrar una sola ventana de riesgo consolidada.
 - Agregar logs mas claros del worker para produccion.
-- Mantener smoke test de Telegram accesible aunque la API always-on desaparezca.
+- Exponer mas diagnostico de fallos de scraping/Telegram en dashboard si hiciera falta.
 
 ## Prioridad baja
 
