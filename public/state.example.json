@@ -1,0 +1,19 @@
+{
+  "generated_at": null,
+  "policy": {
+    "daily_summary_enabled": true,
+    "include_results": true,
+    "lead_minutes": 10,
+    "risk_window_after_minutes": 15,
+    "risk_window_before_minutes": 20,
+    "timezone": "America/Chihuahua"
+  },
+  "counts": {
+    "relevant_events": 0,
+    "schedules": 0,
+    "dispatches": 0
+  },
+  "next_alerts": [],
+  "recent_events": [],
+  "recent_dispatches": []
+}
