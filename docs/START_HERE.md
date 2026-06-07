@@ -22,3 +22,12 @@ Si vas a retomar este proyecto en un chat nuevo, lee esto en este orden:
 ## Nota importante
 
 Antes de cualquier deploy, rotar el `TELEGRAM_BOT_TOKEN`.
+
+## Ultimo estado
+
+Si retomas desde cero, el bloqueo actual fue este:
+
+- `sync-and-publish` en `main` fallo al hacer `git add .state`.
+- La causa es que `.state/` esta en `.gitignore`.
+- El fix es usar `git add -f .state` y `git add -f .state/keepalive.json` en los workflows.
+- El dashboard ya tiene fallback a `public/state.example.json`.
