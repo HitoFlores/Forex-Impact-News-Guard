@@ -25,9 +25,15 @@ Antes de cualquier deploy, rotar el `TELEGRAM_BOT_TOKEN`.
 
 ## Ultimo estado
 
-Si retomas desde cero, el bloqueo actual fue este:
+Si retomas desde cero, el estado real actual es este:
 
-- `sync-and-publish` en `main` fallo al hacer `git add .state`.
-- La causa es que `.state/` esta en `.gitignore`.
-- El fix es usar `git add -f .state` y `git add -f .state/keepalive.json` en los workflows.
-- El dashboard ya tiene fallback a `public/state.example.json`.
+- `sync-and-publish` ya pasa en `main` y Pages ya esta publicado.
+- `keepalive` ya se valido manualmente y genera commit automatico correcto.
+- El workflow nuevo `telegram-smoke-test` ya existe en repo pero falta correrlo manualmente desde GitHub.
+- El dashboard nuevo ya esta en codigo, pero falta relanzar `sync-and-publish` para verlo publicado en Pages.
+- La prueba local real de Telegram ya mando 5 mensajes sample:
+  - `FOREX FACTORY DAILY`
+  - `FOREX IMPACT ALERT`
+  - `FOREX IMPACT ALERT`
+  - `FOREX RESULT UPDATE`
+  - `FOREX RESULT UPDATE`

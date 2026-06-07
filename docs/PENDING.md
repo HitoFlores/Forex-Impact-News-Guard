@@ -2,18 +2,10 @@
 
 ## Prioridad alta
 
-- Migrar deploy a GitHub Actions + GitHub Pages.
-  - convertir worker a `run_once` [hecho]
-  - persistir estado en JSON [hecho]
-  - crear workflow cron cada 5 minutos [hecho]
-  - crear workflow `keepalive` mensual [hecho]
-  - publicar dashboard estatico en Pages [hecho]
 - Rotar `TELEGRAM_BOT_TOKEN` antes de cualquier deploy.
-- Fusionar en `main` el fix de workflow para archivos ignorados.
-  - `git add .state` falla porque `.state/` esta en `.gitignore`
-  - cambiar a `git add -f .state` en `.github/workflows/cron.yml`
-  - cambiar a `git add -f .state/keepalive.json` en `.github/workflows/keepalive.yml`
-  - relanzar `sync-and-publish` en `main` despues del merge
+- Correr `sync-and-publish` manual sobre `main` para publicar en Pages el dashboard nuevo.
+- Correr `telegram-smoke-test` manual sobre `main` para validar flujo 100% GitHub -> Telegram.
+- Confirmar al menos una corrida automatica posterior de `sync-and-publish` sin intervencion manual.
 
 ## Prioridad media
 

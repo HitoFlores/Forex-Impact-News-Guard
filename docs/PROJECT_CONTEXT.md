@@ -26,8 +26,10 @@ El sistema monitorea calendario de Forex Factory para:
   - alertas ya enviadas.
 - Worker ahora corre `run_once` y deja el cron a GitHub Actions.
 - Mensajes Telegram con banderas, iconos y semaforos visuales.
-- Artefactos base de deploy gratis en Oracle Always Free con Docker Compose.
-- Prueba real de Telegram ya validada con smoke test.
+- `GitHub Actions + GitHub Pages` ya quedo desplegado en `main`.
+- `sync-and-publish` y `keepalive` ya fueron validados manualmente.
+- Workflow manual `telegram-smoke-test` ya existe para prueba remota bajo demanda.
+- Prueba real local de Telegram ya validada con 5 mensajes sample.
 
 ## Configuracion actual del producto
 
@@ -54,13 +56,13 @@ Usuario puede configurar:
 ## Direccion de deploy decidida
 
 - Ruta Oracle Always Free se intento de verdad y fallo por capacidad en `mx-monterrey-1`.
-- Siguiente implementacion remota se hara con `GitHub Actions + GitHub Pages`.
-- Esto implica migrar de worker continuo + SQLite a ejecucion `run_once` + estado JSON + dashboard estatico.
-- Se planea un `keepalive` mensual para evitar que GitHub desactive schedules por 60 dias sin actividad del repo.
+- Implementacion remota activa: `GitHub Actions + GitHub Pages`.
+- Esto ya reemplazo worker continuo remoto por ejecucion `run_once` + estado JSON + dashboard estatico.
+- `keepalive` mensual/manual ya existe para evitar que GitHub desactive schedules por 60 dias sin actividad del repo.
 
 ## Limitaciones actuales
 
 - `precheck` revalida calendario justo antes del alert, pero todavia conviene mejorar observabilidad y manejo fino de fallas upstream.
 - Worker agrupa alertas y resultados por bloque horario, pero no resume por ventana de riesgo mas inteligente.
-- No hay UI frontend; solo API y worker.
-- Ruta GitHub ya tiene base de implementacion; falta validar con credenciales reales y publicar Pages.
+- Dashboard ya existe y es util para operacion, pero todavia puede crecer en diagnostico y consolidacion de riesgo.
+- Falta validar manana el workflow `telegram-smoke-test` ejecutado desde GitHub y relanzar `sync-and-publish` para publicar la nueva UI.
