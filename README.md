@@ -86,6 +86,8 @@ uvicorn forex_news_guard.main:app --reload
 - `FOREX_GUARD_TELEGRAM_CHAT_ID=...`
 - `FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID=...` para mandar solo `telegram-smoke-test` a tu chat privado
 
+Nota Telegram: si grupo productivo migra a `supergroup`, el `chat_id` cambia. En ese caso hay que actualizar `FOREX_GUARD_TELEGRAM_CHAT_ID` con nuevo valor que Telegram devuelve en error/log; normalmente usa formato negativo `-100...`.
+
 `currencies=[]` o vacio = sin filtro por moneda. El sistema no usa una whitelist fija ahi; acepta cualquier moneda que venga en Forex Factory y pase el filtro de impacto.
 
 Nota: al 2026-05-26, `requests` normal devolvio `403` por Cloudflare para rutas como `calendar/json`, `calendar/xml`, `calendar/csv` y `news/rss`. En este proyecto cambiamos a un cliente HTTP no-browser compatible con Cloudflare para consumir el HTML real de Forex Factory sin automatizacion de navegador.

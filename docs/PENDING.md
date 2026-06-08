@@ -2,14 +2,12 @@
 
 ## Prioridad 1 - siguiente sesion
 
-- Rotar `TELEGRAM_BOT_TOKEN` antes de cualquier deploy.
 - Mejorar diseno del dashboard como foco principal.
-- Subir calidad visual del dashboard sin romper la operacion ya validada.
 - Refinar jerarquia visual, espaciado, legibilidad y estados de control para que se vea mas profesional.
 
 ## Prioridad alta
 
-- Confirmar al menos una corrida automatica posterior de `sync-and-publish` sin intervencion manual.
+- Confirmar al menos una corrida programada posterior de `sync-and-publish` sin intervencion manual.
 - Endurecer visibilidad/privacidad real si el dashboard debe dejar de ser publico.
   - Si se quiere ocultar contenido completo, mover UI detras de auth real como Cloudflare Access o app con login.
 - Endurecer observabilidad de scraping, Telegram y `precheck` en dashboard.

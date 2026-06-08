@@ -92,9 +92,10 @@ Hacer esto antes de cualquier deploy nuevo o si el token ya paso por chats, capt
 3. Generar token nuevo con `/token`.
 4. Actualizar secreto `FOREX_GUARD_TELEGRAM_BOT_TOKEN` en GitHub `Actions secrets` o `Environment secrets`, segun donde viva hoy.
 5. Verificar que `FOREX_GUARD_TELEGRAM_CHAT_ID` siga correcto.
-6. Si quieres aislar pruebas del grupo real, configurar tambien `FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID` con tu chat privado.
-7. Correr workflow manual `telegram-smoke-test`.
-8. Confirmar recepcion de los 5 mensajes sample antes de volver a usar `sync-and-publish`.
+6. Si Telegram migro grupo productivo a `supergroup`, actualizar `FOREX_GUARD_TELEGRAM_CHAT_ID` al nuevo `chat_id` reportado por Telegram. Suele cambiar a formato negativo `-100...`.
+7. Si quieres aislar pruebas del grupo real, configurar tambien `FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID` con tu chat privado.
+8. Correr workflow manual `telegram-smoke-test`.
+9. Confirmar recepcion de los 5 mensajes sample antes de volver a usar `sync-and-publish`.
 
 No guardar token nuevo en commits, screenshots, notas de handoff ni chats.
 
@@ -124,6 +125,7 @@ Ese workflow:
 - usa `FOREX_GUARD_TELEGRAM_BOT_TOKEN`;
 - usa `FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID` si existe;
 - si no existe, cae a `FOREX_GUARD_TELEGRAM_CHAT_ID`;
+- si Telegram responde `group upgraded to a supergroup` o devuelve nuevo `chat_id`, actualizar secreto `FOREX_GUARD_TELEGRAM_CHAT_ID` al valor nuevo;
 - ejecuta `python scripts/send_telegram_smoke_test.py`;
 - deja resumen en el job y envia todos los mensajes sample al chat de smoke o al chat default.
 
