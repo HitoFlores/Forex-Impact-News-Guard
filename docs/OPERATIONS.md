@@ -76,6 +76,20 @@ Payload base:
 
 Ambos deben quedarse fuera de git.
 
+## Rotacion de Telegram token
+
+Hacer esto antes de cualquier deploy nuevo o si el token ya paso por chats, capturas o pruebas no confiables.
+
+1. Ir a `@BotFather` en Telegram.
+2. Ejecutar `/revoke` sobre el bot actual para invalidar token viejo.
+3. Generar token nuevo con `/token`.
+4. Actualizar secreto `FOREX_GUARD_TELEGRAM_BOT_TOKEN` en GitHub `Actions secrets` o `Environment secrets`, segun donde viva hoy.
+5. Verificar que `FOREX_GUARD_TELEGRAM_CHAT_ID` siga correcto.
+6. Correr workflow manual `telegram-smoke-test`.
+7. Confirmar recepcion de los 5 mensajes sample antes de volver a usar `sync-and-publish`.
+
+No guardar token nuevo en commits, screenshots, notas de handoff ni chats.
+
 ## Prueba manual de Telegram
 
 Para forzar envio de mensajes sample:
