@@ -1,5 +1,25 @@
 const DEFAULT_STATE = {
   generated_at: null,
+  workflow: {
+    event_name: null,
+    event_label: "Local",
+    actor: null,
+    ref_name: null,
+    run_id: null,
+    run_number: null,
+    repository: null,
+    run_url: null,
+  },
+  automation: {
+    trigger: null,
+    trigger_label: "Local",
+    cycle_health: "warn",
+    last_probe_success_at: null,
+    keepalive_updated_at: null,
+    schedule_confirmed: false,
+    status_copy: "Sin confirmacion de cron todavia.",
+    operator_model: "Superficie unica sin split de roles.",
+  },
   counts: {
     relevant_events: 0,
     schedules: 0,
@@ -15,6 +35,7 @@ const DEFAULT_STATE = {
     daily_summary_enabled: true,
     include_results: true,
     high_impact_only: true,
+    allowed_impacts: ["high"],
     breaking_enabled: true,
     calendar_enabled: true,
     monitored_currencies: [],
@@ -36,6 +57,7 @@ const DEFAULT_STATE = {
   dispatch_breakdown: [],
   impact_breakdown: [],
   currency_breakdown: [],
+  risk_blocks: [],
   next_alerts: [],
   recent_events: [],
   recent_dispatches: [],
@@ -72,8 +94,8 @@ function setMode(mode) {
   $("mode-demo").classList.toggle("is-active", mode === "demo");
   $("mode-copy").textContent =
     mode === "demo"
-      ? "Demo visual activo. Telegram real sigue dependiendo de workflows."
-      : "Modo live leyendo ultimo estado publicado por GitHub Actions.";
+      ? "Demo visual activa. Los workflows reales siguen dependiendo de GitHub Actions."
+      : "Modo live leyendo ultimo publish real del proyecto.";
 }
 
 function shiftIso(value, deltaMs) {
@@ -87,6 +109,12 @@ function buildDemoState(sample) {
   return {
     ...sample,
     generated_at: shiftIso(sample.generated_at, deltaMs),
+    automation: {
+      ...(sample.automation ?? {}),
+      generated_at: shiftIso(sample.automation?.generated_at, deltaMs),
+      last_probe_success_at: shiftIso(sample.automation?.last_probe_success_at, deltaMs),
+      keepalive_updated_at: shiftIso(sample.automation?.keepalive_updated_at, deltaMs),
+    },
     status: {
       ...sample.status,
       generated_at: shiftIso(sample.status?.generated_at, deltaMs),
@@ -110,12 +138,19 @@ function buildDemoState(sample) {
         last_error_at: shiftIso(item.last_error_at, deltaMs),
       })),
     },
-    next_alerts: (sample.next_alerts ?? []).map((item) => ({
+    risk_blocks: (sample.risk_blocks ?? []).map((item) => ({
       ...item,
-      alert_at: shiftIso(item.alert_at, deltaMs),
-      scheduled_at: shiftIso(item.scheduled_at, deltaMs),
-      risk_window_starts_at: shiftIso(item.risk_window_starts_at, deltaMs),
-      risk_window_ends_at: shiftIso(item.risk_window_ends_at, deltaMs),
+      starts_at: shiftIso(item.starts_at, deltaMs),
+      ends_at: shiftIso(item.ends_at, deltaMs),
+      first_alert_at: shiftIso(item.first_alert_at, deltaMs),
+      last_event_at: shiftIso(item.last_event_at, deltaMs),
+      events: (item.events ?? []).map((event) => ({
+        ...event,
+        scheduled_at: shiftIso(event.scheduled_at, deltaMs),
+        alert_at: shiftIso(event.alert_at, deltaMs),
+        risk_window_starts_at: shiftIso(event.risk_window_starts_at, deltaMs),
+        risk_window_ends_at: shiftIso(event.risk_window_ends_at, deltaMs),
+      })),
     })),
     recent_events: (sample.recent_events ?? []).map((item) => ({
       ...item,
@@ -138,7 +173,6 @@ async function loadStateForMode(mode) {
       return DEFAULT_STATE;
     }
   }
-
   try {
     return await loadJson(LIVE_STATE_PATH);
   } catch {
@@ -155,6 +189,16 @@ function formatStamp(value) {
   return new Date(value).toLocaleString("es-MX", {
     dateStyle: "medium",
     timeStyle: "short",
+  });
+}
+
+function formatShortStamp(value) {
+  if (!value) return "Sin hora";
+  return new Date(value).toLocaleString("es-MX", {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
   });
 }
 
@@ -181,6 +225,11 @@ function escapeHtml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#39;");
+}
+
+function truncate(value, max = 140) {
+  const text = String(value ?? "");
+  return text.length <= max ? text : `${text.slice(0, max - 1)}...`;
 }
 
 function formatImpact(value) {
@@ -279,7 +328,7 @@ function updateControlLock() {
   $("run-sync").disabled = !hasToken;
   $("apply-settings").disabled = !hasToken;
   if (!hasToken) {
-    setFeedback("workflow-feedback", "Controles bloqueados hasta pegar un GitHub token valido.", "idle");
+    setFeedback("workflow-feedback", "Controles bloqueados hasta pegar un GitHub token con permisos de Actions.", "idle");
   }
 }
 
@@ -288,6 +337,8 @@ function fillSettingsForm(policy) {
   $("revalidate-minutes").value = policy.revalidate_minutes_before_alert ?? 2;
   $("result-delay").value = policy.result_check_delay_minutes ?? 1;
   $("timezone").value = policy.timezone ?? "America/Chihuahua";
+  const allCurrencies = !(policy.monitored_currencies ?? []).length;
+  $("all-currencies").checked = allCurrencies;
   $("currencies").value = (policy.monitored_currencies ?? []).join(",");
   $("risk-before").value = policy.risk_window_before_minutes ?? 15;
   $("risk-after").value = policy.risk_window_after_minutes ?? 15;
@@ -307,16 +358,26 @@ function fillSettingsForm(policy) {
   } else {
     $("allowed-impacts").value = "medium,high";
   }
+  $("currencies").disabled = allCurrencies;
 }
 
 function collectSettingsInputs() {
   const allowedImpacts = $("high-impact-only").checked ? "high" : $("allowed-impacts").value;
+  const allCurrencies = $("all-currencies").checked;
+  const currencies = $("currencies").value
+    .split(",")
+    .map((item) => item.trim().toUpperCase())
+    .filter(Boolean);
+  if (!allCurrencies && currencies.length === 0) {
+    throw new Error("Desactiva 'Todas las monedas' solo si indicas al menos una moneda en el CSV.");
+  }
   return {
     calendar_enabled: String($("calendar-enabled").checked),
     breaking_enabled: String($("breaking-enabled").checked),
     high_impact_only: String($("high-impact-only").checked),
+    all_currencies: String(allCurrencies),
     allowed_impacts: allowedImpacts,
-    currencies: $("currencies").value.trim(),
+    currencies: allCurrencies ? "" : currencies.join(","),
     lead_minutes: String($("lead-minutes").value || 15),
     revalidate_minutes_before_alert: String($("revalidate-minutes").value || 2),
     result_check_delay_minutes: String($("result-delay").value || 1),
@@ -328,15 +389,28 @@ function collectSettingsInputs() {
   };
 }
 
-function settingsNeedSyncNotice(inputs) {
-  const riskyKeys = [
-    "calendar_enabled",
-    "breaking_enabled",
-    "high_impact_only",
-    "allowed_impacts",
-    "currencies",
-  ];
-  return riskyKeys.some((key) => String(inputs[key] ?? "").trim() !== "");
+function settingsNeedSyncNotice(inputs, policy) {
+  const nextCurrencies = inputs.all_currencies === "true"
+    ? ""
+    : inputs.currencies
+      ? inputs.currencies.split(",").map((item) => item.trim()).filter(Boolean).join(",")
+      : "";
+  const currentCurrencies = (policy.monitored_currencies ?? []).join(",");
+  const nextAllowed = inputs.high_impact_only === "true" ? "high" : inputs.allowed_impacts;
+  const currentAllowed = policy.high_impact_only ? "high" : (policy.allowed_impacts ?? []).join(",");
+  return (
+    inputs.calendar_enabled !== String(Boolean(policy.calendar_enabled)) ||
+    inputs.breaking_enabled !== String(Boolean(policy.breaking_enabled)) ||
+    inputs.high_impact_only !== String(Boolean(policy.high_impact_only)) ||
+    nextAllowed !== currentAllowed ||
+    nextCurrencies !== currentCurrencies
+  );
+}
+
+function syncCurrencyInputState() {
+  const allCurrencies = $("all-currencies").checked;
+  $("currencies").disabled = allCurrencies;
+  $("currencies").placeholder = allCurrencies ? "Todas las monedas activas" : "USD,EUR,JPY";
 }
 
 async function dispatchWorkflow(workflowId, inputs = {}) {
@@ -369,7 +443,7 @@ async function dispatchWorkflow(workflowId, inputs = {}) {
 
   if (!response.ok) {
     const errorText = await response.text();
-    throw new Error(`GitHub API ${response.status}: ${errorText}`);
+    throw new Error(`GitHub API ${response.status}: ${truncate(errorText, 220)}`);
   }
 }
 
@@ -378,6 +452,36 @@ async function copySettingsPayload() {
   const text = JSON.stringify(payload, null, 2);
   await navigator.clipboard.writeText(text);
   setFeedback("settings-feedback", "Payload copiado al clipboard.", "ok");
+}
+
+function renderWorkflowStrip(state, mode) {
+  const automation = state.automation ?? DEFAULT_STATE.automation;
+  const workflow = state.workflow ?? DEFAULT_STATE.workflow;
+  const triggerTone = automation.schedule_confirmed ? "good" : "warn";
+  $("workflow-strip").innerHTML = `
+    <article class="workflow-card">
+      <div class="workflow-top">
+        <div>
+          <span class="label">Ultimo origen</span>
+          <h3>${escapeHtml(automation.trigger_label ?? workflow.event_label ?? "Local")}</h3>
+        </div>
+        <span class="pill ${escapeHtml(triggerTone)}">${automation.schedule_confirmed ? "Cron OK" : mode === "demo" ? "Demo" : "No cron"}</span>
+      </div>
+      <p class="workflow-copy">${escapeHtml(automation.status_copy ?? "Sin metadata de workflow.")}</p>
+      <div class="workflow-meta">
+        <span>Actor ${escapeHtml(workflow.actor ?? "N/D")}</span>
+        <span>Ref ${escapeHtml(workflow.ref_name ?? "N/D")}</span>
+        <span>Probe OK ${formatRelative(automation.last_probe_success_at)}</span>
+      </div>
+      <div class="workflow-actions">
+        ${
+          workflow.run_url
+            ? `<a class="action-link tiny" href="${escapeHtml(workflow.run_url)}" target="_blank" rel="noreferrer">Abrir run #${escapeHtml(workflow.run_number ?? workflow.run_id ?? "")}</a>`
+            : '<span class="tiny-note">Sin URL de run en este contexto.</span>'
+        }
+      </div>
+    </article>
+  `;
 }
 
 function bindActions(state) {
@@ -390,7 +494,7 @@ function bindActions(state) {
     try {
       setFeedback("workflow-feedback", "Disparando telegram-smoke-test...", "busy");
       await dispatchWorkflow("telegram-smoke-test.yml");
-      setFeedback("workflow-feedback", "Workflow telegram-smoke-test lanzado.", "ok");
+      setFeedback("workflow-feedback", "Workflow telegram-smoke-test lanzado. Revisa Actions y Telegram.", "ok");
     } catch (error) {
       setFeedback("workflow-feedback", error.message, "error");
     }
@@ -400,7 +504,7 @@ function bindActions(state) {
     try {
       setFeedback("workflow-feedback", "Disparando sync-and-publish...", "busy");
       await dispatchWorkflow("cron.yml");
-      setFeedback("workflow-feedback", "Workflow sync-and-publish lanzado.", "ok");
+      setFeedback("workflow-feedback", "Workflow sync-and-publish lanzado. El dashboard se actualizara al terminar.", "ok");
     } catch (error) {
       setFeedback("workflow-feedback", error.message, "error");
     }
@@ -410,13 +514,14 @@ function bindActions(state) {
     event.preventDefault();
     try {
       const inputs = collectSettingsInputs();
+      const needsSync = settingsNeedSyncNotice(inputs, state.policy_summary ?? DEFAULT_STATE.policy_summary);
       setFeedback("settings-feedback", "Aplicando settings via dashboard-control...", "busy");
       await dispatchWorkflow("dashboard-control.yml", inputs);
       setFeedback(
         "settings-feedback",
-        settingsNeedSyncNotice(inputs)
-          ? "Settings aplicados. Pages se actualizara al terminar, pero cambios de filtros/eventos se veran en Live hasta el siguiente Sync + Publish."
-          : "Workflow dashboard-control lanzado. Pages se actualizara al terminar.",
+        needsSync
+          ? "Settings aplicados. La UI se repinta al terminar, pero cambios de filtros y cobertura real se veran despues del siguiente Sync + Publish."
+          : "Workflow dashboard-control lanzado. El publish de Pages reflejara cambios al terminar.",
         "ok"
       );
     } catch (error) {
@@ -435,15 +540,19 @@ function bindActions(state) {
   $("high-impact-only").onchange = () => {
     $("allowed-impacts").disabled = $("high-impact-only").checked;
   };
+  $("all-currencies").onchange = () => syncCurrencyInputState();
 
   fillSettingsForm(state.policy_summary ?? DEFAULT_STATE.policy_summary);
   $("allowed-impacts").disabled = $("high-impact-only").checked;
+  syncCurrencyInputState();
   updateControlLock();
 }
 
 async function render(mode = detectMode()) {
   setMode(mode);
   const state = await loadStateForMode(mode);
+  const workflow = state.workflow ?? DEFAULT_STATE.workflow;
+  const automation = state.automation ?? DEFAULT_STATE.automation;
   const counts = state.counts ?? DEFAULT_STATE.counts;
   const policy = state.policy_summary ?? DEFAULT_STATE.policy_summary;
   const status = state.status ?? DEFAULT_STATE.status;
@@ -452,37 +561,39 @@ async function render(mode = detectMode()) {
   const currencyBreakdown = Array.isArray(state.currency_breakdown) ? state.currency_breakdown : [];
   const observabilityCards = Array.isArray(state.observability?.cards) ? state.observability.cards : [];
   const observabilityDiagnostics = Array.isArray(state.observability?.diagnostics) ? state.observability.diagnostics : [];
-  const nextAlerts = Array.isArray(state.next_alerts) ? state.next_alerts : [];
+  const riskBlocks = Array.isArray(state.risk_blocks) ? state.risk_blocks : [];
   const recentEvents = Array.isArray(state.recent_events) ? state.recent_events : [];
   const recentDispatches = Array.isArray(state.recent_dispatches) ? state.recent_dispatches : [];
   const freshness = freshnessMeta(state.generated_at);
   const currencies = policy.monitored_currencies?.length ? policy.monitored_currencies.join(", ") : "Todas";
 
-  document.getElementById("count-events").textContent = counts.relevant_events;
-  document.getElementById("count-schedules").textContent = counts.schedules;
-  document.getElementById("count-dispatches").textContent = counts.dispatches;
-  document.getElementById("count-currencies").textContent = counts.tracked_currencies || "ALL";
-  document.getElementById("currencies-copy").textContent = `Monitoreo: ${currencies}`;
-  document.getElementById("generated-at").textContent = `Actualizado ${formatStamp(state.generated_at)}`;
-  document.getElementById("freshness-pill").textContent = mode === "demo" ? "Demo listo" : freshness.label;
-  document.getElementById("freshness-pill").className = `status-pill ${mode === "demo" ? "fresh" : freshness.tone}`;
+  $("count-events").textContent = counts.relevant_events;
+  $("count-schedules").textContent = counts.schedules;
+  $("count-dispatches").textContent = counts.dispatches;
+  $("count-currencies").textContent = counts.tracked_currencies || "ALL";
+  $("currencies-copy").textContent = `Cobertura: ${currencies}`;
+  $("generated-at").textContent = `Actualizado ${formatStamp(state.generated_at)}`;
+  $("freshness-pill").textContent = mode === "demo" ? "Demo listo" : freshness.label;
+  $("freshness-pill").className = `status-pill ${mode === "demo" ? "fresh" : freshness.tone}`;
 
-  document.getElementById("status-next-alert").textContent = formatStamp(status.next_alert_at);
-  document.getElementById("status-next-alert-rel").textContent = formatRelative(status.next_alert_at);
-  document.getElementById("status-next-event").textContent = formatStamp(status.next_event_at);
-  document.getElementById("status-next-event-rel").textContent = formatRelative(status.next_event_at);
-  document.getElementById("status-last-dispatch").textContent = formatStamp(status.last_dispatch_at);
-  document.getElementById("status-last-dispatch-rel").textContent = formatRelative(status.last_dispatch_at);
-  document.getElementById("status-keepalive").textContent = formatStamp(status.keepalive_updated_at);
-  document.getElementById("status-keepalive-rel").textContent = formatRelative(status.keepalive_updated_at);
+  $("status-next-alert").textContent = formatStamp(status.next_alert_at);
+  $("status-next-alert-rel").textContent = formatRelative(status.next_alert_at);
+  $("status-next-event").textContent = formatStamp(status.next_event_at);
+  $("status-next-event-rel").textContent = formatRelative(status.next_event_at);
+  $("status-last-dispatch").textContent = formatStamp(status.last_dispatch_at);
+  $("status-last-dispatch-rel").textContent = formatRelative(status.last_dispatch_at);
+  $("status-keepalive").textContent = formatStamp(status.keepalive_updated_at);
+  $("status-keepalive-rel").textContent = formatRelative(status.keepalive_updated_at);
 
-  document.getElementById("policy-chips").innerHTML = [
+  $("policy-chips").innerHTML = [
     `<span class="chip">${escapeHtml(policy.timezone)}</span>`,
     `<span class="chip">${policy.lead_minutes}m lead</span>`,
     `<span class="chip">${policy.include_results ? "Resultados on" : "Resultados off"}</span>`,
     `<span class="chip">${policy.daily_summary_enabled ? "Daily on" : "Daily off"}</span>`,
-    `<span class="chip">${mode === "demo" ? "Visual demo" : "Estado live"}</span>`,
+    `<span class="chip">${mode === "demo" ? "Visual demo" : escapeHtml(workflow.event_label ?? "Estado live")}</span>`,
   ].join("");
+
+  renderWorkflowStrip({ automation, workflow }, mode);
 
   renderList(
     $("observability-cards"),
@@ -491,66 +602,79 @@ async function render(mode = detectMode()) {
       <article class="card observability-card">
         <div class="card-top">
           <div>
-            <h3>${formatObservabilityLabel(item.key)}</h3>
-            <div class="meta">${escapeHtml(item.note ?? "Sin nota")}</div>
+            <span class="micro-label">${formatObservabilityLabel(item.key)}</span>
+            <h3>${escapeHtml(item.note ?? "Sin nota")}</h3>
           </div>
           <span class="pill obs-pill ${escapeHtml(item.status)}">${escapeHtml(formatObservabilityStatus(item.status))}</span>
         </div>
+        <div class="meta">${escapeHtml(item.hint ?? "Sin hint")}</div>
         <div class="detail-row">
           <span>Intento ${formatRelative(item.last_attempt_at)}</span>
           <span>Exito ${formatRelative(item.last_success_at)}</span>
-          <span>Fallos ${escapeHtml(item.consecutive_failures ?? 0)}</span>
+          <span>Racha ${escapeHtml(item.consecutive_failures ?? 0)}</span>
         </div>
       </article>
     `,
-    "Sin observabilidad"
+    "Sin observabilidad publicada"
   );
 
   renderList(
     $("observability-diagnostics"),
     observabilityDiagnostics,
     (item) => `
-      <article class="card">
+      <article class="card diagnostic-card">
         <div class="card-top">
           <div>
-            <h3>${formatObservabilityLabel(item.key)}</h3>
-            <div class="meta">Ultimo intento ${formatStamp(item.last_attempt_at)} · Ultimo exito ${formatStamp(item.last_success_at)}</div>
+            <span class="micro-label">${formatObservabilityLabel(item.key)}</span>
+            <h3>${escapeHtml(formatObservabilityStatus(item.status))}</h3>
           </div>
-          <span class="mini-pill obs-badge ${escapeHtml(item.status)}">${escapeHtml(formatObservabilityStatus(item.status))}</span>
+          <span class="mini-pill obs-badge ${escapeHtml(item.status)}">${item.stale_minutes == null ? "N/D" : `${escapeHtml(item.stale_minutes)}m`}</span>
         </div>
+        <div class="meta">Ultimo intento ${formatStamp(item.last_attempt_at)} · Ultimo exito ${formatStamp(item.last_success_at)}</div>
+        <p class="diagnostic-copy">${escapeHtml(truncate(item.summary ?? item.last_error_message ?? "Sin diagnostico.", 180))}</p>
         <div class="detail-row">
           <span>Error ${formatStamp(item.last_error_at)}</span>
-          <span>Racha ${escapeHtml(item.consecutive_failures ?? 0)}</span>
-          <span>${escapeHtml(item.last_error_message ?? "Sin error registrado")}</span>
+          <span>Fallos ${escapeHtml(item.consecutive_failures ?? 0)}</span>
         </div>
       </article>
     `,
-    "Sin diagnosticos"
+    "Sin diagnosticos utiles"
   );
 
   renderList(
-    $("next-alerts"),
-    nextAlerts,
-    (item) => `
-      <article class="alert-card">
-        <div class="alert-card-top">
-          <div class="alert-copy">
+    $("risk-blocks"),
+    riskBlocks,
+    (block) => `
+      <article class="risk-card">
+        <div class="risk-top">
+          <div>
             <div class="inline-meta">
-              <span class="mini-pill">${escapeHtml(item.currency)}</span>
-              <span class="mini-pill tone-impact">${formatImpact(item.impact)}</span>
-              <span class="mini-pill tone-muted">${formatKind(item.alert_kind)}</span>
+              <span class="mini-pill tone-impact">${formatImpact(block.dominant_impact)}</span>
+              <span class="mini-pill">${escapeHtml(block.currencies.join(", "))}</span>
+              <span class="mini-pill">${escapeHtml(block.event_count)} evento(s)</span>
             </div>
-            <h3>${escapeHtml(item.title)}</h3>
-            <div class="meta">Evento ${formatStamp(item.scheduled_at)} - ventana ${formatStamp(item.risk_window_starts_at)} a ${formatStamp(item.risk_window_ends_at)}</div>
+            <h3>${block.event_count === 1 ? escapeHtml(block.events[0].title) : `${escapeHtml(block.event_count)} eventos bajo una sola ventana de riesgo`}</h3>
+            <div class="meta">Alerta inicial ${formatShortStamp(block.first_alert_at)} · Ventana ${formatShortStamp(block.starts_at)} a ${formatShortStamp(block.ends_at)}</div>
           </div>
-          <div class="alert-timing">
-            <span class="pill">${formatRelative(item.alert_at)}</span>
-            <small>${formatStamp(item.alert_at)}</small>
+          <div class="risk-timing">
+            <span class="pill">${formatRelative(block.first_alert_at)}</span>
+            <small>${formatStamp(block.last_event_at)}</small>
           </div>
+        </div>
+        <div class="risk-event-list">
+          ${(block.events ?? []).slice(0, 4).map((event) => `
+            <div class="risk-event-row">
+              <span class="risk-flag">${escapeHtml(event.currency)}</span>
+              <div>
+                <strong>${escapeHtml(event.title)}</strong>
+                <small>${formatShortStamp(event.scheduled_at)} · ${formatImpact(event.impact)}</small>
+              </div>
+            </div>
+          `).join("")}
         </div>
       </article>
     `,
-    "Sin alertas proximas"
+    "Sin bloques de riesgo proximos"
   );
 
   renderList(
@@ -558,11 +682,11 @@ async function render(mode = detectMode()) {
     [
       `Calendario ${policy.calendar_enabled ? "activo" : "pausado"}`,
       `Breaking ${policy.breaking_enabled ? "activo" : "pausado"}`,
-      policy.high_impact_only ? "Solo alto impacto" : "Impacto flexible",
+      policy.high_impact_only ? "Solo alto impacto" : `Impacts ${policy.allowed_impacts?.join(", ") ?? "flexibles"}`,
       `Precheck ${policy.revalidate_minutes_before_alert}m antes`,
       `Result check ${policy.result_check_delay_minutes}m despues`,
       `Riesgo ${policy.risk_window_before_minutes ?? 15}m antes / ${policy.risk_window_after_minutes ?? 15}m despues`,
-      `Monedas: ${currencies}`,
+      `Monedas ${currencies}`,
     ],
     (item) => `<article class="card compact-card"><h3>${escapeHtml(item)}</h3></article>`,
     "Sin policy"
@@ -618,7 +742,7 @@ async function render(mode = detectMode()) {
         <div class="card-top">
           <div>
             <h3>${escapeHtml(item.title)}</h3>
-            <div class="meta">${escapeHtml(item.event_id)} - ${escapeHtml(item.currency)} - ${formatImpact(item.impact)} - ${formatStamp(item.scheduled_at)}</div>
+            <div class="meta">${escapeHtml(item.event_id)} · ${escapeHtml(item.currency)} · ${formatImpact(item.impact)} · ${formatStamp(item.scheduled_at)}</div>
           </div>
           ${item.is_breaking ? '<span class="mini-pill tone-alert">Breaking</span>' : ""}
         </div>
@@ -639,14 +763,31 @@ async function render(mode = detectMode()) {
       <article class="card">
         <div class="card-top">
           <div>
-            <h3>${formatKind(item.kind)} - ${escapeHtml(item.event_id)}</h3>
-            <div class="meta">${formatStamp(item.sent_at)} - canal ${escapeHtml(item.channel)}</div>
+            <h3>${formatKind(item.kind)} · ${escapeHtml(item.event_id)}</h3>
+            <div class="meta">${formatStamp(item.sent_at)} · canal ${escapeHtml(item.channel)}</div>
           </div>
-          <span class="mini-pill tone-muted">#${escapeHtml(item.attempt ?? 1)}</span>
+          <span class="mini-pill">#${escapeHtml(item.attempt ?? 1)}</span>
+        </div>
+        <div class="detail-row">
+          <span>Programado ${formatStamp(item.scheduled_for)}</span>
+          <span>Enviado ${formatRelative(item.sent_at)}</span>
         </div>
       </article>
     `,
     "Sin dispatches"
+  );
+
+  renderList(
+    $("control-boundary"),
+    [
+      automation.operator_model ?? "Sin nota de control.",
+      automation.schedule_confirmed
+        ? "La ultima publicacion vino de cron GitHub, no de disparo manual."
+        : "La ultima publicacion no prueba por si sola una corrida programada; revisa trigger y run URL.",
+      "Hoy cualquier operador con token y approval puede tocar smoke, sync y settings. No existe split interno por rol.",
+    ],
+    (item) => `<article class="card compact-card"><h3>${escapeHtml(item)}</h3></article>`,
+    "Sin boundary info"
   );
 
   bindActions(state);
@@ -656,6 +797,6 @@ fillGithubPrefs();
 render().catch((error) => {
   document.body.insertAdjacentHTML(
     "beforeend",
-    `<pre style="padding:24px;color:#ffccaa;background:#1b1111">${escapeHtml(error.message)}</pre>`
+    `<section class="fatal-shell"><article class="fatal-card"><p class="eyebrow">Render failure</p><h2>No se pudo pintar el dashboard</h2><p>${escapeHtml(error.message)}</p></article></section>`
   );
 });

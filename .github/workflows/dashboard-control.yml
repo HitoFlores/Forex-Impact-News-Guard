@@ -21,6 +21,12 @@ on:
         default: "true"
         type: choice
         options: ["true", "false"]
+      all_currencies:
+        description: "Monitorear todas las monedas"
+        required: true
+        default: "true"
+        type: choice
+        options: ["true", "false"]
       allowed_impacts:
         description: "Impacts permitidos si high_impact_only=false"
         required: false
@@ -107,6 +113,7 @@ jobs:
           INPUT_CALENDAR_ENABLED: ${{ inputs.calendar_enabled }}
           INPUT_BREAKING_ENABLED: ${{ inputs.breaking_enabled }}
           INPUT_HIGH_IMPACT_ONLY: ${{ inputs.high_impact_only }}
+          INPUT_ALL_CURRENCIES: ${{ inputs.all_currencies }}
           INPUT_ALLOWED_IMPACTS: ${{ inputs.allowed_impacts }}
           INPUT_CURRENCIES: ${{ inputs.currencies }}
           INPUT_LEAD_MINUTES: ${{ inputs.lead_minutes }}

@@ -18,6 +18,7 @@ def test_build_policy_from_env_parses_dashboard_inputs(monkeypatch) -> None:
     monkeypatch.setenv("INPUT_CALENDAR_ENABLED", "true")
     monkeypatch.setenv("INPUT_BREAKING_ENABLED", "false")
     monkeypatch.setenv("INPUT_HIGH_IMPACT_ONLY", "false")
+    monkeypatch.setenv("INPUT_ALL_CURRENCIES", "false")
     monkeypatch.setenv("INPUT_CURRENCIES", "usd, eur , jpy")
     monkeypatch.setenv("INPUT_LEAD_MINUTES", "25")
     monkeypatch.setenv("INPUT_REVALIDATE_MINUTES_BEFORE_ALERT", "4")
@@ -52,8 +53,36 @@ def test_build_policy_from_env_defaults_to_all_impacts_when_not_high_only(
     monkeypatch.setattr(apply_dashboard_settings, "STATE_DIR", tmp_path)
     monkeypatch.setattr(apply_dashboard_settings, "SETTINGS_PATH", tmp_path / "settings.json")
     monkeypatch.setenv("INPUT_HIGH_IMPACT_ONLY", "false")
+    monkeypatch.setenv("INPUT_ALL_CURRENCIES", "true")
     monkeypatch.delenv("INPUT_ALLOWED_IMPACTS", raising=False)
 
     policy = apply_dashboard_settings.build_policy_from_env()
 
     assert [impact.value for impact in policy.allowed_impacts or []] == ["low", "medium", "high"]
+
+
+def test_build_policy_from_env_uses_empty_currencies_for_all_currencies(monkeypatch) -> None:
+    tmp_path = _sandbox_tmp_dir()
+    monkeypatch.setattr(apply_dashboard_settings, "STATE_DIR", tmp_path)
+    monkeypatch.setattr(apply_dashboard_settings, "SETTINGS_PATH", tmp_path / "settings.json")
+    monkeypatch.setenv("INPUT_ALL_CURRENCIES", "true")
+    monkeypatch.setenv("INPUT_CURRENCIES", "")
+
+    policy = apply_dashboard_settings.build_policy_from_env()
+
+    assert policy.currencies == []
+
+
+def test_build_policy_from_env_rejects_empty_currency_list_when_not_all(monkeypatch) -> None:
+    tmp_path = _sandbox_tmp_dir()
+    monkeypatch.setattr(apply_dashboard_settings, "STATE_DIR", tmp_path)
+    monkeypatch.setattr(apply_dashboard_settings, "SETTINGS_PATH", tmp_path / "settings.json")
+    monkeypatch.setenv("INPUT_ALL_CURRENCIES", "false")
+    monkeypatch.setenv("INPUT_CURRENCIES", "   ")
+
+    try:
+        apply_dashboard_settings.build_policy_from_env()
+    except ValueError as error:
+        assert "all_currencies=false" in str(error)
+    else:
+        raise AssertionError("Expected ValueError for empty currencies when all_currencies is false")

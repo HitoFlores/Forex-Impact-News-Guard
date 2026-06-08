@@ -5,34 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
   <title>Forex Impact News Guard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="page">
-    <section class="masthead">
-      <div class="hero-copy panel">
+    <section class="hero-shell">
+      <article class="panel hero-panel">
         <div class="hero-band">
           <p class="eyebrow">Forex Impact News Guard</p>
           <div class="desk-strip">
-            <span>Macro Risk Desk</span>
-            <span>Pages Control Surface</span>
-            <span>No persistent backend</span>
+            <span>Macro risk desk</span>
+            <span>GitHub Pages surface</span>
+            <span>Workflow driven ops</span>
           </div>
         </div>
-        <h1>Desk operativo para riesgo macro y control remoto.</h1>
+        <h1>Control desk para vigilar cron, riesgo macro y ejecucion remota sin backend persistente.</h1>
         <p class="lede">
-          Panel Pages para leer salud real, simular demo visual, disparar workflows y ajustar policy
-          basica sin dejar vivo un backend.
+          Esta superficie junta tres lecturas en un solo lugar: salud real del pipeline, bloques de riesgo consolidados
+          y controles remotos para Telegram, sync y policy basica.
         </p>
-        <div class="hero-footnote">
-          <span class="hero-line"></span>
-          <p>Lectura publica, acciones sensibles acotadas por GitHub token y approvals de environment.</p>
-        </div>
         <div class="toolbar">
           <div class="mode-switch-wrap">
             <div class="toolbar-label">
               <span>Modo de datos</span>
-              <button class="help-dot" type="button" data-tooltip="Live muestra ultimo estado real publicado por GitHub Actions. Demo carga datos sample para enseñar UI y flujo visual sin esperar noticias reales.">?</button>
+              <button class="help-dot" type="button" data-tooltip="Live muestra ultimo estado real publicado por GitHub Actions. Demo carga un snapshot sample para ensenar la interfaz sin esperar noticias reales.">?</button>
             </div>
             <div class="mode-switch" role="tablist" aria-label="Modo de datos">
               <button id="mode-live" class="mode-toggle is-active" type="button">Live</button>
@@ -41,13 +40,13 @@
           </div>
           <div id="policy-chips" class="chip-row"></div>
         </div>
-      </div>
+      </article>
 
-      <aside class="ops-rail panel">
+      <aside class="panel command-panel">
         <div class="ops-head">
           <div>
             <span id="freshness-pill" class="status-pill">Cargando</span>
-            <p id="mode-copy" class="rail-copy">Leyendo estado</p>
+            <p id="mode-copy" class="rail-copy">Leyendo estado publicado</p>
           </div>
           <span id="generated-at" class="stamp"></span>
         </div>
@@ -70,41 +69,53 @@
           <article class="ops-stat">
             <span class="label">Keepalive</span>
             <strong id="status-keepalive">Sin datos</strong>
-            <small id="status-keepalive-rel">Manual mensual</small>
+            <small id="status-keepalive-rel">Heartbeat mensual</small>
           </article>
         </div>
+        <div id="workflow-strip" class="workflow-strip"></div>
       </aside>
     </section>
 
     <section class="metrics-grid">
-      <article class="metric metric-primary panel">
+      <article class="metric panel metric-major">
         <span class="label">Eventos relevantes</span>
         <strong id="count-events">0</strong>
-        <p>Calendario filtrado listo para precheck y alertas.</p>
+        <p>Universo activo listo para calendar, precheck y alertas.</p>
       </article>
-      <article class="metric metric-secondary panel">
+      <article class="metric panel">
         <span class="label">Checks programados</span>
         <strong id="count-schedules">0</strong>
-        <p>Precheck, alert y result-check vigentes.</p>
+        <p>Alerts y result checks vigentes en el snapshot actual.</p>
       </article>
-      <article class="metric metric-accent panel">
+      <article class="metric panel">
         <span class="label">Dispatches</span>
         <strong id="count-dispatches">0</strong>
-        <p>Ledger para evitar duplicados y ver actividad.</p>
+        <p>Ledger corto para entender actividad reciente del bot.</p>
       </article>
-      <article class="metric metric-muted panel">
+      <article class="metric panel metric-tail">
         <span class="label">Monedas</span>
         <strong id="count-currencies">0</strong>
         <p id="currencies-copy">Sin filtros activos.</p>
       </article>
     </section>
 
-    <section class="observability-layout">
+    <section class="board-grid">
+      <section class="panel panel-span-2">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">Radar</p>
+            <h2>Bloques de riesgo consolidados</h2>
+          </div>
+          <span class="stamp">Agrupado por superposicion de ventana</span>
+        </div>
+        <div id="risk-blocks" class="risk-grid"></div>
+      </section>
+
       <section class="panel">
         <div class="panel-head">
           <div>
             <p class="section-kicker">Health</p>
-            <h2>Observabilidad operacional</h2>
+            <h2>Observabilidad</h2>
           </div>
           <span class="stamp">Scraping / Telegram / Precheck</span>
         </div>
@@ -115,82 +126,37 @@
         <div class="panel-head">
           <div>
             <p class="section-kicker">Diagnostics</p>
-            <h2>Linea de diagnostico</h2>
+            <h2>Ultima senal util</h2>
           </div>
-          <span class="stamp">Ultimo intento y ultimo error</span>
+          <span class="stamp">Error, racha y stale time</span>
         </div>
         <div id="observability-diagnostics" class="stack compact"></div>
       </section>
-    </section>
-
-    <section class="content-grid">
-      <section class="panel panel-wide">
-        <div class="panel-head">
-          <div>
-            <p class="section-kicker">Radar</p>
-            <h2>Proximas ventanas de riesgo</h2>
-          </div>
-          <span class="stamp">Ordenado por alert_at</span>
-        </div>
-        <div id="next-alerts" class="alert-grid"></div>
-      </section>
 
       <section class="panel">
         <div class="panel-head">
           <div>
-            <p class="section-kicker">Security</p>
-            <h2>Acceso y riesgo</h2>
+            <p class="section-kicker">Control</p>
+            <h2>Centro de operaciones</h2>
           </div>
-          <span class="stamp">Importante</span>
-        </div>
-        <div class="security-stack">
-          <article class="security-card security-warn">
-            <h3>Pages publica no puede ocultar contenido real</h3>
-            <p>
-              Este dashboard vive en GitHub Pages publica. Eso significa que cualquier persona con la URL puede ver el HTML, CSS, JS y el estado publicado.
-              Lo que si podemos proteger aqui son las acciones sensibles.
-            </p>
-          </article>
-          <article class="security-card">
-            <h3>Que si queda protegido</h3>
-            <p>
-              Cambiar settings o disparar Telegram requiere un token GitHub valido y, si configuras reviewers en el environment <code>ops-control</code>,
-              ademas requerira aprobacion manual en GitHub antes de ejecutarse.
-            </p>
-          </article>
-          <article class="security-card">
-            <h3>Si quieres ocultar dashboard completo</h3>
-            <p>
-              Eso ya no se resuelve solo con frontend. Necesitas mover esta UI a un sitio con auth real o ponerla detras de una capa tipo Cloudflare Access.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel">
-        <div class="panel-head">
-            <div>
-              <p class="section-kicker">Control</p>
-              <h2>Centro de operaciones</h2>
-            </div>
-          <span class="stamp">GitHub API</span>
+          <span class="stamp">GitHub Actions API</span>
         </div>
         <form id="github-control-form" class="control-form">
           <div class="form-grid">
             <label>
-              <span>Owner <button class="help-dot inline-help" type="button" data-tooltip="Usuario u organizacion dueña del repo en GitHub. Ejemplo: HitoFlores.">?</button></span>
+              <span>Owner <button class="help-dot inline-help" type="button" data-tooltip="Usuario u organizacion duena del repo en GitHub.">?</button></span>
               <input id="gh-owner" name="owner" type="text" value="HitoFlores" autocomplete="off">
             </label>
             <label>
-              <span>Repo <button class="help-dot inline-help" type="button" data-tooltip="Nombre exacto del repositorio donde viven los workflows y Pages.">?</button></span>
+              <span>Repo <button class="help-dot inline-help" type="button" data-tooltip="Nombre exacto del repositorio que contiene workflows y Pages.">?</button></span>
               <input id="gh-repo" name="repo" type="text" value="Forex-Impact-News-Guard" autocomplete="off">
             </label>
             <label>
-              <span>Branch <button class="help-dot inline-help" type="button" data-tooltip="Rama sobre la que se disparan los workflows. Normalmente main.">?</button></span>
+              <span>Branch <button class="help-dot inline-help" type="button" data-tooltip="Rama objetivo para workflow_dispatch. Normalmente main.">?</button></span>
               <input id="gh-branch" name="branch" type="text" value="main" autocomplete="off">
             </label>
             <label class="span-2">
-              <span>GitHub token <button class="help-dot inline-help" type="button" data-tooltip="PAT fine-grained o token equivalente con permiso para Actions en este repo. Sin token nadie puede ejecutar workflows desde esta pagina.">?</button></span>
+              <span>GitHub token <button class="help-dot inline-help" type="button" data-tooltip="PAT con permiso para ejecutar workflows. El token solo vive en esta sesion si activas remember.">?</button></span>
               <input id="gh-token" name="token" type="password" placeholder="Fine-grained PAT con Actions write">
             </label>
           </div>
@@ -198,7 +164,7 @@
           <div class="checkbox-row">
             <label class="check">
               <input id="gh-remember" name="remember" type="checkbox">
-              <span>Guardar repo en navegador y token solo en esta sesion <button class="help-dot inline-help" type="button" data-tooltip="Owner, repo y branch se guardan en localStorage. El token ya no se guarda permanente: solo vive en esta pestaña/sesion para reducir riesgo en una pagina publica.">?</button></span>
+              <span>Guardar repo en navegador y token solo en esta sesion <button class="help-dot inline-help" type="button" data-tooltip="Owner, repo y branch van a localStorage. El token solo queda en sessionStorage para reducir riesgo en una pagina publica.">?</button></span>
             </label>
           </div>
 
@@ -208,14 +174,11 @@
             <a class="action-link" href="https://github.com/HitoFlores/Forex-Impact-News-Guard/actions" target="_blank" rel="noreferrer">Abrir Actions</a>
           </div>
 
-          <p class="form-note">
-            Pages es estatico. Para ejecutar acciones remotas este panel usa GitHub Actions via API desde tu navegador.
-          </p>
           <div class="help-list">
-            <div class="help-line"><strong>Smoke Telegram</strong><span>Dispara mensajes sample reales a tu chat para validar canal y formato sin esperar noticias.</span></div>
-            <div class="help-line"><strong>Sync + Publish</strong><span>Corre sync real, reconstruye `state.json` y vuelve a publicar Pages.</span></div>
+            <div class="help-line"><strong>Smoke Telegram</strong><span>Dispara mensajes sample reales para validar bot, chat_id y formato sin esperar noticias.</span></div>
+            <div class="help-line"><strong>Sync + Publish</strong><span>Corre worker productivo, reconstruye dashboard y vuelve a publicar Pages.</span></div>
           </div>
-          <div id="workflow-feedback" class="feedback idle">Listo para disparar workflows.</div>
+          <div id="workflow-feedback" class="feedback idle">Controles listos.</div>
         </form>
       </section>
 
@@ -225,7 +188,7 @@
             <p class="section-kicker">Policy</p>
             <h2>Settings basicos</h2>
           </div>
-          <span class="stamp">dashboard-control.yml</span>
+          <span class="stamp">workflow dashboard-control</span>
         </div>
         <form id="settings-form" class="control-form">
           <div class="form-grid">
@@ -234,31 +197,31 @@
               <input id="lead-minutes" name="lead_minutes" type="number" min="0" max="240">
             </label>
             <label>
-              <span>Precheck min <button class="help-dot inline-help" type="button" data-tooltip="Minutos antes del alert en que se revalida el evento para evitar avisos con datos viejos.">?</button></span>
+              <span>Precheck min <button class="help-dot inline-help" type="button" data-tooltip="Minutos antes del alert en que se revalida el evento.">?</button></span>
               <input id="revalidate-minutes" name="revalidate_minutes_before_alert" type="number" min="0" max="60">
             </label>
             <label>
-              <span>Result delay <button class="help-dot inline-help" type="button" data-tooltip="Cuantos minutos despues del release se intenta leer y mandar resultado.">?</button></span>
+              <span>Result delay <button class="help-dot inline-help" type="button" data-tooltip="Minutos despues del release para leer resultado.">?</button></span>
               <input id="result-delay" name="result_check_delay_minutes" type="number" min="0" max="60">
             </label>
             <label>
-              <span>Timezone <button class="help-dot inline-help" type="button" data-tooltip="Zona horaria usada para calcular ventanas, horarios y textos mostrados.">?</button></span>
+              <span>Timezone <button class="help-dot inline-help" type="button" data-tooltip="Zona horaria IANA usada para ventanas y textos.">?</button></span>
               <input id="timezone" name="timezone" type="text">
             </label>
             <label class="span-2">
-              <span>Monedas CSV <button class="help-dot inline-help" type="button" data-tooltip="Lista separada por comas. Ejemplo: USD,EUR,JPY. Vacio = todas las monedas.">?</button></span>
+              <span>Monedas CSV <button class="help-dot inline-help" type="button" data-tooltip="Lista CSV usada solo cuando Todas las monedas esta apagado. Ejemplo: USD,EUR,JPY.">?</button></span>
               <input id="currencies" name="currencies" type="text" placeholder="USD,EUR,JPY">
             </label>
             <label>
-              <span>Risk before <button class="help-dot inline-help" type="button" data-tooltip="Minutos antes del evento considerados dentro de ventana de riesgo.">?</button></span>
+              <span>Risk before <button class="help-dot inline-help" type="button" data-tooltip="Minutos antes del evento dentro de ventana de riesgo.">?</button></span>
               <input id="risk-before" name="risk_window_before_minutes" type="number" min="0" max="240">
             </label>
             <label>
-              <span>Risk after <button class="help-dot inline-help" type="button" data-tooltip="Minutos despues del evento que siguen marcados como riesgo para trading.">?</button></span>
+              <span>Risk after <button class="help-dot inline-help" type="button" data-tooltip="Minutos despues del evento dentro de ventana de riesgo.">?</button></span>
               <input id="risk-after" name="risk_window_after_minutes" type="number" min="0" max="240">
             </label>
             <label>
-              <span>Impacts <button class="help-dot inline-help" type="button" data-tooltip="Define impactos permitidos cuando 'Solo high' esta apagado.">?</button></span>
+              <span>Impacts <button class="help-dot inline-help" type="button" data-tooltip="Define impactos permitidos cuando Solo high esta apagado.">?</button></span>
               <select id="allowed-impacts" name="allowed_impacts">
                 <option value="high">Solo high</option>
                 <option value="medium,high">Medium + high</option>
@@ -268,11 +231,12 @@
           </div>
 
           <div class="toggle-grid">
-            <label class="check"><input id="calendar-enabled" name="calendar_enabled" type="checkbox"><span>Calendario <button class="help-dot inline-help" type="button" data-tooltip="Si lo apagas, el bot deja de usar eventos programados del calendario economico.">?</button></span></label>
-            <label class="check"><input id="breaking-enabled" name="breaking_enabled" type="checkbox"><span>Breaking <button class="help-dot inline-help" type="button" data-tooltip="Activa o pausa noticias no programadas detectadas como breaking news.">?</button></span></label>
-            <label class="check"><input id="daily-summary-enabled" name="daily_summary_enabled" type="checkbox"><span>Daily <button class="help-dot inline-help" type="button" data-tooltip="Activa mensaje diario resumen, incluso si no hay noticias relevantes.">?</button></span></label>
-            <label class="check"><input id="include-results" name="include_results" type="checkbox"><span>Resultados <button class="help-dot inline-help" type="button" data-tooltip="Si esta activo, el bot intenta mandar lectura post-release con actual/forecast/previous.">?</button></span></label>
-            <label class="check"><input id="high-impact-only" name="high_impact_only" type="checkbox"><span>Solo high <button class="help-dot inline-help" type="button" data-tooltip="Filtra solo eventos de alto impacto y desactiva selector de impactos.">?</button></span></label>
+            <label class="check"><input id="all-currencies" name="all_currencies" type="checkbox"><span>Todas las monedas <button class="help-dot inline-help" type="button" data-tooltip="Si esta activo, se monitorean todas las monedas y el textbox CSV queda desactivado.">?</button></span></label>
+            <label class="check"><input id="calendar-enabled" name="calendar_enabled" type="checkbox"><span>Calendario <button class="help-dot inline-help" type="button" data-tooltip="Si se apaga, el bot deja de usar eventos programados del calendario.">?</button></span></label>
+            <label class="check"><input id="breaking-enabled" name="breaking_enabled" type="checkbox"><span>Breaking <button class="help-dot inline-help" type="button" data-tooltip="Activa o pausa noticias no programadas.">?</button></span></label>
+            <label class="check"><input id="daily-summary-enabled" name="daily_summary_enabled" type="checkbox"><span>Daily <button class="help-dot inline-help" type="button" data-tooltip="Manda resumen diario incluso si no hay eventos relevantes.">?</button></span></label>
+            <label class="check"><input id="include-results" name="include_results" type="checkbox"><span>Resultados <button class="help-dot inline-help" type="button" data-tooltip="Intenta mandar lectura post-release con actual, forecast y previous.">?</button></span></label>
+            <label class="check"><input id="high-impact-only" name="high_impact_only" type="checkbox"><span>Solo high <button class="help-dot inline-help" type="button" data-tooltip="Fuerza filtro solo alto impacto y desactiva selector de impactos.">?</button></span></label>
           </div>
 
           <div class="action-row">
@@ -281,12 +245,23 @@
           </div>
 
           <div class="help-list">
-            <div class="help-line"><strong>Aplicar settings</strong><span>Lanza workflow `dashboard-control`, actualiza `.state/settings.json` y repinta Pages.</span></div>
-            <div class="help-line"><strong>Importante</strong><span>Cambios de filtros como monedas, impactos, calendario o breaking no rehacen eventos al instante. Se reflejan en `Live` hasta el siguiente `Sync + Publish`.</span></div>
-            <div class="help-line"><strong>Copiar payload</strong><span>Copia el input exacto del workflow para debug o respaldo antes de aplicar cambios.</span></div>
+            <div class="help-line"><strong>Aplicar settings</strong><span>Lanza workflow remoto y actualiza .state/settings.json al terminar.</span></div>
+            <div class="help-line"><strong>Importante</strong><span>Filtros de calendario, impactos y monedas no rehacen eventos instantaneamente. Su efecto se refleja en Live tras siguiente Sync + Publish.</span></div>
+            <div class="help-line"><strong>Copiar payload</strong><span>Guarda el input exacto del workflow antes de hacer cambios sensibles.</span></div>
           </div>
           <div id="settings-feedback" class="feedback idle">Cargando policy actual.</div>
         </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">Boundary</p>
+            <h2>Modelo de control</h2>
+          </div>
+          <span class="stamp">Sin split operador/admin aun</span>
+        </div>
+        <div id="control-boundary" class="stack compact"></div>
       </section>
 
       <section class="panel">
@@ -304,42 +279,10 @@
         <div class="panel-head">
           <div>
             <p class="section-kicker">Mode</p>
-            <h2>Resumen operativo</h2>
+            <h2>Resumen de policy</h2>
           </div>
         </div>
         <div id="policy-summary" class="stack"></div>
-      </section>
-
-      <section class="panel">
-        <div class="panel-head">
-          <div>
-            <p class="section-kicker">Demo</p>
-            <h2>Runbook corto</h2>
-          </div>
-        </div>
-        <div class="runbook">
-          <article class="runbook-step">
-            <span>01</span>
-            <div>
-              <h3>Demo visual</h3>
-              <p>Cambia a <code>Demo</code> para mostrar ventanas, eventos y ledger sample en cualquier momento.</p>
-            </div>
-          </article>
-          <article class="runbook-step">
-            <span>02</span>
-            <div>
-              <h3>Demo Telegram</h3>
-              <p>Usa <code>Smoke Telegram</code> para mandar mensajes reales sample sin esperar noticias.</p>
-            </div>
-          </article>
-          <article class="runbook-step">
-            <span>03</span>
-            <div>
-              <h3>Ajuste remoto</h3>
-              <p>Aplica policy basica con <code>Aplicar settings</code>; workflow actualiza <code>.state/settings.json</code> y repinta Pages. Si cambias filtros de eventos, el efecto real llega tras siguiente <code>Sync + Publish</code>.</p>
-            </div>
-          </article>
-        </div>
       </section>
 
       <section class="panel">

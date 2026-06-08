@@ -4,7 +4,15 @@ from zoneinfo import ZoneInfo
 from scripts.build_dashboard import build_dashboard_payload
 
 
-def test_build_dashboard_payload_adds_ops_summary() -> None:
+def test_build_dashboard_payload_adds_ops_summary(monkeypatch) -> None:  # noqa: ANN001
+    monkeypatch.setenv("GITHUB_EVENT_NAME", "schedule")
+    monkeypatch.setenv("GITHUB_WORKFLOW", "sync-and-publish")
+    monkeypatch.setenv("GITHUB_RUN_ID", "12345")
+    monkeypatch.setenv("GITHUB_RUN_NUMBER", "88")
+    monkeypatch.setenv("GITHUB_REPOSITORY", "HitoFlores/Forex-Impact-News-Guard")
+    monkeypatch.setenv("GITHUB_SERVER_URL", "https://github.com")
+    monkeypatch.setenv("GITHUB_ACTOR", "github-actions[bot]")
+    monkeypatch.setenv("GITHUB_REF_NAME", "main")
     generated_at = datetime(2026, 6, 6, 21, 0, tzinfo=ZoneInfo("America/Chihuahua"))
     payload = build_dashboard_payload(
         {
@@ -76,6 +84,13 @@ def test_build_dashboard_payload_adds_ops_summary() -> None:
     assert payload["impact_breakdown"] == [{"impact": "high", "count": 1}]
     assert payload["currency_breakdown"] == [{"currency": "USD", "count": 1}]
     assert payload["next_alerts"][0]["risk_window_starts_at"] == "2026-06-06T21:00:00-06:00"
+    assert payload["risk_blocks"][0]["event_count"] == 1
     assert payload["observability"]["cards"][0]["key"] == "scraping"
     assert payload["observability"]["cards"][1]["status"] == "error"
     assert payload["observability"]["diagnostics"][1]["last_error_message"] == "RuntimeError: boom"
+    assert payload["observability"]["diagnostics"][1]["summary"] == "RuntimeError: boom"
+    assert payload["workflow"]["event_name"] == "schedule"
+    assert payload["workflow"]["event_label"] == "Cron GitHub"
+    assert payload["workflow"]["run_url"] == "https://github.com/HitoFlores/Forex-Impact-News-Guard/actions/runs/12345"
+    assert payload["automation"]["schedule_confirmed"] is True
+    assert payload["automation"]["trigger_label"] == "Cron GitHub"

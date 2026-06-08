@@ -34,6 +34,31 @@
     }
   ],
   "generated_at": "2026-06-06T10:00:00-06:00",
+  "workflow": {
+    "actor": "github-actions[bot]",
+    "event_label": "Cron GitHub",
+    "event_name": "schedule",
+    "ref_name": "main",
+    "repository": "HitoFlores/Forex-Impact-News-Guard",
+    "run_id": "12345",
+    "run_number": "88",
+    "run_url": "https://github.com/HitoFlores/Forex-Impact-News-Guard/actions/runs/12345"
+  },
+  "automation": {
+    "actor": "github-actions[bot]",
+    "cycle_health": "warn",
+    "generated_at": "2026-06-06T10:00:00-06:00",
+    "keepalive_updated_at": "2026-06-06T07:00:00-06:00",
+    "last_probe_success_at": "2026-06-06T10:13:00-06:00",
+    "operator_model": "Superficie unica: operador y admin comparten mismo workflow con gate de environment.",
+    "ref_name": "main",
+    "run_number": "88",
+    "run_url": "https://github.com/HitoFlores/Forex-Impact-News-Guard/actions/runs/12345",
+    "schedule_confirmed": true,
+    "status_copy": "Ultimo publish vino de cron programado.",
+    "trigger": "schedule",
+    "trigger_label": "Cron GitHub"
+  },
   "impact_breakdown": [
     {
       "count": 2,
@@ -77,6 +102,67 @@
       "risk_window_starts_at": "2026-06-06T12:35:00-06:00",
       "scheduled_at": "2026-06-06T12:55:00-06:00",
       "title": "FOMC Press Conference"
+    }
+  ],
+  "risk_blocks": [
+    {
+      "block_id": "block-1",
+      "currencies": ["USD", "EUR"],
+      "dominant_impact": "high",
+      "ends_at": "2026-06-06T11:40:00-06:00",
+      "event_count": 2,
+      "events": [
+        {
+          "alert_at": "2026-06-06T10:15:00-06:00",
+          "currency": "USD",
+          "event_id": "demo-usd-cpi",
+          "impact": "high",
+          "is_breaking": false,
+          "risk_window_ends_at": "2026-06-06T10:45:00-06:00",
+          "risk_window_starts_at": "2026-06-06T10:05:00-06:00",
+          "scheduled_at": "2026-06-06T10:25:00-06:00",
+          "title": "US CPI m/m"
+        },
+        {
+          "alert_at": "2026-06-06T11:10:00-06:00",
+          "currency": "EUR",
+          "event_id": "demo-eur-ecb",
+          "impact": "medium",
+          "is_breaking": false,
+          "risk_window_ends_at": "2026-06-06T11:40:00-06:00",
+          "risk_window_starts_at": "2026-06-06T11:00:00-06:00",
+          "scheduled_at": "2026-06-06T11:20:00-06:00",
+          "title": "ECB Rate Statement"
+        }
+      ],
+      "first_alert_at": "2026-06-06T10:15:00-06:00",
+      "impacts": ["high", "medium"],
+      "last_event_at": "2026-06-06T11:20:00-06:00",
+      "starts_at": "2026-06-06T10:05:00-06:00"
+    },
+    {
+      "block_id": "block-2",
+      "currencies": ["USD"],
+      "dominant_impact": "high",
+      "ends_at": "2026-06-06T13:15:00-06:00",
+      "event_count": 1,
+      "events": [
+        {
+          "alert_at": "2026-06-06T12:45:00-06:00",
+          "currency": "USD",
+          "event_id": "demo-usd-fomc",
+          "impact": "high",
+          "is_breaking": true,
+          "risk_window_ends_at": "2026-06-06T13:15:00-06:00",
+          "risk_window_starts_at": "2026-06-06T12:35:00-06:00",
+          "scheduled_at": "2026-06-06T12:55:00-06:00",
+          "title": "FOMC Press Conference"
+        }
+      ],
+      "first_alert_at": "2026-06-06T12:45:00-06:00",
+      "impacts": ["high"],
+      "last_event_at": "2026-06-06T12:55:00-06:00",
+      "starts_at": "2026-06-06T12:35:00-06:00"
     }
   ],
   "observability": {

@@ -59,11 +59,19 @@ def build_policy_from_env() -> AlertPolicy:
         os.getenv("INPUT_HIGH_IMPACT_ONLY"),
         current.high_impact_only,
     )
+    current_all_currencies = len(current.currencies) == 0
+    all_currencies = _parse_bool(
+        os.getenv("INPUT_ALL_CURRENCIES"),
+        current_all_currencies,
+    )
+    currencies = [] if all_currencies else _parse_csv(os.getenv("INPUT_CURRENCIES"))
+    if not all_currencies and not currencies:
+        raise ValueError("Cuando all_currencies=false debes indicar al menos una moneda en INPUT_CURRENCIES.")
     payload = {
         "calendar_enabled": _parse_bool(os.getenv("INPUT_CALENDAR_ENABLED"), current.calendar_enabled),
         "breaking_enabled": _parse_bool(os.getenv("INPUT_BREAKING_ENABLED"), current.breaking_enabled),
         "high_impact_only": high_impact_only,
-        "currencies": _parse_csv(os.getenv("INPUT_CURRENCIES")),
+        "currencies": currencies,
         "lead_minutes": _parse_int(os.getenv("INPUT_LEAD_MINUTES"), current.lead_minutes),
         "revalidate_minutes_before_alert": _parse_int(
             os.getenv("INPUT_REVALIDATE_MINUTES_BEFORE_ALERT"),

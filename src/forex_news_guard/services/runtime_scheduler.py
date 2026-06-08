@@ -77,6 +77,20 @@ class RuntimeSchedulerService:
         reference_time = datetime.now(tz=self.policy.timezone_info)
         return self.run_cycle_at(reference_time)
 
+    def run_full_cycle(self) -> tuple[RuntimeSyncResult, RuntimeSyncResult]:
+        self._reload_policy()
+        reference_time = datetime.now(tz=self.policy.timezone_info)
+        sync_result = self.run_cycle_at(reference_time)
+        dispatch_result = self.dispatch_due_checks_at(reference_time)
+        logger.info(
+            "Full worker cycle finished at=%s synced_events=%s due_dispatches=%s skipped=%s",
+            reference_time.isoformat(),
+            len(sync_result.schedules),
+            len(dispatch_result.dispatched),
+            len(dispatch_result.skipped),
+        )
+        return sync_result, dispatch_result
+
     def run_cycle(self) -> RuntimeSyncResult:
         return self.run_once()
 
@@ -101,7 +115,13 @@ class RuntimeSchedulerService:
         )
         dispatched: list[AlertDispatchRecord] = []
         self._send_daily_summary_if_needed([item.event for item in stored_events], reference_time, dispatched)
-        logger.info("Synchronized %s relevant events", len(stored_events))
+        logger.info(
+            "Synchronized relevant_events=%s schedules=%s daily_dispatches=%s at=%s",
+            len(stored_events),
+            len(schedules),
+            len(dispatched),
+            reference_time.isoformat(),
+        )
         return RuntimeSyncResult(synced_at=reference_time, schedules=schedules, dispatched=dispatched)
 
     def dispatch_due_checks(self) -> RuntimeSyncResult:
@@ -131,6 +151,13 @@ class RuntimeSchedulerService:
             blocked_alert_event_ids,
         )
         self._dispatch_grouped_results(schedules, event_map, reference_time, dispatched, skipped)
+        logger.info(
+            "Processed due checks schedules=%s dispatched=%s skipped=%s at=%s",
+            len(schedules),
+            len(dispatched),
+            len(skipped),
+            reference_time.isoformat(),
+        )
 
         return RuntimeSyncResult(
             synced_at=reference_time,
@@ -262,6 +289,12 @@ class RuntimeSchedulerService:
                 else build_grouped_pre_alert_message(events, self.policy.lead_minutes)
             )
             self._send_telegram_message(message, reference_time)
+            logger.info(
+                "Sent alert group events=%s alert_at=%s ids=%s",
+                len(pending),
+                scheduled_for.isoformat(),
+                ",".join(item.event.id for item in pending),
+            )
             for item in pending:
                 record = AlertDispatchRecord(
                     event_id=item.event.id,
@@ -313,6 +346,13 @@ class RuntimeSchedulerService:
                 else build_grouped_result_message(events, reference_time)
             )
             self._send_telegram_message(message, reference_time)
+            logger.info(
+                "Sent result group events=%s check_at=%s attempt=%s ids=%s",
+                len(pending),
+                scheduled_for.isoformat(),
+                attempt,
+                ",".join(schedule.event.id for schedule, _ in pending),
+            )
             for schedule, result_check in pending:
                 record = AlertDispatchRecord(
                     event_id=schedule.event.id,
@@ -346,6 +386,11 @@ class RuntimeSchedulerService:
         high_impact_events = [event for event in events if event.impact.value == "high"]
         message = build_daily_summary_message(high_impact_events, reference_time)
         self._send_telegram_message(message, reference_time)
+        logger.info(
+            "Sent daily summary high_impact_events=%s date=%s",
+            len(high_impact_events),
+            reference_time.date().isoformat(),
+        )
         record = AlertDispatchRecord(
             event_id=message.event_id,
             kind=AlertExecutionKind.DAILY_SUMMARY,
