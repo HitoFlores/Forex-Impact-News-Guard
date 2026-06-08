@@ -200,11 +200,12 @@ h3,
 }
 
 h1 {
-  max-width: none;
+  max-width: 24ch;
   margin-top: 14px;
-  font-size: clamp(1.15rem, 2vw, 1.9rem);
-  line-height: 1.05;
-  white-space: nowrap;
+  font-size: clamp(1.45rem, 2.2vw, 2.35rem);
+  line-height: 1.02;
+  white-space: normal;
+  text-wrap: balance;
 }
 
 h2 {
@@ -887,6 +888,7 @@ code {
   }
 
   h1 {
+    max-width: none;
     font-size: clamp(1.2rem, 5.2vw, 1.55rem);
     white-space: normal;
   }
