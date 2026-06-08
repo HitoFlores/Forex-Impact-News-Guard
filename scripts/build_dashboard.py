@@ -49,6 +49,8 @@ def build_dashboard_payload(
     next_alert_at = min((schedule.alert.scheduled_for for schedule in schedules), default=None)
     dispatch_breakdown = Counter(item.kind.value for item in dispatches)
     monitored_currencies = sorted(policy.normalized_currencies)
+    impact_breakdown = Counter(item.event.impact.value for item in stored_events)
+    currency_breakdown = Counter(item.event.currency for item in stored_events)
 
     return {
         "generated_at": now.isoformat(),
@@ -62,9 +64,12 @@ def build_dashboard_payload(
             "daily_summary_enabled": policy.daily_summary_enabled,
             "include_results": policy.include_results,
             "high_impact_only": policy.high_impact_only,
+            "allowed_impacts": [impact.value for impact in policy.allowed_impacts] if policy.allowed_impacts else None,
             "breaking_enabled": policy.breaking_enabled,
             "calendar_enabled": policy.calendar_enabled,
             "monitored_currencies": monitored_currencies,
+            "risk_window_before_minutes": policy.risk_window_before_minutes,
+            "risk_window_after_minutes": policy.risk_window_after_minutes,
         },
         "counts": {
             "relevant_events": len(stored_events),
@@ -83,6 +88,14 @@ def build_dashboard_payload(
         "dispatch_breakdown": [
             {"kind": kind, "count": count}
             for kind, count in sorted(dispatch_breakdown.items())
+        ],
+        "impact_breakdown": [
+            {"impact": impact, "count": count}
+            for impact, count in sorted(impact_breakdown.items())
+        ],
+        "currency_breakdown": [
+            {"currency": currency, "count": count}
+            for currency, count in sorted(currency_breakdown.items(), key=lambda item: (-item[1], item[0]))[:8]
         ],
         "next_alerts": [
             {

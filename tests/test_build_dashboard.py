@@ -53,5 +53,6 @@ def test_build_dashboard_payload_adds_ops_summary() -> None:
     assert payload["status"]["last_dispatch_at"] == "2026-06-06T20:31:00-06:00"
     assert payload["policy_summary"]["monitored_currencies"] == ["EUR", "USD"]
     assert payload["dispatch_breakdown"] == [{"kind": "daily_summary", "count": 1}]
+    assert payload["impact_breakdown"] == [{"impact": "high", "count": 1}]
+    assert payload["currency_breakdown"] == [{"currency": "USD", "count": 1}]
     assert payload["next_alerts"][0]["risk_window_starts_at"] == "2026-06-06T21:00:00-06:00"
-

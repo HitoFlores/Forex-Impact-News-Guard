@@ -1,0 +1,149 @@
+name: dashboard-control
+
+on:
+  workflow_dispatch:
+    inputs:
+      calendar_enabled:
+        description: "Activar calendario"
+        required: true
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      breaking_enabled:
+        description: "Activar breaking news"
+        required: true
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      high_impact_only:
+        description: "Solo alto impacto"
+        required: true
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      allowed_impacts:
+        description: "Impacts permitidos si high_impact_only=false"
+        required: false
+        default: "medium,high"
+        type: string
+      currencies:
+        description: "Monedas CSV, vacio=todas"
+        required: false
+        default: "USD,EUR"
+        type: string
+      lead_minutes:
+        description: "Minutos antes del alert"
+        required: true
+        default: "15"
+        type: string
+      revalidate_minutes_before_alert:
+        description: "Minutos antes para precheck"
+        required: true
+        default: "2"
+        type: string
+      result_check_delay_minutes:
+        description: "Minutos despues para result check"
+        required: true
+        default: "1"
+        type: string
+      include_results:
+        description: "Mandar resultados"
+        required: true
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      daily_summary_enabled:
+        description: "Mandar resumen diario"
+        required: true
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      risk_window_before_minutes:
+        description: "Ventana riesgo antes"
+        required: true
+        default: "15"
+        type: string
+      risk_window_after_minutes:
+        description: "Ventana riesgo despues"
+        required: true
+        default: "15"
+        type: string
+      timezone:
+        description: "Timezone IANA"
+        required: true
+        default: "America/Chihuahua"
+        type: string
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: forex-guard-dashboard-control
+  cancel-in-progress: true
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -e .[dev]
+
+      - name: Apply settings
+        env:
+          INPUT_CALENDAR_ENABLED: ${{ inputs.calendar_enabled }}
+          INPUT_BREAKING_ENABLED: ${{ inputs.breaking_enabled }}
+          INPUT_HIGH_IMPACT_ONLY: ${{ inputs.high_impact_only }}
+          INPUT_ALLOWED_IMPACTS: ${{ inputs.allowed_impacts }}
+          INPUT_CURRENCIES: ${{ inputs.currencies }}
+          INPUT_LEAD_MINUTES: ${{ inputs.lead_minutes }}
+          INPUT_REVALIDATE_MINUTES_BEFORE_ALERT: ${{ inputs.revalidate_minutes_before_alert }}
+          INPUT_RESULT_CHECK_DELAY_MINUTES: ${{ inputs.result_check_delay_minutes }}
+          INPUT_INCLUDE_RESULTS: ${{ inputs.include_results }}
+          INPUT_DAILY_SUMMARY_ENABLED: ${{ inputs.daily_summary_enabled }}
+          INPUT_RISK_WINDOW_BEFORE_MINUTES: ${{ inputs.risk_window_before_minutes }}
+          INPUT_RISK_WINDOW_AFTER_MINUTES: ${{ inputs.risk_window_after_minutes }}
+          INPUT_TIMEZONE: ${{ inputs.timezone }}
+        run: python scripts/apply_dashboard_settings.py
+
+      - name: Build dashboard
+        run: python scripts/build_dashboard.py
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Commit state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f .state/settings.json
+          if git diff --cached --quiet; then
+            echo "No settings changes"
+          else
+            git commit -m "chore: update dashboard settings [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
+  deploy:
+    needs: control
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
