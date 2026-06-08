@@ -15,6 +15,40 @@
       "kind": "daily_summary",
       "scheduled_for": "2026-06-07T00:00:00-06:00",
       "sent_at": "2026-06-07T00:27:52.240151-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "daily-summary-2026-06-08",
+      "kind": "daily_summary",
+      "scheduled_for": "2026-06-08T00:00:00-06:00",
+      "sent_at": "2026-06-08T13:42:38.055222-06:00"
     }
-  ]
+  ],
+  "observability": {
+    "precheck": {
+      "consecutive_failures": 0,
+      "last_attempt_at": null,
+      "last_error_at": null,
+      "last_error_message": null,
+      "last_success_at": null,
+      "status": "idle"
+    },
+    "scraping": {
+      "consecutive_failures": 0,
+      "last_attempt_at": "2026-06-08T13:42:38.055222-06:00",
+      "last_error_at": null,
+      "last_error_message": null,
+      "last_success_at": "2026-06-08T13:42:38.055222-06:00",
+      "status": "ok"
+    },
+    "telegram": {
+      "consecutive_failures": 0,
+      "last_attempt_at": "2026-06-08T13:42:38.055222-06:00",
+      "last_error_at": null,
+      "last_error_message": null,
+      "last_success_at": "2026-06-08T13:42:38.055222-06:00",
+      "status": "ok"
+    }
+  }
 }
