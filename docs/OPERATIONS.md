@@ -85,8 +85,9 @@ Hacer esto antes de cualquier deploy nuevo o si el token ya paso por chats, capt
 3. Generar token nuevo con `/token`.
 4. Actualizar secreto `FOREX_GUARD_TELEGRAM_BOT_TOKEN` en GitHub `Actions secrets` o `Environment secrets`, segun donde viva hoy.
 5. Verificar que `FOREX_GUARD_TELEGRAM_CHAT_ID` siga correcto.
-6. Correr workflow manual `telegram-smoke-test`.
-7. Confirmar recepcion de los 5 mensajes sample antes de volver a usar `sync-and-publish`.
+6. Si quieres aislar pruebas del grupo real, configurar tambien `FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID` con tu chat privado.
+7. Correr workflow manual `telegram-smoke-test`.
+8. Confirmar recepcion de los 5 mensajes sample antes de volver a usar `sync-and-publish`.
 
 No guardar token nuevo en commits, screenshots, notas de handoff ni chats.
 
@@ -113,9 +114,11 @@ Sin API local, usa workflow manual `telegram-smoke-test` en GitHub Actions.
 Ese workflow:
 
 - instala dependencias;
-- usa secretos `FOREX_GUARD_TELEGRAM_BOT_TOKEN` y `FOREX_GUARD_TELEGRAM_CHAT_ID`;
+- usa `FOREX_GUARD_TELEGRAM_BOT_TOKEN`;
+- usa `FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID` si existe;
+- si no existe, cae a `FOREX_GUARD_TELEGRAM_CHAT_ID`;
 - ejecuta `python scripts/send_telegram_smoke_test.py`;
-- deja resumen en el job y envia todos los mensajes sample al chat real.
+- deja resumen en el job y envia todos los mensajes sample al chat de smoke o al chat default.
 
 Uso:
 

@@ -25,6 +25,7 @@ class Settings(BaseSettings):
     scheduler_tick_seconds: int = 30
     telegram_bot_token: str | None = None
     telegram_chat_id: str | None = None
+    telegram_smoke_chat_id: str | None = None
 
     model_config = SettingsConfigDict(
         env_prefix="FOREX_GUARD_",

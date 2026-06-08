@@ -6,7 +6,12 @@ from datetime import datetime
 from pathlib import Path
 
 from forex_news_guard.domain.models import AlertPolicy, StoredEvent
-from forex_news_guard.domain.runtime import AlertDispatchRecord
+from forex_news_guard.domain.runtime import (
+    AlertDispatchRecord,
+    RuntimeObservability,
+    RuntimeProbeState,
+    RuntimeProbeStatus,
+)
 from forex_news_guard.services.event_scheduler import build_event_schedules
 
 
@@ -19,6 +24,41 @@ def load_json(path: Path, default: object) -> object:
     if not path.exists():
         return default
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def summarize_component(
+    name: str,
+    record: RuntimeProbeState,
+    generated_at: datetime,
+) -> dict[str, object]:
+    last_signal_at = record.last_attempt_at or record.last_success_at or record.last_error_at
+    tone = record.status.value
+    note = "Operativo"
+    if not last_signal_at:
+        tone = RuntimeProbeStatus.WARN.value
+        note = "Sin muestras"
+    elif record.status == RuntimeProbeStatus.OK and name == "scraping":
+        age_minutes = max(0, int((generated_at - last_signal_at).total_seconds() // 60))
+        if age_minutes > 30:
+            tone = RuntimeProbeStatus.WARN.value
+            note = f"Stale {age_minutes}m"
+    elif record.status == RuntimeProbeStatus.ERROR:
+        note = "Fallo reciente"
+    elif record.consecutive_failures:
+        tone = RuntimeProbeStatus.WARN.value
+        note = f"{record.consecutive_failures} fallos previos"
+
+    return {
+        "key": name,
+        "label": name.capitalize(),
+        "status": tone,
+        "note": note,
+        "last_attempt_at": record.last_attempt_at.isoformat() if record.last_attempt_at else None,
+        "last_success_at": record.last_success_at.isoformat() if record.last_success_at else None,
+        "last_error_at": record.last_error_at.isoformat() if record.last_error_at else None,
+        "last_error_message": record.last_error_message,
+        "consecutive_failures": record.consecutive_failures,
+    }
 
 
 def build_dashboard_payload(
@@ -38,6 +78,7 @@ def build_dashboard_payload(
         AlertDispatchRecord.model_validate(row)
         for row in (runtime_payload or {}).get("dispatched_alerts", [])
     ]
+    observability = RuntimeObservability.model_validate((runtime_payload or {}).get("observability", {}))
     schedules = build_event_schedules([item.event for item in stored_events], policy)
     now = generated_at or datetime.now(tz=policy.timezone_info)
     next_event_at = min(
@@ -51,6 +92,11 @@ def build_dashboard_payload(
     monitored_currencies = sorted(policy.normalized_currencies)
     impact_breakdown = Counter(item.event.impact.value for item in stored_events)
     currency_breakdown = Counter(item.event.currency for item in stored_events)
+    observability_cards = [
+        summarize_component("scraping", observability.scraping, now),
+        summarize_component("telegram", observability.telegram, now),
+        summarize_component("precheck", observability.precheck, now),
+    ]
 
     return {
         "generated_at": now.isoformat(),
@@ -84,6 +130,10 @@ def build_dashboard_payload(
             "latest_event_stored_at": latest_stored_at.isoformat() if latest_stored_at else None,
             "last_dispatch_at": last_dispatch_at.isoformat() if last_dispatch_at else None,
             "keepalive_updated_at": (keepalive_payload or {}).get("updated_at"),
+        },
+        "observability": {
+            "cards": observability_cards,
+            "diagnostics": observability_cards,
         },
         "dispatch_breakdown": [
             {"kind": kind, "count": count}

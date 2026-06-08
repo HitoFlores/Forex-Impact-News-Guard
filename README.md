@@ -84,6 +84,7 @@ uvicorn forex_news_guard.main:app --reload
 - `FOREX_GUARD_SCHEDULER_TICK_SECONDS=30`
 - `FOREX_GUARD_TELEGRAM_BOT_TOKEN=...`
 - `FOREX_GUARD_TELEGRAM_CHAT_ID=...`
+- `FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID=...` para mandar solo `telegram-smoke-test` a tu chat privado
 
 Nota: al 2026-05-26, `requests` normal devolvio `403` por Cloudflare para rutas como `calendar/json`, `calendar/xml`, `calendar/csv` y `news/rss`. En este proyecto cambiamos a un cliente HTTP no-browser compatible con Cloudflare para consumir el HTML real de Forex Factory sin automatizacion de navegador.
 

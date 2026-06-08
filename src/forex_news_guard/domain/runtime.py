@@ -10,6 +10,19 @@ class DeliveryChannel(StrEnum):
     TELEGRAM = "telegram"
 
 
+class RuntimeProbeName(StrEnum):
+    SCRAPING = "scraping"
+    TELEGRAM = "telegram"
+    PRECHECK = "precheck"
+
+
+class RuntimeProbeStatus(StrEnum):
+    IDLE = "idle"
+    OK = "ok"
+    WARN = "warn"
+    ERROR = "error"
+
+
 class AlertExecutionKind(StrEnum):
     DAILY_SUMMARY = "daily_summary"
     PRECHECK = "precheck"
@@ -24,6 +37,21 @@ class AlertDispatchRecord(BaseModel):
     attempt: int = 1
     sent_at: datetime
     channel: DeliveryChannel
+
+
+class RuntimeProbeState(BaseModel):
+    status: RuntimeProbeStatus = RuntimeProbeStatus.IDLE
+    last_attempt_at: datetime | None = None
+    last_success_at: datetime | None = None
+    last_error_at: datetime | None = None
+    last_error_message: str | None = None
+    consecutive_failures: int = 0
+
+
+class RuntimeObservability(BaseModel):
+    scraping: RuntimeProbeState = Field(default_factory=RuntimeProbeState)
+    telegram: RuntimeProbeState = Field(default_factory=RuntimeProbeState)
+    precheck: RuntimeProbeState = Field(default_factory=RuntimeProbeState)
 
 
 class RuntimeSyncResult(BaseModel):

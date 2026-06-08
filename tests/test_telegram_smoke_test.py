@@ -2,7 +2,7 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from forex_news_guard.domain.models import AlertPolicy
-from forex_news_guard.services.telegram_smoke_test import send_telegram_smoke_test
+from forex_news_guard.services.telegram_smoke_test import _build_notifier, send_telegram_smoke_test
 
 
 class FakeNotifier:
@@ -29,3 +29,25 @@ def test_send_telegram_smoke_test_builds_all_message_variants() -> None:
         "FOREX RESULT UPDATE",
     ]
     assert notifier.titles == response.sent_messages
+
+
+def test_build_notifier_prefers_smoke_chat_id() -> None:
+    notifier = _build_notifier(
+        bot_token="token",
+        smoke_chat_id="private-chat",
+        default_chat_id="group-chat",
+        timeout_seconds=20.0,
+    )
+
+    assert notifier.chat_id == "private-chat"
+
+
+def test_build_notifier_falls_back_to_default_chat_id() -> None:
+    notifier = _build_notifier(
+        bot_token="token",
+        smoke_chat_id=None,
+        default_chat_id="group-chat",
+        timeout_seconds=20.0,
+    )
+
+    assert notifier.chat_id == "group-chat"

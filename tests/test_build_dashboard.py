@@ -40,7 +40,27 @@ def test_build_dashboard_payload_adds_ops_summary() -> None:
                     "sent_at": "2026-06-06T20:31:00-06:00",
                     "channel": "telegram",
                 }
-            ]
+            ],
+            "observability": {
+                "scraping": {
+                    "status": "ok",
+                    "last_attempt_at": "2026-06-06T20:55:00-06:00",
+                    "last_success_at": "2026-06-06T20:55:00-06:00",
+                    "consecutive_failures": 0,
+                },
+                "telegram": {
+                    "status": "error",
+                    "last_attempt_at": "2026-06-06T20:58:00-06:00",
+                    "last_success_at": "2026-06-06T20:31:00-06:00",
+                    "last_error_at": "2026-06-06T20:58:00-06:00",
+                    "last_error_message": "RuntimeError: boom",
+                    "consecutive_failures": 2,
+                },
+                "precheck": {
+                    "status": "warn",
+                    "consecutive_failures": 0,
+                },
+            },
         },
         {
             "updated_at": "2026-06-01T03:00:00+00:00",
@@ -56,3 +76,6 @@ def test_build_dashboard_payload_adds_ops_summary() -> None:
     assert payload["impact_breakdown"] == [{"impact": "high", "count": 1}]
     assert payload["currency_breakdown"] == [{"currency": "USD", "count": 1}]
     assert payload["next_alerts"][0]["risk_window_starts_at"] == "2026-06-06T21:00:00-06:00"
+    assert payload["observability"]["cards"][0]["key"] == "scraping"
+    assert payload["observability"]["cards"][1]["status"] == "error"
+    assert payload["observability"]["diagnostics"][1]["last_error_message"] == "RuntimeError: boom"

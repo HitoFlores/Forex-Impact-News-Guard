@@ -29,6 +29,10 @@ const DEFAULT_STATE = {
     last_dispatch_at: null,
     keepalive_updated_at: null,
   },
+  observability: {
+    cards: [],
+    diagnostics: [],
+  },
   dispatch_breakdown: [],
   impact_breakdown: [],
   currency_breakdown: [],
@@ -91,6 +95,20 @@ function buildDemoState(sample) {
       latest_event_stored_at: shiftIso(sample.status?.latest_event_stored_at, deltaMs),
       last_dispatch_at: shiftIso(sample.status?.last_dispatch_at, deltaMs),
       keepalive_updated_at: shiftIso(sample.status?.keepalive_updated_at, deltaMs),
+    },
+    observability: {
+      cards: (sample.observability?.cards ?? []).map((item) => ({
+        ...item,
+        last_attempt_at: shiftIso(item.last_attempt_at, deltaMs),
+        last_success_at: shiftIso(item.last_success_at, deltaMs),
+        last_error_at: shiftIso(item.last_error_at, deltaMs),
+      })),
+      diagnostics: (sample.observability?.diagnostics ?? []).map((item) => ({
+        ...item,
+        last_attempt_at: shiftIso(item.last_attempt_at, deltaMs),
+        last_success_at: shiftIso(item.last_success_at, deltaMs),
+        last_error_at: shiftIso(item.last_error_at, deltaMs),
+      })),
     },
     next_alerts: (sample.next_alerts ?? []).map((item) => ({
       ...item,
@@ -179,6 +197,23 @@ function formatKind(value) {
   if (normalized === "precheck") return "Precheck";
   if (normalized === "alert") return "Alert";
   if (normalized === "result") return "Result";
+  return value ?? "N/D";
+}
+
+function formatObservabilityLabel(value) {
+  const normalized = String(value ?? "").toLowerCase();
+  if (normalized === "scraping") return "Scraping";
+  if (normalized === "telegram") return "Telegram";
+  if (normalized === "precheck") return "Precheck";
+  return value ?? "N/D";
+}
+
+function formatObservabilityStatus(value) {
+  const normalized = String(value ?? "").toLowerCase();
+  if (normalized === "ok") return "OK";
+  if (normalized === "warn") return "Warn";
+  if (normalized === "error") return "Error";
+  if (normalized === "idle") return "Idle";
   return value ?? "N/D";
 }
 
@@ -293,6 +328,17 @@ function collectSettingsInputs() {
   };
 }
 
+function settingsNeedSyncNotice(inputs) {
+  const riskyKeys = [
+    "calendar_enabled",
+    "breaking_enabled",
+    "high_impact_only",
+    "allowed_impacts",
+    "currencies",
+  ];
+  return riskyKeys.some((key) => String(inputs[key] ?? "").trim() !== "");
+}
+
 async function dispatchWorkflow(workflowId, inputs = {}) {
   const owner = $("gh-owner").value.trim();
   const repo = $("gh-repo").value.trim();
@@ -363,9 +409,16 @@ function bindActions(state) {
   $("settings-form").onsubmit = async (event) => {
     event.preventDefault();
     try {
+      const inputs = collectSettingsInputs();
       setFeedback("settings-feedback", "Aplicando settings via dashboard-control...", "busy");
-      await dispatchWorkflow("dashboard-control.yml", collectSettingsInputs());
-      setFeedback("settings-feedback", "Workflow dashboard-control lanzado. Pages se actualizara al terminar.", "ok");
+      await dispatchWorkflow("dashboard-control.yml", inputs);
+      setFeedback(
+        "settings-feedback",
+        settingsNeedSyncNotice(inputs)
+          ? "Settings aplicados. Pages se actualizara al terminar, pero cambios de filtros/eventos se veran en Live hasta el siguiente Sync + Publish."
+          : "Workflow dashboard-control lanzado. Pages se actualizara al terminar.",
+        "ok"
+      );
     } catch (error) {
       setFeedback("settings-feedback", error.message, "error");
     }
@@ -397,6 +450,8 @@ async function render(mode = detectMode()) {
   const breakdown = Array.isArray(state.dispatch_breakdown) ? state.dispatch_breakdown : [];
   const impactBreakdown = Array.isArray(state.impact_breakdown) ? state.impact_breakdown : [];
   const currencyBreakdown = Array.isArray(state.currency_breakdown) ? state.currency_breakdown : [];
+  const observabilityCards = Array.isArray(state.observability?.cards) ? state.observability.cards : [];
+  const observabilityDiagnostics = Array.isArray(state.observability?.diagnostics) ? state.observability.diagnostics : [];
   const nextAlerts = Array.isArray(state.next_alerts) ? state.next_alerts : [];
   const recentEvents = Array.isArray(state.recent_events) ? state.recent_events : [];
   const recentDispatches = Array.isArray(state.recent_dispatches) ? state.recent_dispatches : [];
@@ -428,6 +483,50 @@ async function render(mode = detectMode()) {
     `<span class="chip">${policy.daily_summary_enabled ? "Daily on" : "Daily off"}</span>`,
     `<span class="chip">${mode === "demo" ? "Visual demo" : "Estado live"}</span>`,
   ].join("");
+
+  renderList(
+    $("observability-cards"),
+    observabilityCards,
+    (item) => `
+      <article class="card observability-card">
+        <div class="card-top">
+          <div>
+            <h3>${formatObservabilityLabel(item.key)}</h3>
+            <div class="meta">${escapeHtml(item.note ?? "Sin nota")}</div>
+          </div>
+          <span class="pill obs-pill ${escapeHtml(item.status)}">${escapeHtml(formatObservabilityStatus(item.status))}</span>
+        </div>
+        <div class="detail-row">
+          <span>Intento ${formatRelative(item.last_attempt_at)}</span>
+          <span>Exito ${formatRelative(item.last_success_at)}</span>
+          <span>Fallos ${escapeHtml(item.consecutive_failures ?? 0)}</span>
+        </div>
+      </article>
+    `,
+    "Sin observabilidad"
+  );
+
+  renderList(
+    $("observability-diagnostics"),
+    observabilityDiagnostics,
+    (item) => `
+      <article class="card">
+        <div class="card-top">
+          <div>
+            <h3>${formatObservabilityLabel(item.key)}</h3>
+            <div class="meta">Ultimo intento ${formatStamp(item.last_attempt_at)} · Ultimo exito ${formatStamp(item.last_success_at)}</div>
+          </div>
+          <span class="mini-pill obs-badge ${escapeHtml(item.status)}">${escapeHtml(formatObservabilityStatus(item.status))}</span>
+        </div>
+        <div class="detail-row">
+          <span>Error ${formatStamp(item.last_error_at)}</span>
+          <span>Racha ${escapeHtml(item.consecutive_failures ?? 0)}</span>
+          <span>${escapeHtml(item.last_error_message ?? "Sin error registrado")}</span>
+        </div>
+      </article>
+    `,
+    "Sin diagnosticos"
+  );
 
   renderList(
     $("next-alerts"),

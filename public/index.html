@@ -99,6 +99,30 @@
       </article>
     </section>
 
+    <section class="observability-layout">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">Health</p>
+            <h2>Observabilidad operacional</h2>
+          </div>
+          <span class="stamp">Scraping / Telegram / Precheck</span>
+        </div>
+        <div id="observability-cards" class="observability-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">Diagnostics</p>
+            <h2>Linea de diagnostico</h2>
+          </div>
+          <span class="stamp">Ultimo intento y ultimo error</span>
+        </div>
+        <div id="observability-diagnostics" class="stack compact"></div>
+      </section>
+    </section>
+
     <section class="content-grid">
       <section class="panel panel-wide">
         <div class="panel-head">
@@ -258,6 +282,7 @@
 
           <div class="help-list">
             <div class="help-line"><strong>Aplicar settings</strong><span>Lanza workflow `dashboard-control`, actualiza `.state/settings.json` y repinta Pages.</span></div>
+            <div class="help-line"><strong>Importante</strong><span>Cambios de filtros como monedas, impactos, calendario o breaking no rehacen eventos al instante. Se reflejan en `Live` hasta el siguiente `Sync + Publish`.</span></div>
             <div class="help-line"><strong>Copiar payload</strong><span>Copia el input exacto del workflow para debug o respaldo antes de aplicar cambios.</span></div>
           </div>
           <div id="settings-feedback" class="feedback idle">Cargando policy actual.</div>
@@ -311,7 +336,7 @@
             <span>03</span>
             <div>
               <h3>Ajuste remoto</h3>
-              <p>Aplica policy basica con <code>Aplicar settings</code>; workflow actualiza <code>.state/settings.json</code> y repinta Pages.</p>
+              <p>Aplica policy basica con <code>Aplicar settings</code>; workflow actualiza <code>.state/settings.json</code> y repinta Pages. Si cambias filtros de eventos, el efecto real llega tras siguiente <code>Sync + Publish</code>.</p>
             </div>
           </article>
         </div>

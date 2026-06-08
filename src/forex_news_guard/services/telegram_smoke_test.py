@@ -21,7 +21,12 @@ def send_telegram_smoke_test(
     settings = get_settings()
     alert_policy = policy or SettingsService().get_policy()
     generated_at = reference_time or datetime.now(tz=alert_policy.timezone_info)
-    sender = notifier or _build_notifier(settings.telegram_bot_token, settings.telegram_chat_id, settings.forex_factory_timeout_seconds)
+    sender = notifier or _build_notifier(
+        settings.telegram_bot_token,
+        settings.telegram_smoke_chat_id,
+        settings.telegram_chat_id,
+        settings.forex_factory_timeout_seconds,
+    )
 
     first_event = ForexEvent(
         id="smoke-usd-cpi",
@@ -72,9 +77,16 @@ def send_telegram_smoke_test(
     return TelegramSmokeTestResponse(sent_messages=sent_messages)
 
 
-def _build_notifier(bot_token: str | None, chat_id: str | None, timeout_seconds: float) -> TelegramNotifier:
+def _build_notifier(
+    bot_token: str | None,
+    smoke_chat_id: str | None,
+    default_chat_id: str | None,
+    timeout_seconds: float,
+) -> TelegramNotifier:
+    chat_id = smoke_chat_id or default_chat_id
     if not bot_token or not chat_id:
         raise RuntimeError(
-            "Configura FOREX_GUARD_TELEGRAM_BOT_TOKEN y FOREX_GUARD_TELEGRAM_CHAT_ID para probar Telegram."
+            "Configura FOREX_GUARD_TELEGRAM_BOT_TOKEN y FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID "
+            "o FOREX_GUARD_TELEGRAM_CHAT_ID para probar Telegram."
         )
     return TelegramNotifier(bot_token=bot_token, chat_id=chat_id, timeout_seconds=timeout_seconds)

@@ -11,6 +11,7 @@ from forex_news_guard.domain.runtime import (
     AlertDispatchRecord,
     AlertExecutionKind,
     DeliveryChannel,
+    RuntimeProbeName,
     RuntimeSyncResult,
 )
 from forex_news_guard.integrations.forex_factory import ForexFactoryClient
@@ -80,11 +81,23 @@ class RuntimeSchedulerService:
         return self.run_once()
 
     def run_cycle_at(self, reference_time: datetime) -> RuntimeSyncResult:
-        stored_events, schedules = sync_relevant_calendar_events(
-            policy=self.policy,
-            reference_time=reference_time,
-            client=self.client,
-            repository=self.event_repository,
+        try:
+            stored_events, schedules = sync_relevant_calendar_events(
+                policy=self.policy,
+                reference_time=reference_time,
+                client=self.client,
+                repository=self.event_repository,
+            )
+        except Exception as error:
+            self.runtime_repository.record_probe_error(
+                RuntimeProbeName.SCRAPING,
+                attempted_at=reference_time,
+                error_message=f"{type(error).__name__}: {error}",
+            )
+            raise
+        self.runtime_repository.record_probe_success(
+            RuntimeProbeName.SCRAPING,
+            attempted_at=reference_time,
         )
         dispatched: list[AlertDispatchRecord] = []
         self._send_daily_summary_if_needed([item.event for item in stored_events], reference_time, dispatched)
@@ -156,8 +169,26 @@ class RuntimeSchedulerService:
             self.event_repository.replace_relevant_events(relevant_events, reference_time=reference_time)
             refreshed_stored_events = self.event_repository.list_relevant_events(reference_time=reference_time)
             refreshed_schedules = build_event_schedules([item.event for item in refreshed_stored_events], self.policy)
+            self.runtime_repository.record_probe_success(
+                RuntimeProbeName.SCRAPING,
+                attempted_at=reference_time,
+            )
+            self.runtime_repository.record_probe_success(
+                RuntimeProbeName.PRECHECK,
+                attempted_at=reference_time,
+            )
             logger.info("Revalidated %s events for %s due prechecks", len(relevant_events), len(pending_prechecks))
-        except Exception:
+        except Exception as error:
+            self.runtime_repository.record_probe_error(
+                RuntimeProbeName.SCRAPING,
+                attempted_at=reference_time,
+                error_message=f"{type(error).__name__}: {error}",
+            )
+            self.runtime_repository.record_probe_error(
+                RuntimeProbeName.PRECHECK,
+                attempted_at=reference_time,
+                error_message=f"{type(error).__name__}: {error}",
+            )
             logger.exception("Failed to revalidate calendar events before alert dispatch")
             skipped.append(f"precheck-refresh-failed:{len(pending_prechecks)}")
             return stored_events, schedules, {schedule.event.id for schedule in pending_prechecks}
@@ -230,7 +261,7 @@ class RuntimeSchedulerService:
                 if len(events) == 1
                 else build_grouped_pre_alert_message(events, self.policy.lead_minutes)
             )
-            self.notifier.send(message)
+            self._send_telegram_message(message, reference_time)
             for item in pending:
                 record = AlertDispatchRecord(
                     event_id=item.event.id,
@@ -281,7 +312,7 @@ class RuntimeSchedulerService:
                 if len(events) == 1
                 else build_grouped_result_message(events, reference_time)
             )
-            self.notifier.send(message)
+            self._send_telegram_message(message, reference_time)
             for schedule, result_check in pending:
                 record = AlertDispatchRecord(
                     event_id=schedule.event.id,
@@ -314,7 +345,7 @@ class RuntimeSchedulerService:
 
         high_impact_events = [event for event in events if event.impact.value == "high"]
         message = build_daily_summary_message(high_impact_events, reference_time)
-        self.notifier.send(message)
+        self._send_telegram_message(message, reference_time)
         record = AlertDispatchRecord(
             event_id=message.event_id,
             kind=AlertExecutionKind.DAILY_SUMMARY,
@@ -368,7 +399,7 @@ class RuntimeSchedulerService:
             )
             return
 
-        self.notifier.send(message)
+        self._send_telegram_message(message, reference_time)
         record = AlertDispatchRecord(
             event_id=event.id,
             kind=execution_kind,
@@ -390,6 +421,21 @@ class RuntimeSchedulerService:
             bot_token=settings.telegram_bot_token,
             chat_id=settings.telegram_chat_id,
             timeout_seconds=settings.forex_factory_timeout_seconds,
+        )
+
+    def _send_telegram_message(self, message, reference_time: datetime) -> None:  # noqa: ANN001
+        try:
+            self.notifier.send(message)
+        except Exception as error:
+            self.runtime_repository.record_probe_error(
+                RuntimeProbeName.TELEGRAM,
+                attempted_at=reference_time,
+                error_message=f"{type(error).__name__}: {error}",
+            )
+            raise
+        self.runtime_repository.record_probe_success(
+            RuntimeProbeName.TELEGRAM,
+            attempted_at=reference_time,
         )
 
     def _reload_policy(self) -> None:

@@ -27,4 +27,5 @@ jobs:
         env:
           FOREX_GUARD_TELEGRAM_BOT_TOKEN: ${{ secrets.FOREX_GUARD_TELEGRAM_BOT_TOKEN }}
           FOREX_GUARD_TELEGRAM_CHAT_ID: ${{ secrets.FOREX_GUARD_TELEGRAM_CHAT_ID }}
+          FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID: ${{ secrets.FOREX_GUARD_TELEGRAM_SMOKE_CHAT_ID }}
         run: python scripts/send_telegram_smoke_test.py

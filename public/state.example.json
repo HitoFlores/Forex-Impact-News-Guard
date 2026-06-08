@@ -79,6 +79,78 @@
       "title": "FOMC Press Conference"
     }
   ],
+  "observability": {
+    "cards": [
+      {
+        "consecutive_failures": 0,
+        "key": "scraping",
+        "label": "Scraping",
+        "last_attempt_at": "2026-06-06T09:59:00-06:00",
+        "last_error_at": null,
+        "last_error_message": null,
+        "last_success_at": "2026-06-06T09:59:00-06:00",
+        "note": "Operativo",
+        "status": "ok"
+      },
+      {
+        "consecutive_failures": 1,
+        "key": "telegram",
+        "label": "Telegram",
+        "last_attempt_at": "2026-06-06T10:26:00-06:00",
+        "last_error_at": "2026-06-06T10:26:00-06:00",
+        "last_error_message": "TimeoutError: sendMessage tardio",
+        "last_success_at": "2026-06-06T10:15:00-06:00",
+        "note": "Fallo reciente",
+        "status": "error"
+      },
+      {
+        "consecutive_failures": 0,
+        "key": "precheck",
+        "label": "Precheck",
+        "last_attempt_at": "2026-06-06T10:13:00-06:00",
+        "last_error_at": null,
+        "last_error_message": null,
+        "last_success_at": "2026-06-06T10:13:00-06:00",
+        "note": "Operativo",
+        "status": "ok"
+      }
+    ],
+    "diagnostics": [
+      {
+        "consecutive_failures": 0,
+        "key": "scraping",
+        "label": "Scraping",
+        "last_attempt_at": "2026-06-06T09:59:00-06:00",
+        "last_error_at": null,
+        "last_error_message": null,
+        "last_success_at": "2026-06-06T09:59:00-06:00",
+        "note": "Operativo",
+        "status": "ok"
+      },
+      {
+        "consecutive_failures": 1,
+        "key": "telegram",
+        "label": "Telegram",
+        "last_attempt_at": "2026-06-06T10:26:00-06:00",
+        "last_error_at": "2026-06-06T10:26:00-06:00",
+        "last_error_message": "TimeoutError: sendMessage tardio",
+        "last_success_at": "2026-06-06T10:15:00-06:00",
+        "note": "Fallo reciente",
+        "status": "error"
+      },
+      {
+        "consecutive_failures": 0,
+        "key": "precheck",
+        "label": "Precheck",
+        "last_attempt_at": "2026-06-06T10:13:00-06:00",
+        "last_error_at": null,
+        "last_error_message": null,
+        "last_success_at": "2026-06-06T10:13:00-06:00",
+        "note": "Operativo",
+        "status": "ok"
+      }
+    ]
+  },
   "policy": {
     "allowed_impacts": [
       "medium",
