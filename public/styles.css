@@ -86,6 +86,7 @@ body::after {
 .panel {
   padding: 24px;
   animation: rise 560ms ease both;
+  overflow: visible;
 }
 
 .panel::before,
