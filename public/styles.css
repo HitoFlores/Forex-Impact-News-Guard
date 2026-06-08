@@ -200,10 +200,10 @@ h3,
 }
 
 h1 {
-  max-width: 24ch;
+  max-width: 100%;
   margin-top: 14px;
-  font-size: clamp(1.45rem, 2.2vw, 2.35rem);
-  line-height: 1.02;
+  font-size: clamp(1.85rem, 3vw, 3.05rem);
+  line-height: 0.98;
   white-space: normal;
   text-wrap: balance;
 }
