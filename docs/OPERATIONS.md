@@ -69,6 +69,13 @@ Payload base:
 }
 ```
 
+Nota sobre `currencies`:
+
+- `[]` o vacio no significa un catalogo fijo interno.
+- Significa `sin filtro por moneda`.
+- Entra cualquier moneda que venga en Forex Factory y pase el filtro de impacto.
+- En la practica suele incluir cosas como `USD`, `EUR`, `GBP`, `JPY`, `AUD`, `NZD`, `CAD`, `CHF`, `CNY`, `MXN`, pero no esta limitado a esa lista.
+
 ## Archivos locales importantes
 
 - `.env`: secretos locales
