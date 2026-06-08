@@ -28,8 +28,15 @@ El sistema monitorea calendario de Forex Factory para:
 - Mensajes Telegram con banderas, iconos y semaforos visuales.
 - `GitHub Actions + GitHub Pages` ya quedo desplegado en `main`.
 - `sync-and-publish` y `keepalive` ya fueron validados manualmente.
-- Workflow manual `telegram-smoke-test` ya existe para prueba remota bajo demanda.
-- Prueba real local de Telegram ya validada con 5 mensajes sample.
+- Workflow manual `telegram-smoke-test` ya existe para prueba remota bajo demanda y ya fue validado desde GitHub.
+- Prueba real de Telegram ya validada con 5 mensajes sample.
+- Dashboard publicado con modos `Live` y `Demo`.
+- Dashboard puede disparar:
+  - `telegram-smoke-test`;
+  - `sync-and-publish`;
+  - `dashboard-control` para settings basicos.
+- Los workflows sensibles usan environment `ops-control`.
+- El token del dashboard ya no se guarda persistente; solo en sesion del navegador.
 
 ## Configuracion actual del producto
 
@@ -64,5 +71,6 @@ Usuario puede configurar:
 
 - `precheck` revalida calendario justo antes del alert, pero todavia conviene mejorar observabilidad y manejo fino de fallas upstream.
 - Worker agrupa alertas y resultados por bloque horario, pero no resume por ventana de riesgo mas inteligente.
-- Dashboard ya existe y es util para operacion, pero todavia puede crecer en diagnostico y consolidacion de riesgo.
-- Falta validar manana el workflow `telegram-smoke-test` ejecutado desde GitHub y relanzar `sync-and-publish` para publicar la nueva UI.
+- Dashboard ya existe y es util para operacion, pero todavia puede crecer en diagnostico, consolidacion de riesgo y calidad visual.
+- GitHub Pages sigue siendo publica; aunque las acciones ya exigen token y pueden exigir approval en `ops-control`, el contenido publicado sigue siendo visible para cualquiera con la URL.
+- Si se quiere privacidad real de lectura, toca mover la UI a una superficie con auth real.

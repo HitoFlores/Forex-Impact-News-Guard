@@ -29,11 +29,22 @@ Si retomas desde cero, el estado real actual es este:
 
 - `sync-and-publish` ya pasa en `main` y Pages ya esta publicado.
 - `keepalive` ya se valido manualmente y genera commit automatico correcto.
-- El workflow nuevo `telegram-smoke-test` ya existe en repo pero falta correrlo manualmente desde GitHub.
-- El dashboard nuevo ya esta en codigo, pero falta relanzar `sync-and-publish` para verlo publicado en Pages.
-- La prueba local real de Telegram ya mando 5 mensajes sample:
+- `telegram-smoke-test` ya fue probado desde GitHub Actions con exito.
+- `dashboard-control` ya existe y permite cambiar settings basicos desde el dashboard via GitHub API + workflow.
+- El dashboard nuevo ya esta publicado y validado en modo `Live` y `Demo`.
+- El dashboard ahora incluye:
+  - toggle `Live / Demo`;
+  - tooltips `?` de ayuda;
+  - `Smoke Telegram`;
+  - `Sync + Publish`;
+  - `Settings basicos`;
+  - bloque visible de seguridad;
+  - bloqueo de controles hasta pegar token.
+- Los workflows sensibles `telegram-smoke-test` y `dashboard-control` ya quedaron amarrados al environment `ops-control`.
+- La prueba real de Telegram ya mando 5 mensajes sample:
   - `FOREX FACTORY DAILY`
   - `FOREX IMPACT ALERT`
   - `FOREX IMPACT ALERT`
   - `FOREX RESULT UPDATE`
   - `FOREX RESULT UPDATE`
+- Proxima prioridad clara: mejorar el diseno del dashboard sin tocar negativamente el flujo operativo validado.

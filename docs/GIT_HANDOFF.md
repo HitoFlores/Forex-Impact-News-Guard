@@ -15,8 +15,22 @@ El repositorio fue reiniciado y reconstruido desde un scaffold roto hacia una ba
 - `keepalive` ya se corrio manual y paso en verde, generando commit automatico.
 - Se agrego workflow manual `telegram-smoke-test` para forzar desde GitHub el envio real de todos los mensajes sample.
 - Se agrego script `scripts/send_telegram_smoke_test.py` y se probo localmente con envio real de 5 mensajes a Telegram.
-- El dashboard fue rehecho para mostrar salud del cron, proxima alerta/evento, keepalive, policy y ledger reciente.
-- Pendiente inmediato para manana: correr `sync-and-publish` manual sobre `main` para publicar nuevo dashboard y luego correr `telegram-smoke-test` manual desde GitHub para validar flujo 100% remoto.
+- `telegram-smoke-test` ya fue validado desde GitHub Actions con exito.
+- El dashboard fue rehecho y publicado con:
+  - salud del cron;
+  - proxima alerta/evento;
+  - keepalive;
+  - policy y ledger reciente;
+  - modo `Live / Demo`;
+  - ayuda inline con `?`;
+  - `Smoke Telegram`;
+  - `Sync + Publish`;
+  - `Settings basicos` via workflow;
+  - bloque de seguridad.
+- Se agrego `scripts/apply_dashboard_settings.py`.
+- Se agrego workflow `.github/workflows/dashboard-control.yml`.
+- Los workflows sensibles ya usan environment `ops-control` para approval si se configura reviewer en GitHub.
+- Pendiente prioritario para proxima sesion: mejorar diseno del dashboard como prioridad 1.
 
 ## Lo que deberia entrar a git
 
@@ -43,7 +57,7 @@ Nota:
 
 1. Revisar `git status`
 2. Confirmar que `.env` no este staged
-3. Correr `sync-and-publish` manual en GitHub para desplegar dashboard nuevo
-4. Abrir Pages y confirmar que UI nueva ya quedo publicada
-5. Correr `telegram-smoke-test` manual en GitHub sobre `main`
-6. Confirmar recepcion en Telegram y, si hace falta, volver a correr `sync-and-publish`
+3. Abrir Pages y confirmar que siga en `Live`
+4. Confirmar que `ops-control` exista y tenga reviewers si se quiere approval manual
+5. Si vas a tocar UI, priorizar mejora de diseno antes de meter nuevas features
+6. Si se requiere validar flujo real, correr `telegram-smoke-test` y luego revisar approval/resultado en GitHub Actions
