@@ -1,5 +1,6 @@
 {
   "allowed_impacts": [
+    "medium",
     "high"
   ],
   "breaking_enabled": true,
@@ -12,14 +13,14 @@
   "high_impact_only": true,
   "include_results": true,
   "lead_minutes": 10,
-  "result_check_delay_minutes": 3,
+  "result_check_delay_minutes": 4,
   "result_retry_minutes": [
     3,
     5
   ],
   "revalidate_minutes_before_alert": 2,
-  "risk_window_after_minutes": 15,
-  "risk_window_before_minutes": 15,
+  "risk_window_after_minutes": 10,
+  "risk_window_before_minutes": 10,
   "timezone": "America/Chihuahua",
   "timezone_info": "America/Chihuahua"
 }
