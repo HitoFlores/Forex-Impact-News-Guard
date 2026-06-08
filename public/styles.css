@@ -200,10 +200,11 @@ h3,
 }
 
 h1 {
-  max-width: 18ch;
+  max-width: none;
   margin-top: 14px;
-  font-size: clamp(2.4rem, 5vw, 4.8rem);
-  line-height: 0.93;
+  font-size: clamp(1.15rem, 2vw, 1.9rem);
+  line-height: 1.05;
+  white-space: nowrap;
 }
 
 h2 {
@@ -886,8 +887,8 @@ code {
   }
 
   h1 {
-    max-width: none;
-    font-size: clamp(2rem, 9vw, 3.4rem);
+    font-size: clamp(1.2rem, 5.2vw, 1.55rem);
+    white-space: normal;
   }
 
   .toolbar,
