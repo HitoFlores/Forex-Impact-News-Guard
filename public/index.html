@@ -18,9 +18,15 @@
           basica sin dejar vivo un backend.
         </p>
         <div class="toolbar">
-          <div class="mode-switch" role="tablist" aria-label="Modo de datos">
-            <button id="mode-live" class="mode-toggle is-active" type="button">Live</button>
-            <button id="mode-demo" class="mode-toggle" type="button">Demo</button>
+          <div class="mode-switch-wrap">
+            <div class="toolbar-label">
+              <span>Modo de datos</span>
+              <button class="help-dot" type="button" data-tooltip="Live muestra ultimo estado real publicado por GitHub Actions. Demo carga datos sample para enseñar UI y flujo visual sin esperar noticias reales.">?</button>
+            </div>
+            <div class="mode-switch" role="tablist" aria-label="Modo de datos">
+              <button id="mode-live" class="mode-toggle is-active" type="button">Live</button>
+              <button id="mode-demo" class="mode-toggle" type="button">Demo</button>
+            </div>
           </div>
           <div id="policy-chips" class="chip-row"></div>
         </div>
@@ -97,27 +103,59 @@
       <section class="panel">
         <div class="panel-head">
           <div>
-            <p class="section-kicker">Control</p>
-            <h2>Centro de operaciones</h2>
+            <p class="section-kicker">Security</p>
+            <h2>Acceso y riesgo</h2>
           </div>
+          <span class="stamp">Importante</span>
+        </div>
+        <div class="security-stack">
+          <article class="security-card security-warn">
+            <h3>Pages publica no puede ocultar contenido real</h3>
+            <p>
+              Este dashboard vive en GitHub Pages publica. Eso significa que cualquier persona con la URL puede ver el HTML, CSS, JS y el estado publicado.
+              Lo que si podemos proteger aqui son las acciones sensibles.
+            </p>
+          </article>
+          <article class="security-card">
+            <h3>Que si queda protegido</h3>
+            <p>
+              Cambiar settings o disparar Telegram requiere un token GitHub valido y, si configuras reviewers en el environment <code>ops-control</code>,
+              ademas requerira aprobacion manual en GitHub antes de ejecutarse.
+            </p>
+          </article>
+          <article class="security-card">
+            <h3>Si quieres ocultar dashboard completo</h3>
+            <p>
+              Eso ya no se resuelve solo con frontend. Necesitas mover esta UI a un sitio con auth real o ponerla detras de una capa tipo Cloudflare Access.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+            <div>
+              <p class="section-kicker">Control</p>
+              <h2>Centro de operaciones</h2>
+            </div>
           <span class="stamp">GitHub API</span>
         </div>
         <form id="github-control-form" class="control-form">
           <div class="form-grid">
             <label>
-              <span>Owner</span>
+              <span>Owner <button class="help-dot inline-help" type="button" data-tooltip="Usuario u organizacion dueña del repo en GitHub. Ejemplo: HitoFlores.">?</button></span>
               <input id="gh-owner" name="owner" type="text" value="HitoFlores" autocomplete="off">
             </label>
             <label>
-              <span>Repo</span>
+              <span>Repo <button class="help-dot inline-help" type="button" data-tooltip="Nombre exacto del repositorio donde viven los workflows y Pages.">?</button></span>
               <input id="gh-repo" name="repo" type="text" value="Forex-Impact-News-Guard" autocomplete="off">
             </label>
             <label>
-              <span>Branch</span>
+              <span>Branch <button class="help-dot inline-help" type="button" data-tooltip="Rama sobre la que se disparan los workflows. Normalmente main.">?</button></span>
               <input id="gh-branch" name="branch" type="text" value="main" autocomplete="off">
             </label>
             <label class="span-2">
-              <span>GitHub token</span>
+              <span>GitHub token <button class="help-dot inline-help" type="button" data-tooltip="PAT fine-grained o token equivalente con permiso para Actions en este repo. Sin token nadie puede ejecutar workflows desde esta pagina.">?</button></span>
               <input id="gh-token" name="token" type="password" placeholder="Fine-grained PAT con Actions write">
             </label>
           </div>
@@ -125,7 +163,7 @@
           <div class="checkbox-row">
             <label class="check">
               <input id="gh-remember" name="remember" type="checkbox">
-              <span>Guardar token y repo en este navegador</span>
+              <span>Guardar repo en navegador y token solo en esta sesion <button class="help-dot inline-help" type="button" data-tooltip="Owner, repo y branch se guardan en localStorage. El token ya no se guarda permanente: solo vive en esta pestaña/sesion para reducir riesgo en una pagina publica.">?</button></span>
             </label>
           </div>
 
@@ -138,6 +176,10 @@
           <p class="form-note">
             Pages es estatico. Para ejecutar acciones remotas este panel usa GitHub Actions via API desde tu navegador.
           </p>
+          <div class="help-list">
+            <div class="help-line"><strong>Smoke Telegram</strong><span>Dispara mensajes sample reales a tu chat para validar canal y formato sin esperar noticias.</span></div>
+            <div class="help-line"><strong>Sync + Publish</strong><span>Corre sync real, reconstruye `state.json` y vuelve a publicar Pages.</span></div>
+          </div>
           <div id="workflow-feedback" class="feedback idle">Listo para disparar workflows.</div>
         </form>
       </section>
@@ -153,35 +195,35 @@
         <form id="settings-form" class="control-form">
           <div class="form-grid">
             <label>
-              <span>Lead min</span>
+              <span>Lead min <button class="help-dot inline-help" type="button" data-tooltip="Minutos antes del evento en que sale la alerta principal.">?</button></span>
               <input id="lead-minutes" name="lead_minutes" type="number" min="0" max="240">
             </label>
             <label>
-              <span>Precheck min</span>
+              <span>Precheck min <button class="help-dot inline-help" type="button" data-tooltip="Minutos antes del alert en que se revalida el evento para evitar avisos con datos viejos.">?</button></span>
               <input id="revalidate-minutes" name="revalidate_minutes_before_alert" type="number" min="0" max="60">
             </label>
             <label>
-              <span>Result delay</span>
+              <span>Result delay <button class="help-dot inline-help" type="button" data-tooltip="Cuantos minutos despues del release se intenta leer y mandar resultado.">?</button></span>
               <input id="result-delay" name="result_check_delay_minutes" type="number" min="0" max="60">
             </label>
             <label>
-              <span>Timezone</span>
+              <span>Timezone <button class="help-dot inline-help" type="button" data-tooltip="Zona horaria usada para calcular ventanas, horarios y textos mostrados.">?</button></span>
               <input id="timezone" name="timezone" type="text">
             </label>
             <label class="span-2">
-              <span>Monedas CSV</span>
+              <span>Monedas CSV <button class="help-dot inline-help" type="button" data-tooltip="Lista separada por comas. Ejemplo: USD,EUR,JPY. Vacio = todas las monedas.">?</button></span>
               <input id="currencies" name="currencies" type="text" placeholder="USD,EUR,JPY">
             </label>
             <label>
-              <span>Risk before</span>
+              <span>Risk before <button class="help-dot inline-help" type="button" data-tooltip="Minutos antes del evento considerados dentro de ventana de riesgo.">?</button></span>
               <input id="risk-before" name="risk_window_before_minutes" type="number" min="0" max="240">
             </label>
             <label>
-              <span>Risk after</span>
+              <span>Risk after <button class="help-dot inline-help" type="button" data-tooltip="Minutos despues del evento que siguen marcados como riesgo para trading.">?</button></span>
               <input id="risk-after" name="risk_window_after_minutes" type="number" min="0" max="240">
             </label>
             <label>
-              <span>Impacts</span>
+              <span>Impacts <button class="help-dot inline-help" type="button" data-tooltip="Define impactos permitidos cuando 'Solo high' esta apagado.">?</button></span>
               <select id="allowed-impacts" name="allowed_impacts">
                 <option value="high">Solo high</option>
                 <option value="medium,high">Medium + high</option>
@@ -191,11 +233,11 @@
           </div>
 
           <div class="toggle-grid">
-            <label class="check"><input id="calendar-enabled" name="calendar_enabled" type="checkbox"><span>Calendario</span></label>
-            <label class="check"><input id="breaking-enabled" name="breaking_enabled" type="checkbox"><span>Breaking</span></label>
-            <label class="check"><input id="daily-summary-enabled" name="daily_summary_enabled" type="checkbox"><span>Daily</span></label>
-            <label class="check"><input id="include-results" name="include_results" type="checkbox"><span>Resultados</span></label>
-            <label class="check"><input id="high-impact-only" name="high_impact_only" type="checkbox"><span>Solo high</span></label>
+            <label class="check"><input id="calendar-enabled" name="calendar_enabled" type="checkbox"><span>Calendario <button class="help-dot inline-help" type="button" data-tooltip="Si lo apagas, el bot deja de usar eventos programados del calendario economico.">?</button></span></label>
+            <label class="check"><input id="breaking-enabled" name="breaking_enabled" type="checkbox"><span>Breaking <button class="help-dot inline-help" type="button" data-tooltip="Activa o pausa noticias no programadas detectadas como breaking news.">?</button></span></label>
+            <label class="check"><input id="daily-summary-enabled" name="daily_summary_enabled" type="checkbox"><span>Daily <button class="help-dot inline-help" type="button" data-tooltip="Activa mensaje diario resumen, incluso si no hay noticias relevantes.">?</button></span></label>
+            <label class="check"><input id="include-results" name="include_results" type="checkbox"><span>Resultados <button class="help-dot inline-help" type="button" data-tooltip="Si esta activo, el bot intenta mandar lectura post-release con actual/forecast/previous.">?</button></span></label>
+            <label class="check"><input id="high-impact-only" name="high_impact_only" type="checkbox"><span>Solo high <button class="help-dot inline-help" type="button" data-tooltip="Filtra solo eventos de alto impacto y desactiva selector de impactos.">?</button></span></label>
           </div>
 
           <div class="action-row">
@@ -203,6 +245,10 @@
             <button id="copy-settings" class="action-button secondary" type="button">Copiar payload</button>
           </div>
 
+          <div class="help-list">
+            <div class="help-line"><strong>Aplicar settings</strong><span>Lanza workflow `dashboard-control`, actualiza `.state/settings.json` y repinta Pages.</span></div>
+            <div class="help-line"><strong>Copiar payload</strong><span>Copia el input exacto del workflow para debug o respaldo antes de aplicar cambios.</span></div>
+          </div>
           <div id="settings-feedback" class="feedback idle">Cargando policy actual.</div>
         </form>
       </section>

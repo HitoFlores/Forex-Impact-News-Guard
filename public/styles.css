@@ -134,6 +134,30 @@ h1 {
   margin-top: 24px;
 }
 
+.mode-switch-wrap,
+.toolbar-label,
+.help-line {
+  display: flex;
+  gap: 10px;
+}
+
+.mode-switch-wrap,
+.help-line {
+  flex-direction: column;
+}
+
+.toolbar-label {
+  align-items: center;
+}
+
+.toolbar-label span,
+.help-line strong {
+  font: 700 0.76rem/1 var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .mode-switch,
 .chip-row,
 .inline-meta,
@@ -157,7 +181,8 @@ h1 {
 
 .mode-toggle,
 .action-button,
-.action-link {
+.action-link,
+.help-dot {
   border: 0;
   cursor: pointer;
   text-decoration: none;
@@ -181,8 +206,61 @@ h1 {
 
 .mode-toggle:hover,
 .action-button:hover,
-.action-link:hover {
+.action-link:hover,
+.help-dot:hover {
   transform: translateY(-1px);
+}
+
+.action-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+}
+
+.help-dot {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--accent-strong);
+  border: 1px solid var(--line-strong);
+  font: 700 0.72rem/1 var(--sans);
+  padding: 0;
+}
+
+.help-dot::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  width: min(280px, 60vw);
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(8, 13, 20, 0.96);
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow);
+  font: 600 0.78rem/1.45 var(--sans);
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 140ms ease;
+  z-index: 20;
+}
+
+.help-dot:hover::after,
+.help-dot:focus-visible::after {
+  opacity: 1;
+}
+
+.inline-help {
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+  vertical-align: middle;
 }
 
 .chip-row {
@@ -336,6 +414,51 @@ label span {
   color: var(--muted);
   font-size: 0.88rem;
   line-height: 1.55;
+}
+
+.help-list {
+  display: grid;
+  gap: 8px;
+}
+
+.security-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.security-card {
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.security-card h3 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.security-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font: 600 0.84rem/1.55 var(--sans);
+}
+
+.security-warn {
+  border-color: rgba(242, 196, 111, 0.35);
+  background: rgba(242, 196, 111, 0.07);
+}
+
+.help-line {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.028);
+}
+
+.help-line span {
+  color: var(--muted);
+  font: 600 0.84rem/1.5 var(--sans);
 }
 
 .content-grid {

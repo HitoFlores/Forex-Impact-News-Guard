@@ -86,6 +86,8 @@ concurrency:
 jobs:
   control:
     runs-on: ubuntu-latest
+    environment:
+      name: ops-control
     steps:
       - name: Checkout
         uses: actions/checkout@v4

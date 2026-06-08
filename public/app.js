@@ -41,6 +41,7 @@ const LIVE_STATE_PATH = "state.json";
 const DEMO_STATE_PATH = "state.example.json";
 const MODE_STORAGE_KEY = "fing-dashboard-mode";
 const GITHUB_STORAGE_KEY = "fing-dashboard-github";
+const GITHUB_TOKEN_SESSION_KEY = "fing-dashboard-github-token";
 
 function $(id) {
   return document.getElementById(id);
@@ -211,10 +212,12 @@ function saveGithubPrefs(rememberToken) {
     repo: $("gh-repo").value.trim(),
     branch: $("gh-branch").value.trim(),
   };
-  if (rememberToken) {
-    prefs.token = $("gh-token").value;
-  }
   window.localStorage.setItem(GITHUB_STORAGE_KEY, JSON.stringify(prefs));
+  if (rememberToken) {
+    window.sessionStorage.setItem(GITHUB_TOKEN_SESSION_KEY, $("gh-token").value);
+  } else {
+    window.sessionStorage.removeItem(GITHUB_TOKEN_SESSION_KEY);
+  }
 }
 
 function fillGithubPrefs() {
@@ -222,8 +225,9 @@ function fillGithubPrefs() {
   if (prefs.owner) $("gh-owner").value = prefs.owner;
   if (prefs.repo) $("gh-repo").value = prefs.repo;
   if (prefs.branch) $("gh-branch").value = prefs.branch;
-  if (prefs.token) {
-    $("gh-token").value = prefs.token;
+  const token = window.sessionStorage.getItem(GITHUB_TOKEN_SESSION_KEY);
+  if (token) {
+    $("gh-token").value = token;
     $("gh-remember").checked = true;
   }
 }
@@ -232,6 +236,16 @@ function setFeedback(id, message, tone = "idle") {
   const el = $(id);
   el.textContent = message;
   el.className = `feedback ${tone}`;
+}
+
+function updateControlLock() {
+  const hasToken = Boolean($("gh-token").value.trim());
+  $("run-smoke").disabled = !hasToken;
+  $("run-sync").disabled = !hasToken;
+  $("apply-settings").disabled = !hasToken;
+  if (!hasToken) {
+    setFeedback("workflow-feedback", "Controles bloqueados hasta pegar un GitHub token valido.", "idle");
+  }
 }
 
 function fillSettingsForm(policy) {
@@ -321,6 +335,8 @@ async function copySettingsPayload() {
 }
 
 function bindActions(state) {
+  $("gh-token").oninput = () => updateControlLock();
+  $("gh-remember").onchange = () => saveGithubPrefs($("gh-remember").checked);
   $("mode-live").onclick = () => render("live");
   $("mode-demo").onclick = () => render("demo");
 
@@ -369,6 +385,7 @@ function bindActions(state) {
 
   fillSettingsForm(state.policy_summary ?? DEFAULT_STATE.policy_summary);
   $("allowed-impacts").disabled = $("high-impact-only").checked;
+  updateControlLock();
 }
 
 async function render(mode = detectMode()) {
