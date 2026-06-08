@@ -7,8 +7,8 @@ from forex_news_guard.domain.runtime import NotificationMessage
 
 class TelegramNotifier:
     def __init__(self, bot_token: str, chat_id: str, timeout_seconds: float = 20.0) -> None:
-        self.bot_token = bot_token
-        self.chat_id = chat_id
+        self.bot_token = bot_token.strip()
+        self.chat_id = chat_id.strip()
         self.timeout_seconds = timeout_seconds
 
     def send(self, message: NotificationMessage) -> None:
@@ -23,4 +23,6 @@ class TelegramNotifier:
                     "disable_web_page_preview": True,
                 },
             )
-        response.raise_for_status()
+        if response.is_error:
+            detail = response.text.strip() or response.reason_phrase
+            raise RuntimeError(f"Telegram sendMessage failed ({response.status_code}): {detail}")
