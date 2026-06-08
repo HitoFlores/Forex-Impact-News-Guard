@@ -12,17 +12,26 @@
     <section class="masthead">
       <div class="hero-copy panel">
         <p class="eyebrow">Forex Impact News Guard</p>
-        <h1>Radar operativo de riesgo macro, cron y Telegram.</h1>
+        <h1>Desk operativo para riesgo macro y control remoto.</h1>
         <p class="lede">
-          GitHub Actions sincroniza Forex Factory cada 5 minutos, Telegram saca alertas reales y este
-          panel deja ver salud operativa, proximo riesgo y ledger reciente sin API viva.
+          Panel Pages para leer salud real, simular demo visual, disparar workflows y ajustar policy
+          basica sin dejar vivo un backend.
         </p>
-        <div id="policy-chips" class="chip-row"></div>
+        <div class="toolbar">
+          <div class="mode-switch" role="tablist" aria-label="Modo de datos">
+            <button id="mode-live" class="mode-toggle is-active" type="button">Live</button>
+            <button id="mode-demo" class="mode-toggle" type="button">Demo</button>
+          </div>
+          <div id="policy-chips" class="chip-row"></div>
+        </div>
       </div>
 
       <aside class="ops-rail panel">
         <div class="ops-head">
-          <span id="freshness-pill" class="status-pill">Cargando</span>
+          <div>
+            <span id="freshness-pill" class="status-pill">Cargando</span>
+            <p id="mode-copy" class="rail-copy">Leyendo estado</p>
+          </div>
           <span id="generated-at" class="stamp"></span>
         </div>
         <div class="ops-grid">
@@ -59,12 +68,12 @@
       <article class="metric panel">
         <span class="label">Checks programados</span>
         <strong id="count-schedules">0</strong>
-        <p>Precheck, alerta y result-check vigentes en estado.</p>
+        <p>Precheck, alert y result-check vigentes.</p>
       </article>
       <article class="metric panel">
         <span class="label">Dispatches</span>
         <strong id="count-dispatches">0</strong>
-        <p>Mensajes ya enviados y persistidos para no duplicar.</p>
+        <p>Ledger para evitar duplicados y ver actividad.</p>
       </article>
       <article class="metric panel">
         <span class="label">Monedas</span>
@@ -80,7 +89,7 @@
             <p class="section-kicker">Radar</p>
             <h2>Proximas ventanas de riesgo</h2>
           </div>
-          <span class="stamp">Ordenado por alerta</span>
+          <span class="stamp">Ordenado por alert_at</span>
         </div>
         <div id="next-alerts" class="alert-grid"></div>
       </section>
@@ -88,8 +97,132 @@
       <section class="panel">
         <div class="panel-head">
           <div>
+            <p class="section-kicker">Control</p>
+            <h2>Centro de operaciones</h2>
+          </div>
+          <span class="stamp">GitHub API</span>
+        </div>
+        <form id="github-control-form" class="control-form">
+          <div class="form-grid">
+            <label>
+              <span>Owner</span>
+              <input id="gh-owner" name="owner" type="text" value="HitoFlores" autocomplete="off">
+            </label>
+            <label>
+              <span>Repo</span>
+              <input id="gh-repo" name="repo" type="text" value="Forex-Impact-News-Guard" autocomplete="off">
+            </label>
+            <label>
+              <span>Branch</span>
+              <input id="gh-branch" name="branch" type="text" value="main" autocomplete="off">
+            </label>
+            <label class="span-2">
+              <span>GitHub token</span>
+              <input id="gh-token" name="token" type="password" placeholder="Fine-grained PAT con Actions write">
+            </label>
+          </div>
+
+          <div class="checkbox-row">
+            <label class="check">
+              <input id="gh-remember" name="remember" type="checkbox">
+              <span>Guardar token y repo en este navegador</span>
+            </label>
+          </div>
+
+          <div class="action-row">
+            <button id="run-smoke" class="action-button" type="button">Smoke Telegram</button>
+            <button id="run-sync" class="action-button secondary" type="button">Sync + Publish</button>
+            <a class="action-link" href="https://github.com/HitoFlores/Forex-Impact-News-Guard/actions" target="_blank" rel="noreferrer">Abrir Actions</a>
+          </div>
+
+          <p class="form-note">
+            Pages es estatico. Para ejecutar acciones remotas este panel usa GitHub Actions via API desde tu navegador.
+          </p>
+          <div id="workflow-feedback" class="feedback idle">Listo para disparar workflows.</div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
             <p class="section-kicker">Policy</p>
-            <h2>Modo operativo</h2>
+            <h2>Settings basicos</h2>
+          </div>
+          <span class="stamp">dashboard-control.yml</span>
+        </div>
+        <form id="settings-form" class="control-form">
+          <div class="form-grid">
+            <label>
+              <span>Lead min</span>
+              <input id="lead-minutes" name="lead_minutes" type="number" min="0" max="240">
+            </label>
+            <label>
+              <span>Precheck min</span>
+              <input id="revalidate-minutes" name="revalidate_minutes_before_alert" type="number" min="0" max="60">
+            </label>
+            <label>
+              <span>Result delay</span>
+              <input id="result-delay" name="result_check_delay_minutes" type="number" min="0" max="60">
+            </label>
+            <label>
+              <span>Timezone</span>
+              <input id="timezone" name="timezone" type="text">
+            </label>
+            <label class="span-2">
+              <span>Monedas CSV</span>
+              <input id="currencies" name="currencies" type="text" placeholder="USD,EUR,JPY">
+            </label>
+            <label>
+              <span>Risk before</span>
+              <input id="risk-before" name="risk_window_before_minutes" type="number" min="0" max="240">
+            </label>
+            <label>
+              <span>Risk after</span>
+              <input id="risk-after" name="risk_window_after_minutes" type="number" min="0" max="240">
+            </label>
+            <label>
+              <span>Impacts</span>
+              <select id="allowed-impacts" name="allowed_impacts">
+                <option value="high">Solo high</option>
+                <option value="medium,high">Medium + high</option>
+                <option value="low,medium,high">Todos</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="toggle-grid">
+            <label class="check"><input id="calendar-enabled" name="calendar_enabled" type="checkbox"><span>Calendario</span></label>
+            <label class="check"><input id="breaking-enabled" name="breaking_enabled" type="checkbox"><span>Breaking</span></label>
+            <label class="check"><input id="daily-summary-enabled" name="daily_summary_enabled" type="checkbox"><span>Daily</span></label>
+            <label class="check"><input id="include-results" name="include_results" type="checkbox"><span>Resultados</span></label>
+            <label class="check"><input id="high-impact-only" name="high_impact_only" type="checkbox"><span>Solo high</span></label>
+          </div>
+
+          <div class="action-row">
+            <button id="apply-settings" class="action-button" type="submit">Aplicar settings</button>
+            <button id="copy-settings" class="action-button secondary" type="button">Copiar payload</button>
+          </div>
+
+          <div id="settings-feedback" class="feedback idle">Cargando policy actual.</div>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">Signals</p>
+            <h2>Distribucion operativa</h2>
+          </div>
+        </div>
+        <div id="impact-breakdown" class="stack compact"></div>
+        <div id="currency-breakdown" class="stack compact top-gap"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="section-kicker">Mode</p>
+            <h2>Resumen operativo</h2>
           </div>
         </div>
         <div id="policy-summary" class="stack"></div>
@@ -98,40 +231,30 @@
       <section class="panel">
         <div class="panel-head">
           <div>
-            <p class="section-kicker">Dispatch mix</p>
-            <h2>Tipos enviados</h2>
-          </div>
-        </div>
-        <div id="dispatch-breakdown" class="stack compact"></div>
-      </section>
-
-      <section class="panel">
-        <div class="panel-head">
-          <div>
-            <p class="section-kicker">Runbook</p>
-            <h2>Acciones manuales</h2>
+            <p class="section-kicker">Demo</p>
+            <h2>Runbook corto</h2>
           </div>
         </div>
         <div class="runbook">
           <article class="runbook-step">
             <span>01</span>
             <div>
-              <h3>Forzar mensajes reales</h3>
-              <p>Corre workflow <code>telegram-smoke-test</code> para validar daily, pre-alert y result updates.</p>
+              <h3>Demo visual</h3>
+              <p>Cambia a <code>Demo</code> para mostrar ventanas, eventos y ledger sample en cualquier momento.</p>
             </div>
           </article>
           <article class="runbook-step">
             <span>02</span>
             <div>
-              <h3>Sincronizar estado</h3>
-              <p>Usa <code>sync-and-publish</code> si quieres recalcular JSON y repintar Pages al momento.</p>
+              <h3>Demo Telegram</h3>
+              <p>Usa <code>Smoke Telegram</code> para mandar mensajes reales sample sin esperar noticias.</p>
             </div>
           </article>
           <article class="runbook-step">
             <span>03</span>
             <div>
-              <h3>Mantener schedules vivos</h3>
-              <p>Lanza <code>keepalive</code> manual solo para verificar que el repositorio siga activo.</p>
+              <h3>Ajuste remoto</h3>
+              <p>Aplica policy basica con <code>Aplicar settings</code>; workflow actualiza <code>.state/settings.json</code> y repinta Pages.</p>
             </div>
           </article>
         </div>
@@ -154,7 +277,8 @@
             <h2>Ultimos dispatches</h2>
           </div>
         </div>
-        <div id="recent-dispatches" class="stack compact"></div>
+        <div id="dispatch-breakdown" class="stack compact"></div>
+        <div id="recent-dispatches" class="stack compact top-gap"></div>
       </section>
     </section>
   </main>

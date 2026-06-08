@@ -1,42 +1,230 @@
 {
-  "generated_at": null,
+  "counts": {
+    "dispatches": 6,
+    "relevant_events": 3,
+    "schedules": 9,
+    "tracked_currencies": 3
+  },
+  "currency_breakdown": [
+    {
+      "count": 2,
+      "currency": "USD"
+    },
+    {
+      "count": 1,
+      "currency": "EUR"
+    }
+  ],
+  "dispatch_breakdown": [
+    {
+      "count": 2,
+      "kind": "daily_summary"
+    },
+    {
+      "count": 2,
+      "kind": "precheck"
+    },
+    {
+      "count": 1,
+      "kind": "alert"
+    },
+    {
+      "count": 1,
+      "kind": "result"
+    }
+  ],
+  "generated_at": "2026-06-06T10:00:00-06:00",
+  "impact_breakdown": [
+    {
+      "count": 2,
+      "impact": "high"
+    },
+    {
+      "count": 1,
+      "impact": "medium"
+    }
+  ],
+  "next_alerts": [
+    {
+      "alert_at": "2026-06-06T10:15:00-06:00",
+      "alert_kind": "alert",
+      "currency": "USD",
+      "event_id": "demo-usd-cpi",
+      "impact": "high",
+      "risk_window_ends_at": "2026-06-06T10:45:00-06:00",
+      "risk_window_starts_at": "2026-06-06T10:05:00-06:00",
+      "scheduled_at": "2026-06-06T10:25:00-06:00",
+      "title": "US CPI m/m"
+    },
+    {
+      "alert_at": "2026-06-06T11:10:00-06:00",
+      "alert_kind": "precheck",
+      "currency": "EUR",
+      "event_id": "demo-eur-ecb",
+      "impact": "medium",
+      "risk_window_ends_at": "2026-06-06T11:40:00-06:00",
+      "risk_window_starts_at": "2026-06-06T11:00:00-06:00",
+      "scheduled_at": "2026-06-06T11:20:00-06:00",
+      "title": "ECB Rate Statement"
+    },
+    {
+      "alert_at": "2026-06-06T12:45:00-06:00",
+      "alert_kind": "alert",
+      "currency": "USD",
+      "event_id": "demo-usd-fomc",
+      "impact": "high",
+      "risk_window_ends_at": "2026-06-06T13:15:00-06:00",
+      "risk_window_starts_at": "2026-06-06T12:35:00-06:00",
+      "scheduled_at": "2026-06-06T12:55:00-06:00",
+      "title": "FOMC Press Conference"
+    }
+  ],
   "policy": {
+    "allowed_impacts": [
+      "medium",
+      "high"
+    ],
+    "breaking_enabled": true,
+    "calendar_enabled": true,
+    "currencies": [
+      "USD",
+      "EUR",
+      "JPY"
+    ],
     "daily_summary_enabled": true,
+    "high_impact_only": false,
     "include_results": true,
     "lead_minutes": 10,
-    "risk_window_after_minutes": 15,
+    "result_check_delay_minutes": 1,
+    "result_retry_minutes": [
+      3,
+      5
+    ],
+    "revalidate_minutes_before_alert": 2,
+    "risk_window_after_minutes": 20,
     "risk_window_before_minutes": 20,
     "timezone": "America/Chihuahua"
   },
-  "counts": {
-    "tracked_currencies": 0,
-    "relevant_events": 0,
-    "schedules": 0,
-    "dispatches": 0
-  },
-  "dispatch_breakdown": [],
-  "next_alerts": [],
   "policy_summary": {
+    "allowed_impacts": [
+      "medium",
+      "high"
+    ],
     "breaking_enabled": true,
     "calendar_enabled": true,
     "daily_summary_enabled": true,
-    "high_impact_only": true,
+    "high_impact_only": false,
     "include_results": true,
     "lead_minutes": 10,
-    "monitored_currencies": [],
+    "monitored_currencies": [
+      "EUR",
+      "JPY",
+      "USD"
+    ],
     "result_check_delay_minutes": 1,
-    "result_retry_minutes": [3, 5],
+    "result_retry_minutes": [
+      3,
+      5
+    ],
     "revalidate_minutes_before_alert": 2,
+    "risk_window_after_minutes": 20,
+    "risk_window_before_minutes": 20,
     "timezone": "America/Chihuahua"
   },
-  "recent_events": [],
-  "recent_dispatches": [],
+  "recent_dispatches": [
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "daily-summary-demo",
+      "kind": "daily_summary",
+      "scheduled_for": "2026-06-06T09:00:00-06:00",
+      "sent_at": "2026-06-06T09:00:14-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "demo-usd-cpi",
+      "kind": "precheck",
+      "scheduled_for": "2026-06-06T10:13:00-06:00",
+      "sent_at": "2026-06-06T10:13:06-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "demo-usd-cpi",
+      "kind": "alert",
+      "scheduled_for": "2026-06-06T10:15:00-06:00",
+      "sent_at": "2026-06-06T10:15:09-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "demo-usd-cpi",
+      "kind": "result",
+      "scheduled_for": "2026-06-06T10:26:00-06:00",
+      "sent_at": "2026-06-06T10:26:21-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "demo-eur-ecb",
+      "kind": "precheck",
+      "scheduled_for": "2026-06-06T11:08:00-06:00",
+      "sent_at": "2026-06-06T11:08:09-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "daily-summary-demo-2",
+      "kind": "daily_summary",
+      "scheduled_for": "2026-06-06T08:00:00-06:00",
+      "sent_at": "2026-06-06T08:00:12-06:00"
+    }
+  ],
+  "recent_events": [
+    {
+      "actual": "0.4%",
+      "currency": "USD",
+      "event_id": "demo-usd-cpi",
+      "forecast": "0.3%",
+      "impact": "high",
+      "is_breaking": false,
+      "previous": "0.2%",
+      "scheduled_at": "2026-06-06T10:25:00-06:00",
+      "stored_at": "2026-06-06T09:58:00-06:00",
+      "title": "US CPI m/m"
+    },
+    {
+      "actual": null,
+      "currency": "EUR",
+      "event_id": "demo-eur-ecb",
+      "forecast": "4.25%",
+      "impact": "medium",
+      "is_breaking": false,
+      "previous": "4.25%",
+      "scheduled_at": "2026-06-06T11:20:00-06:00",
+      "stored_at": "2026-06-06T10:02:00-06:00",
+      "title": "ECB Rate Statement"
+    },
+    {
+      "actual": null,
+      "currency": "USD",
+      "event_id": "demo-usd-fomc",
+      "forecast": null,
+      "impact": "high",
+      "is_breaking": true,
+      "previous": null,
+      "scheduled_at": "2026-06-06T12:55:00-06:00",
+      "stored_at": "2026-06-06T10:05:00-06:00",
+      "title": "FOMC Press Conference"
+    }
+  ],
   "status": {
-    "generated_at": null,
-    "keepalive_updated_at": null,
-    "last_dispatch_at": null,
-    "latest_event_stored_at": null,
-    "next_alert_at": null,
-    "next_event_at": null
+    "generated_at": "2026-06-06T10:00:00-06:00",
+    "keepalive_updated_at": "2026-06-06T07:00:00-06:00",
+    "last_dispatch_at": "2026-06-06T10:26:21-06:00",
+    "latest_event_stored_at": "2026-06-06T10:05:00-06:00",
+    "next_alert_at": "2026-06-06T10:15:00-06:00",
+    "next_event_at": "2026-06-06T10:25:00-06:00"
   }
 }
