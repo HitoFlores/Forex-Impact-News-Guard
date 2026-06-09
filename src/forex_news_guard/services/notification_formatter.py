@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date, datetime
 from html import escape
 
 from forex_news_guard.domain.models import EventSchedule, ForexEvent, ImpactLevel
@@ -46,11 +46,16 @@ def build_result_message(event: ForexEvent, checked_at: datetime) -> Notificatio
 
 
 def build_daily_summary_message(events: list[ForexEvent], generated_at: datetime) -> NotificationMessage:
-    if not events:
+    today = generated_at.date()
+    tomorrow = date.fromordinal(today.toordinal() + 1)
+    todays_events = [event for event in events if _event_local_date(event, generated_at) == today]
+    tomorrows_events = [event for event in events if _event_local_date(event, generated_at) == tomorrow]
+
+    if not todays_events:
         body = "<i>No hay noticias relevantes configuradas para hoy.</i>"
     else:
         lines = ["<b>HIGH IMPACT CALENDAR</b>", f"<i>{escape(generated_at.strftime('%Y-%m-%d'))}</i>", ""]
-        for event in events:
+        for event in todays_events:
             event_time = event.scheduled_at.strftime("%H:%M") if event.scheduled_at else "N/D"
             flag = _currency_flag(event.currency)
             impact_badge = _impact_badge(event.impact)
@@ -60,6 +65,10 @@ def build_daily_summary_message(events: list[ForexEvent], generated_at: datetime
                 f"📊 <code>Impacto:</code> {impact_badge} <b>{escape(_impact_label(event.impact))}</b>\n"
             )
         body = "\n".join(lines)
+    if tomorrows_events:
+        count = len(tomorrows_events)
+        plural = "s" if count != 1 else ""
+        body = f"{body}\n\n<i>Manana se esperan {count} noticia{plural} de alto impacto.</i>"
     return NotificationMessage(
         event_id=f"daily-summary-{generated_at.date().isoformat()}",
         impact=ImpactLevel.HIGH,
@@ -130,6 +139,14 @@ def _impact_label(impact: ImpactLevel) -> str:
         ImpactLevel.MEDIUM: "Medio",
         ImpactLevel.LOW: "Bajo",
     }[impact]
+
+
+def _event_local_date(event: ForexEvent, generated_at: datetime) -> date | None:
+    if event.scheduled_at is None:
+        return None
+    if generated_at.tzinfo is None:
+        return event.scheduled_at.date()
+    return event.scheduled_at.astimezone(generated_at.tzinfo).date()
 
 
 def _currency_flag(currency: str) -> str:
