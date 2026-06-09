@@ -26,6 +26,7 @@ El sistema monitorea calendario de Forex Factory para:
   - alertas ya enviadas.
 - Worker ahora corre `run_once` y deja el cron a GitHub Actions.
 - Mensajes Telegram con banderas, iconos y semaforos visuales.
+- Resumen diario de Telegram separa eventos de hoy y manana: el calendario diario lista solo la fecha actual y, si detecta alto impacto para manana, agrega una nota corta sin listar esos eventos como si fueran de hoy.
 - `GitHub Actions + GitHub Pages` ya quedo desplegado en `main`.
 - `sync-and-publish` y `keepalive` ya fueron validados manualmente.
 - Workflow manual `telegram-smoke-test` ya existe para prueba remota bajo demanda y ya fue validado desde GitHub.
@@ -57,7 +58,7 @@ Usuario puede configurar:
 2. Sincroniza Forex Factory y filtra eventos relevantes.
 3. Guarda solo hoy y manana.
 4. Calcula `precheck`, `alert` y `result-check`.
-5. Envia resumen diario una vez por dia.
+5. Envia resumen diario una vez por dia, con detalle solo de hoy y aviso agregado de manana si aplica.
 6. Envia alertas y resultados por Telegram.
 
 ## Direccion de deploy decidida

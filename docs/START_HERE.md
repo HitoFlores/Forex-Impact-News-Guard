@@ -28,8 +28,9 @@ Antes de cualquier deploy, rotar el `TELEGRAM_BOT_TOKEN`.
 Si retomas desde cero, el estado real actual es este:
 
 - `sync-and-publish` ya pasa en `main` y Pages ya esta publicado.
+- Ultimo redeploy manual validado: run `27214972059` de `sync-and-publish`, completado con exito.
 - `keepalive` ya se valido manualmente y genera commit automatico correcto.
-- `telegram-smoke-test` ya fue probado desde GitHub Actions con exito.
+- `telegram-smoke-test` ya fue probado desde GitHub Actions con exito; ultimo run validado: `27215982457`.
 - `dashboard-control` ya existe y permite cambiar settings basicos desde el dashboard via GitHub API + workflow.
 - El dashboard nuevo ya esta publicado y validado en modo `Live` y `Demo`.
 - El dashboard ahora incluye:
@@ -47,4 +48,8 @@ Si retomas desde cero, el estado real actual es este:
   - `FOREX IMPACT ALERT`
   - `FOREX RESULT UPDATE`
   - `FOREX RESULT UPDATE`
+- El resumen diario de Telegram ya separa eventos por fecha local:
+  - lista solo eventos de hoy;
+  - si hay eventos de manana, agrega solo una nota tipo `Manana se esperan X noticias de alto impacto.`;
+  - no muestra titulos de manana dentro del calendario de hoy.
 - Proxima prioridad clara: mejorar el diseno del dashboard sin tocar negativamente el flujo operativo validado.
