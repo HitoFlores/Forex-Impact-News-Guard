@@ -1,3 +1,137 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "0.3%",
+        "id": "ff-calendar-148363",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.4%",
+        "published_at": null,
+        "scheduled_at": "2026-06-10T06:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Core CPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=148363"
+      },
+      "event_date": "2026-06-10",
+      "stored_at": "2026-06-09T00:29:23.311236-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "2.9%",
+        "id": "ff-calendar-153053",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2.8%",
+        "published_at": null,
+        "scheduled_at": "2026-06-10T06:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Core CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=153053"
+      },
+      "event_date": "2026-06-10",
+      "stored_at": "2026-06-09T00:29:23.311236-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "0.5%",
+        "id": "ff-calendar-148331",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.6%",
+        "published_at": null,
+        "scheduled_at": "2026-06-10T06:30:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=148331"
+      },
+      "event_date": "2026-06-10",
+      "stored_at": "2026-06-09T00:29:23.311236-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "4.2%",
+        "id": "ff-calendar-148348",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "3.8%",
+        "published_at": null,
+        "scheduled_at": "2026-06-10T06:30:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=148348"
+      },
+      "event_date": "2026-06-10",
+      "stored_at": "2026-06-09T00:29:23.311236-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": null,
+        "id": "ff-calendar-146542",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-10T07:45:00-06:00",
+        "source": "forex_factory",
+        "title": "BOC Rate Statement",
+        "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=146542"
+      },
+      "event_date": "2026-06-10",
+      "stored_at": "2026-06-09T00:29:23.311236-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": "2.25%",
+        "id": "ff-calendar-146534",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2.25%",
+        "published_at": null,
+        "scheduled_at": "2026-06-10T07:45:00-06:00",
+        "source": "forex_factory",
+        "title": "Overnight Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=146534"
+      },
+      "event_date": "2026-06-10",
+      "stored_at": "2026-06-09T00:29:23.311236-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": null,
+        "id": "ff-calendar-146554",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-10T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "BOC Press Conference",
+        "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=146554"
+      },
+      "event_date": "2026-06-10",
+      "stored_at": "2026-06-09T00:29:23.311236-06:00"
+    }
+  ]
 }
