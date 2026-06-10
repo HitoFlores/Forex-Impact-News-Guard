@@ -2,8 +2,8 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "0.2%",
+        "actual_better_worse": 2,
         "currency": "USD",
         "forecast": "0.3%",
         "id": "ff-calendar-148363",
@@ -17,11 +17,11 @@
         "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=148363"
       },
       "event_date": "2026-06-10",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "2.9%",
         "actual_better_worse": 0,
         "currency": "USD",
         "forecast": "2.9%",
@@ -36,11 +36,11 @@
         "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=153053"
       },
       "event_date": "2026-06-10",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "0.5%",
         "actual_better_worse": 0,
         "currency": "USD",
         "forecast": "0.5%",
@@ -55,11 +55,11 @@
         "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=148331"
       },
       "event_date": "2026-06-10",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "4.2%",
         "actual_better_worse": 0,
         "currency": "USD",
         "forecast": "4.2%",
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=148348"
       },
       "event_date": "2026-06-10",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
@@ -93,11 +93,11 @@
         "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=146542"
       },
       "event_date": "2026-06-10",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "2.25%",
         "actual_better_worse": 0,
         "currency": "CAD",
         "forecast": "2.25%",
@@ -112,7 +112,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=146534"
       },
       "event_date": "2026-06-10",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
@@ -131,7 +131,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun10.2026#detail=146554"
       },
       "event_date": "2026-06-10",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
@@ -150,7 +150,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=150532"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
@@ -169,7 +169,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=150533"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
@@ -188,7 +188,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=148400"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
@@ -207,7 +207,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=148383"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
@@ -226,7 +226,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=147001"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     },
     {
       "event": {
@@ -245,7 +245,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=150531"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-10T06:02:49.386476-06:00"
+      "stored_at": "2026-06-10T10:02:03.560155-06:00"
     }
   ]
 }
