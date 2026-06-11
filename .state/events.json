@@ -2,7 +2,7 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
+        "actual": "2.40%",
         "actual_better_worse": 0,
         "currency": "EUR",
         "forecast": "2.40%",
@@ -17,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=150532"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T03:20:33.387982-06:00"
+      "stored_at": "2026-06-11T06:58:36.590043-06:00"
     },
     {
       "event": {
@@ -36,12 +36,12 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=150533"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T03:20:33.387982-06:00"
+      "stored_at": "2026-06-11T06:58:36.590043-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "0.4%",
+        "actual_better_worse": 2,
         "currency": "USD",
         "forecast": "0.5%",
         "id": "ff-calendar-148400",
@@ -55,12 +55,12 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=148400"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T03:20:33.387982-06:00"
+      "stored_at": "2026-06-11T06:58:36.590043-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "1.1%",
+        "actual_better_worse": 1,
         "currency": "USD",
         "forecast": "0.7%",
         "id": "ff-calendar-148383",
@@ -74,12 +74,12 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=148383"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T03:20:33.387982-06:00"
+      "stored_at": "2026-06-11T06:58:36.590043-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "229K",
+        "actual_better_worse": 2,
         "currency": "USD",
         "forecast": "220K",
         "id": "ff-calendar-147001",
@@ -93,7 +93,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=147001"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T03:20:33.387982-06:00"
+      "stored_at": "2026-06-11T06:58:36.590043-06:00"
     },
     {
       "event": {
@@ -112,7 +112,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=150531"
       },
       "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T03:20:33.387982-06:00"
+      "stored_at": "2026-06-11T06:58:36.590043-06:00"
     },
     {
       "event": {
@@ -131,7 +131,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun12.2026#detail=151542"
       },
       "event_date": "2026-06-12",
-      "stored_at": "2026-06-11T03:20:33.387982-06:00"
+      "stored_at": "2026-06-11T06:58:36.590043-06:00"
     },
     {
       "event": {
@@ -150,7 +150,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun12.2026#detail=148575"
       },
       "event_date": "2026-06-12",
-      "stored_at": "2026-06-11T03:20:33.387982-06:00"
+      "stored_at": "2026-06-11T06:58:36.590043-06:00"
     },
     {
       "event": {
@@ -169,7 +169,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun12.2026#detail=148587"
       },
       "event_date": "2026-06-12",
-      "stored_at": "2026-06-11T03:20:33.387982-06:00"
+      "stored_at": "2026-06-11T06:58:36.590043-06:00"
     }
   ]
 }
