@@ -647,6 +647,54 @@
       "kind": "alert",
       "scheduled_for": "2026-06-12T07:45:00-06:00",
       "sent_at": "2026-06-12T07:53:16.383416-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148575",
+      "kind": "result",
+      "scheduled_for": "2026-06-12T08:01:00-06:00",
+      "sent_at": "2026-06-12T10:39:18.578067-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148587",
+      "kind": "result",
+      "scheduled_for": "2026-06-12T08:01:00-06:00",
+      "sent_at": "2026-06-12T10:39:18.578067-06:00"
+    },
+    {
+      "attempt": 2,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148575",
+      "kind": "result",
+      "scheduled_for": "2026-06-12T08:03:00-06:00",
+      "sent_at": "2026-06-12T10:39:18.578067-06:00"
+    },
+    {
+      "attempt": 2,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148587",
+      "kind": "result",
+      "scheduled_for": "2026-06-12T08:03:00-06:00",
+      "sent_at": "2026-06-12T10:39:18.578067-06:00"
+    },
+    {
+      "attempt": 3,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148575",
+      "kind": "result",
+      "scheduled_for": "2026-06-12T08:05:00-06:00",
+      "sent_at": "2026-06-12T10:39:18.578067-06:00"
+    },
+    {
+      "attempt": 3,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148587",
+      "kind": "result",
+      "scheduled_for": "2026-06-12T08:05:00-06:00",
+      "sent_at": "2026-06-12T10:39:18.578067-06:00"
     }
   ],
   "observability": {
@@ -660,18 +708,18 @@
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-12T07:53:16.383416-06:00",
+      "last_attempt_at": "2026-06-12T10:39:18.578067-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-12T07:53:16.383416-06:00",
+      "last_success_at": "2026-06-12T10:39:18.578067-06:00",
       "status": "ok"
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-12T07:53:16.383416-06:00",
+      "last_attempt_at": "2026-06-12T10:39:18.578067-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-12T07:53:16.383416-06:00",
+      "last_success_at": "2026-06-12T10:39:18.578067-06:00",
       "status": "ok"
     }
   }
