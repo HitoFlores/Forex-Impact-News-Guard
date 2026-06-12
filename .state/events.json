@@ -2,121 +2,7 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "2.40%",
-        "actual_better_worse": 0,
-        "currency": "EUR",
-        "forecast": "2.40%",
-        "id": "ff-calendar-150532",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "2.15%",
-        "published_at": null,
-        "scheduled_at": "2026-06-11T06:15:00-06:00",
-        "source": "forex_factory",
-        "title": "Main Refinancing Rate",
-        "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=150532"
-      },
-      "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T19:39:46.243750-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "EUR",
-        "forecast": null,
-        "id": "ff-calendar-150533",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-06-11T06:15:00-06:00",
-        "source": "forex_factory",
-        "title": "Monetary Policy Statement",
-        "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=150533"
-      },
-      "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T19:39:46.243750-06:00"
-    },
-    {
-      "event": {
-        "actual": "0.4%",
-        "actual_better_worse": 2,
-        "currency": "USD",
-        "forecast": "0.5%",
-        "id": "ff-calendar-148400",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "1.0%",
-        "published_at": null,
-        "scheduled_at": "2026-06-11T06:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Core PPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=148400"
-      },
-      "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T19:39:46.243750-06:00"
-    },
-    {
-      "event": {
-        "actual": "1.1%",
-        "actual_better_worse": 1,
-        "currency": "USD",
-        "forecast": "0.7%",
-        "id": "ff-calendar-148383",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "1.4%",
-        "published_at": null,
-        "scheduled_at": "2026-06-11T06:30:00-06:00",
-        "source": "forex_factory",
-        "title": "PPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=148383"
-      },
-      "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T19:39:46.243750-06:00"
-    },
-    {
-      "event": {
-        "actual": "229K",
-        "actual_better_worse": 2,
-        "currency": "USD",
-        "forecast": "220K",
-        "id": "ff-calendar-147001",
-        "impact": "medium",
-        "is_breaking": false,
-        "previous": "225K",
-        "published_at": null,
-        "scheduled_at": "2026-06-11T06:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Unemployment Claims",
-        "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=147001"
-      },
-      "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T19:39:46.243750-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "EUR",
-        "forecast": null,
-        "id": "ff-calendar-150531",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-06-11T06:45:00-06:00",
-        "source": "forex_factory",
-        "title": "ECB Press Conference",
-        "url": "https://www.forexfactory.com/calendar?day=jun11.2026#detail=150531"
-      },
-      "event_date": "2026-06-11",
-      "stored_at": "2026-06-11T19:39:46.243750-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
+        "actual": "-0.1%",
         "actual_better_worse": 0,
         "currency": "GBP",
         "forecast": "-0.1%",
@@ -131,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun12.2026#detail=151542"
       },
       "event_date": "2026-06-12",
-      "stored_at": "2026-06-11T19:39:46.243750-06:00"
+      "stored_at": "2026-06-12T00:19:22.175500-06:00"
     },
     {
       "event": {
@@ -150,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun12.2026#detail=148575"
       },
       "event_date": "2026-06-12",
-      "stored_at": "2026-06-11T19:39:46.243750-06:00"
+      "stored_at": "2026-06-12T00:19:22.175500-06:00"
     },
     {
       "event": {
@@ -169,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun12.2026#detail=148587"
       },
       "event_date": "2026-06-12",
-      "stored_at": "2026-06-11T19:39:46.243750-06:00"
+      "stored_at": "2026-06-12T00:19:22.175500-06:00"
     }
   ]
 }
