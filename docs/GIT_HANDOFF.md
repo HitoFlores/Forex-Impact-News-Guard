@@ -26,11 +26,12 @@ El repositorio fue reiniciado y reconstruido desde un scaffold roto hacia una ba
   - `Smoke Telegram`;
   - `Sync + Publish`;
   - `Settings basicos` via workflow;
-  - bloque de seguridad.
+  - bloque de seguridad;
+  - ledger de ultimos dispatches con scroll interno para evitar crecimiento infinito de la pantalla.
 - Se agrego `scripts/apply_dashboard_settings.py`.
 - Se agrego workflow `.github/workflows/dashboard-control.yml`.
 - Los workflows sensibles ya usan environment `ops-control` para approval si se configura reviewer en GitHub.
-- Pendiente prioritario para proxima sesion: mejorar diseno del dashboard como prioridad 1.
+- El ledger de ultimos dispatches ya no crece la pantalla indefinidamente; conserva counters visibles y desplaza solo el historial reciente.
 
 ## Lo que deberia entrar a git
 
@@ -59,5 +60,5 @@ Nota:
 2. Confirmar que `.env` no este staged
 3. Abrir Pages y confirmar que siga en `Live`
 4. Confirmar que `ops-control` exista y tenga reviewers si se quiere approval manual
-5. Si vas a tocar UI, priorizar mejora de diseno antes de meter nuevas features
+5. Si vas a tocar UI, validar desktop/mobile para que los paneles largos mantengan scroll interno donde aplique
 6. Si se requiere validar flujo real, correr `telegram-smoke-test` y luego revisar approval/resultado en GitHub Actions

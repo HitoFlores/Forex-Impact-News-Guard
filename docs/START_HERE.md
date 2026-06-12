@@ -40,7 +40,8 @@ Si retomas desde cero, el estado real actual es este:
   - `Sync + Publish`;
   - `Settings basicos`;
   - bloque visible de seguridad;
-  - bloqueo de controles hasta pegar token.
+  - bloqueo de controles hasta pegar token;
+  - ledger de ultimos dispatches con scroll interno para mantener estable el alto de pantalla.
 - Los workflows sensibles `telegram-smoke-test` y `dashboard-control` ya quedaron amarrados al environment `ops-control`.
 - La prueba real de Telegram ya mando 5 mensajes sample:
   - `FOREX FACTORY DAILY`

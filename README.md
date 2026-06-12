@@ -68,7 +68,7 @@ uvicorn forex_news_guard.main:app --reload
 - `sync-and-publish`: cron principal en GitHub Actions, actualiza `.state/` y publica Pages.
 - `keepalive`: workflow manual/mensual para mantener schedules vivos.
 - `telegram-smoke-test`: workflow manual para forzar envio real de todos los mensajes sample a Telegram sin levantar API local.
-- `public/`: dashboard estatico con salud operativa, proximas ventanas de riesgo y ledger reciente.
+- `public/`: dashboard estatico con salud operativa, proximas ventanas de riesgo y ledger reciente con scroll interno para no crecer indefinidamente.
 
 ## Variables de entorno utiles
 
