@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from apscheduler.schedulers.background import BackgroundScheduler
 
@@ -30,6 +30,9 @@ from forex_news_guard.storage.event_repository import EventRepository
 from forex_news_guard.storage.runtime_repository import RuntimeRepository
 
 logger = logging.getLogger(__name__)
+
+ALERT_EARLY_GRACE = timedelta(seconds=30)
+ALERT_LATE_GRACE = timedelta(minutes=5)
 
 
 class RuntimeSchedulerService:
@@ -259,8 +262,15 @@ class RuntimeSchedulerService:
             grouped.setdefault(schedule.alert.scheduled_for, []).append(schedule)
 
         for scheduled_for, group in grouped.items():
-            due_group = [item for item in group if item.alert.scheduled_for <= reference_time]
+            due_group = [
+                item
+                for item in group
+                if item.alert.scheduled_for - ALERT_EARLY_GRACE <= reference_time
+                and reference_time <= item.alert.scheduled_for + ALERT_LATE_GRACE
+            ]
             if not due_group:
+                if scheduled_for <= reference_time:
+                    skipped.append(f"group-alert-stale:{scheduled_for.isoformat()}")
                 continue
             blocked_group = [item for item in due_group if item.event.id in blocked_alert_event_ids]
             for item in blocked_group:
@@ -284,9 +294,9 @@ class RuntimeSchedulerService:
                 continue
 
             message = (
-                build_pre_alert_message(events[0], self.policy.lead_minutes)
+                build_pre_alert_message(events[0], self._minutes_until_event(events[0], reference_time))
                 if len(events) == 1
-                else build_grouped_pre_alert_message(events, self.policy.lead_minutes)
+                else build_grouped_pre_alert_message(events, self._minutes_until_event(events[0], reference_time))
             )
             self._send_telegram_message(message, reference_time)
             logger.info(
@@ -334,6 +344,7 @@ class RuntimeSchedulerService:
                     scheduled_for=item[1].scheduled_for,
                     attempt=item[1].attempt,
                 )
+                and not self._result_already_finalized(item[0])
             ]
             if not pending:
                 skipped.append(f"group-result:{scheduled_for.isoformat()}:{attempt}")
@@ -354,16 +365,10 @@ class RuntimeSchedulerService:
                 ",".join(schedule.event.id for schedule, _ in pending),
             )
             for schedule, result_check in pending:
-                record = AlertDispatchRecord(
-                    event_id=schedule.event.id,
-                    kind=AlertExecutionKind.RESULT,
-                    attempt=result_check.attempt,
-                    scheduled_for=result_check.scheduled_for,
-                    sent_at=reference_time,
-                    channel=DeliveryChannel.TELEGRAM,
-                )
-                self.runtime_repository.record_dispatch(record)
-                dispatched.append(record)
+                result_records = self._result_records_to_mark(schedule, result_check, reference_time)
+                for record in result_records:
+                    self.runtime_repository.record_dispatch(record)
+                dispatched.append(result_records[0])
 
     def _send_daily_summary_if_needed(
         self,
@@ -485,3 +490,46 @@ class RuntimeSchedulerService:
 
     def _reload_policy(self) -> None:
         self.policy = self.settings_service.get_policy()
+
+    def _minutes_until_event(self, event: ForexEvent, reference_time: datetime) -> int:
+        if event.scheduled_at is None:
+            return self.policy.lead_minutes
+        seconds = (event.scheduled_at - reference_time).total_seconds()
+        return max(0, round(seconds / 60))
+
+    def _result_already_finalized(self, schedule: EventSchedule) -> bool:
+        if not self._event_has_actual(schedule.event):
+            return False
+        return any(
+            self.runtime_repository.has_been_dispatched(
+                event_id=schedule.event.id,
+                kind=AlertExecutionKind.RESULT,
+                scheduled_for=result_check.scheduled_for,
+                attempt=result_check.attempt,
+            )
+            for result_check in schedule.result_checks
+        )
+
+    def _result_records_to_mark(
+        self,
+        schedule: EventSchedule,
+        result_check: ScheduledEventCheck,
+        reference_time: datetime,
+    ) -> list[AlertDispatchRecord]:
+        checks = schedule.result_checks if self._event_has_actual(schedule.event) else [result_check]
+        return [
+            AlertDispatchRecord(
+                event_id=schedule.event.id,
+                kind=AlertExecutionKind.RESULT,
+                attempt=check.attempt,
+                scheduled_for=check.scheduled_for,
+                sent_at=reference_time,
+                channel=DeliveryChannel.TELEGRAM,
+            )
+            for check in checks
+        ]
+
+    def _event_has_actual(self, event: ForexEvent) -> bool:
+        if event.actual is None:
+            return False
+        return event.actual.strip().upper() not in {"", "N/D", "N/A", "NA"}

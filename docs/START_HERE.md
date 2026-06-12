@@ -52,4 +52,9 @@ Si retomas desde cero, el estado real actual es este:
   - lista solo eventos de hoy;
   - si hay eventos de manana, agrega solo una nota tipo `Manana se esperan X noticias de alto impacto.`;
   - no muestra titulos de manana dentro del calendario de hoy.
-- Proxima prioridad clara: mejorar el diseno del dashboard sin tocar negativamente el flujo operativo validado.
+- Se corrigio precision operativa de alertas/resultados:
+  - alertas pre-news solo salen dentro de margen estricto alrededor de `alert_at`;
+  - el mensaje calcula minutos reales hasta el evento;
+  - resultados muestran hora del release, no hora del retry;
+  - retries de resultado ya no duplican mensajes si `Actual` ya llego.
+- Proxima prioridad clara: mover runtime critico a worker continuo si se necesita precision mejor que la que GitHub Actions cron puede garantizar.

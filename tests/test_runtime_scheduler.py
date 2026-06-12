@@ -51,9 +51,9 @@ class FailingClient(FakeClient):
         raise RuntimeError(self.error_message)
 
 
-def test_dispatch_due_checks_sends_alert_and_result_once(tmp_path: Path) -> None:
+def test_dispatch_due_checks_sends_alert_once_inside_timing_window(tmp_path: Path) -> None:
     timezone = ZoneInfo("America/Chihuahua")
-    now = datetime(2026, 5, 26, 15, 5, tzinfo=timezone)
+    now = datetime(2026, 5, 26, 14, 55, tzinfo=timezone)
     event = ForexEvent(
         id="usd-high",
         title="FOMC",
@@ -82,11 +82,48 @@ def test_dispatch_due_checks_sends_alert_and_result_once(tmp_path: Path) -> None
     second_result = service.dispatch_due_checks_at(reference_time=now)
     observability = runtime_repository.get_observability()
 
-    assert len(result.dispatched) >= 2
-    assert len(notifier.messages) >= 2
+    assert len(result.dispatched) == 2
+    assert len(notifier.messages) == 1
+    assert "Stop trading window in <b>5 min</b>" in notifier.messages[0]
     assert second_result.dispatched == []
     assert observability.telegram.status == RuntimeProbeStatus.OK
     assert observability.telegram.last_success_at == now
+
+
+def test_dispatch_due_checks_sends_final_result_once_across_due_retries(tmp_path: Path) -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    now = datetime(2026, 5, 26, 15, 5, tzinfo=timezone)
+    event = ForexEvent(
+        id="usd-high",
+        title="FOMC",
+        currency="USD",
+        impact=ImpactLevel.HIGH,
+        scheduled_at=datetime(2026, 5, 26, 15, 0, tzinfo=timezone),
+        actual="5.25%",
+        forecast="5.25%",
+        previous="5.25%",
+    )
+    event_repository = EventRepository(str(tmp_path / "events.db"))
+    event_repository.replace_relevant_events([event], reference_time=now)
+    runtime_repository = RuntimeRepository(str(tmp_path / "events.db"))
+    notifier = FakeNotifier()
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(lead_minutes=5, revalidate_minutes_before_alert=2, result_check_delay_minutes=1),
+        client=FakeClient([event]),
+        event_repository=event_repository,
+        runtime_repository=runtime_repository,
+        notifier=notifier,
+    )
+
+    result = service.dispatch_due_checks_at(reference_time=now)
+    second_result = service.dispatch_due_checks_at(reference_time=now)
+
+    assert len(notifier.messages) == 1
+    assert "FOREX RESULT UPDATE" in notifier.messages[0]
+    assert "15:00" in notifier.messages[0]
+    result_dispatches = [record for record in result.dispatched if record.kind.value == "result"]
+    assert [record.attempt for record in result_dispatches] == [1]
+    assert second_result.dispatched == []
 
 
 def test_run_cycle_persists_only_relevant_events(tmp_path: Path) -> None:
@@ -171,9 +208,9 @@ def test_dispatch_groups_events_with_same_schedule_into_single_message(tmp_path:
     notifier.messages.clear()
     service.dispatch_due_checks_at(reference_time=now)
 
-    assert len(notifier.messages) == 4
-    assert "NEWS BLOCK IN 5 MIN" in notifier.messages[0]
-    assert "POST-NEWS UPDATE" in notifier.messages[1]
+    assert len(notifier.messages) == 3
+    assert "POST-NEWS UPDATE" in notifier.messages[0]
+    assert "FOMC Statement" in notifier.messages[1]
 
 
 def test_dispatch_due_checks_revalidates_calendar_and_skips_stale_alert(tmp_path: Path) -> None:

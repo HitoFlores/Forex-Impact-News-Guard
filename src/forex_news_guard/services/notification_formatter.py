@@ -24,6 +24,7 @@ def build_pre_alert_message(event: ForexEvent, lead_minutes: int) -> Notificatio
 
 
 def build_result_message(event: ForexEvent, checked_at: datetime) -> NotificationMessage:
+    event_time = event.scheduled_at.strftime("%H:%M") if event.scheduled_at else checked_at.strftime("%H:%M")
     actual = event.actual or "N/D"
     forecast = event.forecast or "N/D"
     previous = event.previous or "N/D"
@@ -35,7 +36,7 @@ def build_result_message(event: ForexEvent, checked_at: datetime) -> Notificatio
         impact=event.impact,
         title="FOREX RESULT UPDATE",
         body=(
-            f"<blockquote><b>📣 {flag} {escape(event.currency)}  {escape(checked_at.strftime('%H:%M'))}</b></blockquote>\n"
+            f"<blockquote><b>📣 {flag} {escape(event.currency)}  {escape(event_time)}</b></blockquote>\n"
             f"📰 <b>{escape(event.title)}</b>\n"
             f"📊 <code>Impacto  :</code> {impact_badge} <b>{escape(_impact_label(event.impact))}</b>\n"
             f"{result_badge} <code>Actual   :</code> <b>{escape(actual)}</b>\n"
@@ -102,9 +103,10 @@ def build_grouped_pre_alert_message(events: list[ForexEvent], lead_minutes: int)
 
 def build_grouped_result_message(events: list[ForexEvent], checked_at: datetime) -> NotificationMessage:
     primary = events[0]
+    event_time = primary.scheduled_at.strftime("%H:%M") if primary.scheduled_at else checked_at.strftime("%H:%M")
     lines = [
         "📣 <b>POST-NEWS UPDATE</b>",
-        f"⏰ <i>{escape(checked_at.strftime('%H:%M'))}</i>",
+        f"⏰ <i>{escape(event_time)}</i>",
         "",
     ]
     for event in events:
