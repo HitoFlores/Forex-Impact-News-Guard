@@ -716,10 +716,10 @@
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-13T13:48:18.515872-06:00",
+      "last_attempt_at": "2026-06-13T14:56:33.770065-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-13T13:48:18.515872-06:00",
+      "last_success_at": "2026-06-13T14:56:33.770065-06:00",
       "status": "ok"
     },
     "telegram": {
