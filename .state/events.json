@@ -1,3 +1,137 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "EUR",
+        "forecast": null,
+        "id": "ff-calendar-153300",
+        "impact": "medium",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-15T01:15:00-06:00",
+        "source": "forex_factory",
+        "title": "ECB President Lagarde Speaks",
+        "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=153300"
+      },
+      "event_date": "2026-06-15",
+      "stored_at": "2026-06-14T00:20:14.607859-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "JPY",
+        "forecast": "<1.00%",
+        "id": "ff-calendar-148552",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "<0.75%",
+        "published_at": null,
+        "scheduled_at": "2026-06-15T20:30:00-06:00",
+        "source": "forex_factory",
+        "title": "BOJ Policy Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=148552"
+      },
+      "event_date": "2026-06-15",
+      "stored_at": "2026-06-14T00:20:14.607859-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "JPY",
+        "forecast": null,
+        "id": "ff-calendar-148553",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-15T20:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Monetary Policy Statement",
+        "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=148553"
+      },
+      "event_date": "2026-06-15",
+      "stored_at": "2026-06-14T00:20:14.607859-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "4.35%",
+        "id": "ff-calendar-147785",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.35%",
+        "published_at": null,
+        "scheduled_at": "2026-06-15T22:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Cash Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=147785"
+      },
+      "event_date": "2026-06-15",
+      "stored_at": "2026-06-14T00:20:14.607859-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": null,
+        "id": "ff-calendar-147786",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-15T22:30:00-06:00",
+        "source": "forex_factory",
+        "title": "RBA Rate Statement",
+        "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=147786"
+      },
+      "event_date": "2026-06-15",
+      "stored_at": "2026-06-14T00:20:14.607859-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": null,
+        "id": "ff-calendar-147798",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-15T23:30:00-06:00",
+        "source": "forex_factory",
+        "title": "RBA Press Conference",
+        "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=147798"
+      },
+      "event_date": "2026-06-15",
+      "stored_at": "2026-06-14T00:20:14.607859-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "JPY",
+        "forecast": null,
+        "id": "ff-calendar-148554",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-15T23:30:00-06:00",
+        "source": "forex_factory",
+        "title": "BOJ Press Conference",
+        "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=148554"
+      },
+      "event_date": "2026-06-15",
+      "stored_at": "2026-06-14T00:20:14.607859-06:00"
+    }
+  ]
 }

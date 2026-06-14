@@ -703,6 +703,14 @@
       "kind": "daily_summary",
       "scheduled_for": "2026-06-13T00:00:00-06:00",
       "sent_at": "2026-06-13T00:52:34.344585-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "daily-summary-2026-06-14",
+      "kind": "daily_summary",
+      "scheduled_for": "2026-06-14T00:00:00-06:00",
+      "sent_at": "2026-06-14T00:20:14.607859-06:00"
     }
   ],
   "observability": {
@@ -716,18 +724,18 @@
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-13T19:39:28.579368-06:00",
+      "last_attempt_at": "2026-06-14T00:20:14.607859-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-13T19:39:28.579368-06:00",
+      "last_success_at": "2026-06-14T00:20:14.607859-06:00",
       "status": "ok"
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-13T00:52:34.344585-06:00",
+      "last_attempt_at": "2026-06-14T00:20:14.607859-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-13T00:52:34.344585-06:00",
+      "last_success_at": "2026-06-14T00:20:14.607859-06:00",
       "status": "ok"
     }
   }
