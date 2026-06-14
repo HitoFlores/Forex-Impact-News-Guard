@@ -17,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=153300"
       },
       "event_date": "2026-06-15",
-      "stored_at": "2026-06-14T08:25:50.207596-06:00"
+      "stored_at": "2026-06-14T10:05:35.451352-06:00"
     },
     {
       "event": {
@@ -36,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=148552"
       },
       "event_date": "2026-06-15",
-      "stored_at": "2026-06-14T08:25:50.207596-06:00"
+      "stored_at": "2026-06-14T10:05:35.451352-06:00"
     },
     {
       "event": {
@@ -55,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=148553"
       },
       "event_date": "2026-06-15",
-      "stored_at": "2026-06-14T08:25:50.207596-06:00"
+      "stored_at": "2026-06-14T10:05:35.451352-06:00"
     },
     {
       "event": {
@@ -71,10 +71,10 @@
         "scheduled_at": "2026-06-15T22:30:00-06:00",
         "source": "forex_factory",
         "title": "Cash Rate",
-        "url": "https://www.forexfactory.com/calendar?day=jun16.2026#detail=147785"
+        "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=147785"
       },
       "event_date": "2026-06-15",
-      "stored_at": "2026-06-14T08:25:50.207596-06:00"
+      "stored_at": "2026-06-14T10:05:35.451352-06:00"
     },
     {
       "event": {
@@ -90,10 +90,10 @@
         "scheduled_at": "2026-06-15T22:30:00-06:00",
         "source": "forex_factory",
         "title": "RBA Rate Statement",
-        "url": "https://www.forexfactory.com/calendar?day=jun16.2026#detail=147786"
+        "url": "https://www.forexfactory.com/calendar?day=jun15.2026#detail=147786"
       },
       "event_date": "2026-06-15",
-      "stored_at": "2026-06-14T08:25:50.207596-06:00"
+      "stored_at": "2026-06-14T10:05:35.451352-06:00"
     },
     {
       "event": {
@@ -112,7 +112,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun16.2026#detail=147798"
       },
       "event_date": "2026-06-15",
-      "stored_at": "2026-06-14T08:25:50.207596-06:00"
+      "stored_at": "2026-06-14T10:05:35.451352-06:00"
     },
     {
       "event": {
@@ -131,7 +131,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun16.2026#detail=148554"
       },
       "event_date": "2026-06-15",
-      "stored_at": "2026-06-14T08:25:50.207596-06:00"
+      "stored_at": "2026-06-14T10:05:35.451352-06:00"
     }
   ]
 }
