@@ -95,6 +95,36 @@ def test_parse_calendar_html_supports_component_state_payload() -> None:
     assert events[0].title == "CPI m/m"
 
 
+def test_parse_calendar_component_state_prefers_visible_time_label_over_dateline() -> None:
+    html = """
+    <script>
+    window.calendarComponentStates[1] = {
+      "days": [
+        {
+          "date": "Jun 15, 2026",
+          "events": [
+            {
+              "id": 153300,
+              "name": "ECB President Lagarde Speaks",
+              "date": "Jun 15, 2026",
+              "dateline": 1781508600,
+              "currency": "EUR",
+              "impactName": "medium",
+              "timeLabel": "12:30am"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    """
+    reference_time = datetime(2026, 6, 15, 15, 5, tzinfo=ZoneInfo("America/Chihuahua"))
+
+    events = parse_calendar_html(html, "https://www.forexfactory.com/calendar", reference_time)
+
+    assert events[0].scheduled_at == datetime(2026, 6, 15, 0, 30, tzinfo=ZoneInfo("America/Chihuahua"))
+
+
 def test_parse_breaking_news_html_filters_high_impact_items() -> None:
     html = """
     <section>

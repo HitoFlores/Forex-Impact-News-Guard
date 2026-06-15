@@ -1,5 +1,4 @@
 .git
-.codegraph
 .env
 .pytest_cache
 .state

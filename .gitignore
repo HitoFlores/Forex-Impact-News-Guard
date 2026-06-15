@@ -8,7 +8,8 @@ __pycache__/
 *.egg-info/
 .state/
 .tmp/
-.codegraph/
+graphify-out/cache/
+graphify-out/20??-??-??/
 public/state.json
 
 # Build

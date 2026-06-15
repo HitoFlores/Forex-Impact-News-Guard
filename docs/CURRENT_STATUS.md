@@ -1,3 +1,7 @@
+
+## Navegación  
+- [[PROJECT]]
+
 # CURRENT STATUS
 
 > **Fuentes:** Las secciones indican entre paréntesis el origen de cada afirmación:
@@ -15,7 +19,7 @@ El sistema está **operativo en producción** sobre GitHub Actions + GitHub Page
 - `keepalive` mensual validado; genera commit automático para evitar que GH desactive schedules. `[doc]`
 - Dashboard publicado en modo `Live` y `Demo`. `[doc]`
 - Canal Telegram activo y validado con 5 mensajes sample reales. `[doc]`
-- Todos los tests pasan: **42/42** (`pytest tests/`). `[test]`
+- Todos los tests pasan: **46/46** (`pytest tests/`). `[test]`
 
 ---
 
@@ -42,6 +46,9 @@ El sistema está **operativo en producción** sobre GitHub Actions + GitHub Page
 - Ventana estricta de envío: `[alert_at - 30s, alert_at + 5min]`; fuera de ese rango la alerta se descarta como stale
 - Revalidación pre-alerta (precheck): re-fetcha Forex Factory antes de cada grupo de alertas vencidas; si el evento se movió, recalcula schedules
 - Finalizacion de resultados: cuando `Actual` llega, marca todos los retries pendientes del mismo evento como cubiertos; no sigue reintentando
+- Resultados sin `Actual` real (`N/D`, vacío, `NA`) no se envían a Telegram aunque los retries estén vencidos
+- Resumen diario acotado a medianoche local: sólo se envía entre `00:00` y `00:30` según `AlertPolicy.timezone`
+- Parser de Forex Factory prioriza `timeLabel` visible sobre `dateline` para alinear el bot con la hora mostrada en la tabla web
 
 ### Dashboard `[doc]`
 
@@ -52,6 +59,7 @@ El sistema está **operativo en producción** sobre GitHub Actions + GitHub Page
 - Modos `Live` y `Demo`
 - Tooltips `?` de ayuda inline
 - Controles: `Smoke Telegram`, `Sync + Publish`, `Settings básicos`
+- Selector de timezone IANA en Settings, con `America/Chihuahua` como valor actual por default
 
 ### Seguridad operativa `[doc]`
 
@@ -149,7 +157,7 @@ Ordenados por impacto / esfuerzo estimado:
 | Flujo principal (sync → alert → result) | ✅ Operativo y validado |
 | Notificaciones Telegram | ✅ Validadas con mensajes reales |
 | Dashboard operativo | ✅ Publicado en Pages |
-| Cobertura de tests | ⚠️ 42 tests pasan, pero el formateador de mensajes (interfaz con el usuario) no tiene cobertura |
+| Cobertura de tests | ⚠️ 46 tests pasan, pero el formateador de mensajes (interfaz con el usuario) no tiene cobertura |
 | Observabilidad | ⚠️ Probes registran estado pero no alertan activamente al operador |
 | Resiliencia a cambios upstream | ⚠️ Dos estrategias de parsing, pero sin fallback si ambas fallan |
 | Escalabilidad | ➡️ Diseño para uso individual; sin rate limiting ni compactación de estado |

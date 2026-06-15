@@ -149,7 +149,7 @@ def test_run_cycle_persists_only_relevant_events(tmp_path: Path) -> None:
     runtime_repository = RuntimeRepository(str(tmp_path / "events.db"))
     notifier = FakeNotifier()
     service = RuntimeSchedulerService(
-        policy=AlertPolicy(allowed_impacts=[ImpactLevel.HIGH], currencies=["USD"]),
+        policy=AlertPolicy(allowed_impacts=[ImpactLevel.HIGH], currencies=["USD"], daily_summary_enabled=False),
         client=FakeClient(events),
         event_repository=event_repository,
         runtime_repository=runtime_repository,
@@ -161,10 +161,65 @@ def test_run_cycle_persists_only_relevant_events(tmp_path: Path) -> None:
     observability = runtime_repository.get_observability()
 
     assert len(result.schedules) == 1
-    assert len(result.dispatched) == 1
+    assert [record for record in result.dispatched if record.kind.value == "result"] == []
     assert [item.event.id for item in stored] == ["usd-high"]
     assert observability.scraping.status == RuntimeProbeStatus.OK
     assert observability.scraping.last_success_at == now
+
+
+def test_run_cycle_sends_daily_summary_inside_midnight_window(tmp_path: Path) -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    now = datetime(2026, 6, 15, 0, 5, tzinfo=timezone)
+    event = ForexEvent(
+        id="jpy-high",
+        title="BOJ Policy Rate",
+        currency="JPY",
+        impact=ImpactLevel.HIGH,
+        scheduled_at=datetime(2026, 6, 15, 20, 30, tzinfo=timezone),
+    )
+    event_repository = EventRepository(str(tmp_path / "events.db"))
+    runtime_repository = RuntimeRepository(str(tmp_path / "events.db"))
+    notifier = FakeNotifier()
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(daily_summary_enabled=True),
+        client=FakeClient([event]),
+        event_repository=event_repository,
+        runtime_repository=runtime_repository,
+        notifier=notifier,
+    )
+
+    result = service.run_cycle_at(reference_time=now)
+
+    assert len(result.dispatched) == 1
+    assert result.dispatched[0].event_id == "daily-summary-2026-06-15"
+    assert "FOREX FACTORY DAILY" in notifier.messages[0]
+
+
+def test_run_cycle_skips_stale_daily_summary_after_midnight_window(tmp_path: Path) -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    now = datetime(2026, 6, 15, 4, 28, tzinfo=timezone)
+    event = ForexEvent(
+        id="jpy-high",
+        title="BOJ Policy Rate",
+        currency="JPY",
+        impact=ImpactLevel.HIGH,
+        scheduled_at=datetime(2026, 6, 15, 20, 30, tzinfo=timezone),
+    )
+    event_repository = EventRepository(str(tmp_path / "events.db"))
+    runtime_repository = RuntimeRepository(str(tmp_path / "events.db"))
+    notifier = FakeNotifier()
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(daily_summary_enabled=True),
+        client=FakeClient([event]),
+        event_repository=event_repository,
+        runtime_repository=runtime_repository,
+        notifier=notifier,
+    )
+
+    result = service.run_cycle_at(reference_time=now)
+
+    assert [record for record in result.dispatched if record.kind.value == "result"] == []
+    assert notifier.messages == []
 
 
 def test_dispatch_groups_events_with_same_schedule_into_single_message(tmp_path: Path) -> None:
@@ -208,9 +263,47 @@ def test_dispatch_groups_events_with_same_schedule_into_single_message(tmp_path:
     notifier.messages.clear()
     service.dispatch_due_checks_at(reference_time=now)
 
-    assert len(notifier.messages) == 3
-    assert "POST-NEWS UPDATE" in notifier.messages[0]
-    assert "FOMC Statement" in notifier.messages[1]
+    assert len(notifier.messages) == 1
+    assert "FOREX RESULT UPDATE" in notifier.messages[0]
+    assert "FOMC Statement" not in notifier.messages[0]
+
+
+def test_dispatch_due_checks_skips_result_retries_without_actual_value(tmp_path: Path) -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    now = datetime(2026, 6, 15, 4, 28, tzinfo=timezone)
+    event = ForexEvent(
+        id="eur-medium",
+        title="ECB President Lagarde Speaks",
+        currency="EUR",
+        impact=ImpactLevel.MEDIUM,
+        scheduled_at=datetime(2026, 6, 15, 1, 30, tzinfo=timezone),
+        actual="N/D",
+        forecast="N/D",
+        previous="N/D",
+    )
+    event_repository = EventRepository(str(tmp_path / "events.db"))
+    event_repository.replace_relevant_events([event], reference_time=now)
+    runtime_repository = RuntimeRepository(str(tmp_path / "events.db"))
+    notifier = FakeNotifier()
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(
+            allowed_impacts=[ImpactLevel.MEDIUM],
+            lead_minutes=5,
+            revalidate_minutes_before_alert=2,
+            result_check_delay_minutes=1,
+            result_retry_minutes=[3, 5],
+            daily_summary_enabled=False,
+        ),
+        client=FakeClient([event]),
+        event_repository=event_repository,
+        runtime_repository=runtime_repository,
+        notifier=notifier,
+    )
+
+    result = service.dispatch_due_checks_at(reference_time=now)
+
+    assert [record for record in result.dispatched if record.kind.value == "result"] == []
+    assert notifier.messages == []
 
 
 def test_dispatch_due_checks_revalidates_calendar_and_skips_stale_alert(tmp_path: Path) -> None:
@@ -223,6 +316,9 @@ def test_dispatch_due_checks_revalidates_calendar_and_skips_stale_alert(tmp_path
         currency="USD",
         impact=ImpactLevel.HIGH,
         scheduled_at=datetime(2026, 5, 26, 15, 0, tzinfo=timezone),
+        actual="5.25%",
+        forecast="5.25%",
+        previous="5.25%",
     )
     moved_event = ForexEvent(
         id="usd-high",
@@ -269,6 +365,9 @@ def test_dispatch_due_checks_records_precheck_failure_observability(tmp_path: Pa
         currency="USD",
         impact=ImpactLevel.HIGH,
         scheduled_at=datetime(2026, 5, 26, 15, 0, tzinfo=timezone),
+        actual="5.25%",
+        forecast="5.25%",
+        previous="5.25%",
     )
     event_repository = EventRepository(str(tmp_path / "events.db"))
     runtime_repository = RuntimeRepository(str(tmp_path / "events.db"))
@@ -361,6 +460,9 @@ def test_dispatch_due_checks_records_telegram_failure(tmp_path: Path) -> None:
         currency="USD",
         impact=ImpactLevel.HIGH,
         scheduled_at=datetime(2026, 5, 26, 15, 0, tzinfo=timezone),
+        actual="5.25%",
+        forecast="5.25%",
+        previous="5.25%",
     )
     event_repository = EventRepository(str(tmp_path / "events.db"))
     event_repository.replace_relevant_events([event], reference_time=now)

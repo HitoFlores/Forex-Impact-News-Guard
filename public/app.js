@@ -68,6 +68,17 @@ const DEMO_STATE_PATH = "state.example.json";
 const MODE_STORAGE_KEY = "fing-dashboard-mode";
 const GITHUB_STORAGE_KEY = "fing-dashboard-github";
 const GITHUB_TOKEN_SESSION_KEY = "fing-dashboard-github-token";
+const TIMEZONE_OPTIONS = [
+  ["America/Chihuahua", "America/Chihuahua (actual)"],
+  ["America/Mexico_City", "America/Mexico_City"],
+  ["America/Hermosillo", "America/Hermosillo"],
+  ["America/New_York", "America/New_York"],
+  ["Europe/London", "Europe/London"],
+  ["Europe/Madrid", "Europe/Madrid"],
+  ["Asia/Tokyo", "Asia/Tokyo"],
+  ["Australia/Sydney", "Australia/Sydney"],
+  ["UTC", "UTC"],
+];
 
 function $(id) {
   return document.getElementById(id);
@@ -332,11 +343,22 @@ function updateControlLock() {
   }
 }
 
+function fillTimezoneOptions(timezone) {
+  const value = timezone || "America/Chihuahua";
+  const options = TIMEZONE_OPTIONS.some(([zone]) => zone === value)
+    ? TIMEZONE_OPTIONS
+    : [[value, `${value} (actual)`], ...TIMEZONE_OPTIONS];
+  $("timezone").innerHTML = options
+    .map(([zone, label]) => `<option value="${escapeHtml(zone)}">${escapeHtml(label)}</option>`)
+    .join("");
+  $("timezone").value = value;
+}
+
 function fillSettingsForm(policy) {
   $("lead-minutes").value = policy.lead_minutes ?? 15;
   $("revalidate-minutes").value = policy.revalidate_minutes_before_alert ?? 2;
   $("result-delay").value = policy.result_check_delay_minutes ?? 1;
-  $("timezone").value = policy.timezone ?? "America/Chihuahua";
+  fillTimezoneOptions(policy.timezone ?? "America/Chihuahua");
   const allCurrencies = !(policy.monitored_currencies ?? []).length;
   $("all-currencies").checked = allCurrencies;
   $("currencies").value = (policy.monitored_currencies ?? []).join(",");
@@ -403,7 +425,8 @@ function settingsNeedSyncNotice(inputs, policy) {
     inputs.breaking_enabled !== String(Boolean(policy.breaking_enabled)) ||
     inputs.high_impact_only !== String(Boolean(policy.high_impact_only)) ||
     nextAllowed !== currentAllowed ||
-    nextCurrencies !== currentCurrencies
+    nextCurrencies !== currentCurrencies ||
+    inputs.timezone !== (policy.timezone ?? "America/Chihuahua")
   );
 }
 

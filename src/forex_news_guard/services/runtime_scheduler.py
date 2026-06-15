@@ -33,6 +33,7 @@ logger = logging.getLogger(__name__)
 
 ALERT_EARLY_GRACE = timedelta(seconds=30)
 ALERT_LATE_GRACE = timedelta(minutes=5)
+DAILY_SUMMARY_LATE_GRACE = timedelta(minutes=30)
 
 
 class RuntimeSchedulerService:
@@ -344,6 +345,7 @@ class RuntimeSchedulerService:
                     scheduled_for=item[1].scheduled_for,
                     attempt=item[1].attempt,
                 )
+                and self._event_has_actual(item[0].event)
                 and not self._result_already_finalized(item[0])
             ]
             if not pending:
@@ -377,15 +379,18 @@ class RuntimeSchedulerService:
         dispatched: list[AlertDispatchRecord],
     ) -> None:
         scheduled_for = reference_time.replace(hour=0, minute=0, second=0, microsecond=0)
+        if not self.policy.daily_summary_enabled:
+            return
+
+        if not scheduled_for <= reference_time <= scheduled_for + DAILY_SUMMARY_LATE_GRACE:
+            return
+
         if self.runtime_repository.has_been_dispatched(
             event_id=f"daily-summary-{reference_time.date().isoformat()}",
             kind=AlertExecutionKind.DAILY_SUMMARY,
             scheduled_for=scheduled_for,
             attempt=1,
         ):
-            return
-
-        if not self.policy.daily_summary_enabled:
             return
 
         high_impact_events = [event for event in events if event.impact.value == "high"]

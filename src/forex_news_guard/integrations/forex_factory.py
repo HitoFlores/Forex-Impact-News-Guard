@@ -186,19 +186,19 @@ def _extract_calendar_events_from_component_state(
             if not title or not currency or not event_id or impact is None:
                 continue
 
-            dateline = record.get("dateline")
             scheduled_at = None
-            if dateline not in (None, ""):
-                try:
-                    scheduled_at = datetime.fromtimestamp(int(dateline), tz=reference_time.tzinfo)
-                except (TypeError, ValueError, OSError):
-                    scheduled_at = None
+            scheduled_at = _parse_calendar_datetime(
+                _first_non_empty(record, "date"),
+                _first_non_empty(record, "timeLabel", "time"),
+                reference_time,
+            )
             if scheduled_at is None:
-                scheduled_at = _parse_calendar_datetime(
-                    _first_non_empty(record, "date"),
-                    _first_non_empty(record, "timeLabel", "time"),
-                    reference_time,
-                )
+                dateline = record.get("dateline")
+                if dateline not in (None, ""):
+                    try:
+                        scheduled_at = datetime.fromtimestamp(int(dateline), tz=reference_time.tzinfo)
+                    except (TypeError, ValueError, OSError):
+                        scheduled_at = None
             if scheduled_at is None:
                 continue
 
@@ -333,7 +333,7 @@ def _parse_calendar_datetime(
     if cleaned_time.lower() in {"all day", "day 1", "day 2", "day 3", "tentative"}:
         return None
 
-    date_text = date_label.strip()
+    date_text = BeautifulSoup(date_label, "html.parser").get_text(" ", strip=True).replace(",", "")
     parsed_date: datetime | None = None
     for fmt in ("%a %b %d %Y", "%a %b %d", "%b %d %Y", "%b %d"):
         try:

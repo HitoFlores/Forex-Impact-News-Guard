@@ -1,5 +1,8 @@
 # ARCHITECTURE
 
+## Navegación  
+- [[PROJECT]]
+
 ## Componentes principales
 
 ```
@@ -63,6 +66,8 @@ Integración HTTP con Forex Factory. Usa `cloudscraper` para pasar el WAF Cloudf
 
 1. Extracción del JSON embebido en `window.calendarComponentStates[N]` (preferida, más estable).
 2. Fallback a parsing HTML con BeautifulSoup si el JSON embebido no está disponible.
+
+En el JSON embebido, el parser usa primero `date` + `timeLabel`, que es la hora visible en la tabla de Forex Factory. `dateline` queda sólo como fallback porque puede no coincidir con la zona horaria que ve el operador en la UI.
 
 Si recibe 403/429 o detecta challenge de Cloudflare, lanza `ForexFactoryBlockedError` con instrucción de configurar cookie de sesión.
 
@@ -224,6 +229,12 @@ Los secrets de producción (bot token, chat ID) viven en GitHub Actions Secrets 
 **Worker run_once, no daemon.** En producción el worker corre y termina; GitHub Actions es el scheduler. `BackgroundScheduler` de APScheduler existe en el código pero sólo se usa para modo continuo local de desarrollo.
 
 **Ventana estricta de alertas.** El worker rechaza alertas fuera de `[alert_at - 30s, alert_at + 5min]` para evitar notificaciones tardías cuando GitHub Actions ejecuta con retraso. Mejor silencio que aviso con timing engañoso.
+
+**Resumen diario sin catch-up tardio.** El daily summary sólo se envía entre `00:00` y `00:30` en la timezone activa. Si GitHub Actions no corre en esa ventana, el resumen se omite en vez de enviarse horas tarde.
+
+**Resultados sólo con dato real.** `FOREX RESULT UPDATE` requiere `Actual` real. Si Forex Factory sigue en `N/D` o vacío, no se emite mensaje aunque los retries ya estén vencidos.
+
+**Timezone controlada desde dashboard.** `AlertPolicy.timezone` sigue guardado en `.state/settings.json`; el dashboard lo edita con un selector IANA y el workflow `dashboard-control.yml` lo aplica vía `INPUT_TIMEZONE`.
 
 **Deduplicación por `RuntimeRepository`.** Cada dispatch queda registrado en `runtime.json` con `(event_id, kind, scheduled_for, attempt)`. Antes de enviar cualquier mensaje se consulta este registro. Garantiza idempotencia ante re-ejecuciones del cron.
 

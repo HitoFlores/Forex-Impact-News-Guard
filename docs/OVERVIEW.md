@@ -1,5 +1,7 @@
 # OVERVIEW
 
+## Navegación  
+- [[PROJECT]]
 ## Qué es
 
 Forex-Impact-News-Guard es un sistema de vigilancia de calendario económico que monitorea Forex Factory y envía alertas por Telegram antes y después de noticias de alto impacto. El producto tiene dos superficies: un worker que corre en GitHub Actions y un dashboard estático publicado en GitHub Pages desde donde el operador controla el sistema sin necesidad de infraestructura propia.
@@ -19,24 +21,25 @@ Trader individual (o equipo pequeño) que opera cuentas propias o fondeadas en m
 - **Vigilancia de calendario:** sincroniza Forex Factory periódicamente y filtra eventos por impacto y moneda configurados por el usuario.
 - **Alertas pre-noticia:** avisa N minutos antes del evento con una ventana de tolerancia estricta para no enviar avisos tardíos o engañosos.
 - **Revalidación antes del envío:** verifica que el evento no se haya movido justo antes de alertar; si cambió, recalcula horarios.
-- **Consulta de resultados:** después del release, consulta el resultado del evento y lo reporta por Telegram; reintenta si el dato aún no está disponible, sin duplicar mensajes cuando el resultado ya llegó.
-- **Resumen diario:** envía una vez por día un resumen de los eventos relevantes del día actual; si hay eventos de alto impacto mañana, agrega una nota corta sin listarlos como si fueran de hoy.
+- **Consulta de resultados:** después del release, consulta el resultado del evento y lo reporta por Telegram sólo cuando `Actual` trae un valor real; si sigue en `N/D`, no envía mensajes vacíos ni triples.
+- **Resumen diario:** envía una vez por día un resumen de los eventos relevantes del día actual, sólo dentro de la ventana `00:00`-`00:30` local; si hay eventos de alto impacto mañana, agrega una nota corta sin listarlos como si fueran de hoy.
 - **Dashboard operativo:** interfaz estática con estado de salud del sistema, próximas ventanas de riesgo, ledger de últimos dispatches y controles para disparar acciones remotas (smoke test, sync, settings básicos).
 - **Control remoto desde dashboard:** el operador puede cambiar settings básicos, forzar un sync y hacer smoke test de Telegram directamente desde el dashboard sin acceso a terminal.
+- **Timezone configurable:** el dashboard expone un selector IANA para cambiar `AlertPolicy.timezone`, con `America/Chihuahua` como valor actual por default.
 
 ## Flujo general del sistema
 
 ```
-GitHub Actions cron (cada ~30 min)
+GitHub Actions cron (cada ~5 min)
   └─► worker run_once
         ├─► lee settings desde JSON (.state/)
-        ├─► sincroniza Forex Factory (cloudscraper + HTML parsing)
+        ├─► sincroniza Forex Factory (cloudscraper + HTML parsing; timeLabel visible antes que dateline)
         ├─► filtra eventos relevantes → guarda hoy y mañana en .state/
         ├─► calcula timestamps: precheck / alert / result-check por evento
-        ├─► resumen diario (una vez por día) → Telegram
+        ├─► resumen diario (00:00-00:30 local) → Telegram
         ├─► precheck: revalida evento antes de alertar
         ├─► alert: envía aviso si está dentro de ventana estricta → Telegram
-        └─► result-check: consulta resultado con reintentos → Telegram
+        └─► result-check: consulta resultado con reintentos; envia sólo si Actual es real → Telegram
 
 GitHub Actions publica .state/ con git add -f
   └─► GitHub Pages sirve dashboard estático
