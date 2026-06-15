@@ -420,6 +420,34 @@ def test_run_cycle_records_scraping_failure(tmp_path: Path) -> None:
     assert observability.scraping.consecutive_failures == 1
 
 
+def test_run_cycle_alerts_operator_on_third_scraping_failure(tmp_path: Path) -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    now = datetime(2026, 5, 26, 10, 0, tzinfo=timezone)
+    runtime_repository = RuntimeRepository(str(tmp_path / "events.db"))
+    notifier = FakeNotifier()
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(),
+        client=FailingClient(),
+        event_repository=EventRepository(str(tmp_path / "events.db")),
+        runtime_repository=runtime_repository,
+        notifier=notifier,
+    )
+
+    for offset in range(4):
+        try:
+            service.run_cycle_at(reference_time=now.replace(minute=offset))
+        except RuntimeError:
+            pass
+        else:
+            raise AssertionError("Expected run_cycle_at to fail")
+
+    scraping_alerts = [message for message in notifier.messages if "FOREX SCRAPING ERROR" in message]
+    observability = runtime_repository.get_observability()
+    assert len(scraping_alerts) == 1
+    assert "<b>3</b>" in scraping_alerts[0]
+    assert observability.scraping.consecutive_failures == 4
+
+
 def test_dispatch_due_checks_records_precheck_failure(tmp_path: Path) -> None:
     timezone = ZoneInfo("America/Chihuahua")
     sync_time = datetime(2026, 5, 26, 14, 50, tzinfo=timezone)

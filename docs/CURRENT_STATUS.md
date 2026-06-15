@@ -113,10 +113,9 @@ No hay funcionalidades en estado experimental explícito al cierre de la última
 
 | Riesgo | Impacto |
 |---|---|
-| Fallo de scraping silencioso para el operador | `RuntimeRepository` registra el error pero no hay alerta automática a Telegram cuando `consecutive_failures` supera un umbral |
+| Fallo de scraping silencioso para el operador | Mitigado: se alerta por Telegram cuando `consecutive_failures` alcanza `FOREX_GUARD_SCRAPING_FAILURE_ALERT_THRESHOLD` |
 | Sin límite de rate para Telegram Bot API | En semanas con muchos eventos simultáneos podría alcanzar el límite de 30 msg/s de la API |
-| `runtime.json` puede crecer indefinidamente | No hay TTL ni compactación del historial de dispatches; en uso prolongado el archivo crece sin límite |
-| Dependencia de `cloudscraper` sin pin de versión explícita | Actualización automática podría introducir regresión de compatibilidad con Cloudflare |
+| `runtime.json` puede crecer indefinidamente | Mitigado: el worker poda dispatches antiguos con `FOREX_GUARD_RUNTIME_DISPATCH_TTL_DAYS` |
 
 ---
 
@@ -126,25 +125,19 @@ Ordenados por impacto / esfuerzo estimado:
 
 ### Alta prioridad
 
-1. **Tests para `notification_formatter`** — las 5 funciones que construyen mensajes Telegram no tienen cobertura. Un cambio de formato silencioso afecta directamente al usuario.
-
-2. **Alerta Telegram cuando scraping falla consecutivamente** — `RuntimeProbeState.consecutive_failures` existe pero nadie actúa sobre él. Agregar un umbral configurable (ej. 3 fallos) que dispare un mensaje de error al operador cierra el loop de observabilidad.
-
-3. **TTL / compactación de `runtime.json`** — sin límite, el historial de dispatches crece indefinidamente. Implementar limpieza de registros con más de N días (ej. 7) en cada ciclo.
+1. **Completar tests para `notification_formatter`** — ya existe cobertura para resumen diario; faltan tests unitarios propios para alerta individual, alerta agrupada, resultado individual, resultado agrupado y resumen de schedule. Se sigue validando en escenarios reales día a día.
 
 ### Media prioridad
 
-4. **Activar o remover `breaking_enabled`** — la funcionalidad existe en el cliente y en el modelo de política, pero el worker no la invoca. Decidir si se integra al ciclo productivo o se elimina para evitar confusión.
+2. **Activar o remover `breaking_enabled`** — la funcionalidad existe en el cliente y en el modelo de política, pero el worker no la invoca. Decidir si se integra al ciclo productivo o se elimina para evitar confusión.
 
-5. **Emitir `WARN` en `RuntimeProbeStatus`** — el estado existe pero no se usa. Implementar umbral intermedio (ej. 1-2 fallos consecutivos = WARN, 3+ = ERROR) para dar visibilidad antes de que el sistema falle del todo.
-
-6. **Pin de versión para `cloudscraper`** — la dependencia crítica para acceso a Forex Factory no tiene versión fija en `pyproject.toml`. Un `cloudscraper>=1.2.71,<2` evita regresiones silenciosas.
+3. **Emitir `WARN` en `RuntimeProbeStatus`** — el estado existe pero no se usa. Implementar umbral intermedio (ej. 1-2 fallos consecutivos = WARN, 3+ = ERROR) para dar visibilidad antes de que el sistema falle del todo.
 
 ### Baja prioridad / largo plazo
 
-7. **Worker continuo con infraestructura propia** — GitHub Actions no garantiza precisión sub-minuto. Si se necesita esa precisión, el modo `BackgroundScheduler.start()` ya existe en código y sólo necesita validación en un entorno con uptime real.
+4. **Worker continuo con infraestructura propia** — GitHub Actions no garantiza precisión sub-minuto. Si se necesita esa precisión, el modo `BackgroundScheduler.start()` ya existe en código y sólo necesita validación en un entorno con uptime real.
 
-8. **Auth de lectura para el dashboard** — si el estado operativo (ventanas de riesgo, timing de alertas) se vuelve sensible, mover la UI a una superficie con auth real.
+5. **Auth de lectura para el dashboard** — si el estado operativo (ventanas de riesgo, timing de alertas) se vuelve sensible, mover la UI a una superficie con auth real.
 
 ---
 

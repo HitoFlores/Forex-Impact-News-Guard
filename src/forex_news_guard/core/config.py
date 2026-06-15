@@ -23,6 +23,8 @@ class Settings(BaseSettings):
     settings_state_path: str = str(Path(".state/settings.json").resolve())
     scheduler_sync_interval_minutes: int = 30
     scheduler_tick_seconds: int = 30
+    scraping_failure_alert_threshold: int = 3
+    runtime_dispatch_ttl_days: int = 7
     telegram_bot_token: str | None = None
     telegram_chat_id: str | None = None
     telegram_smoke_chat_id: str | None = None

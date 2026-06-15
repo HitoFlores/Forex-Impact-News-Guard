@@ -78,6 +78,20 @@ def build_daily_summary_message(events: list[ForexEvent], generated_at: datetime
     )
 
 
+def build_scraping_failure_message(consecutive_failures: int, error_message: str, checked_at: datetime) -> NotificationMessage:
+    return NotificationMessage(
+        event_id=f"scraping-failure-{checked_at.date().isoformat()}",
+        impact=ImpactLevel.HIGH,
+        title="FOREX SCRAPING ERROR",
+        body=(
+            "<b>Forex Factory scraping is failing</b>\n"
+            f"<code>Failures :</code> <b>{consecutive_failures}</b>\n"
+            f"<code>Checked  :</code> {escape(checked_at.isoformat())}\n"
+            f"<code>Error    :</code> {escape(error_message)}"
+        ),
+    )
+
+
 def build_grouped_pre_alert_message(events: list[ForexEvent], lead_minutes: int) -> NotificationMessage:
     primary = events[0]
     event_time = primary.scheduled_at.strftime("%H:%M") if primary.scheduled_at else "N/D"

@@ -2,6 +2,12 @@
 
 Sin pendientes activos al cierre de esta sesion.
 
+## Mejoras cerradas recientemente
+
+- Alerta Telegram cuando el scraping falla consecutivamente.
+- Poda por TTL de dispatches antiguos en `runtime.json`.
+- `cloudscraper` queda documentado como dependencia ya pineada en `pyproject.toml`.
+
 ## Riesgos tecnicos a recordar
 
 - Forex Factory puede cambiar HTML/JS y romper parsing.

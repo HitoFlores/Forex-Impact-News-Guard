@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from forex_news_guard.domain.runtime import (
@@ -51,6 +51,25 @@ class RuntimeRepository:
         payload["dispatched_alerts"] = rows
         self.store.save(payload)
 
+    def prune_dispatches(self, reference_time: datetime, ttl_days: int) -> int:
+        if ttl_days <= 0:
+            return 0
+        payload = self.store.load(default=self._default_payload())
+        cutoff = reference_time - timedelta(days=ttl_days)
+        rows = payload.get("dispatched_alerts", [])
+        retained = []
+        for row in rows:
+            sent_at = self._normalize_datetime(self._parse_datetime(row.get("sent_at")), reference_time)
+            scheduled_for = self._normalize_datetime(self._parse_datetime(row.get("scheduled_for")), reference_time)
+            newest_timestamp = max([item for item in [sent_at, scheduled_for] if item is not None], default=None)
+            if newest_timestamp is None or newest_timestamp >= cutoff:
+                retained.append(row)
+        removed = len(rows) - len(retained)
+        if removed:
+            payload["dispatched_alerts"] = retained
+            self.store.save(payload)
+        return removed
+
     def get_observability(self) -> RuntimeObservability:
         payload = self.store.load(default=self._default_payload())
         return RuntimeObservability.model_validate(payload.get("observability") or {})
@@ -95,3 +114,20 @@ class RuntimeRepository:
         if path.suffix.lower() in {".db", ".sqlite", ".sqlite3"}:
             return str(path.with_name(f"{path.stem}{suffix}.json"))
         return state_path
+
+    def _parse_datetime(self, value: object) -> datetime | None:
+        if not isinstance(value, str):
+            return None
+        try:
+            return datetime.fromisoformat(value)
+        except ValueError:
+            return None
+
+    def _normalize_datetime(self, value: datetime | None, reference_time: datetime) -> datetime | None:
+        if value is None:
+            return None
+        if reference_time.tzinfo is not None and value.tzinfo is None:
+            return value.replace(tzinfo=reference_time.tzinfo)
+        if reference_time.tzinfo is None and value.tzinfo is not None:
+            return value.replace(tzinfo=None)
+        return value

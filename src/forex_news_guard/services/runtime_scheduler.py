@@ -23,6 +23,7 @@ from forex_news_guard.services.notification_formatter import (
     build_grouped_result_message,
     build_pre_alert_message,
     build_result_message,
+    build_scraping_failure_message,
 )
 from forex_news_guard.services.settings_service import SettingsService
 from forex_news_guard.services.telegram_notifier import TelegramNotifier
@@ -99,6 +100,7 @@ class RuntimeSchedulerService:
         return self.run_once()
 
     def run_cycle_at(self, reference_time: datetime) -> RuntimeSyncResult:
+        self._prune_runtime_history(reference_time)
         try:
             stored_events, schedules = sync_relevant_calendar_events(
                 policy=self.policy,
@@ -112,6 +114,7 @@ class RuntimeSchedulerService:
                 attempted_at=reference_time,
                 error_message=f"{type(error).__name__}: {error}",
             )
+            self._send_scraping_failure_alert_if_needed(reference_time)
             raise
         self.runtime_repository.record_probe_success(
             RuntimeProbeName.SCRAPING,
@@ -134,6 +137,7 @@ class RuntimeSchedulerService:
         return self.dispatch_due_checks_at(reference_time)
 
     def dispatch_due_checks_at(self, reference_time: datetime) -> RuntimeSyncResult:
+        self._prune_runtime_history(reference_time)
         stored_events = self.event_repository.list_relevant_events(reference_time=reference_time)
         schedules = build_event_schedules([item.event for item in stored_events], self.policy)
         dispatched: list[AlertDispatchRecord] = []
@@ -220,6 +224,7 @@ class RuntimeSchedulerService:
                 attempted_at=reference_time,
                 error_message=f"{type(error).__name__}: {error}",
             )
+            self._send_scraping_failure_alert_if_needed(reference_time)
             logger.exception("Failed to revalidate calendar events before alert dispatch")
             skipped.append(f"precheck-refresh-failed:{len(pending_prechecks)}")
             return stored_events, schedules, {schedule.event.id for schedule in pending_prechecks}
@@ -495,6 +500,33 @@ class RuntimeSchedulerService:
 
     def _reload_policy(self) -> None:
         self.policy = self.settings_service.get_policy()
+
+    def _prune_runtime_history(self, reference_time: datetime) -> None:
+        settings = get_settings()
+        removed = self.runtime_repository.prune_dispatches(
+            reference_time=reference_time,
+            ttl_days=settings.runtime_dispatch_ttl_days,
+        )
+        if removed:
+            logger.info("Pruned %s runtime dispatch records older than %s days", removed, settings.runtime_dispatch_ttl_days)
+
+    def _send_scraping_failure_alert_if_needed(self, reference_time: datetime) -> None:
+        settings = get_settings()
+        threshold = settings.scraping_failure_alert_threshold
+        if threshold <= 0:
+            return
+        scraping = self.runtime_repository.get_observability().scraping
+        if scraping.consecutive_failures != threshold:
+            return
+        message = build_scraping_failure_message(
+            consecutive_failures=scraping.consecutive_failures,
+            error_message=scraping.last_error_message or "Unknown scraping error",
+            checked_at=reference_time,
+        )
+        try:
+            self._send_telegram_message(message, reference_time)
+        except Exception:
+            logger.exception("Failed to notify operator about repeated scraping failures")
 
     def _minutes_until_event(self, event: ForexEvent, reference_time: datetime) -> int:
         if event.scheduled_at is None:

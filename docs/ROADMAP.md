@@ -17,30 +17,6 @@ Las funciones que construyen los mensajes de Telegram (resumen diario, alerta in
 
 ---
 
-### Alerta Telegram cuando el scraping falla repetidamente
-
-El sistema registra fallos de scraping en `runtime.json` con contador de fallos consecutivos. `[inferencia]` Sin embargo, nadie actúa sobre ese contador: si Forex Factory bloquea o cambia estructura, el operador sólo lo descubre mirando el dashboard.
-
-**Qué agregar:** cuando los fallos consecutivos de scraping superen un umbral configurable (ej. 3 ciclos), enviar un mensaje de alerta al canal Telegram del operador. Cierra el loop de observabilidad sin necesidad de infraestructura adicional.
-
----
-
-### Limpieza periódica del historial de dispatches
-
-El archivo `runtime.json` guarda cada mensaje enviado con su timestamp. `[inferencia]` No hay mecanismo de expiración: en uso continuo crece indefinidamente. Un sistema que lleva meses activo acumulará miles de registros irrelevantes.
-
-**Qué agregar:** en cada ciclo del worker, descartar registros con más de N días (ej. 7). Operación simple; no requiere cambios de esquema.
-
----
-
-### Pin de versión para `cloudscraper`
-
-`cloudscraper` es la dependencia más crítica del sistema: sin ella no hay acceso a Forex Factory. `[inferencia]` Si no está fijada con rango estricto en `pyproject.toml`, una actualización automática puede romper la compatibilidad con Cloudflare sin aviso.
-
-**Qué fijar:** versión mínima y máxima conocida como estable (`>=X.Y.Z,<X+1`).
-
----
-
 ## Mediano plazo
 _Mejoras que amplían capacidades del producto o mejoran resiliencia operativa. Requieren diseño pero no cambian la arquitectura de fondo._
 
@@ -72,9 +48,9 @@ Hoy el sistema tiene dos estrategias de parsing (JSON embebido en `window.calend
 
 ### Limitar crecimiento del dashboard en periodos largos
 
-El ledger de dispatches ya tiene scroll interno. `[doc]` Pero el archivo `runtime.json` que alimenta el dashboard puede crecer mucho en periodos prolongados, aumentando el tiempo de carga y el tamaño del commit de estado.
+El ledger de dispatches ya tiene scroll interno y `runtime.json` poda dispatches antiguos con `FOREX_GUARD_RUNTIME_DISPATCH_TTL_DAYS`. `[doc]` Aun así, el dashboard publicado puede necesitar un límite explícito de registros renderizados si se quiere mantener el artefacto muy pequeño.
 
-Esto se resuelve combinando la limpieza periódica del historial (corto plazo) con un límite explícito de registros que `build_dashboard.py` incluye en el artefacto publicado.
+**Qué agregar:** un límite explícito de registros que `build_dashboard.py` incluye en el artefacto publicado.
 
 ---
 
@@ -124,9 +100,8 @@ Mientras el uso sea personal esto no es un problema. Si se comparte con un equip
 
 | Riesgo | Probabilidad | Impacto |
 |---|---|---|
-| Fallo de scraping silencioso para el operador | Media | Alto: sin alertas, sin notificación |
-| `runtime.json` muy grande ralentiza ciclos del worker | Baja a corto plazo, crece con el tiempo | Bajo-medio |
-| Actualización de `cloudscraper` sin pin rompe scraping | Baja | Alto |
+| Fallo de scraping silencioso para el operador | Baja | Mitigado con alerta Telegram al alcanzar el umbral de fallos consecutivos |
+| `runtime.json` muy grande ralentiza ciclos del worker | Baja | Mitigado con poda por TTL de dispatches antiguos |
 | Breaking news activo en config pero no en worker genera confusión en diagnóstico | Baja | Bajo |
 
 ---
@@ -135,9 +110,7 @@ Mientras el uso sea personal esto no es un problema. Si se comparte con un equip
 
 Ordenados por relación impacto / esfuerzo:
 
-1. **Tests para mensajes Telegram** — mayor riesgo de regresión silenciosa, menor esfuerzo.
-2. **Alerta de scraping fallido al operador** — cierra el loop de observabilidad con ~20 líneas de código.
-3. **Limpieza de `runtime.json`** — previene problema de crecimiento antes de que sea visible.
-4. **Pin de `cloudscraper`** — una línea en `pyproject.toml`; protege la dependencia más crítica.
-5. **Decidir sobre breaking news** — activar o eliminar; el estado actual genera ambigüedad.
-6. **Estados WARN en observabilidad** — mejora la legibilidad del dashboard en degradación parcial.
+1. **Completar tests para mensajes Telegram** — mayor riesgo de regresión silenciosa; parte de la cobertura se valida día a día con escenarios reales.
+2. **Decidir sobre breaking news** — activar o eliminar; el estado actual genera ambigüedad.
+3. **Estados WARN en observabilidad** — mejora la legibilidad del dashboard en degradación parcial.
+4. **Límite de registros renderizados en dashboard** — mantiene pequeño el artefacto publicado si el historial operativo crece.

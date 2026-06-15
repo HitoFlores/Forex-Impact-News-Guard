@@ -83,6 +83,11 @@ Nota sobre `currencies`:
 
 Ambos deben quedarse fuera de git.
 
+## Variables operativas
+
+- `FOREX_GUARD_SCRAPING_FAILURE_ALERT_THRESHOLD`: fallos consecutivos de scraping necesarios para avisar por Telegram. Default: `3`. Usa `0` para desactivar el aviso.
+- `FOREX_GUARD_RUNTIME_DISPATCH_TTL_DAYS`: días de historial de dispatches que conserva `runtime.json`. Default: `7`. Usa `0` para desactivar la poda.
+
 ## Rotacion de Telegram token
 
 Hacer esto antes de cualquier deploy nuevo o si el token ya paso por chats, capturas o pruebas no confiables.

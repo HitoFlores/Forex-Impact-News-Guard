@@ -508,7 +508,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "scripts_build_dashboard_py_path",
-      "community": 8,
+      "community": 0,
       "norm_label": "path"
     },
     {
@@ -558,7 +558,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "runtimeprobestate",
-      "community": 8,
+      "community": 0,
       "norm_label": "runtimeprobestate"
     },
     {
@@ -598,7 +598,7 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "scripts_build_dashboard_py_alertpolicy",
-      "community": 8,
+      "community": 0,
       "norm_label": "alertpolicy"
     },
     {
@@ -985,7 +985,7 @@
       "label": "get_settings()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/core/config.py",
-      "source_location": "L38",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "core_config_get_settings",
       "community": 2,
@@ -1068,7 +1068,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "domain_models_alertpolicy",
-      "community": 8,
+      "community": 10,
       "norm_label": "alertpolicy"
     },
     {
@@ -1078,7 +1078,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "domain_models_alertpolicy_timezone_info",
-      "community": 8,
+      "community": 10,
       "norm_label": ".timezone_info()"
     },
     {
@@ -1098,7 +1098,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "domain_models_alertpolicy_risk_before_delta",
-      "community": 8,
+      "community": 10,
       "norm_label": ".risk_before_delta()"
     },
     {
@@ -1108,7 +1108,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "timedelta",
-      "community": 8,
+      "community": 10,
       "norm_label": "timedelta"
     },
     {
@@ -1118,7 +1118,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "domain_models_alertpolicy_risk_after_delta",
-      "community": 8,
+      "community": 10,
       "norm_label": ".risk_after_delta()"
     },
     {
@@ -1128,7 +1128,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "domain_models_alertpolicy_lead_delta",
-      "community": 8,
+      "community": 10,
       "norm_label": ".lead_delta()"
     },
     {
@@ -1138,7 +1138,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "domain_models_alertpolicy_revalidate_delta",
-      "community": 8,
+      "community": 10,
       "norm_label": ".revalidate_delta()"
     },
     {
@@ -1148,7 +1148,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "domain_models_alertpolicy_result_check_delta",
-      "community": 8,
+      "community": 10,
       "norm_label": ".result_check_delta()"
     },
     {
@@ -1158,7 +1158,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "domain_models_alertpolicy_normalized_currencies",
-      "community": 8,
+      "community": 10,
       "norm_label": ".normalized_currencies()"
     },
     {
@@ -1168,7 +1168,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "domain_models_alertpolicy_effective_impacts",
-      "community": 8,
+      "community": 10,
       "norm_label": ".effective_impacts()"
     },
     {
@@ -1238,7 +1238,7 @@
       "source_location": "L129",
       "_origin": "ast",
       "id": "domain_models_scheduledeventcheckkind",
-      "community": 8,
+      "community": 10,
       "norm_label": "scheduledeventcheckkind"
     },
     {
@@ -1328,7 +1328,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "domain_runtime_runtimeprobestate",
-      "community": 8,
+      "community": 0,
       "norm_label": "runtimeprobestate"
     },
     {
@@ -1448,7 +1448,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "integrations_forex_factory_forexfactoryclient_from_settings",
-      "community": 2,
+      "community": 0,
       "norm_label": ".from_settings()"
     },
     {
@@ -1458,7 +1458,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "settings",
-      "community": 2,
+      "community": 0,
       "norm_label": "settings"
     },
     {
@@ -1818,7 +1818,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_event_scheduler",
-      "community": 8,
+      "community": 10,
       "norm_label": "event_scheduler.py"
     },
     {
@@ -1828,7 +1828,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "services_event_scheduler_filter_relevant_events",
-      "community": 8,
+      "community": 10,
       "norm_label": "filter_relevant_events()"
     },
     {
@@ -1838,7 +1838,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_event_scheduler_py_forexevent",
-      "community": 8,
+      "community": 10,
       "norm_label": "forexevent"
     },
     {
@@ -1848,7 +1848,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_event_scheduler_py_alertpolicy",
-      "community": 8,
+      "community": 10,
       "norm_label": "alertpolicy"
     },
     {
@@ -1858,7 +1858,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "services_event_scheduler_build_event_schedules",
-      "community": 8,
+      "community": 10,
       "norm_label": "build_event_schedules()"
     },
     {
@@ -1868,7 +1868,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_event_scheduler_py_eventschedule",
-      "community": 8,
+      "community": 0,
       "norm_label": "eventschedule"
     },
     {
@@ -1878,7 +1878,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_forex_factory_monitor",
-      "community": 0,
+      "community": 10,
       "norm_label": "forex_factory_monitor.py"
     },
     {
@@ -1888,7 +1888,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "services_forex_factory_monitor_preview_live_alerts",
-      "community": 0,
+      "community": 10,
       "norm_label": "preview_live_alerts()"
     },
     {
@@ -1898,7 +1898,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_forex_factory_monitor_py_alertpolicy",
-      "community": 0,
+      "community": 10,
       "norm_label": "alertpolicy"
     },
     {
@@ -1908,7 +1908,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_forex_factory_monitor_py_datetime",
-      "community": 0,
+      "community": 10,
       "norm_label": "datetime"
     },
     {
@@ -1918,7 +1918,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_forex_factory_monitor_py_forexfactoryclient",
-      "community": 0,
+      "community": 10,
       "norm_label": "forexfactoryclient"
     },
     {
@@ -1938,7 +1938,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "services_forex_factory_monitor_sync_relevant_calendar_events",
-      "community": 0,
+      "community": 10,
       "norm_label": "sync_relevant_calendar_events()"
     },
     {
@@ -2042,10 +2042,20 @@
       "norm_label": "build_daily_summary_message()"
     },
     {
-      "label": "build_grouped_pre_alert_message()",
+      "label": "build_scraping_failure_message()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
       "source_location": "L81",
+      "_origin": "ast",
+      "id": "services_notification_formatter_build_scraping_failure_message",
+      "community": 3,
+      "norm_label": "build_scraping_failure_message()"
+    },
+    {
+      "label": "build_grouped_pre_alert_message()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/services/notification_formatter.py",
+      "source_location": "L95",
       "_origin": "ast",
       "id": "services_notification_formatter_build_grouped_pre_alert_message",
       "community": 3,
@@ -2055,7 +2065,7 @@
       "label": "build_grouped_result_message()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L104",
+      "source_location": "L118",
       "_origin": "ast",
       "id": "services_notification_formatter_build_grouped_result_message",
       "community": 3,
@@ -2065,7 +2075,7 @@
       "label": "build_schedule_summary()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L129",
+      "source_location": "L143",
       "_origin": "ast",
       "id": "services_notification_formatter_build_schedule_summary",
       "community": 3,
@@ -2075,7 +2085,7 @@
       "label": "EventSchedule",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L129",
+      "source_location": "L143",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_notification_formatter_py_eventschedule",
       "community": 3,
@@ -2085,7 +2095,7 @@
       "label": "_impact_label()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L138",
+      "source_location": "L152",
       "_origin": "ast",
       "id": "services_notification_formatter_impact_label",
       "community": 3,
@@ -2095,7 +2105,7 @@
       "label": "ImpactLevel",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L138",
+      "source_location": "L152",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_notification_formatter_py_impactlevel",
       "community": 3,
@@ -2105,7 +2115,7 @@
       "label": "_event_local_date()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L146",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "services_notification_formatter_event_local_date",
       "community": 3,
@@ -2115,7 +2125,7 @@
       "label": "date",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L146",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "date",
       "community": 3,
@@ -2125,7 +2135,7 @@
       "label": "_currency_flag()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L154",
+      "source_location": "L168",
       "_origin": "ast",
       "id": "services_notification_formatter_currency_flag",
       "community": 3,
@@ -2135,7 +2145,7 @@
       "label": "_impact_badge()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L169",
+      "source_location": "L183",
       "_origin": "ast",
       "id": "services_notification_formatter_impact_badge",
       "community": 3,
@@ -2145,7 +2155,7 @@
       "label": "_result_badge()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
-      "source_location": "L177",
+      "source_location": "L191",
       "_origin": "ast",
       "id": "services_notification_formatter_result_badge",
       "community": 3,
@@ -2158,24 +2168,24 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_runtime_scheduler",
-      "community": 1,
+      "community": 32,
       "norm_label": "runtime_scheduler.py"
     },
     {
       "label": "RuntimeSchedulerService",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice",
-      "community": 1,
+      "community": 32,
       "norm_label": "runtimeschedulerservice"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_init",
       "community": 0,
@@ -2185,7 +2195,7 @@
       "label": "AlertPolicy",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_alertpolicy",
       "community": 0,
@@ -2195,7 +2205,7 @@
       "label": "ForexFactoryClient",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_forexfactoryclient",
       "community": 0,
@@ -2205,7 +2215,7 @@
       "label": "EventRepository",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_eventrepository",
       "community": 0,
@@ -2215,7 +2225,7 @@
       "label": "RuntimeRepository",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "runtimerepository",
       "community": 0,
@@ -2225,7 +2235,7 @@
       "label": "TelegramNotifier",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_telegramnotifier",
       "community": 0,
@@ -2235,7 +2245,7 @@
       "label": "SettingsService",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "settingsservice",
       "community": 0,
@@ -2245,37 +2255,37 @@
       "label": ".start()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L58",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_start",
-      "community": 1,
+      "community": 32,
       "norm_label": ".start()"
     },
     {
       "label": ".shutdown()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L76",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_shutdown",
-      "community": 1,
+      "community": 32,
       "norm_label": ".shutdown()"
     },
     {
       "label": ".run_once()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L79",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_run_once",
-      "community": 1,
+      "community": 32,
       "norm_label": ".run_once()"
     },
     {
       "label": "RuntimeSyncResult",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L79",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_runtimesyncresult",
       "community": 0,
@@ -2285,77 +2295,77 @@
       "label": ".run_full_cycle()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L84",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_run_full_cycle",
-      "community": 0,
+      "community": 32,
       "norm_label": ".run_full_cycle()"
     },
     {
       "label": ".run_cycle()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L98",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_run_cycle",
-      "community": 1,
+      "community": 32,
       "norm_label": ".run_cycle()"
     },
     {
       "label": ".run_cycle_at()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L101",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_run_cycle_at",
-      "community": 0,
+      "community": 32,
       "norm_label": ".run_cycle_at()"
     },
     {
       "label": "datetime",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L101",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_datetime",
-      "community": 0,
+      "community": 32,
       "norm_label": "datetime"
     },
     {
       "label": ".dispatch_due_checks()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L131",
+      "source_location": "L134",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_due_checks",
-      "community": 1,
+      "community": 32,
       "norm_label": ".dispatch_due_checks()"
     },
     {
       "label": ".dispatch_due_checks_at()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L136",
+      "source_location": "L139",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_due_checks_at",
-      "community": 0,
+      "community": 32,
       "norm_label": ".dispatch_due_checks_at()"
     },
     {
       "label": "._revalidate_due_prechecks()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L173",
+      "source_location": "L177",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_revalidate_due_prechecks",
-      "community": 0,
+      "community": 32,
       "norm_label": "._revalidate_due_prechecks()"
     },
     {
       "label": "StoredEvent",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L173",
+      "source_location": "L177",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_storedevent",
       "community": 0,
@@ -2365,7 +2375,7 @@
       "label": "EventSchedule",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L173",
+      "source_location": "L177",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_eventschedule",
       "community": 0,
@@ -2375,7 +2385,7 @@
       "label": "AlertDispatchRecord",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L173",
+      "source_location": "L177",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_alertdispatchrecord",
       "community": 0,
@@ -2385,17 +2395,17 @@
       "label": "._dispatch_grouped_alerts()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L252",
+      "source_location": "L257",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_grouped_alerts",
-      "community": 0,
+      "community": 32,
       "norm_label": "._dispatch_grouped_alerts()"
     },
     {
       "label": "ForexEvent",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L252",
+      "source_location": "L257",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_forexevent",
       "community": 0,
@@ -2405,37 +2415,37 @@
       "label": "._dispatch_grouped_results()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L321",
+      "source_location": "L326",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_grouped_results",
-      "community": 0,
+      "community": 32,
       "norm_label": "._dispatch_grouped_results()"
     },
     {
       "label": "._send_daily_summary_if_needed()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L375",
+      "source_location": "L380",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_send_daily_summary_if_needed",
-      "community": 0,
+      "community": 32,
       "norm_label": "._send_daily_summary_if_needed()"
     },
     {
       "label": "._dispatch_if_due()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L415",
+      "source_location": "L420",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_if_due",
-      "community": 0,
+      "community": 32,
       "norm_label": "._dispatch_if_due()"
     },
     {
       "label": "ScheduledEventCheck",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L415",
+      "source_location": "L420",
       "_origin": "ast",
       "id": "scheduledeventcheck",
       "community": 0,
@@ -2445,70 +2455,90 @@
       "label": "._build_notifier()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L469",
+      "source_location": "L474",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_build_notifier",
-      "community": 1,
+      "community": 0,
       "norm_label": "._build_notifier()"
     },
     {
       "label": "._send_telegram_message()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L481",
+      "source_location": "L486",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_send_telegram_message",
-      "community": 0,
+      "community": 32,
       "norm_label": "._send_telegram_message()"
     },
     {
       "label": "._reload_policy()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L496",
+      "source_location": "L501",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_reload_policy",
-      "community": 1,
+      "community": 32,
       "norm_label": "._reload_policy()"
+    },
+    {
+      "label": "._prune_runtime_history()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L504",
+      "_origin": "ast",
+      "id": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
+      "community": 32,
+      "norm_label": "._prune_runtime_history()"
+    },
+    {
+      "label": "._send_scraping_failure_alert_if_needed()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L513",
+      "_origin": "ast",
+      "id": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
+      "community": 32,
+      "norm_label": "._send_scraping_failure_alert_if_needed()"
     },
     {
       "label": "._minutes_until_event()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L499",
+      "source_location": "L531",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_minutes_until_event",
-      "community": 0,
+      "community": 32,
       "norm_label": "._minutes_until_event()"
     },
     {
       "label": "._result_already_finalized()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L505",
+      "source_location": "L537",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_result_already_finalized",
-      "community": 0,
+      "community": 32,
       "norm_label": "._result_already_finalized()"
     },
     {
       "label": "._result_records_to_mark()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L518",
+      "source_location": "L550",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_result_records_to_mark",
-      "community": 0,
+      "community": 32,
       "norm_label": "._result_records_to_mark()"
     },
     {
       "label": "._event_has_actual()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
-      "source_location": "L537",
+      "source_location": "L569",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_event_has_actual",
-      "community": 0,
+      "community": 32,
       "norm_label": "._event_has_actual()"
     },
     {
@@ -2972,10 +3002,20 @@
       "norm_label": "alertdispatchrecord"
     },
     {
-      "label": ".get_observability()",
+      "label": ".prune_dispatches()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L54",
+      "_origin": "ast",
+      "id": "storage_runtime_repository_runtimerepository_prune_dispatches",
+      "community": 0,
+      "norm_label": ".prune_dispatches()"
+    },
+    {
+      "label": ".get_observability()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_get_observability",
       "community": 0,
@@ -2985,7 +3025,7 @@
       "label": "RuntimeObservability",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L54",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "runtimeobservability",
       "community": 0,
@@ -2995,7 +3035,7 @@
       "label": ".record_probe_success()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L58",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_record_probe_success",
       "community": 0,
@@ -3005,7 +3045,7 @@
       "label": "RuntimeProbeName",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L58",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "runtimeprobename",
       "community": 0,
@@ -3015,7 +3055,7 @@
       "label": ".record_probe_error()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L71",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_record_probe_error",
       "community": 0,
@@ -3025,7 +3065,7 @@
       "label": "._load_records()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L83",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_load_records",
       "community": 0,
@@ -3035,7 +3075,7 @@
       "label": "._default_payload()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L87",
+      "source_location": "L106",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_default_payload",
       "community": 0,
@@ -3045,11 +3085,31 @@
       "label": "._resolve_state_path()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L93",
+      "source_location": "L112",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_resolve_state_path",
       "community": 6,
       "norm_label": "._resolve_state_path()"
+    },
+    {
+      "label": "._parse_datetime()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L118",
+      "_origin": "ast",
+      "id": "storage_runtime_repository_runtimerepository_parse_datetime",
+      "community": 0,
+      "norm_label": "._parse_datetime()"
+    },
+    {
+      "label": "._normalize_datetime()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "storage_runtime_repository_runtimerepository_normalize_datetime",
+      "community": 0,
+      "norm_label": "._normalize_datetime()"
     },
     {
       "label": "settings_repository.py",
@@ -3378,7 +3438,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_forex_factory_integration",
-      "community": 2,
+      "community": 1,
       "norm_label": "test_forex_factory_integration.py"
     },
     {
@@ -3388,7 +3448,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_forex_factory_integration_test_parse_calendar_html_supports_legacy_rows",
-      "community": 2,
+      "community": 1,
       "norm_label": "test_parse_calendar_html_supports_legacy_rows()"
     },
     {
@@ -3398,7 +3458,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_forex_factory_integration_test_parse_calendar_html_supports_modern_rows",
-      "community": 2,
+      "community": 1,
       "norm_label": "test_parse_calendar_html_supports_modern_rows()"
     },
     {
@@ -3408,7 +3468,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "tests_test_forex_factory_integration_test_parse_calendar_html_supports_component_state_payload",
-      "community": 2,
+      "community": 1,
       "norm_label": "test_parse_calendar_html_supports_component_state_payload()"
     },
     {
@@ -3418,7 +3478,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "tests_test_forex_factory_integration_test_parse_calendar_component_state_prefers_visible_time_label_over_dateline",
-      "community": 2,
+      "community": 1,
       "norm_label": "test_parse_calendar_component_state_prefers_visible_time_label_over_dateline()"
     },
     {
@@ -3428,7 +3488,7 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "tests_test_forex_factory_integration_test_parse_breaking_news_html_filters_high_impact_items",
-      "community": 2,
+      "community": 1,
       "norm_label": "test_parse_breaking_news_html_filters_high_impact_items()"
     },
     {
@@ -3448,7 +3508,7 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "tests_test_forex_factory_integration_test_live_preview_reports_blocked_source",
-      "community": 2,
+      "community": 1,
       "norm_label": "test_live_preview_reports_blocked_source()"
     },
     {
@@ -3510,6 +3570,36 @@
       "id": "tests_test_notification_formatter_test_daily_summary_no_today_events_still_mentions_tomorrow",
       "community": 1,
       "norm_label": "test_daily_summary_no_today_events_still_mentions_tomorrow()"
+    },
+    {
+      "label": "test_runtime_repository.py",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_runtime_repository",
+      "community": 1,
+      "norm_label": "test_runtime_repository.py"
+    },
+    {
+      "label": "test_prune_dispatches_removes_records_older_than_ttl()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
+      "community": 1,
+      "norm_label": "test_prune_dispatches_removes_records_older_than_ttl()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "tests_test_runtime_repository_py_path",
+      "community": 0,
+      "norm_label": "path"
     },
     {
       "label": "test_runtime_scheduler.py",
@@ -3782,10 +3872,20 @@
       "norm_label": "test_run_cycle_records_scraping_failure()"
     },
     {
-      "label": "test_dispatch_due_checks_records_precheck_failure()",
+      "label": "test_run_cycle_alerts_operator_on_third_scraping_failure()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L423",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "community": 1,
+      "norm_label": "test_run_cycle_alerts_operator_on_third_scraping_failure()"
+    },
+    {
+      "label": "test_dispatch_due_checks_records_precheck_failure()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L451",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_records_precheck_failure",
       "community": 1,
@@ -3795,7 +3895,7 @@
       "label": "test_dispatch_due_checks_records_telegram_failure()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L454",
+      "source_location": "L482",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_records_telegram_failure",
       "community": 1,
@@ -3838,7 +3938,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_settings_service",
-      "community": 6,
+      "community": 10,
       "norm_label": "test_settings_service.py"
     },
     {
@@ -3848,7 +3948,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_test_settings_service_test_settings_service_persists_policy",
-      "community": 6,
+      "community": 10,
       "norm_label": "test_settings_service_persists_policy()"
     },
     {
@@ -3858,7 +3958,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_test_settings_service_py_path",
-      "community": 6,
+      "community": 10,
       "norm_label": "path"
     },
     {
@@ -4835,7 +4935,7 @@
       "label": "EventScheduler / AlertPlanner",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L72",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "docs_architecture_eventscheduler_alertplanner",
       "community": 27,
@@ -4845,7 +4945,7 @@
       "label": "Storage (capa de persistencia)",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L76",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "docs_architecture_storage_capa_de_persistencia",
       "community": 27,
@@ -4855,7 +4955,7 @@
       "label": "TelegramNotifier / NotificationFormatter",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L88",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "docs_architecture_telegramnotifier_notificationformatter",
       "community": 27,
@@ -4865,7 +4965,7 @@
       "label": "API (FastAPI)",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L94",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "docs_architecture_api_fastapi",
       "community": 27,
@@ -4875,7 +4975,7 @@
       "label": "Dashboard (GitHub Pages)",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L98",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "docs_architecture_dashboard_github_pages",
       "community": 27,
@@ -4885,7 +4985,7 @@
       "label": "Scripts de soporte",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L102",
+      "source_location": "L104",
       "_origin": "ast",
       "id": "docs_architecture_scripts_de_soporte",
       "community": 27,
@@ -4895,7 +4995,7 @@
       "label": "Flujo de datos",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L112",
+      "source_location": "L114",
       "_origin": "ast",
       "id": "docs_architecture_flujo_de_datos",
       "community": 27,
@@ -4905,7 +5005,7 @@
       "label": "Sistemas externos",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L183",
+      "source_location": "L185",
       "_origin": "ast",
       "id": "docs_architecture_sistemas_externos",
       "community": 27,
@@ -4915,7 +5015,7 @@
       "label": "Dependencias importantes",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L194",
+      "source_location": "L196",
       "_origin": "ast",
       "id": "docs_architecture_dependencias_importantes",
       "community": 27,
@@ -4925,7 +5025,7 @@
       "label": "Runtime",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L196",
+      "source_location": "L198",
       "_origin": "ast",
       "id": "docs_architecture_runtime",
       "community": 27,
@@ -4935,7 +5035,7 @@
       "label": "Configuraci\u00f3n en dos capas",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L207",
+      "source_location": "L209",
       "_origin": "ast",
       "id": "docs_architecture_configuraci\u00f3n_en_dos_capas",
       "community": 27,
@@ -4945,7 +5045,7 @@
       "label": "Decisiones de dise\u00f1o relevantes",
       "file_type": "document",
       "source_file": "docs/ARCHITECTURE.md",
-      "source_location": "L223",
+      "source_location": "L225",
       "_origin": "ast",
       "id": "docs_architecture_decisiones_de_dise\u00f1o_relevantes",
       "community": 27,
@@ -5035,7 +5135,7 @@
       "label": "Dashboard `[doc]`",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L50",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "docs_current_status_dashboard_doc",
       "community": 25,
@@ -5045,7 +5145,7 @@
       "label": "Seguridad operativa `[doc]`",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L60",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "docs_current_status_seguridad_operativa_doc",
       "community": 25,
@@ -5055,7 +5155,7 @@
       "label": "API local `[c\u00f3digo]`",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L66",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "docs_current_status_api_local_c\u00f3digo",
       "community": 25,
@@ -5065,7 +5165,7 @@
       "label": "Funcionalidades en pruebas",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L74",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "docs_current_status_funcionalidades_en_pruebas",
       "community": 25,
@@ -5075,7 +5175,7 @@
       "label": "Pendientes conocidos",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L82",
+      "source_location": "L86",
       "_origin": "ast",
       "id": "docs_current_status_pendientes_conocidos",
       "community": 25,
@@ -5085,7 +5185,7 @@
       "label": "Riesgos actuales",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L96",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "docs_current_status_riesgos_actuales",
       "community": 25,
@@ -5095,7 +5195,7 @@
       "label": "Documentados expl\u00edcitamente `[doc]`",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L98",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "docs_current_status_documentados_expl\u00edcitamente_doc",
       "community": 25,
@@ -5105,7 +5205,7 @@
       "label": "Inferidos del c\u00f3digo `[c\u00f3digo]`",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L108",
+      "source_location": "L112",
       "_origin": "ast",
       "id": "docs_current_status_inferidos_del_c\u00f3digo_c\u00f3digo",
       "community": 25,
@@ -5115,7 +5215,7 @@
       "label": "Pr\u00f3ximos pasos recomendados",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L119",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "docs_current_status_pr\u00f3ximos_pasos_recomendados",
       "community": 25,
@@ -5125,7 +5225,7 @@
       "label": "Alta prioridad",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L123",
+      "source_location": "L126",
       "_origin": "ast",
       "id": "docs_current_status_alta_prioridad",
       "community": 25,
@@ -5135,7 +5235,7 @@
       "label": "Media prioridad",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L131",
+      "source_location": "L130",
       "_origin": "ast",
       "id": "docs_current_status_media_prioridad",
       "community": 25,
@@ -5145,7 +5245,7 @@
       "label": "Baja prioridad / largo plazo",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L139",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "docs_current_status_baja_prioridad_largo_plazo",
       "community": 25,
@@ -5155,7 +5255,7 @@
       "label": "Nivel de madurez del proyecto",
       "file_type": "document",
       "source_file": "docs/CURRENT_STATUS.md",
-      "source_location": "L147",
+      "source_location": "L144",
       "_origin": "ast",
       "id": "docs_current_status_nivel_de_madurez_del_proyecto",
       "community": 25,
@@ -5632,6 +5732,46 @@
       "norm_label": "lessons_learned.md"
     },
     {
+      "label": "Lessons Learned",
+      "file_type": "document",
+      "source_file": "docs/LESSONS_LEARNED.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_lessons_learned_lessons_learned",
+      "community": 49,
+      "norm_label": "lessons learned"
+    },
+    {
+      "label": "Forex Factory time parsing",
+      "file_type": "document",
+      "source_file": "docs/LESSONS_LEARNED.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_lessons_learned_forex_factory_time_parsing",
+      "community": 49,
+      "norm_label": "forex factory time parsing"
+    },
+    {
+      "label": "GitHub Actions timing",
+      "file_type": "document",
+      "source_file": "docs/LESSONS_LEARNED.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_lessons_learned_github_actions_timing",
+      "community": 49,
+      "norm_label": "github actions timing"
+    },
+    {
+      "label": "Result updates",
+      "file_type": "document",
+      "source_file": "docs/LESSONS_LEARNED.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "docs_lessons_learned_result_updates",
+      "community": 49,
+      "norm_label": "result updates"
+    },
+    {
       "label": "OPERATIONS.md",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
@@ -5722,10 +5862,20 @@
       "norm_label": "archivos locales importantes"
     },
     {
-      "label": "Rotacion de Telegram token",
+      "label": "Variables operativas",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
       "source_location": "L86",
+      "_origin": "ast",
+      "id": "docs_operations_variables_operativas",
+      "community": 30,
+      "norm_label": "variables operativas"
+    },
+    {
+      "label": "Rotacion de Telegram token",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS.md",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "docs_operations_rotacion_de_telegram_token",
       "community": 30,
@@ -5735,7 +5885,7 @@
       "label": "Prueba manual de Telegram",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L102",
+      "source_location": "L107",
       "_origin": "ast",
       "id": "docs_operations_prueba_manual_de_telegram",
       "community": 30,
@@ -5745,7 +5895,7 @@
       "label": "Prueba forzada remota de Telegram",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L118",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "docs_operations_prueba_forzada_remota_de_telegram",
       "community": 30,
@@ -5755,7 +5905,7 @@
       "label": "Nota de transicion",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L141",
+      "source_location": "L146",
       "_origin": "ast",
       "id": "docs_operations_nota_de_transicion",
       "community": 30,
@@ -5835,7 +5985,7 @@
       "label": "Flujo general del sistema",
       "file_type": "document",
       "source_file": "docs/OVERVIEW.md",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "docs_overview_flujo_general_del_sistema",
       "community": 34,
@@ -5845,7 +5995,7 @@
       "label": "Dependencias importantes",
       "file_type": "document",
       "source_file": "docs/OVERVIEW.md",
-      "source_location": "L49",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "docs_overview_dependencias_importantes",
       "community": 34,
@@ -5855,7 +6005,7 @@
       "label": "Estado actual del proyecto",
       "file_type": "document",
       "source_file": "docs/OVERVIEW.md",
-      "source_location": "L62",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "docs_overview_estado_actual_del_proyecto",
       "community": 34,
@@ -5882,10 +6032,20 @@
       "norm_label": "pending"
     },
     {
-      "label": "Riesgos tecnicos a recordar",
+      "label": "Mejoras cerradas recientemente",
       "file_type": "document",
       "source_file": "docs/PENDING.md",
       "source_location": "L5",
+      "_origin": "ast",
+      "id": "docs_pending_mejoras_cerradas_recientemente",
+      "community": 44,
+      "norm_label": "mejoras cerradas recientemente"
+    },
+    {
+      "label": "Riesgos tecnicos a recordar",
+      "file_type": "document",
+      "source_file": "docs/PENDING.md",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "docs_pending_riesgos_tecnicos_a_recordar",
       "community": 44,
@@ -6082,40 +6242,10 @@
       "norm_label": "gaps de cobertura de tests"
     },
     {
-      "label": "Alerta Telegram cuando el scraping falla repetidamente",
-      "file_type": "document",
-      "source_file": "docs/ROADMAP.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "docs_roadmap_alerta_telegram_cuando_el_scraping_falla_repetidamente",
-      "community": 26,
-      "norm_label": "alerta telegram cuando el scraping falla repetidamente"
-    },
-    {
-      "label": "Limpieza peri\u00f3dica del historial de dispatches",
-      "file_type": "document",
-      "source_file": "docs/ROADMAP.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "docs_roadmap_limpieza_peri\u00f3dica_del_historial_de_dispatches",
-      "community": 26,
-      "norm_label": "limpieza periodica del historial de dispatches"
-    },
-    {
-      "label": "Pin de versi\u00f3n para `cloudscraper`",
-      "file_type": "document",
-      "source_file": "docs/ROADMAP.md",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "docs_roadmap_pin_de_versi\u00f3n_para_cloudscraper",
-      "community": 26,
-      "norm_label": "pin de version para `cloudscraper`"
-    },
-    {
       "label": "Mediano plazo",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L44",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "docs_roadmap_mediano_plazo",
       "community": 26,
@@ -6125,7 +6255,7 @@
       "label": "Activar o descartar el canal de breaking news",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L47",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "docs_roadmap_activar_o_descartar_el_canal_de_breaking_news",
       "community": 26,
@@ -6135,7 +6265,7 @@
       "label": "Estados de salud intermedios (WARN)",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L55",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "docs_roadmap_estados_de_salud_intermedios_warn",
       "community": 26,
@@ -6145,7 +6275,7 @@
       "label": "Mejora de la resiliencia al parsing de Forex Factory",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L63",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "docs_roadmap_mejora_de_la_resiliencia_al_parsing_de_forex_factory",
       "community": 26,
@@ -6155,7 +6285,7 @@
       "label": "Limitar crecimiento del dashboard en periodos largos",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L73",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "docs_roadmap_limitar_crecimiento_del_dashboard_en_periodos_largos",
       "community": 26,
@@ -6165,7 +6295,7 @@
       "label": "Largo plazo",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L81",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "docs_roadmap_largo_plazo",
       "community": 26,
@@ -6175,7 +6305,7 @@
       "label": "Worker continuo para precisi\u00f3n sub-minuto",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L84",
+      "source_location": "L60",
       "_origin": "ast",
       "id": "docs_roadmap_worker_continuo_para_precisi\u00f3n_sub_minuto",
       "community": 26,
@@ -6185,7 +6315,7 @@
       "label": "Canal de notificaciones adicional (Web Push / email)",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L94",
+      "source_location": "L70",
       "_origin": "ast",
       "id": "docs_roadmap_canal_de_notificaciones_adicional_web_push_email",
       "community": 26,
@@ -6195,7 +6325,7 @@
       "label": "Autenticaci\u00f3n de lectura para el dashboard",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L104",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "docs_roadmap_autenticaci\u00f3n_de_lectura_para_el_dashboard",
       "community": 26,
@@ -6205,7 +6335,7 @@
       "label": "Riesgos actuales",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L112",
+      "source_location": "L88",
       "_origin": "ast",
       "id": "docs_roadmap_riesgos_actuales",
       "community": 26,
@@ -6215,7 +6345,7 @@
       "label": "Documentados `[doc]`",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L114",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "docs_roadmap_documentados_doc",
       "community": 26,
@@ -6225,7 +6355,7 @@
       "label": "Inferidos del c\u00f3digo `[inferencia]`",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L123",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "docs_roadmap_inferidos_del_c\u00f3digo_inferencia",
       "community": 26,
@@ -6235,7 +6365,7 @@
       "label": "Pr\u00f3ximos pasos recomendados",
       "file_type": "document",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L134",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "docs_roadmap_pr\u00f3ximos_pasos_recomendados",
       "community": 26,
@@ -6300,7 +6430,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 32,
       "norm_label": "eventscheduler",
       "community_name": "Community 1",
       "id": "forex_news_guard_eventscheduler"
@@ -6495,9 +6625,9 @@
       "source_location": "L351",
       "weight": 1.0,
       "context": "call",
+      "confidence_score": 1.0,
       "source": "public_app_filltimezoneoptions",
-      "target": "public_app",
-      "confidence_score": 1.0
+      "target": "public_app"
     },
     {
       "relation": "contains",
@@ -6711,9 +6841,9 @@
       "source_file": "public/app.js",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_app",
-      "target": "public_app_timezone_options",
-      "confidence_score": 1.0
+      "target": "public_app_timezone_options"
     },
     {
       "relation": "contains",
@@ -6941,9 +7071,9 @@
       "source_file": "public/app.js",
       "source_location": "L361",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_app_fillsettingsform",
-      "target": "public_app_filltimezoneoptions",
-      "confidence_score": 1.0
+      "target": "public_app_filltimezoneoptions"
     },
     {
       "relation": "calls",
@@ -10874,6 +11004,28 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "tests_test_runtime_repository",
+      "target": "zoneinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L3",
       "weight": 1.0,
@@ -10967,6 +11119,17 @@
       "source_location": "L171",
       "weight": 1.0,
       "source": "tests_test_runtime_scheduler_test_dispatch_groups_events_with_same_schedule_into_single_message",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L424",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
       "target": "zoneinfo"
     },
     {
@@ -11205,6 +11368,17 @@
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository_prune_dispatches",
+      "target": "timedelta"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "tests/test_notification_formatter.py",
       "source_location": "L23",
       "weight": 1.0,
@@ -11220,6 +11394,17 @@
       "source_location": "L41",
       "weight": 1.0,
       "source": "tests_test_notification_formatter_test_daily_summary_no_today_events_still_mentions_tomorrow",
+      "target": "timedelta"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
       "target": "timedelta"
     },
     {
@@ -12547,6 +12732,16 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "tests_test_runtime_repository_py_path",
+      "target": "domain_runtime_deliverychannel",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L6",
       "weight": 0.8,
@@ -13087,6 +13282,16 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "tests_test_runtime_repository_py_path",
+      "target": "domain_runtime_alertexecutionkind",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L6",
       "weight": 0.8,
@@ -13283,6 +13488,16 @@
       "confidence_score": 0.5,
       "source": "storage_runtime_repository_runtimerepository",
       "target": "domain_runtime_alertdispatchrecord"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "tests_test_runtime_repository_py_path",
+      "target": "domain_runtime_alertdispatchrecord",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -15541,6 +15756,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "services_notification_formatter",
+      "target": "services_notification_formatter_build_scraping_failure_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/notification_formatter.py",
       "source_location": "L154",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -15786,6 +16011,17 @@
       "target": "src_forex_news_guard_services_notification_formatter_py_notificationmessage"
     },
     {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/notification_formatter.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "services_notification_formatter_build_scraping_failure_message",
+      "target": "src_forex_news_guard_services_notification_formatter_py_notificationmessage",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -15900,6 +16136,17 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "services_notification_formatter_build_scraping_failure_message",
+      "target": "src_forex_news_guard_services_notification_formatter_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/notification_formatter.py",
       "source_location": "L146",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -16004,6 +16251,28 @@
       "weight": 1.0,
       "source": "tests_test_notification_formatter_test_daily_summary_no_today_events_still_mentions_tomorrow",
       "target": "services_notification_formatter_build_daily_summary_message"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/notification_formatter.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "services_notification_formatter_build_scraping_failure_message",
+      "target": "date",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L521",
+      "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
+      "target": "services_notification_formatter_build_scraping_failure_message"
     },
     {
       "relation": "calls",
@@ -16294,6 +16563,16 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L504",
+      "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice",
+      "target": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L491",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -16379,6 +16658,16 @@
       "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice",
       "target": "services_runtime_scheduler_runtimeschedulerservice_send_daily_summary_if_needed"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L513",
+      "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice",
+      "target": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -17134,11 +17423,33 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice_run_cycle_at",
+      "target": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L120",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_run_cycle_at",
       "target": "services_runtime_scheduler_runtimeschedulerservice_send_daily_summary_if_needed"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice_run_cycle_at",
+      "target": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -17211,6 +17522,17 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L504",
+      "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
+      "target": "src_forex_news_guard_services_runtime_scheduler_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L513",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -17238,6 +17560,17 @@
       "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_send_daily_summary_if_needed",
       "target": "src_forex_news_guard_services_runtime_scheduler_py_datetime"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L513",
+      "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
+      "target": "src_forex_news_guard_services_runtime_scheduler_py_datetime",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -17341,9 +17674,31 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L140",
       "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice_dispatch_due_checks_at",
+      "target": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L140",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_dispatch_due_checks_at",
       "target": "services_runtime_scheduler_runtimeschedulerservice_revalidate_due_prechecks"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice_revalidate_due_prechecks",
+      "target": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -17852,6 +18207,17 @@
       "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_result_records_to_mark",
       "target": "scheduledeventcheck"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
+      "source_location": "L527",
+      "weight": 1.0,
+      "source": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
+      "target": "services_runtime_scheduler_runtimeschedulerservice_send_telegram_message",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -18861,6 +19227,36 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository",
+      "target": "storage_runtime_repository_runtimerepository_normalize_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository",
+      "target": "storage_runtime_repository_runtimerepository_parse_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository",
+      "target": "storage_runtime_repository_runtimerepository_prune_dispatches",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L37",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -18896,6 +19292,16 @@
       "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository",
       "target": "storage_runtime_repository_runtimerepository_resolve_state_path"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L6",
+      "weight": 0.8,
+      "source": "tests_test_runtime_repository_py_path",
+      "target": "storage_runtime_repository_runtimerepository",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -19023,6 +19429,39 @@
     },
     {
       "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository_normalize_datetime",
+      "target": "src_forex_news_guard_storage_runtime_repository_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L118",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository_parse_datetime",
+      "target": "src_forex_news_guard_storage_runtime_repository_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository_prune_dispatches",
+      "target": "src_forex_news_guard_storage_runtime_repository_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
@@ -19064,6 +19503,39 @@
       "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository_record_dispatch",
       "target": "storage_runtime_repository_runtimerepository_default_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository_prune_dispatches",
+      "target": "storage_runtime_repository_runtimerepository_default_payload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository_prune_dispatches",
+      "target": "storage_runtime_repository_runtimerepository_normalize_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository_prune_dispatches",
+      "target": "storage_runtime_repository_runtimerepository_parse_datetime",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -19651,6 +20123,27 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "tests_test_runtime_repository",
+      "target": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
+      "target": "tests_test_runtime_repository_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L44",
       "weight": 1.0,
@@ -19788,6 +20281,16 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler",
       "target": "tests_test_runtime_scheduler_test_dispatch_groups_events_with_same_schedule_into_single_message"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L423",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler",
+      "target": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19935,6 +20438,17 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_dispatch_groups_events_with_same_schedule_into_single_message",
       "target": "tests_test_runtime_scheduler_fakenotifier"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L427",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "target": "tests_test_runtime_scheduler_fakenotifier",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -20409,6 +20923,17 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L425",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "target": "tests_test_runtime_scheduler_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L131",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -20499,6 +21024,17 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_dispatch_due_checks_records_precheck_failure",
       "target": "tests_test_runtime_scheduler_failingclient"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L430",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "target": "tests_test_runtime_scheduler_failingclient",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -20598,6 +21134,17 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_dispatch_groups_events_with_same_schedule_into_single_message",
       "target": "tests_test_runtime_scheduler_py_path"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L423",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "target": "tests_test_runtime_scheduler_py_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -22271,6 +22818,46 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/LESSONS_LEARNED.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_lessons_learned",
+      "target": "docs_lessons_learned_lessons_learned",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/LESSONS_LEARNED.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "docs_lessons_learned_lessons_learned",
+      "target": "docs_lessons_learned_forex_factory_time_parsing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/LESSONS_LEARNED.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_lessons_learned_lessons_learned",
+      "target": "docs_lessons_learned_github_actions_timing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/LESSONS_LEARNED.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "docs_lessons_learned_lessons_learned",
+      "target": "docs_lessons_learned_result_updates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/OPERATIONS.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -22391,6 +22978,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "docs_operations_operations",
+      "target": "docs_operations_variables_operativas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/OVERVIEW.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -22487,6 +23084,16 @@
       "confidence_score": 1.0,
       "source": "docs_pending",
       "target": "docs_pending_pending"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/PENDING.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "docs_pending_pending",
+      "target": "docs_pending_mejoras_cerradas_recientemente",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -22692,41 +23299,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/ROADMAP.md",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_roadmap_corto_plazo",
-      "target": "docs_roadmap_alerta_telegram_cuando_el_scraping_falla_repetidamente"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/ROADMAP.md",
       "source_location": "L12",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "docs_roadmap_corto_plazo",
       "target": "docs_roadmap_gaps_de_cobertura_de_tests"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/ROADMAP.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_roadmap_corto_plazo",
-      "target": "docs_roadmap_limpieza_peri\u00f3dica_del_historial_de_dispatches"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/ROADMAP.md",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_roadmap_corto_plazo",
-      "target": "docs_roadmap_pin_de_versi\u00f3n_para_cloudscraper"
     },
     {
       "relation": "contains",
@@ -22880,5 +23457,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "366d5abf4bec512dc2c0be09430f804412331933"
+  "built_at_commit": "25fd82fc3a95974777f4cfd5b563639e0c5294f8"
 }
