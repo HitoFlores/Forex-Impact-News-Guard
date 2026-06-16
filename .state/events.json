@@ -1,3 +1,80 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "3.75%",
+        "id": "ff-calendar-146497",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "3.75%",
+        "published_at": null,
+        "scheduled_at": "2026-06-17T11:00:00-06:00",
+        "source": "forex_factory",
+        "title": "Federal Funds Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jun17.2026#detail=146497"
+      },
+      "event_date": "2026-06-17",
+      "stored_at": "2026-06-16T04:28:27.818179-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": null,
+        "id": "ff-calendar-146511",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-17T11:00:00-06:00",
+        "source": "forex_factory",
+        "title": "FOMC Economic Projections",
+        "url": "https://www.forexfactory.com/calendar?day=jun17.2026#detail=146511"
+      },
+      "event_date": "2026-06-17",
+      "stored_at": "2026-06-16T04:28:27.818179-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": null,
+        "id": "ff-calendar-146505",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-17T11:00:00-06:00",
+        "source": "forex_factory",
+        "title": "FOMC Statement",
+        "url": "https://www.forexfactory.com/calendar?day=jun17.2026#detail=146505"
+      },
+      "event_date": "2026-06-17",
+      "stored_at": "2026-06-16T04:28:27.818179-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": null,
+        "id": "ff-calendar-146517",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-06-17T11:30:00-06:00",
+        "source": "forex_factory",
+        "title": "FOMC Press Conference",
+        "url": "https://www.forexfactory.com/calendar?day=jun17.2026#detail=146517"
+      },
+      "event_date": "2026-06-17",
+      "stored_at": "2026-06-16T04:28:27.818179-06:00"
+    }
+  ]
 }
