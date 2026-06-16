@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "3.75%",
         "published_at": null,
-        "scheduled_at": "2026-06-17T11:00:00-06:00",
+        "scheduled_at": "2026-06-17T14:00:00-06:00",
         "source": "forex_factory",
         "title": "Federal Funds Rate",
         "url": "https://www.forexfactory.com/calendar?day=jun17.2026#detail=146497"
       },
       "event_date": "2026-06-17",
-      "stored_at": "2026-06-16T12:14:48.304251-06:00"
+      "stored_at": "2026-06-16T13:04:05.334255-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-06-17T11:00:00-06:00",
+        "scheduled_at": "2026-06-17T14:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Economic Projections",
         "url": "https://www.forexfactory.com/calendar?day=jun17.2026#detail=146511"
       },
       "event_date": "2026-06-17",
-      "stored_at": "2026-06-16T12:14:48.304251-06:00"
+      "stored_at": "2026-06-16T13:04:05.334255-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-06-17T11:00:00-06:00",
+        "scheduled_at": "2026-06-17T14:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Statement",
         "url": "https://www.forexfactory.com/calendar?day=jun17.2026#detail=146505"
       },
       "event_date": "2026-06-17",
-      "stored_at": "2026-06-16T12:14:48.304251-06:00"
+      "stored_at": "2026-06-16T13:04:05.334255-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-06-17T11:30:00-06:00",
+        "scheduled_at": "2026-06-17T14:30:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=jun17.2026#detail=146517"
       },
       "event_date": "2026-06-17",
-      "stored_at": "2026-06-16T12:14:48.304251-06:00"
+      "stored_at": "2026-06-16T13:04:05.334255-06:00"
     }
   ]
 }
