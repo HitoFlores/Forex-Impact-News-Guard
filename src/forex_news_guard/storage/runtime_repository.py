@@ -3,6 +3,7 @@ from __future__ import annotations
 from datetime import datetime, timedelta
 from pathlib import Path
 
+from forex_news_guard.core.config import get_settings
 from forex_news_guard.domain.runtime import (
     AlertDispatchRecord,
     AlertExecutionKind,
@@ -91,13 +92,23 @@ class RuntimeRepository:
         payload = self.store.load(default=self._default_payload())
         observability = RuntimeObservability.model_validate(payload.get("observability") or {})
         state = getattr(observability, probe.value)
-        state.status = RuntimeProbeStatus.ERROR
         state.last_attempt_at = attempted_at
         state.last_error_at = attempted_at
         state.last_error_message = error_message.strip()[:240]
         state.consecutive_failures += 1
+        state.status = (
+            RuntimeProbeStatus.ERROR
+            if state.consecutive_failures >= self._error_threshold(probe)
+            else RuntimeProbeStatus.WARN
+        )
         payload["observability"] = observability.model_dump(mode="json")
         self.store.save(payload)
+
+    def _error_threshold(self, probe: RuntimeProbeName) -> int:
+        if probe == RuntimeProbeName.SCRAPING:
+            threshold = get_settings().scraping_failure_alert_threshold
+            return threshold if threshold > 0 else 3
+        return 3
 
     def _load_records(self) -> list[dict[str, object]]:
         payload = self.store.load(default=self._default_payload())

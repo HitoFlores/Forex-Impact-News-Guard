@@ -1028,7 +1028,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "strenum",
-      "community": 10,
+      "community": 0,
       "norm_label": "strenum"
     },
     {
@@ -1048,7 +1048,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "domain_models_forexevent",
-      "community": 0,
+      "community": 10,
       "norm_label": "forexevent"
     },
     {
@@ -1058,7 +1058,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "basemodel",
-      "community": 0,
+      "community": 10,
       "norm_label": "basemodel"
     },
     {
@@ -1298,7 +1298,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "domain_runtime_runtimeprobestatus",
-      "community": 1,
+      "community": 0,
       "norm_label": "runtimeprobestatus"
     },
     {
@@ -1408,7 +1408,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "runtimeerror",
-      "community": 1,
+      "community": 3,
       "norm_label": "runtimeerror"
     },
     {
@@ -1448,7 +1448,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "integrations_forex_factory_forexfactoryclient_from_settings",
-      "community": 0,
+      "community": 10,
       "norm_label": ".from_settings()"
     },
     {
@@ -1458,7 +1458,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "settings",
-      "community": 0,
+      "community": 10,
       "norm_label": "settings"
     },
     {
@@ -1868,7 +1868,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_event_scheduler_py_eventschedule",
-      "community": 0,
+      "community": 10,
       "norm_label": "eventschedule"
     },
     {
@@ -1932,10 +1932,30 @@
       "norm_label": "alertpreviewresponse"
     },
     {
-      "label": "sync_relevant_calendar_events()",
+      "label": "fetch_source_events()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
       "source_location": "L26",
+      "_origin": "ast",
+      "id": "services_forex_factory_monitor_fetch_source_events",
+      "community": 10,
+      "norm_label": "fetch_source_events()"
+    },
+    {
+      "label": "ForexEvent",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "community": 10,
+      "norm_label": "forexevent"
+    },
+    {
+      "label": "sync_relevant_calendar_events()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "services_forex_factory_monitor_sync_relevant_calendar_events",
       "community": 10,
@@ -1945,7 +1965,7 @@
       "label": "EventRepository",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
-      "source_location": "L26",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_forex_factory_monitor_py_eventrepository",
       "community": 0,
@@ -1955,7 +1975,7 @@
       "label": "StoredEvent",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
-      "source_location": "L26",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_forex_factory_monitor_py_storedevent",
       "community": 0,
@@ -1965,11 +1985,31 @@
       "label": "EventSchedule",
       "file_type": "code",
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
-      "source_location": "L26",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_forex_factory_monitor_py_eventschedule",
       "community": 0,
       "norm_label": "eventschedule"
+    },
+    {
+      "label": "_normalize_breaking_event_for_scheduler()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "services_forex_factory_monitor_normalize_breaking_event_for_scheduler",
+      "community": 10,
+      "norm_label": "_normalize_breaking_event_for_scheduler()"
+    },
+    {
+      "label": "_deduplicate_events()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "services_forex_factory_monitor_deduplicate_events",
+      "community": 10,
+      "norm_label": "_deduplicate_events()"
     },
     {
       "label": "notification_formatter.py",
@@ -2088,7 +2128,7 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_notification_formatter_py_eventschedule",
-      "community": 3,
+      "community": 10,
       "norm_label": "eventschedule"
     },
     {
@@ -2168,7 +2208,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "services_runtime_scheduler",
-      "community": 32,
+      "community": 0,
       "norm_label": "runtime_scheduler.py"
     },
     {
@@ -2178,7 +2218,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice",
-      "community": 32,
+      "community": 0,
       "norm_label": "runtimeschedulerservice"
     },
     {
@@ -2258,7 +2298,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_start",
-      "community": 32,
+      "community": 0,
       "norm_label": ".start()"
     },
     {
@@ -2268,7 +2308,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_shutdown",
-      "community": 32,
+      "community": 0,
       "norm_label": ".shutdown()"
     },
     {
@@ -2278,7 +2318,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_run_once",
-      "community": 32,
+      "community": 0,
       "norm_label": ".run_once()"
     },
     {
@@ -2298,7 +2338,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_run_full_cycle",
-      "community": 32,
+      "community": 0,
       "norm_label": ".run_full_cycle()"
     },
     {
@@ -2308,7 +2348,7 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_run_cycle",
-      "community": 32,
+      "community": 0,
       "norm_label": ".run_cycle()"
     },
     {
@@ -2318,7 +2358,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_run_cycle_at",
-      "community": 32,
+      "community": 0,
       "norm_label": ".run_cycle_at()"
     },
     {
@@ -2328,7 +2368,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_runtime_scheduler_py_datetime",
-      "community": 32,
+      "community": 0,
       "norm_label": "datetime"
     },
     {
@@ -2338,7 +2378,7 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_due_checks",
-      "community": 32,
+      "community": 0,
       "norm_label": ".dispatch_due_checks()"
     },
     {
@@ -2348,7 +2388,7 @@
       "source_location": "L139",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_due_checks_at",
-      "community": 32,
+      "community": 0,
       "norm_label": ".dispatch_due_checks_at()"
     },
     {
@@ -2358,7 +2398,7 @@
       "source_location": "L177",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_revalidate_due_prechecks",
-      "community": 32,
+      "community": 0,
       "norm_label": "._revalidate_due_prechecks()"
     },
     {
@@ -2398,7 +2438,7 @@
       "source_location": "L257",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_grouped_alerts",
-      "community": 32,
+      "community": 0,
       "norm_label": "._dispatch_grouped_alerts()"
     },
     {
@@ -2418,7 +2458,7 @@
       "source_location": "L326",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_grouped_results",
-      "community": 32,
+      "community": 0,
       "norm_label": "._dispatch_grouped_results()"
     },
     {
@@ -2428,7 +2468,7 @@
       "source_location": "L380",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_send_daily_summary_if_needed",
-      "community": 32,
+      "community": 0,
       "norm_label": "._send_daily_summary_if_needed()"
     },
     {
@@ -2438,7 +2478,7 @@
       "source_location": "L420",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_dispatch_if_due",
-      "community": 32,
+      "community": 0,
       "norm_label": "._dispatch_if_due()"
     },
     {
@@ -2468,7 +2508,7 @@
       "source_location": "L486",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_send_telegram_message",
-      "community": 32,
+      "community": 0,
       "norm_label": "._send_telegram_message()"
     },
     {
@@ -2478,7 +2518,7 @@
       "source_location": "L501",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_reload_policy",
-      "community": 32,
+      "community": 0,
       "norm_label": "._reload_policy()"
     },
     {
@@ -2488,7 +2528,7 @@
       "source_location": "L504",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
-      "community": 32,
+      "community": 0,
       "norm_label": "._prune_runtime_history()"
     },
     {
@@ -2498,7 +2538,7 @@
       "source_location": "L513",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
-      "community": 32,
+      "community": 0,
       "norm_label": "._send_scraping_failure_alert_if_needed()"
     },
     {
@@ -2508,7 +2548,7 @@
       "source_location": "L531",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_minutes_until_event",
-      "community": 32,
+      "community": 0,
       "norm_label": "._minutes_until_event()"
     },
     {
@@ -2518,7 +2558,7 @@
       "source_location": "L537",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_result_already_finalized",
-      "community": 32,
+      "community": 0,
       "norm_label": "._result_already_finalized()"
     },
     {
@@ -2528,7 +2568,7 @@
       "source_location": "L550",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_result_records_to_mark",
-      "community": 32,
+      "community": 0,
       "norm_label": "._result_records_to_mark()"
     },
     {
@@ -2538,7 +2578,7 @@
       "source_location": "L569",
       "_origin": "ast",
       "id": "services_runtime_scheduler_runtimeschedulerservice_event_has_actual",
-      "community": 32,
+      "community": 0,
       "norm_label": "._event_has_actual()"
     },
     {
@@ -2688,7 +2728,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_telegram_smoke_test_py_alertpolicy",
-      "community": 0,
+      "community": 10,
       "norm_label": "alertpolicy"
     },
     {
@@ -2698,7 +2738,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_telegram_smoke_test_py_telegramnotifier",
-      "community": 3,
+      "community": 10,
       "norm_label": "telegramnotifier"
     },
     {
@@ -2708,7 +2748,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_telegram_smoke_test_py_datetime",
-      "community": 3,
+      "community": 10,
       "norm_label": "datetime"
     },
     {
@@ -2718,7 +2758,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_forex_news_guard_services_telegram_smoke_test_py_telegramsmoketestresponse",
-      "community": 0,
+      "community": 10,
       "norm_label": "telegramsmoketestresponse"
     },
     {
@@ -2935,7 +2975,7 @@
       "label": "RuntimeRepository",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L16",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository",
       "community": 0,
@@ -2945,7 +2985,7 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_init",
       "community": 6,
@@ -2955,7 +2995,7 @@
       "label": ".has_been_dispatched()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_has_been_dispatched",
       "community": 0,
@@ -2965,7 +3005,7 @@
       "label": "AlertExecutionKind",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "alertexecutionkind",
       "community": 0,
@@ -2975,7 +3015,7 @@
       "label": "datetime",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "src_forex_news_guard_storage_runtime_repository_py_datetime",
       "community": 0,
@@ -2985,7 +3025,7 @@
       "label": ".record_dispatch()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_record_dispatch",
       "community": 0,
@@ -2995,7 +3035,7 @@
       "label": "AlertDispatchRecord",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "src_forex_news_guard_storage_runtime_repository_py_alertdispatchrecord",
       "community": 0,
@@ -3005,7 +3045,7 @@
       "label": ".prune_dispatches()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L54",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_prune_dispatches",
       "community": 0,
@@ -3015,7 +3055,7 @@
       "label": ".get_observability()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L73",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_get_observability",
       "community": 0,
@@ -3025,7 +3065,7 @@
       "label": "RuntimeObservability",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L73",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "runtimeobservability",
       "community": 0,
@@ -3035,7 +3075,7 @@
       "label": ".record_probe_success()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L77",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_record_probe_success",
       "community": 0,
@@ -3045,7 +3085,7 @@
       "label": "RuntimeProbeName",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L77",
+      "source_location": "L78",
       "_origin": "ast",
       "id": "runtimeprobename",
       "community": 0,
@@ -3055,17 +3095,27 @@
       "label": ".record_probe_error()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L90",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_record_probe_error",
       "community": 0,
       "norm_label": ".record_probe_error()"
     },
     {
+      "label": "._error_threshold()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "storage_runtime_repository_runtimerepository_error_threshold",
+      "community": 0,
+      "norm_label": "._error_threshold()"
+    },
+    {
       "label": "._load_records()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L102",
+      "source_location": "L113",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_load_records",
       "community": 0,
@@ -3075,7 +3125,7 @@
       "label": "._default_payload()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L106",
+      "source_location": "L117",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_default_payload",
       "community": 0,
@@ -3085,7 +3135,7 @@
       "label": "._resolve_state_path()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L112",
+      "source_location": "L123",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_resolve_state_path",
       "community": 6,
@@ -3095,7 +3145,7 @@
       "label": "._parse_datetime()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L118",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_parse_datetime",
       "community": 0,
@@ -3105,7 +3155,7 @@
       "label": "._normalize_datetime()",
       "file_type": "code",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
-      "source_location": "L126",
+      "source_location": "L137",
       "_origin": "ast",
       "id": "storage_runtime_repository_runtimerepository_normalize_datetime",
       "community": 0,
@@ -3190,6 +3240,36 @@
       "id": "forex_news_guard_worker_run_worker",
       "community": 9,
       "norm_label": "run_worker()"
+    },
+    {
+      "label": "worker_continuous.py",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/worker_continuous.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "forex_news_guard_worker_continuous",
+      "community": 9,
+      "norm_label": "worker_continuous.py"
+    },
+    {
+      "label": "_wait_forever()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/worker_continuous.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "forex_news_guard_worker_continuous_wait_forever",
+      "community": 9,
+      "norm_label": "_wait_forever()"
+    },
+    {
+      "label": "run_worker_continuous()",
+      "file_type": "code",
+      "source_file": "src/forex_news_guard/worker_continuous.py",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "forex_news_guard_worker_continuous_run_worker_continuous",
+      "community": 9,
+      "norm_label": "run_worker_continuous()"
     },
     {
       "label": "test_alert_planner.py",
@@ -3538,7 +3618,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "tests_test_forex_factory_sync_py_path",
-      "community": 1,
+      "community": 10,
       "norm_label": "path"
     },
     {
@@ -3548,28 +3628,98 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_notification_formatter",
-      "community": 1,
+      "community": 3,
       "norm_label": "test_notification_formatter.py"
     },
     {
-      "label": "test_daily_summary_lists_today_events_and_only_mentions_tomorrow()",
+      "label": "_event()",
       "file_type": "code",
       "source_file": "tests/test_notification_formatter.py",
-      "source_location": "L8",
+      "source_location": "L15",
       "_origin": "ast",
-      "id": "tests_test_notification_formatter_test_daily_summary_lists_today_events_and_only_mentions_tomorrow",
-      "community": 1,
-      "norm_label": "test_daily_summary_lists_today_events_and_only_mentions_tomorrow()"
+      "id": "tests_test_notification_formatter_event",
+      "community": 3,
+      "norm_label": "_event()"
+    },
+    {
+      "label": "ForexEvent",
+      "file_type": "code",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "tests_test_notification_formatter_py_forexevent",
+      "community": 10,
+      "norm_label": "forexevent"
+    },
+    {
+      "label": "test_build_pre_alert_message_contains_contract_and_escapes_html()",
+      "file_type": "code",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "tests_test_notification_formatter_test_build_pre_alert_message_contains_contract_and_escapes_html",
+      "community": 3,
+      "norm_label": "test_build_pre_alert_message_contains_contract_and_escapes_html()"
+    },
+    {
+      "label": "test_build_result_message_contains_actual_forecast_previous_and_fallbacks()",
+      "file_type": "code",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "tests_test_notification_formatter_test_build_result_message_contains_actual_forecast_previous_and_fallbacks",
+      "community": 3,
+      "norm_label": "test_build_result_message_contains_actual_forecast_previous_and_fallbacks()"
+    },
+    {
+      "label": "test_build_grouped_pre_alert_message_lists_each_event()",
+      "file_type": "code",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "tests_test_notification_formatter_test_build_grouped_pre_alert_message_lists_each_event",
+      "community": 3,
+      "norm_label": "test_build_grouped_pre_alert_message_lists_each_event()"
+    },
+    {
+      "label": "test_build_grouped_result_message_lists_each_event_values()",
+      "file_type": "code",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L88",
+      "_origin": "ast",
+      "id": "tests_test_notification_formatter_test_build_grouped_result_message_lists_each_event_values",
+      "community": 3,
+      "norm_label": "test_build_grouped_result_message_lists_each_event_values()"
+    },
+    {
+      "label": "test_build_daily_summary_lists_today_events_and_only_mentions_tomorrow()",
+      "file_type": "code",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "tests_test_notification_formatter_test_build_daily_summary_lists_today_events_and_only_mentions_tomorrow",
+      "community": 3,
+      "norm_label": "test_build_daily_summary_lists_today_events_and_only_mentions_tomorrow()"
     },
     {
       "label": "test_daily_summary_no_today_events_still_mentions_tomorrow()",
       "file_type": "code",
       "source_file": "tests/test_notification_formatter.py",
-      "source_location": "L33",
+      "source_location": "L133",
       "_origin": "ast",
       "id": "tests_test_notification_formatter_test_daily_summary_no_today_events_still_mentions_tomorrow",
-      "community": 1,
+      "community": 3,
       "norm_label": "test_daily_summary_no_today_events_still_mentions_tomorrow()"
+    },
+    {
+      "label": "test_build_schedule_summary_includes_event_and_check_counts()",
+      "file_type": "code",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L149",
+      "_origin": "ast",
+      "id": "tests_test_notification_formatter_test_build_schedule_summary_includes_event_and_check_counts",
+      "community": 3,
+      "norm_label": "test_build_schedule_summary_includes_event_and_check_counts()"
     },
     {
       "label": "test_runtime_repository.py",
@@ -3585,7 +3735,7 @@
       "label": "test_prune_dispatches_removes_records_older_than_ttl()",
       "file_type": "code",
       "source_file": "tests/test_runtime_repository.py",
-      "source_location": "L9",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
       "community": 1,
@@ -3595,11 +3745,21 @@
       "label": "Path",
       "file_type": "code",
       "source_file": "tests/test_runtime_repository.py",
-      "source_location": "L9",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_runtime_repository_py_path",
       "community": 0,
       "norm_label": "path"
+    },
+    {
+      "label": "test_record_probe_error_warns_before_error_threshold_and_success_resets()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "tests_test_runtime_repository_test_record_probe_error_warns_before_error_threshold_and_success_resets",
+      "community": 1,
+      "norm_label": "test_record_probe_error_warns_before_error_threshold_and_success_resets()"
     },
     {
       "label": "test_runtime_scheduler.py",
@@ -3658,7 +3818,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_failingnotifier_send",
-      "community": 1,
+      "community": 3,
       "norm_label": ".send()"
     },
     {
@@ -3695,7 +3855,7 @@
       "label": ".fetch_calendar_events()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L31",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_fakeclient_fetch_calendar_events",
       "community": 1,
@@ -3705,17 +3865,27 @@
       "label": "datetime",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L31",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_py_datetime",
       "community": 1,
       "norm_label": "datetime"
     },
     {
+      "label": ".fetch_breaking_news_events()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_fakeclient_fetch_breaking_news_events",
+      "community": 1,
+      "norm_label": ".fetch_breaking_news_events()"
+    },
+    {
       "label": "FailingRefreshClient",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L36",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_failingrefreshclient",
       "community": 1,
@@ -3725,7 +3895,7 @@
       "label": ".fetch_calendar_events()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L37",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_failingrefreshclient_fetch_calendar_events",
       "community": 1,
@@ -3735,7 +3905,7 @@
       "label": "FailingClient",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L44",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_failingclient",
       "community": 1,
@@ -3745,7 +3915,7 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L45",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_failingclient_init",
       "community": 1,
@@ -3755,37 +3925,87 @@
       "label": ".fetch_calendar_events()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L49",
+      "source_location": "L60",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_failingclient_fetch_calendar_events",
       "community": 1,
       "norm_label": ".fetch_calendar_events()"
     },
     {
-      "label": "test_dispatch_due_checks_sends_alert_once_inside_timing_window()",
+      "label": "FakeBackgroundScheduler",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L54",
+      "source_location": "L65",
       "_origin": "ast",
-      "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_sends_alert_once_inside_timing_window",
+      "id": "tests_test_runtime_scheduler_fakebackgroundscheduler",
       "community": 1,
-      "norm_label": "test_dispatch_due_checks_sends_alert_once_inside_timing_window()"
+      "norm_label": "fakebackgroundscheduler"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_fakebackgroundscheduler_init",
+      "community": 1,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".add_job()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_fakebackgroundscheduler_add_job",
+      "community": 1,
+      "norm_label": ".add_job()"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_fakebackgroundscheduler_start",
+      "community": 1,
+      "norm_label": ".start()"
+    },
+    {
+      "label": "test_start_registers_sync_and_dispatch_interval_jobs()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_test_start_registers_sync_and_dispatch_interval_jobs",
+      "community": 1,
+      "norm_label": "test_start_registers_sync_and_dispatch_interval_jobs()"
     },
     {
       "label": "Path",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L54",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_py_path",
       "community": 1,
       "norm_label": "path"
     },
     {
+      "label": "test_dispatch_due_checks_sends_alert_once_inside_timing_window()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L109",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_sends_alert_once_inside_timing_window",
+      "community": 1,
+      "norm_label": "test_dispatch_due_checks_sends_alert_once_inside_timing_window()"
+    },
+    {
       "label": "test_dispatch_due_checks_sends_final_result_once_across_due_retries()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L93",
+      "source_location": "L148",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_sends_final_result_once_across_due_retries",
       "community": 1,
@@ -3795,17 +4015,47 @@
       "label": "test_run_cycle_persists_only_relevant_events()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L129",
+      "source_location": "L184",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_run_cycle_persists_only_relevant_events",
       "community": 1,
       "norm_label": "test_run_cycle_persists_only_relevant_events()"
     },
     {
+      "label": "test_run_cycle_includes_breaking_news_when_enabled()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L225",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_test_run_cycle_includes_breaking_news_when_enabled",
+      "community": 1,
+      "norm_label": "test_run_cycle_includes_breaking_news_when_enabled()"
+    },
+    {
+      "label": "test_run_cycle_skips_breaking_news_when_disabled()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L261",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_test_run_cycle_skips_breaking_news_when_disabled",
+      "community": 1,
+      "norm_label": "test_run_cycle_skips_breaking_news_when_disabled()"
+    },
+    {
+      "label": "test_run_cycle_deduplicates_calendar_and_breaking_by_event_id()",
+      "file_type": "code",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L285",
+      "_origin": "ast",
+      "id": "tests_test_runtime_scheduler_test_run_cycle_deduplicates_calendar_and_breaking_by_event_id",
+      "community": 1,
+      "norm_label": "test_run_cycle_deduplicates_calendar_and_breaking_by_event_id()"
+    },
+    {
       "label": "test_run_cycle_sends_daily_summary_inside_midnight_window()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L170",
+      "source_location": "L319",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_run_cycle_sends_daily_summary_inside_midnight_window",
       "community": 1,
@@ -3815,7 +4065,7 @@
       "label": "test_run_cycle_skips_stale_daily_summary_after_midnight_window()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L198",
+      "source_location": "L347",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_run_cycle_skips_stale_daily_summary_after_midnight_window",
       "community": 1,
@@ -3825,7 +4075,7 @@
       "label": "test_dispatch_groups_events_with_same_schedule_into_single_message()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L225",
+      "source_location": "L374",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_dispatch_groups_events_with_same_schedule_into_single_message",
       "community": 1,
@@ -3835,7 +4085,7 @@
       "label": "test_dispatch_due_checks_skips_result_retries_without_actual_value()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L271",
+      "source_location": "L420",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_skips_result_retries_without_actual_value",
       "community": 1,
@@ -3845,7 +4095,7 @@
       "label": "test_dispatch_due_checks_revalidates_calendar_and_skips_stale_alert()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L309",
+      "source_location": "L458",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_revalidates_calendar_and_skips_stale_alert",
       "community": 1,
@@ -3855,7 +4105,7 @@
       "label": "test_dispatch_due_checks_records_precheck_failure_observability()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L358",
+      "source_location": "L507",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_records_precheck_failure_observability",
       "community": 1,
@@ -3865,7 +4115,7 @@
       "label": "test_run_cycle_records_scraping_failure()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L398",
+      "source_location": "L547",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_run_cycle_records_scraping_failure",
       "community": 1,
@@ -3875,7 +4125,7 @@
       "label": "test_run_cycle_alerts_operator_on_third_scraping_failure()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L423",
+      "source_location": "L572",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
       "community": 1,
@@ -3885,7 +4135,7 @@
       "label": "test_dispatch_due_checks_records_precheck_failure()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L451",
+      "source_location": "L600",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_records_precheck_failure",
       "community": 1,
@@ -3895,7 +4145,7 @@
       "label": "test_dispatch_due_checks_records_telegram_failure()",
       "file_type": "code",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L482",
+      "source_location": "L631",
       "_origin": "ast",
       "id": "tests_test_runtime_scheduler_test_dispatch_due_checks_records_telegram_failure",
       "community": 1,
@@ -3938,7 +4188,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_settings_service",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_settings_service.py"
     },
     {
@@ -3948,7 +4198,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_test_settings_service_test_settings_service_persists_policy",
-      "community": 10,
+      "community": 6,
       "norm_label": "test_settings_service_persists_policy()"
     },
     {
@@ -3958,7 +4208,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "tests_test_settings_service_py_path",
-      "community": 10,
+      "community": 6,
       "norm_label": "path"
     },
     {
@@ -4085,7 +4335,7 @@
       "label": "FakeSchedulerService",
       "file_type": "code",
       "source_file": "tests/test_worker.py",
-      "source_location": "L8",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "tests_test_worker_fakeschedulerservice",
       "community": 9,
@@ -4095,7 +4345,7 @@
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "tests/test_worker.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "tests_test_worker_fakeschedulerservice_init",
       "community": 9,
@@ -4105,7 +4355,7 @@
       "label": ".run_full_cycle()",
       "file_type": "code",
       "source_file": "tests/test_worker.py",
-      "source_location": "L12",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_worker_fakeschedulerservice_run_full_cycle",
       "community": 9,
@@ -4115,21 +4365,71 @@
       "label": "RuntimeSyncResult",
       "file_type": "code",
       "source_file": "tests/test_worker.py",
-      "source_location": "L12",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "tests_test_worker_py_runtimesyncresult",
       "community": 9,
       "norm_label": "runtimesyncresult"
     },
     {
+      "label": "FakeContinuousSchedulerService",
+      "file_type": "code",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "tests_test_worker_fakecontinuousschedulerservice",
+      "community": 9,
+      "norm_label": "fakecontinuousschedulerservice"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "tests_test_worker_fakecontinuousschedulerservice_init",
+      "community": 9,
+      "norm_label": ".__init__()"
+    },
+    {
+      "label": ".start()",
+      "file_type": "code",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "tests_test_worker_fakecontinuousschedulerservice_start",
+      "community": 9,
+      "norm_label": ".start()"
+    },
+    {
+      "label": ".shutdown()",
+      "file_type": "code",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "tests_test_worker_fakecontinuousschedulerservice_shutdown",
+      "community": 9,
+      "norm_label": ".shutdown()"
+    },
+    {
       "label": "test_run_worker_executes_full_cycle()",
       "file_type": "code",
       "source_file": "tests/test_worker.py",
-      "source_location": "L21",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_worker_test_run_worker_executes_full_cycle",
       "community": 9,
       "norm_label": "test_run_worker_executes_full_cycle()"
+    },
+    {
+      "label": "test_run_worker_continuous_starts_and_shutdowns_on_interrupt()",
+      "file_type": "code",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "tests_test_worker_test_run_worker_continuous_starts_and_shutdowns_on_interrupt",
+      "community": 9,
+      "norm_label": "test_run_worker_continuous_starts_and_shutdowns_on_interrupt()"
     },
     {
       "label": "SKILL.md",
@@ -5835,7 +6135,7 @@
       "label": "Endpoints utiles",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L36",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "docs_operations_endpoints_utiles",
       "community": 30,
@@ -5845,7 +6145,7 @@
       "label": "Ejemplo rapido para actualizar settings",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L47",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "docs_operations_ejemplo_rapido_para_actualizar_settings",
       "community": 30,
@@ -5855,7 +6155,7 @@
       "label": "Archivos locales importantes",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L79",
+      "source_location": "L101",
       "_origin": "ast",
       "id": "docs_operations_archivos_locales_importantes",
       "community": 30,
@@ -5865,17 +6165,27 @@
       "label": "Variables operativas",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L86",
+      "source_location": "L108",
       "_origin": "ast",
       "id": "docs_operations_variables_operativas",
       "community": 30,
       "norm_label": "variables operativas"
     },
     {
+      "label": "Auth de lectura del dashboard",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS.md",
+      "source_location": "L113",
+      "_origin": "ast",
+      "id": "docs_operations_auth_de_lectura_del_dashboard",
+      "community": 30,
+      "norm_label": "auth de lectura del dashboard"
+    },
+    {
       "label": "Rotacion de Telegram token",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L91",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "docs_operations_rotacion_de_telegram_token",
       "community": 30,
@@ -5885,7 +6195,7 @@
       "label": "Prueba manual de Telegram",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L107",
+      "source_location": "L145",
       "_origin": "ast",
       "id": "docs_operations_prueba_manual_de_telegram",
       "community": 30,
@@ -5895,7 +6205,7 @@
       "label": "Prueba forzada remota de Telegram",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L123",
+      "source_location": "L161",
       "_origin": "ast",
       "id": "docs_operations_prueba_forzada_remota_de_telegram",
       "community": 30,
@@ -5905,7 +6215,7 @@
       "label": "Nota de transicion",
       "file_type": "document",
       "source_file": "docs/OPERATIONS.md",
-      "source_location": "L146",
+      "source_location": "L184",
       "_origin": "ast",
       "id": "docs_operations_nota_de_transicion",
       "community": 30,
@@ -6430,7 +6740,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 32,
+      "community": 0,
       "norm_label": "eventscheduler",
       "community_name": "Community 1",
       "id": "forex_news_guard_eventscheduler"
@@ -9289,6 +9599,16 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "tests_test_notification_formatter_py_forexevent",
+      "target": "domain_models_impactlevel",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L5",
       "weight": 0.8,
@@ -9315,6 +9635,16 @@
       "confidence_score": 0.5,
       "source": "tests_test_runtime_scheduler_failingrefreshclient",
       "target": "domain_models_impactlevel"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "domain_models_impactlevel",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -9699,6 +10029,86 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_alertpolicy",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_alertpreviewresponse",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_datetime",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_eventrepository",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_eventschedule",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexfactoryclient",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_storedevent",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
       "source_location": "L4",
       "weight": 0.8,
@@ -9959,6 +10369,16 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "tests_test_notification_formatter_py_forexevent",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L5",
       "weight": 0.8,
@@ -9985,6 +10405,16 @@
       "confidence_score": 0.5,
       "source": "tests_test_runtime_scheduler_failingrefreshclient",
       "target": "domain_models_forexevent"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "domain_models_forexevent",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -10442,6 +10872,16 @@
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
       "source_location": "L4",
       "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "target": "domain_models_alertpolicy",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexfactoryclient",
       "target": "domain_models_alertpolicy"
@@ -10665,6 +11105,16 @@
       "confidence_score": 0.5,
       "source": "tests_test_runtime_scheduler_failingrefreshclient",
       "target": "domain_models_alertpolicy"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "domain_models_alertpolicy",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -10984,9 +11434,53 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/test_notification_formatter.py",
-      "source_location": "L9",
+      "source_location": "L16",
       "weight": 1.0,
-      "source": "tests_test_notification_formatter_test_daily_summary_lists_today_events_and_only_mentions_tomorrow",
+      "source": "tests_test_notification_formatter_event",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_daily_summary_lists_today_events_and_only_mentions_tomorrow",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_grouped_result_message_lists_each_event_values",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_result_message_contains_actual_forecast_previous_and_fallbacks",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_schedule_summary_includes_event_and_check_counts",
       "target": "zoneinfo"
     },
     {
@@ -11007,9 +11501,9 @@
       "source_file": "tests/test_runtime_repository.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_runtime_repository",
-      "target": "zoneinfo",
-      "confidence_score": 1.0
+      "target": "zoneinfo"
     },
     {
       "relation": "calls",
@@ -11020,6 +11514,17 @@
       "source_location": "L10",
       "weight": 1.0,
       "source": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "tests_test_runtime_repository_test_record_probe_error_warns_before_error_threshold_and_success_resets",
       "target": "zoneinfo"
     },
     {
@@ -11138,6 +11643,28 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L286",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_deduplicates_calendar_and_breaking_by_event_id",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_includes_breaking_news_when_enabled",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L130",
       "weight": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_persists_only_relevant_events",
@@ -11163,6 +11690,17 @@
       "source_location": "L171",
       "weight": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_sends_daily_summary_inside_midnight_window",
+      "target": "zoneinfo"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L262",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_skips_breaking_news_when_disabled",
       "target": "zoneinfo"
     },
     {
@@ -11380,9 +11918,9 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/test_notification_formatter.py",
-      "source_location": "L23",
+      "source_location": "L118",
       "weight": 1.0,
-      "source": "tests_test_notification_formatter_test_daily_summary_lists_today_events_and_only_mentions_tomorrow",
+      "source": "tests_test_notification_formatter_test_build_daily_summary_lists_today_events_and_only_mentions_tomorrow",
       "target": "timedelta"
     },
     {
@@ -11405,6 +11943,17 @@
       "source_location": "L17",
       "weight": 1.0,
       "source": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
+      "target": "timedelta"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "tests_test_runtime_repository_test_record_probe_error_warns_before_error_threshold_and_success_resets",
       "target": "timedelta"
     },
     {
@@ -11605,6 +12154,16 @@
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
       "source_location": "L4",
       "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "target": "domain_models_alertpreviewresponse",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexfactoryclient",
       "target": "domain_models_alertpreviewresponse"
@@ -11748,6 +12307,16 @@
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_forex_factory_monitor_py_eventschedule",
       "target": "domain_models_storedevent"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "target": "domain_models_storedevent",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -11942,6 +12511,16 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "tests_test_notification_formatter_py_forexevent",
+      "target": "domain_models_scheduledeventcheckkind",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L9",
       "weight": 0.8,
@@ -12108,6 +12687,16 @@
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_runtime_scheduler_py_telegramnotifier",
       "target": "domain_models_scheduledeventcheck"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "tests_test_notification_formatter_py_forexevent",
+      "target": "domain_models_scheduledeventcheck",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -12335,6 +12924,16 @@
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
       "source_location": "L4",
       "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "target": "domain_models_eventschedule",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L4",
+      "weight": 0.8,
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexfactoryclient",
       "target": "domain_models_eventschedule"
@@ -12498,6 +13097,16 @@
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_runtime_scheduler_py_telegramnotifier",
       "target": "domain_models_eventschedule"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "tests_test_notification_formatter_py_forexevent",
+      "target": "domain_models_eventschedule",
+      "confidence_score": 0.5
     },
     {
       "relation": "contains",
@@ -12735,9 +13344,9 @@
       "source_file": "tests/test_runtime_repository.py",
       "source_location": "L5",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_runtime_repository_py_path",
-      "target": "domain_runtime_deliverychannel",
-      "confidence_score": 0.5
+      "target": "domain_runtime_deliverychannel"
     },
     {
       "relation": "uses",
@@ -12942,6 +13551,16 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "tests_test_runtime_repository_py_path",
+      "target": "domain_runtime_runtimeprobename",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L6",
       "weight": 0.8,
@@ -13002,6 +13621,16 @@
     {
       "relation": "uses",
       "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "tests_test_runtime_repository_py_path",
+      "target": "domain_runtime_runtimeprobestatus",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L6",
       "weight": 0.8,
@@ -13028,6 +13657,16 @@
       "confidence_score": 0.5,
       "source": "tests_test_runtime_scheduler_failingrefreshclient",
       "target": "domain_runtime_runtimeprobestatus"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L6",
+      "weight": 0.8,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "domain_runtime_runtimeprobestatus",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -13285,9 +13924,9 @@
       "source_file": "tests/test_runtime_repository.py",
       "source_location": "L5",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_runtime_repository_py_path",
-      "target": "domain_runtime_alertexecutionkind",
-      "confidence_score": 0.5
+      "target": "domain_runtime_alertexecutionkind"
     },
     {
       "relation": "uses",
@@ -13495,9 +14134,9 @@
       "source_file": "tests/test_runtime_repository.py",
       "source_location": "L5",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_runtime_repository_py_path",
-      "target": "domain_runtime_alertdispatchrecord",
-      "confidence_score": 0.5
+      "target": "domain_runtime_alertdispatchrecord"
     },
     {
       "relation": "uses",
@@ -13698,6 +14337,16 @@
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_runtime_scheduler_py_telegramnotifier",
       "target": "domain_runtime_runtimesyncresult"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "source": "tests_test_worker_fakecontinuousschedulerservice",
+      "target": "domain_runtime_runtimesyncresult",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -14362,6 +15011,16 @@
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_forex_factory_monitor_py_eventschedule",
       "target": "integrations_forex_factory_forexfactoryclient"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "target": "integrations_forex_factory_forexfactoryclient",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -15441,6 +16100,36 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor",
+      "target": "services_forex_factory_monitor_deduplicate_events",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor",
+      "target": "services_forex_factory_monitor_fetch_source_events",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor",
+      "target": "services_forex_factory_monitor_normalize_breaking_event_for_scheduler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
       "source_location": "L11",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -15541,6 +16230,28 @@
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
       "source_location": "L26",
       "weight": 1.0,
+      "source": "services_forex_factory_monitor_fetch_source_events",
+      "target": "src_forex_news_guard_services_forex_factory_monitor_py_alertpolicy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor_normalize_breaking_event_for_scheduler",
+      "target": "src_forex_news_guard_services_forex_factory_monitor_py_alertpolicy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L26",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "services_forex_factory_monitor_sync_relevant_calendar_events",
       "target": "src_forex_news_guard_services_forex_factory_monitor_py_alertpolicy"
@@ -15562,6 +16273,28 @@
       "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
       "source_location": "L26",
       "weight": 1.0,
+      "source": "services_forex_factory_monitor_fetch_source_events",
+      "target": "src_forex_news_guard_services_forex_factory_monitor_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor_normalize_breaking_event_for_scheduler",
+      "target": "src_forex_news_guard_services_forex_factory_monitor_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L26",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "services_forex_factory_monitor_sync_relevant_calendar_events",
       "target": "src_forex_news_guard_services_forex_factory_monitor_py_datetime"
@@ -15575,6 +16308,17 @@
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_forex_factory_monitor_py_datetime",
       "target": "storage_event_repository_eventrepository"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor_fetch_source_events",
+      "target": "src_forex_news_guard_services_forex_factory_monitor_py_forexfactoryclient",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -15606,6 +16350,82 @@
       "confidence_score": 0.5,
       "source": "src_forex_news_guard_services_forex_factory_monitor_py_alertpreviewresponse",
       "target": "storage_event_repository_eventrepository"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor_fetch_source_events",
+      "target": "services_forex_factory_monitor_deduplicate_events",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor_fetch_source_events",
+      "target": "services_forex_factory_monitor_normalize_breaking_event_for_scheduler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor_fetch_source_events",
+      "target": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor_sync_relevant_calendar_events",
+      "target": "services_forex_factory_monitor_fetch_source_events",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor_deduplicate_events",
+      "target": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "services_forex_factory_monitor_normalize_breaking_event_for_scheduler",
+      "target": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/forex_news_guard/services/forex_factory_monitor.py",
+      "source_location": "L8",
+      "weight": 0.8,
+      "source": "src_forex_news_guard_services_forex_factory_monitor_py_forexevent",
+      "target": "storage_event_repository_eventrepository",
+      "confidence_score": 0.5
     },
     {
       "relation": "references",
@@ -15758,9 +16578,9 @@
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_notification_formatter",
-      "target": "services_notification_formatter_build_scraping_failure_message",
-      "confidence_score": 1.0
+      "target": "services_notification_formatter_build_scraping_failure_message"
     },
     {
       "relation": "contains",
@@ -15912,6 +16732,17 @@
       "target": "services_notification_formatter_build_pre_alert_message"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_pre_alert_message_contains_contract_and_escapes_html",
+      "target": "services_notification_formatter_build_pre_alert_message"
+    },
+    {
       "relation": "references",
       "context": "generic_arg",
       "confidence": "EXTRACTED",
@@ -16017,9 +16848,9 @@
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_notification_formatter_build_scraping_failure_message",
-      "target": "src_forex_news_guard_services_notification_formatter_py_notificationmessage",
-      "confidence_score": 1.0
+      "target": "src_forex_news_guard_services_notification_formatter_py_notificationmessage"
     },
     {
       "relation": "calls",
@@ -16110,6 +16941,17 @@
       "target": "services_notification_formatter_build_result_message"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_result_message_contains_actual_forecast_previous_and_fallbacks",
+      "target": "services_notification_formatter_build_result_message"
+    },
+    {
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
@@ -16138,9 +16980,9 @@
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_notification_formatter_build_scraping_failure_message",
-      "target": "src_forex_news_guard_services_notification_formatter_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_forex_news_guard_services_notification_formatter_py_datetime"
     },
     {
       "relation": "references",
@@ -16236,9 +17078,9 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "tests/test_notification_formatter.py",
-      "source_location": "L26",
+      "source_location": "L121",
       "weight": 1.0,
-      "source": "tests_test_notification_formatter_test_daily_summary_lists_today_events_and_only_mentions_tomorrow",
+      "source": "tests_test_notification_formatter_test_build_daily_summary_lists_today_events_and_only_mentions_tomorrow",
       "target": "services_notification_formatter_build_daily_summary_message"
     },
     {
@@ -16259,9 +17101,9 @@
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_notification_formatter_build_scraping_failure_message",
-      "target": "date",
-      "confidence_score": 1.0
+      "target": "date"
     },
     {
       "relation": "calls",
@@ -16332,6 +17174,17 @@
     {
       "relation": "calls",
       "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_grouped_pre_alert_message_lists_each_event",
+      "target": "services_notification_formatter_build_grouped_pre_alert_message"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/services/notification_formatter.py",
       "source_location": "L113",
@@ -16374,6 +17227,17 @@
       "target": "services_notification_formatter_build_grouped_result_message"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_grouped_result_message_lists_each_event_values",
+      "target": "services_notification_formatter_build_grouped_result_message"
+    },
+    {
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
@@ -16383,6 +17247,17 @@
       "confidence_score": 1.0,
       "source": "services_notification_formatter_build_schedule_summary",
       "target": "src_forex_news_guard_services_notification_formatter_py_eventschedule"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_schedule_summary_includes_event_and_check_counts",
+      "target": "services_notification_formatter_build_schedule_summary"
     },
     {
       "relation": "references",
@@ -16565,9 +17440,9 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L504",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice",
-      "target": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
-      "confidence_score": 1.0
+      "target": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history"
     },
     {
       "relation": "method",
@@ -16665,9 +17540,9 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L513",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice",
-      "target": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
-      "confidence_score": 1.0
+      "target": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed"
     },
     {
       "relation": "method",
@@ -16768,6 +17643,16 @@
       "confidence_score": 0.5,
       "source": "tests_test_runtime_scheduler_failingrefreshclient",
       "target": "services_runtime_scheduler_runtimeschedulerservice"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L7",
+      "weight": 0.8,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "services_runtime_scheduler_runtimeschedulerservice",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -17425,9 +18310,9 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_run_cycle_at",
-      "target": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
-      "confidence_score": 1.0
+      "target": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history"
     },
     {
       "relation": "calls",
@@ -17447,9 +18332,9 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_run_cycle_at",
-      "target": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
-      "confidence_score": 1.0
+      "target": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed"
     },
     {
       "relation": "references",
@@ -17524,9 +18409,9 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L504",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
-      "target": "src_forex_news_guard_services_runtime_scheduler_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_forex_news_guard_services_runtime_scheduler_py_datetime"
     },
     {
       "relation": "references",
@@ -17568,9 +18453,9 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L513",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
-      "target": "src_forex_news_guard_services_runtime_scheduler_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_forex_news_guard_services_runtime_scheduler_py_datetime"
     },
     {
       "relation": "references",
@@ -17674,9 +18559,9 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L140",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_dispatch_due_checks_at",
-      "target": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history",
-      "confidence_score": 1.0
+      "target": "services_runtime_scheduler_runtimeschedulerservice_prune_runtime_history"
     },
     {
       "relation": "calls",
@@ -17696,9 +18581,9 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L227",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_revalidate_due_prechecks",
-      "target": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
-      "confidence_score": 1.0
+      "target": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed"
     },
     {
       "relation": "references",
@@ -18215,9 +19100,9 @@
       "source_file": "src/forex_news_guard/services/runtime_scheduler.py",
       "source_location": "L527",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "services_runtime_scheduler_runtimeschedulerservice_send_scraping_failure_alert_if_needed",
-      "target": "services_runtime_scheduler_runtimeschedulerservice_send_telegram_message",
-      "confidence_score": 1.0
+      "target": "services_runtime_scheduler_runtimeschedulerservice_send_telegram_message"
     },
     {
       "relation": "calls",
@@ -18760,6 +19645,16 @@
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L8",
       "weight": 0.8,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "storage_event_repository_eventrepository",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L8",
+      "weight": 0.8,
       "confidence_score": 0.5,
       "source": "tests_test_runtime_scheduler_fakeclient",
       "target": "storage_event_repository_eventrepository"
@@ -19187,6 +20082,16 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository",
+      "target": "storage_runtime_repository_runtimerepository_error_threshold",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L54",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -19229,9 +20134,9 @@
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L126",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository",
-      "target": "storage_runtime_repository_runtimerepository_normalize_datetime",
-      "confidence_score": 1.0
+      "target": "storage_runtime_repository_runtimerepository_normalize_datetime"
     },
     {
       "relation": "method",
@@ -19239,9 +20144,9 @@
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository",
-      "target": "storage_runtime_repository_runtimerepository_parse_datetime",
-      "confidence_score": 1.0
+      "target": "storage_runtime_repository_runtimerepository_parse_datetime"
     },
     {
       "relation": "method",
@@ -19249,9 +20154,9 @@
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository",
-      "target": "storage_runtime_repository_runtimerepository_prune_dispatches",
-      "confidence_score": 1.0
+      "target": "storage_runtime_repository_runtimerepository_prune_dispatches"
     },
     {
       "relation": "method",
@@ -19299,9 +20204,9 @@
       "source_file": "tests/test_runtime_repository.py",
       "source_location": "L6",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "tests_test_runtime_repository_py_path",
-      "target": "storage_runtime_repository_runtimerepository",
-      "confidence_score": 0.5
+      "target": "storage_runtime_repository_runtimerepository"
     },
     {
       "relation": "uses",
@@ -19332,6 +20237,16 @@
       "confidence_score": 0.5,
       "source": "tests_test_runtime_scheduler_failingrefreshclient",
       "target": "storage_runtime_repository_runtimerepository"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "storage_runtime_repository_runtimerepository",
+      "confidence_score": 0.5
     },
     {
       "relation": "uses",
@@ -19434,9 +20349,9 @@
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L126",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository_normalize_datetime",
-      "target": "src_forex_news_guard_storage_runtime_repository_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_forex_news_guard_storage_runtime_repository_py_datetime"
     },
     {
       "relation": "references",
@@ -19445,9 +20360,9 @@
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository_parse_datetime",
-      "target": "src_forex_news_guard_storage_runtime_repository_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_forex_news_guard_storage_runtime_repository_py_datetime"
     },
     {
       "relation": "references",
@@ -19456,9 +20371,9 @@
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository_prune_dispatches",
-      "target": "src_forex_news_guard_storage_runtime_repository_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_forex_news_guard_storage_runtime_repository_py_datetime"
     },
     {
       "relation": "references",
@@ -19511,9 +20426,9 @@
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository_prune_dispatches",
-      "target": "storage_runtime_repository_runtimerepository_default_payload",
-      "confidence_score": 1.0
+      "target": "storage_runtime_repository_runtimerepository_default_payload"
     },
     {
       "relation": "calls",
@@ -19522,9 +20437,9 @@
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository_prune_dispatches",
-      "target": "storage_runtime_repository_runtimerepository_normalize_datetime",
-      "confidence_score": 1.0
+      "target": "storage_runtime_repository_runtimerepository_normalize_datetime"
     },
     {
       "relation": "calls",
@@ -19533,9 +20448,9 @@
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository_prune_dispatches",
-      "target": "storage_runtime_repository_runtimerepository_parse_datetime",
-      "confidence_score": 1.0
+      "target": "storage_runtime_repository_runtimerepository_parse_datetime"
     },
     {
       "relation": "references",
@@ -19597,6 +20512,17 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository_error_threshold",
+      "target": "runtimeprobename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
       "source_location": "L71",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -19613,6 +20539,17 @@
       "confidence_score": 1.0,
       "source": "storage_runtime_repository_runtimerepository_record_probe_error",
       "target": "storage_runtime_repository_runtimerepository_default_payload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/storage/runtime_repository.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "storage_runtime_repository_runtimerepository_record_probe_error",
+      "target": "storage_runtime_repository_runtimerepository_error_threshold",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -19749,6 +20686,59 @@
       "weight": 1.0,
       "source": "tests_test_worker_test_run_worker_executes_full_cycle",
       "target": "forex_news_guard_worker_run_worker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/worker_continuous.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "forex_news_guard_worker_continuous",
+      "target": "forex_news_guard_worker_continuous_run_worker_continuous",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/worker_continuous.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "forex_news_guard_worker_continuous",
+      "target": "forex_news_guard_worker_continuous_wait_forever",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "tests_test_worker",
+      "target": "forex_news_guard_worker_continuous",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/forex_news_guard/worker_continuous.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "forex_news_guard_worker_continuous_run_worker_continuous",
+      "target": "forex_news_guard_worker_continuous_wait_forever",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_worker.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "tests_test_worker_test_run_worker_continuous_starts_and_shutdowns_on_interrupt",
+      "target": "forex_news_guard_worker_continuous_run_worker_continuous"
     },
     {
       "relation": "contains",
@@ -20104,11 +21094,71 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_notification_formatter.py",
-      "source_location": "L8",
+      "source_location": "L15",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "tests_test_notification_formatter",
-      "target": "tests_test_notification_formatter_test_daily_summary_lists_today_events_and_only_mentions_tomorrow"
+      "target": "tests_test_notification_formatter_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter",
+      "target": "tests_test_notification_formatter_test_build_daily_summary_lists_today_events_and_only_mentions_tomorrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter",
+      "target": "tests_test_notification_formatter_test_build_grouped_pre_alert_message_lists_each_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter",
+      "target": "tests_test_notification_formatter_test_build_grouped_result_message_lists_each_event_values",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter",
+      "target": "tests_test_notification_formatter_test_build_pre_alert_message_contains_contract_and_escapes_html",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter",
+      "target": "tests_test_notification_formatter_test_build_result_message_contains_actual_forecast_previous_and_fallbacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter",
+      "target": "tests_test_notification_formatter_test_build_schedule_summary_includes_event_and_check_counts",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20121,13 +21171,111 @@
       "target": "tests_test_notification_formatter_test_daily_summary_no_today_events_still_mentions_tomorrow"
     },
     {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_event",
+      "target": "tests_test_notification_formatter_py_forexevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_daily_summary_lists_today_events_and_only_mentions_tomorrow",
+      "target": "tests_test_notification_formatter_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_grouped_pre_alert_message_lists_each_event",
+      "target": "tests_test_notification_formatter_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_grouped_result_message_lists_each_event_values",
+      "target": "tests_test_notification_formatter_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_pre_alert_message_contains_contract_and_escapes_html",
+      "target": "tests_test_notification_formatter_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_result_message_contains_actual_forecast_previous_and_fallbacks",
+      "target": "tests_test_notification_formatter_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_build_schedule_summary_includes_event_and_check_counts",
+      "target": "tests_test_notification_formatter_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_notification_formatter.py",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "tests_test_notification_formatter_test_daily_summary_no_today_events_still_mentions_tomorrow",
+      "target": "tests_test_notification_formatter_event",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_repository.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_runtime_repository",
-      "target": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
+      "target": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "tests_test_runtime_repository",
+      "target": "tests_test_runtime_repository_test_record_probe_error_warns_before_error_threshold_and_success_resets",
       "confidence_score": 1.0
     },
     {
@@ -20137,7 +21285,18 @@
       "source_file": "tests/test_runtime_repository.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_runtime_repository_test_prune_dispatches_removes_records_older_than_ttl",
+      "target": "tests_test_runtime_repository_py_path"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_repository.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "tests_test_runtime_repository_test_record_probe_error_warns_before_error_threshold_and_success_resets",
       "target": "tests_test_runtime_repository_py_path",
       "confidence_score": 1.0
     },
@@ -20170,6 +21329,16 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler",
       "target": "tests_test_runtime_scheduler_failingrefreshclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler",
+      "target": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20288,8 +21457,28 @@
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L423",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler",
-      "target": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "target": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L285",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler",
+      "target": "tests_test_runtime_scheduler_test_run_cycle_deduplicates_calendar_and_breaking_by_event_id",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler",
+      "target": "tests_test_runtime_scheduler_test_run_cycle_includes_breaking_news_when_enabled",
       "confidence_score": 1.0
     },
     {
@@ -20326,11 +21515,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L261",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler",
+      "target": "tests_test_runtime_scheduler_test_run_cycle_skips_breaking_news_when_disabled",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L198",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler",
       "target": "tests_test_runtime_scheduler_test_run_cycle_skips_stale_daily_summary_after_midnight_window"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler",
+      "target": "tests_test_runtime_scheduler_test_start_registers_sync_and_dispatch_interval_jobs",
+      "confidence_score": 1.0
     },
     {
       "relation": "inherits",
@@ -20446,7 +21655,29 @@
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L427",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "target": "tests_test_runtime_scheduler_fakenotifier"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L309",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_deduplicates_calendar_and_breaking_by_event_id",
+      "target": "tests_test_runtime_scheduler_fakenotifier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_includes_breaking_news_when_enabled",
       "target": "tests_test_runtime_scheduler_fakenotifier",
       "confidence_score": 1.0
     },
@@ -20488,11 +21719,33 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L277",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_skips_breaking_news_when_disabled",
+      "target": "tests_test_runtime_scheduler_fakenotifier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L210",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_skips_stale_daily_summary_after_midnight_window",
       "target": "tests_test_runtime_scheduler_fakenotifier"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_start_registers_sync_and_dispatch_interval_jobs",
+      "target": "tests_test_runtime_scheduler_fakenotifier",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -20534,6 +21787,16 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_failingrefreshclient",
       "target": "tests_test_runtime_scheduler_fakeclient"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_fakeclient",
+      "target": "tests_test_runtime_scheduler_fakeclient_fetch_breaking_news_events",
+      "confidence_score": 1.0
     },
     {
       "relation": "method",
@@ -20637,6 +21900,28 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L306",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_deduplicates_calendar_and_breaking_by_event_id",
+      "target": "tests_test_runtime_scheduler_fakeclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_includes_breaking_news_when_enabled",
+      "target": "tests_test_runtime_scheduler_fakeclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L153",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -20659,11 +21944,33 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L271",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_skips_breaking_news_when_disabled",
+      "target": "tests_test_runtime_scheduler_fakeclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L213",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_skips_stale_daily_summary_after_midnight_window",
       "target": "tests_test_runtime_scheduler_fakeclient"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_start_registers_sync_and_dispatch_interval_jobs",
+      "target": "tests_test_runtime_scheduler_fakeclient",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -20769,6 +22076,28 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L288",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_deduplicates_calendar_and_breaking_by_event_id",
+      "target": "tests_test_runtime_scheduler_py_forexevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L228",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_includes_breaking_news_when_enabled",
+      "target": "tests_test_runtime_scheduler_py_forexevent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L133",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -20785,6 +22114,17 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_sends_daily_summary_inside_midnight_window",
       "target": "tests_test_runtime_scheduler_py_forexevent"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L264",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_skips_breaking_news_when_disabled",
+      "target": "tests_test_runtime_scheduler_py_forexevent",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -20829,6 +22169,17 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_failingrefreshclient_fetch_calendar_events",
       "target": "tests_test_runtime_scheduler_py_datetime"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_fakeclient_fetch_breaking_news_events",
+      "target": "tests_test_runtime_scheduler_py_datetime",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -20925,7 +22276,29 @@
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L425",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "target": "tests_test_runtime_scheduler_py_datetime"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L287",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_deduplicates_calendar_and_breaking_by_event_id",
+      "target": "tests_test_runtime_scheduler_py_datetime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_includes_breaking_news_when_enabled",
       "target": "tests_test_runtime_scheduler_py_datetime",
       "confidence_score": 1.0
     },
@@ -20961,6 +22334,17 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_sends_daily_summary_inside_midnight_window",
       "target": "tests_test_runtime_scheduler_py_datetime"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L263",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_skips_breaking_news_when_disabled",
+      "target": "tests_test_runtime_scheduler_py_datetime",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -21032,9 +22416,9 @@
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L430",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
-      "target": "tests_test_runtime_scheduler_failingclient",
-      "confidence_score": 1.0
+      "target": "tests_test_runtime_scheduler_failingclient"
     },
     {
       "relation": "calls",
@@ -21048,15 +22432,67 @@
       "target": "tests_test_runtime_scheduler_failingclient"
     },
     {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "tests_test_runtime_scheduler_fakebackgroundscheduler_add_job",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "tests_test_runtime_scheduler_fakebackgroundscheduler_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "target": "tests_test_runtime_scheduler_fakebackgroundscheduler_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_start_registers_sync_and_dispatch_interval_jobs",
+      "target": "tests_test_runtime_scheduler_fakebackgroundscheduler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_start_registers_sync_and_dispatch_interval_jobs",
+      "target": "tests_test_runtime_scheduler_fakebackgroundscheduler_start",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
-      "source_location": "L54",
+      "source_location": "L77",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "tests_test_runtime_scheduler_test_dispatch_due_checks_sends_alert_once_inside_timing_window",
-      "target": "tests_test_runtime_scheduler_py_path"
+      "source": "tests_test_runtime_scheduler_test_start_registers_sync_and_dispatch_interval_jobs",
+      "target": "tests_test_runtime_scheduler_py_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -21107,6 +22543,17 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tests_test_runtime_scheduler_test_dispatch_due_checks_sends_alert_once_inside_timing_window",
+      "target": "tests_test_runtime_scheduler_py_path"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L93",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -21142,7 +22589,29 @@
       "source_file": "tests/test_runtime_scheduler.py",
       "source_location": "L423",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_alerts_operator_on_third_scraping_failure",
+      "target": "tests_test_runtime_scheduler_py_path"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L285",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_deduplicates_calendar_and_breaking_by_event_id",
+      "target": "tests_test_runtime_scheduler_py_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_includes_breaking_news_when_enabled",
       "target": "tests_test_runtime_scheduler_py_path",
       "confidence_score": 1.0
     },
@@ -21178,6 +22647,17 @@
       "confidence_score": 1.0,
       "source": "tests_test_runtime_scheduler_test_run_cycle_sends_daily_summary_inside_midnight_window",
       "target": "tests_test_runtime_scheduler_py_path"
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_runtime_scheduler.py",
+      "source_location": "L261",
+      "weight": 1.0,
+      "source": "tests_test_runtime_scheduler_test_run_cycle_skips_breaking_news_when_disabled",
+      "target": "tests_test_runtime_scheduler_py_path",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -21337,11 +22817,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_worker.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "tests_test_worker",
+      "target": "tests_test_worker_fakecontinuousschedulerservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_worker.py",
       "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "tests_test_worker",
       "target": "tests_test_worker_fakeschedulerservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "tests_test_worker",
+      "target": "tests_test_worker_test_run_worker_continuous_starts_and_shutdowns_on_interrupt",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -21394,6 +22894,47 @@
       "confidence_score": 1.0,
       "source": "tests_test_worker_fakeschedulerservice_run_full_cycle",
       "target": "tests_test_worker_py_runtimesyncresult"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "tests_test_worker_fakecontinuousschedulerservice",
+      "target": "tests_test_worker_fakecontinuousschedulerservice_init",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "tests_test_worker_fakecontinuousschedulerservice",
+      "target": "tests_test_worker_fakecontinuousschedulerservice_shutdown",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "tests_test_worker_fakecontinuousschedulerservice",
+      "target": "tests_test_worker_fakecontinuousschedulerservice_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_worker.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "tests_test_worker_test_run_worker_continuous_starts_and_shutdowns_on_interrupt",
+      "target": "tests_test_worker_fakecontinuousschedulerservice",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -22821,9 +24362,9 @@
       "source_file": "docs/LESSONS_LEARNED.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_lessons_learned",
-      "target": "docs_lessons_learned_lessons_learned",
-      "confidence_score": 1.0
+      "target": "docs_lessons_learned_lessons_learned"
     },
     {
       "relation": "contains",
@@ -22831,9 +24372,9 @@
       "source_file": "docs/LESSONS_LEARNED.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_lessons_learned_lessons_learned",
-      "target": "docs_lessons_learned_forex_factory_time_parsing",
-      "confidence_score": 1.0
+      "target": "docs_lessons_learned_forex_factory_time_parsing"
     },
     {
       "relation": "contains",
@@ -22841,9 +24382,9 @@
       "source_file": "docs/LESSONS_LEARNED.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_lessons_learned_lessons_learned",
-      "target": "docs_lessons_learned_github_actions_timing",
-      "confidence_score": 1.0
+      "target": "docs_lessons_learned_github_actions_timing"
     },
     {
       "relation": "contains",
@@ -22851,9 +24392,9 @@
       "source_file": "docs/LESSONS_LEARNED.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_lessons_learned_lessons_learned",
-      "target": "docs_lessons_learned_result_updates",
-      "confidence_score": 1.0
+      "target": "docs_lessons_learned_result_updates"
     },
     {
       "relation": "contains",
@@ -22874,6 +24415,16 @@
       "confidence_score": 1.0,
       "source": "docs_operations_operations",
       "target": "docs_operations_archivos_locales_importantes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS.md",
+      "source_location": "L113",
+      "weight": 1.0,
+      "source": "docs_operations_operations",
+      "target": "docs_operations_auth_de_lectura_del_dashboard",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -22981,9 +24532,9 @@
       "source_file": "docs/OPERATIONS.md",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_operations_operations",
-      "target": "docs_operations_variables_operativas",
-      "confidence_score": 1.0
+      "target": "docs_operations_variables_operativas"
     },
     {
       "relation": "contains",
@@ -23091,9 +24642,9 @@
       "source_file": "docs/PENDING.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_pending_pending",
-      "target": "docs_pending_mejoras_cerradas_recientemente",
-      "confidence_score": 1.0
+      "target": "docs_pending_mejoras_cerradas_recientemente"
     },
     {
       "relation": "contains",
@@ -23457,5 +25008,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "25fd82fc3a95974777f4cfd5b563639e0c5294f8"
+  "built_at_commit": "79dadd5b33d86926827f1da208df98b7499ba871"
 }

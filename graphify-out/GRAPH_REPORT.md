@@ -1,16 +1,16 @@
 # Graph Report - Forex-Impact-News-Guard  (2026-06-15)
 
 ## Corpus Check
-- 81 files · ~33,146 words
+- 82 files · ~34,514 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 646 nodes · 1641 edges · 50 communities (41 shown, 9 thin omitted)
-- Extraction: 57% EXTRACTED · 43% INFERRED · 0% AMBIGUOUS · INFERRED: 699 edges (avg confidence: 0.55)
+- 677 nodes · 1759 edges · 49 communities (40 shown, 9 thin omitted)
+- Extraction: 58% EXTRACTED · 42% INFERRED · 0% AMBIGUOUS · INFERRED: 742 edges (avg confidence: 0.55)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `25fd82fc`
+- Built from commit: `79dadd5b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -40,7 +40,6 @@
 - [[_COMMUNITY_Community 29|Community 29]]
 - [[_COMMUNITY_Community 30|Community 30]]
 - [[_COMMUNITY_Community 31|Community 31]]
-- [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 33|Community 33]]
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
@@ -60,16 +59,16 @@
 - [[_COMMUNITY_Community 49|Community 49]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `AlertPolicy` - 69 edges
-2. `RuntimeSchedulerService` - 59 edges
-3. `ForexEvent` - 57 edges
-4. `ImpactLevel` - 50 edges
-5. `ZoneInfo` - 47 edges
-6. `EventRepository` - 44 edges
-7. `EventSchedule` - 43 edges
-8. `RuntimeRepository` - 42 edges
+1. `AlertPolicy` - 71 edges
+2. `ForexEvent` - 67 edges
+3. `RuntimeSchedulerService` - 60 edges
+4. `ZoneInfo` - 55 edges
+5. `ImpactLevel` - 52 edges
+6. `EventRepository` - 46 edges
+7. `EventSchedule` - 45 edges
+8. `RuntimeRepository` - 44 edges
 9. `$()` - 36 edges
-10. `StoredEvent` - 33 edges
+10. `StoredEvent` - 34 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_events_endpoints_return_relevant_data()` --calls--> `ZoneInfo`  [INFERRED]
@@ -97,31 +96,31 @@
 - 1-file cycle: `src/forex_news_guard/storage/event_repository.py -> src/forex_news_guard/storage/event_repository.py`
 - 1-file cycle: `src/forex_news_guard/storage/runtime_repository.py -> src/forex_news_guard/storage/runtime_repository.py`
 
-## Communities (50 total, 9 thin omitted)
+## Communities (49 total, 9 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.15
-Nodes (48): AlertExecutionKind, BaseModel, EventSchedule, ForexEvent, ScheduledEventCheck, StoredEvent, AlertDispatchRecord, AlertExecutionKind (+40 more)
+Cohesion: 0.11
+Nodes (47): AlertExecutionKind, EventSchedule, ScheduledEventCheck, StoredEvent, AlertDispatchRecord, AlertExecutionKind, DeliveryChannel, RuntimeObservability (+39 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.10
-Nodes (43): RuntimeProbeStatus, RuntimeError, test_preview_builds_calendar_and_breaking_alerts(), test_preview_skips_non_high_impact_when_policy_requires_it(), Path, test_repository_cleanup_removes_old_rows_after_day_rollover(), test_repository_retains_only_today_and_tomorrow(), test_build_event_schedules_creates_precheck_alert_and_result_retries() (+35 more)
+Nodes (44): test_preview_builds_calendar_and_breaking_alerts(), test_preview_skips_non_high_impact_when_policy_requires_it(), Path, test_repository_cleanup_removes_old_rows_after_day_rollover(), test_repository_retains_only_today_and_tomorrow(), test_build_event_schedules_creates_precheck_alert_and_result_retries(), test_filter_relevant_events_respects_impacts_and_currencies(), test_live_preview_merges_calendar_and_breaking_news() (+36 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.21
 Nodes (25): BaseSettings, get_settings(), Settings, _coerce_datetime(), _coerce_int(), _extract_calendar_events_from_component_state(), _extract_text(), _first_non_empty() (+17 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.15
-Nodes (27): date, NotificationMessage, MonkeyPatch, main(), build_daily_summary_message(), build_grouped_pre_alert_message(), build_grouped_result_message(), build_pre_alert_message() (+19 more)
+Cohesion: 0.12
+Nodes (33): date, NotificationMessage, MonkeyPatch, RuntimeError, main(), build_daily_summary_message(), build_grouped_pre_alert_message(), build_grouped_result_message() (+25 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.10
 Nodes (28): $(), bindActions(), buildDemoState(), collectSettingsInputs(), copySettingsPayload(), DEFAULT_STATE, dispatchWorkflow(), escapeHtml() (+20 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.09
-Nodes (9): SettingsRepository, AlertPolicy, datetime, ForexEvent, StoredEvent, Any, AlertPolicy, JsonStateStore (+1 more)
+Cohesion: 0.08
+Nodes (11): SettingsRepository, AlertPolicy, datetime, ForexEvent, StoredEvent, Any, AlertPolicy, JsonStateStore (+3 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.10
@@ -132,12 +131,12 @@ Cohesion: 0.32
 Nodes (12): build_automation_summary(), build_dashboard_payload(), build_observability_diagnostics(), build_risk_blocks(), build_workflow_meta(), impact_rank(), load_json(), main() (+4 more)
 
 ### Community 9 - "Community 9"
-Cohesion: 0.22
-Nodes (7): run_worker(), sync-and-publish Workflow, Static Dashboard, .state/ JSON Files, FakeSchedulerService, RuntimeSyncResult, test_run_worker_executes_full_cycle()
+Cohesion: 0.13
+Nodes (11): run_worker_continuous(), _wait_forever(), run_worker(), sync-and-publish Workflow, Static Dashboard, .state/ JSON Files, FakeContinuousSchedulerService, FakeSchedulerService (+3 more)
 
 ### Community 10 - "Community 10"
 Cohesion: 0.09
-Nodes (39): AlertPreviewRequest, AlertKind, AlertPolicy, AlertPreviewRequest, AlertPreviewResponse, ImpactLevel, PlannedAlert, RiskWindow (+31 more)
+Nodes (51): AlertPreviewRequest, BaseModel, AlertKind, AlertPolicy, AlertPreviewRequest, AlertPreviewResponse, ForexEvent, ImpactLevel (+43 more)
 
 ### Community 11 - "Community 11"
 Cohesion: 0.48
@@ -172,16 +171,12 @@ Cohesion: 0.14
 Nodes (13): Deploy gratis recomendado, Documentacion de handoff, Ejecutar localmente, Endpoints, Estado actual, Estructura, Flujo pensado, Forex-Impact-News-Guard (+5 more)
 
 ### Community 30 - "Community 30"
-Cohesion: 0.14
-Nodes (13): Archivos locales importantes, Ejemplo rapido para actualizar settings, Endpoints utiles, Instalar, Levantar API, Levantar worker, Nota de transicion, Operations (+5 more)
+Cohesion: 0.13
+Nodes (14): Archivos locales importantes, Auth de lectura del dashboard, Ejemplo rapido para actualizar settings, Endpoints utiles, Instalar, Levantar API, Levantar worker, Nota de transicion (+6 more)
 
 ### Community 31 - "Community 31"
 Cohesion: 0.17
 Nodes (11): Archivos de deploy incluidos, Arquitectura, Deploy Oracle Always Free, Operacion basica, Paso 1. Crear VM, Paso 2. Instalar Docker en VM, Paso 3. Subir repo y configurar entorno, Paso 4. Levantar stack (+3 more)
-
-### Community 32 - "Community 32"
-Cohesion: 0.21
-Nodes (3): EventScheduler, RuntimeSchedulerService, datetime
 
 ### Community 33 - "Community 33"
 Cohesion: 0.20
@@ -236,24 +231,24 @@ Cohesion: 0.40
 Nodes (4): Forex Factory time parsing, GitHub Actions timing, Lessons Learned, Result updates
 
 ## Knowledge Gaps
-- **173 isolated node(s):** `run-on-vm.sh script`, `DEFAULT_STATE`, `TIMEZONE_OPTIONS`, `Path`, `Usage` (+168 more)
+- **174 isolated node(s):** `run-on-vm.sh script`, `DEFAULT_STATE`, `TIMEZONE_OPTIONS`, `Path`, `Usage` (+169 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `AlertPolicy` connect `Community 10` to `Community 0`, `Community 32`, `Community 1`, `Community 3`, `Community 4`, `Community 6`, `Community 7`, `Community 8`, `Community 12`?**
-  _High betweenness centrality (0.063) - this node is a cross-community bridge._
-- **Why does `ZoneInfo` connect `Community 1` to `Community 4`, `Community 7`, `Community 8`, `Community 9`, `Community 10`?**
-  _High betweenness centrality (0.043) - this node is a cross-community bridge._
-- **Why does `ImpactLevel` connect `Community 10` to `Community 0`, `Community 1`, `Community 2`, `Community 3`, `Community 12`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
-- **Are the 59 inferred relationships involving `AlertPolicy` (e.g. with `AlertPreviewRequest` and `RuntimeProbeState`) actually correct?**
-  _`AlertPolicy` has 59 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 33 inferred relationships involving `RuntimeSchedulerService` (e.g. with `run_worker()` and `AlertPolicy`) actually correct?**
-  _`RuntimeSchedulerService` has 33 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 55 inferred relationships involving `ForexEvent` (e.g. with `date` and `ForexFactoryBlockedError`) actually correct?**
-  _`ForexEvent` has 55 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 47 inferred relationships involving `ImpactLevel` (e.g. with `date` and `AlertDispatchRecord`) actually correct?**
-  _`ImpactLevel` has 47 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `AlertPolicy` connect `Community 10` to `Community 0`, `Community 1`, `Community 4`, `Community 6`, `Community 7`, `Community 8`, `Community 12`?**
+  _High betweenness centrality (0.062) - this node is a cross-community bridge._
+- **Why does `ZoneInfo` connect `Community 1` to `Community 3`, `Community 4`, `Community 7`, `Community 8`, `Community 9`, `Community 10`?**
+  _High betweenness centrality (0.053) - this node is a cross-community bridge._
+- **Why does `ImpactLevel` connect `Community 10` to `Community 0`, `Community 1`, `Community 2`, `Community 3`, `Community 6`, `Community 12`?**
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **Are the 61 inferred relationships involving `AlertPolicy` (e.g. with `AlertPreviewRequest` and `RuntimeProbeState`) actually correct?**
+  _`AlertPolicy` has 61 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 65 inferred relationships involving `ForexEvent` (e.g. with `date` and `ForexFactoryBlockedError`) actually correct?**
+  _`ForexEvent` has 65 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 34 inferred relationships involving `RuntimeSchedulerService` (e.g. with `run_worker()` and `AlertPolicy`) actually correct?**
+  _`RuntimeSchedulerService` has 34 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 41 inferred relationships involving `ZoneInfo` (e.g. with `test_preview_builds_calendar_and_breaking_alerts()` and `test_preview_skips_non_high_impact_when_policy_requires_it()`) actually correct?**
+  _`ZoneInfo` has 41 INFERRED edges - model-reasoned connections that need verification._

@@ -23,14 +23,25 @@ class FailingNotifier(FakeNotifier):
 
 
 class FakeClient:
-    def __init__(self, events: list[ForexEvent], refreshed_events: list[ForexEvent] | None = None) -> None:
+    def __init__(
+        self,
+        events: list[ForexEvent],
+        refreshed_events: list[ForexEvent] | None = None,
+        breaking_events: list[ForexEvent] | None = None,
+    ) -> None:
         self.events = events
         self.refreshed_events = refreshed_events if refreshed_events is not None else events
+        self.breaking_events = breaking_events or []
         self.calls = 0
+        self.breaking_calls = 0
 
     def fetch_calendar_events(self, reference_time: datetime):  # noqa: ANN202
         self.calls += 1
         return self.events if self.calls == 1 else self.refreshed_events
+
+    def fetch_breaking_news_events(self, reference_time: datetime):  # noqa: ANN202
+        self.breaking_calls += 1
+        return self.breaking_events
 
 
 class FailingRefreshClient(FakeClient):
@@ -49,6 +60,50 @@ class FailingClient(FakeClient):
     def fetch_calendar_events(self, reference_time: datetime):  # noqa: ANN202
         self.calls += 1
         raise RuntimeError(self.error_message)
+
+
+class FakeBackgroundScheduler:
+    def __init__(self) -> None:
+        self.jobs: list[dict[str, object]] = []
+        self.started = False
+
+    def add_job(self, func, trigger: str, **kwargs) -> None:  # noqa: ANN001, ANN202
+        self.jobs.append({"func": func, "trigger": trigger, **kwargs})
+
+    def start(self) -> None:
+        self.started = True
+
+
+def test_start_registers_sync_and_dispatch_interval_jobs(tmp_path: Path) -> None:
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(),
+        client=FakeClient([]),
+        event_repository=EventRepository(str(tmp_path / "events.db")),
+        runtime_repository=RuntimeRepository(str(tmp_path / "events.db")),
+        notifier=FakeNotifier(),
+    )
+    fake_scheduler = FakeBackgroundScheduler()
+    service.scheduler = fake_scheduler
+
+    service.start()
+
+    assert fake_scheduler.started is True
+    assert fake_scheduler.jobs == [
+        {
+            "func": service.run_cycle,
+            "trigger": "interval",
+            "minutes": 30,
+            "id": "sync-relevant-events",
+            "replace_existing": True,
+        },
+        {
+            "func": service.dispatch_due_checks,
+            "trigger": "interval",
+            "seconds": 30,
+            "id": "dispatch-due-checks",
+            "replace_existing": True,
+        },
+    ]
 
 
 def test_dispatch_due_checks_sends_alert_once_inside_timing_window(tmp_path: Path) -> None:
@@ -165,6 +220,100 @@ def test_run_cycle_persists_only_relevant_events(tmp_path: Path) -> None:
     assert [item.event.id for item in stored] == ["usd-high"]
     assert observability.scraping.status == RuntimeProbeStatus.OK
     assert observability.scraping.last_success_at == now
+
+
+def test_run_cycle_includes_breaking_news_when_enabled(tmp_path: Path) -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    now = datetime(2026, 5, 26, 10, 0, tzinfo=timezone)
+    calendar_event = ForexEvent(
+        id="usd-high",
+        title="FOMC",
+        currency="USD",
+        impact=ImpactLevel.HIGH,
+        scheduled_at=datetime(2026, 5, 26, 15, 0, tzinfo=timezone),
+    )
+    breaking_event = ForexEvent(
+        id="breaking-fed",
+        title="Fed announces emergency statement",
+        currency="USD",
+        impact=ImpactLevel.HIGH,
+        published_at=now,
+        is_breaking=True,
+    )
+    client = FakeClient([calendar_event], breaking_events=[breaking_event])
+    event_repository = EventRepository(str(tmp_path / "events.db"))
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(lead_minutes=5, breaking_enabled=True, daily_summary_enabled=False),
+        client=client,
+        event_repository=event_repository,
+        runtime_repository=RuntimeRepository(str(tmp_path / "events.db")),
+        notifier=FakeNotifier(),
+    )
+
+    result = service.run_cycle_at(reference_time=now)
+    stored = event_repository.list_relevant_events(reference_time=now)
+
+    assert client.breaking_calls == 1
+    assert [item.event.id for item in stored] == ["breaking-fed", "usd-high"]
+    assert any(schedule.event.id == "breaking-fed" and schedule.alert.scheduled_for == now for schedule in result.schedules)
+
+
+def test_run_cycle_skips_breaking_news_when_disabled(tmp_path: Path) -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    now = datetime(2026, 5, 26, 10, 0, tzinfo=timezone)
+    event = ForexEvent(
+        id="usd-high",
+        title="FOMC",
+        currency="USD",
+        impact=ImpactLevel.HIGH,
+        scheduled_at=datetime(2026, 5, 26, 15, 0, tzinfo=timezone),
+    )
+    client = FakeClient([event], breaking_events=[event])
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(breaking_enabled=False, daily_summary_enabled=False),
+        client=client,
+        event_repository=EventRepository(str(tmp_path / "events.db")),
+        runtime_repository=RuntimeRepository(str(tmp_path / "events.db")),
+        notifier=FakeNotifier(),
+    )
+
+    service.run_cycle_at(reference_time=now)
+
+    assert client.breaking_calls == 0
+
+
+def test_run_cycle_deduplicates_calendar_and_breaking_by_event_id(tmp_path: Path) -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    now = datetime(2026, 5, 26, 10, 0, tzinfo=timezone)
+    calendar_event = ForexEvent(
+        id="shared",
+        title="Calendar title",
+        currency="USD",
+        impact=ImpactLevel.HIGH,
+        scheduled_at=datetime(2026, 5, 26, 15, 0, tzinfo=timezone),
+    )
+    breaking_event = ForexEvent(
+        id="shared",
+        title="Breaking title",
+        currency="USD",
+        impact=ImpactLevel.HIGH,
+        published_at=now,
+        is_breaking=True,
+    )
+    event_repository = EventRepository(str(tmp_path / "events.db"))
+    service = RuntimeSchedulerService(
+        policy=AlertPolicy(lead_minutes=5, breaking_enabled=True, daily_summary_enabled=False),
+        client=FakeClient([calendar_event], breaking_events=[breaking_event]),
+        event_repository=event_repository,
+        runtime_repository=RuntimeRepository(str(tmp_path / "events.db")),
+        notifier=FakeNotifier(),
+    )
+
+    service.run_cycle_at(reference_time=now)
+    stored = event_repository.list_relevant_events(reference_time=now)
+
+    assert [item.event.id for item in stored] == ["shared"]
+    assert stored[0].event.title == "Breaking title"
 
 
 def test_run_cycle_sends_daily_summary_inside_midnight_window(tmp_path: Path) -> None:
@@ -390,8 +539,8 @@ def test_dispatch_due_checks_records_precheck_failure_observability(tmp_path: Pa
     service.dispatch_due_checks_at(reference_time=dispatch_time)
     observability = runtime_repository.get_observability()
 
-    assert observability.precheck.status == RuntimeProbeStatus.ERROR
-    assert observability.scraping.status == RuntimeProbeStatus.ERROR
+    assert observability.precheck.status == RuntimeProbeStatus.WARN
+    assert observability.scraping.status == RuntimeProbeStatus.WARN
     assert observability.precheck.last_error_message == "RuntimeError: forex factory unavailable"
 
 
@@ -415,7 +564,7 @@ def test_run_cycle_records_scraping_failure(tmp_path: Path) -> None:
         raise AssertionError("Expected run_cycle_at to fail")
 
     observability = runtime_repository.get_observability()
-    assert observability.scraping.status == "error"
+    assert observability.scraping.status == "warn"
     assert observability.scraping.last_error_message == "RuntimeError: scrape down"
     assert observability.scraping.consecutive_failures == 1
 
@@ -475,7 +624,7 @@ def test_dispatch_due_checks_records_precheck_failure(tmp_path: Path) -> None:
 
     observability = runtime_repository.get_observability()
     assert "precheck-refresh-failed:1" in result.skipped
-    assert observability.precheck.status == "error"
+    assert observability.precheck.status == "warn"
     assert observability.precheck.last_error_message == "RuntimeError: precheck miss"
 
 
@@ -511,5 +660,5 @@ def test_dispatch_due_checks_records_telegram_failure(tmp_path: Path) -> None:
         raise AssertionError("Expected dispatch_due_checks_at to fail")
 
     observability = runtime_repository.get_observability()
-    assert observability.telegram.status == "error"
+    assert observability.telegram.status == "warn"
     assert observability.telegram.last_error_message == "RuntimeError: telegram down"

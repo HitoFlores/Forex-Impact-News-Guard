@@ -90,8 +90,8 @@
     "semantic_hash": "ea2231cd063e8ce92782efabee5ac30b"
   },
   "src/forex_news_guard/core/config.py": {
-    "mtime": 1781563057.4036312,
-    "ast_hash": "2deb9ac056ae58b16d944b77e5ecbe96",
+    "mtime": 1781563315.2537148,
+    "ast_hash": "c9968b502509d6c609b16bf77c9d586d",
     "semantic_hash": ""
   },
   "src/forex_news_guard/domain/__init__.py": {
@@ -140,18 +140,18 @@
     "semantic_hash": "b12aee3f51bf4f6781e16b1a1af4442d"
   },
   "src/forex_news_guard/services/forex_factory_monitor.py": {
-    "mtime": 1780802063.556819,
-    "ast_hash": "9591ab546e0e0ccfe22be633b2968da8",
-    "semantic_hash": "9591ab546e0e0ccfe22be633b2968da8"
+    "mtime": 1781580529.1481423,
+    "ast_hash": "ba9f6e24c7e6c29b433813b0cd8784df",
+    "semantic_hash": ""
   },
   "src/forex_news_guard/services/notification_formatter.py": {
-    "mtime": 1781563057.4061372,
-    "ast_hash": "199733e81bc38af2f4e6d79fb80c3fc8",
+    "mtime": 1781563315.2537148,
+    "ast_hash": "1bec9b2f8ab2f74193a8181f75cca86f",
     "semantic_hash": ""
   },
   "src/forex_news_guard/services/runtime_scheduler.py": {
-    "mtime": 1781563057.4061372,
-    "ast_hash": "e3b9caf87f08cc4ed18f0e3d5415626a",
+    "mtime": 1781563315.2547183,
+    "ast_hash": "96f7fddf59886a65739392123a01d705",
     "semantic_hash": ""
   },
   "src/forex_news_guard/services/settings_service.py": {
@@ -185,8 +185,8 @@
     "semantic_hash": "dd1b127be769d7b2b06fa044302620fc"
   },
   "src/forex_news_guard/storage/runtime_repository.py": {
-    "mtime": 1781563169.578457,
-    "ast_hash": "a97ff0e45917cedaa1f05bd2a29aa61e",
+    "mtime": 1781580539.246943,
+    "ast_hash": "b00a11e683fa7bc0e4096c971c77dff4",
     "semantic_hash": ""
   },
   "src/forex_news_guard/storage/settings_repository.py": {
@@ -235,18 +235,18 @@
     "semantic_hash": ""
   },
   "tests/test_forex_factory_sync.py": {
-    "mtime": 1780802063.567098,
-    "ast_hash": "3d00c136b2a867e35c472d63f1d22bab",
-    "semantic_hash": "3d00c136b2a867e35c472d63f1d22bab"
+    "mtime": 1781580802.484591,
+    "ast_hash": "d582b3fe62041cefc830c64fde9b8cb6",
+    "semantic_hash": ""
   },
   "tests/test_notification_formatter.py": {
-    "mtime": 1781016930.126159,
-    "ast_hash": "aaaf197ea22e37378e263de543c42dc6",
-    "semantic_hash": "aaaf197ea22e37378e263de543c42dc6"
+    "mtime": 1781580635.869749,
+    "ast_hash": "6ed0314e395957c34238e9e2d80f61b5",
+    "semantic_hash": ""
   },
   "tests/test_runtime_scheduler.py": {
-    "mtime": 1781563077.137784,
-    "ast_hash": "a544471880a3945f44821c59879f9130",
+    "mtime": 1781580737.9980986,
+    "ast_hash": "cdb12c0e808f542a37434b7c8f550018",
     "semantic_hash": ""
   },
   "tests/test_settings_and_events_api.py": {
@@ -270,9 +270,9 @@
     "semantic_hash": "2f19af3b41ec3bf642078f037332ff20"
   },
   "tests/test_worker.py": {
-    "mtime": 1780948674.2176156,
-    "ast_hash": "c44fe5d75450f74b50553ad1ff44cbe7",
-    "semantic_hash": "c44fe5d75450f74b50553ad1ff44cbe7"
+    "mtime": 1781580656.5748348,
+    "ast_hash": "8224d854781271733edcb3c4dcc840e4",
+    "semantic_hash": ""
   },
   ".codex/skills/graphify/SKILL.md": {
     "mtime": 1781562063.4788418,
@@ -360,8 +360,8 @@
     "semantic_hash": ""
   },
   "docs/CURRENT_STATUS.md": {
-    "mtime": 1781563149.5135233,
-    "ast_hash": "99843c88d31ae2cad1cfc7509afd2d6c",
+    "mtime": 1781563315.2429419,
+    "ast_hash": "22b9e6cc58e2e2ab7dddc065d4de2677",
     "semantic_hash": ""
   },
   "docs/DEPLOY_GITHUB_ACTIONS_PAGES.md": {
@@ -390,8 +390,8 @@
     "semantic_hash": ""
   },
   "docs/OPERATIONS.md": {
-    "mtime": 1781563149.5145226,
-    "ast_hash": "f1ef412fdeb8e72fcf1c429e1931ee65",
+    "mtime": 1781580710.212526,
+    "ast_hash": "829072623b239518ac27d31fd34178b8",
     "semantic_hash": ""
   },
   "docs/OVERVIEW.md": {
@@ -400,8 +400,8 @@
     "semantic_hash": ""
   },
   "docs/PENDING.md": {
-    "mtime": 1781563149.5155256,
-    "ast_hash": "8e9bbe33a9ee33238cd81e8671161224",
+    "mtime": 1781563315.243942,
+    "ast_hash": "f9f8d0edee76c8ffe8ca57a28fa73e81",
     "semantic_hash": ""
   },
   "docs/PROJECT.md": {
@@ -415,8 +415,8 @@
     "semantic_hash": ""
   },
   "docs/ROADMAP.md": {
-    "mtime": 1781563149.5145226,
-    "ast_hash": "ae797dbebef56ab1c8049df8250040b9",
+    "mtime": 1781563315.244947,
+    "ast_hash": "74d786d4f6bae731a744e57c24021408",
     "semantic_hash": ""
   },
   "docs/START_HERE.md": {
@@ -430,8 +430,13 @@
     "semantic_hash": ""
   },
   "tests/test_runtime_repository.py": {
-    "mtime": 1781563077.1387846,
-    "ast_hash": "56f8605b435f5f4cb3fd19d3c0a2cb69",
+    "mtime": 1781580591.2798338,
+    "ast_hash": "c8e702538d8598a25d52b581b6066699",
+    "semantic_hash": ""
+  },
+  "src/forex_news_guard/worker_continuous.py": {
+    "mtime": 1781580547.2080393,
+    "ast_hash": "1bb94c63404948c0883d25ea6cf6153a",
     "semantic_hash": ""
   }
 }

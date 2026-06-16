@@ -31,7 +31,29 @@ En otra terminal:
 python -m forex_news_guard.worker
 ```
 
-Ese comando ahora corre una sola vez. Para repeticion continua local, usa tu propio cron o loop externo.
+Ese comando corre una sola vez y es el modo productivo actual en GitHub Actions.
+
+Para repeticion continua local o en VPS:
+
+```bash
+python -m forex_news_guard.worker_continuous
+```
+
+Ese modo instancia `RuntimeSchedulerService`, registra dos jobs internos y mantiene el proceso bloqueado hasta `Ctrl+C`:
+
+- `sync-relevant-events`: corre cada `FOREX_GUARD_SCHEDULER_SYNC_INTERVAL_MINUTES` minutos.
+- `dispatch-due-checks`: corre cada `FOREX_GUARD_SCHEDULER_TICK_SECONDS` segundos.
+
+Variables necesarias para el worker continuo:
+
+- `FOREX_GUARD_TELEGRAM_BOT_TOKEN`
+- `FOREX_GUARD_TELEGRAM_CHAT_ID`
+- `FOREX_GUARD_EVENTS_STATE_PATH`
+- `FOREX_GUARD_RUNTIME_STATE_PATH`
+- `FOREX_GUARD_SETTINGS_STATE_PATH`
+- `FOREX_GUARD_FOREX_FACTORY_COOKIE` si Forex Factory bloquea el scraping sin cookie.
+
+Para detenerlo, usa `Ctrl+C` en local o detiene el servicio del sistema si lo corres con systemd, Docker o un supervisor. Este modo no cambia produccion: `.github/workflows/cron.yml` sigue usando `python -m forex_news_guard.worker`. Su precision depende del uptime real del host; en una laptop se detiene si la sesion duerme o se cierra.
 
 ## Endpoints utiles
 
@@ -87,6 +109,26 @@ Ambos deben quedarse fuera de git.
 
 - `FOREX_GUARD_SCRAPING_FAILURE_ALERT_THRESHOLD`: fallos consecutivos de scraping necesarios para avisar por Telegram. Default: `3`. Usa `0` para desactivar el aviso.
 - `FOREX_GUARD_RUNTIME_DISPATCH_TTL_DAYS`: días de historial de dispatches que conserva `runtime.json`. Default: `7`. Usa `0` para desactivar la poda.
+
+## Auth de lectura del dashboard
+
+GitHub Pages sirve contenido estatico publico. No hay auth de lectura real dentro del dashboard publicado en Pages.
+
+Decision actual: no configurar Cloudflare Access todavia. Mientras no haya dominio o host propio, el dashboard queda como esta: Pages publico para lectura, con acciones sensibles protegidas por token de GitHub en sesion y environment `ops-control`.
+
+Si el estado operativo se considera sensible, usa una capa externa:
+
+1. Configurar un dominio propio para el dashboard.
+2. Pasar el dominio por Cloudflare con proxy activo.
+3. Crear una aplicacion de Cloudflare Access para la ruta del dashboard.
+4. Definir una politica de acceso por emails permitidos.
+5. Usar y compartir solo el dominio protegido.
+
+Importante: `public/state.json` y el dashboard siguen siendo accesibles por la URL directa de GitHub Pages si alguien la conoce. Para proteccion real, no compartas la URL publica de Pages y opera desde el dominio protegido por Cloudflare Access.
+
+Las acciones sensibles permanecen protegidas como hasta ahora: token de GitHub en sesion del navegador y workflow `dashboard-control` bajo el environment `ops-control`.
+
+Nota de costo: Cloudflare Access puede ser viable en plan gratis para uso personal o equipos pequenos, pero aun asi normalmente requiere un dominio propio. Reabrir esta tarea cuando se decida comprar/conectar dominio o mover el dashboard a un host propio.
 
 ## Rotacion de Telegram token
 

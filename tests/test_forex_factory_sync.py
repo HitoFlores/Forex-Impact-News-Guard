@@ -49,6 +49,9 @@ def test_sync_relevant_calendar_events_persists_and_schedules(tmp_path: Path) ->
                 ),
             ]
 
+        def fetch_breaking_news_events(self, reference_time: datetime):  # noqa: ANN202
+            return []
+
     stored_events, schedules = sync_relevant_calendar_events(
         policy=AlertPolicy(allowed_impacts=[ImpactLevel.HIGH], currencies=["USD"]),
         reference_time=reference_time,
