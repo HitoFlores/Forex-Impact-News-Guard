@@ -135,8 +135,8 @@
     "semantic_hash": "789d61a34010250e05c5fbfe87bd2070"
   },
   "src/forex_news_guard/services/event_scheduler.py": {
-    "mtime": 1781636207.241446,
-    "ast_hash": "94692e39f7c74919e1074ac98087369e",
+    "mtime": 1781642145.1955683,
+    "ast_hash": "84a7133180306dd116143f44b6aae140",
     "semantic_hash": ""
   },
   "src/forex_news_guard/services/forex_factory_monitor.py": {
@@ -225,8 +225,8 @@
     "semantic_hash": "356d0b7c4c20cfa07031bcf801847e5a"
   },
   "tests/test_event_scheduler.py": {
-    "mtime": 1781636207.242447,
-    "ast_hash": "5548e503c04aa61dcc29272d856e5574",
+    "mtime": 1781642145.1965675,
+    "ast_hash": "c70060e1b518845f49cd9fdee97e1d6d",
     "semantic_hash": ""
   },
   "tests/test_forex_factory_integration.py": {
@@ -360,8 +360,8 @@
     "semantic_hash": ""
   },
   "docs/CURRENT_STATUS.md": {
-    "mtime": 1781563315.2429419,
-    "ast_hash": "22b9e6cc58e2e2ab7dddc065d4de2677",
+    "mtime": 1781642764.643246,
+    "ast_hash": "a4af93dd4bd4c26178e4ac823fcaa011",
     "semantic_hash": ""
   },
   "docs/DEPLOY_GITHUB_ACTIONS_PAGES.md": {
@@ -390,8 +390,8 @@
     "semantic_hash": ""
   },
   "docs/OPERATIONS.md": {
-    "mtime": 1781588886.418176,
-    "ast_hash": "1926213c8a881bdf3a52df0bdff5d401",
+    "mtime": 1781642764.6452453,
+    "ast_hash": "8a0008f1e0297b944ca931ba5d255042",
     "semantic_hash": ""
   },
   "docs/OVERVIEW.md": {
@@ -415,13 +415,13 @@
     "semantic_hash": ""
   },
   "docs/ROADMAP.md": {
-    "mtime": 1781563315.244947,
-    "ast_hash": "74d786d4f6bae731a744e57c24021408",
+    "mtime": 1781642764.6442442,
+    "ast_hash": "3d7cfa89a16f0cc049f4e8df66e9585d",
     "semantic_hash": ""
   },
   "docs/START_HERE.md": {
-    "mtime": 1781298953.5849435,
-    "ast_hash": "9197f712bc2c91b77411bb49cfef6280",
+    "mtime": 1781642779.0686822,
+    "ast_hash": "eaf0ce951d8ff2b42298a9c357f07a29",
     "semantic_hash": ""
   },
   "public/index.html": {

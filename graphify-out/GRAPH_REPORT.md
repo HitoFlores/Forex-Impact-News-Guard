@@ -1,7 +1,7 @@
 # Graph Report - Forex-Impact-News-Guard  (2026-06-16)
 
 ## Corpus Check
-- 82 files · ~34,634 words
+- 82 files · ~34,556 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4e35568b`
+- Built from commit: `ed79795b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -152,12 +152,12 @@ Cohesion: 0.08
 Nodes (23): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+15 more)
 
 ### Community 25 - "Community 25"
-Cohesion: 0.10
-Nodes (20): Alta prioridad, API local `[código]`, Baja prioridad / largo plazo, Control de calidad de alertas `[código]`, CURRENT STATUS, Dashboard `[doc]`, Documentados explícitamente `[doc]`, Estado actual (+12 more)
+Cohesion: 0.09
+Nodes (21): Alta prioridad, API local `[código]`, Baja prioridad / largo plazo, Configuracion productiva actual, Control de calidad de alertas `[código]`, CURRENT STATUS, Dashboard `[doc]`, Documentados explícitamente `[doc]` (+13 more)
 
 ### Community 26 - "Community 26"
 Cohesion: 0.12
-Nodes (16): Activar o descartar el canal de breaking news, Autenticación de lectura para el dashboard, Canal de notificaciones adicional (Web Push / email), Corto plazo, Documentados `[doc]`, Estados de salud intermedios (WARN), Gaps de cobertura de tests, Inferidos del código `[inferencia]` (+8 more)
+Nodes (15): Autenticación de lectura para el dashboard, Canal de notificaciones adicional (Web Push / email), Corto plazo, Documentados `[doc]`, Estados de salud intermedios (WARN), Gaps de cobertura de tests, Inferidos del código `[inferencia]`, Largo plazo (+7 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.11

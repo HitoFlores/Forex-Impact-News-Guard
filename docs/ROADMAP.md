@@ -20,14 +20,6 @@ Las funciones que construyen los mensajes de Telegram (resumen diario, alerta in
 ## Mediano plazo
 _Mejoras que amplían capacidades del producto o mejoran resiliencia operativa. Requieren diseño pero no cambian la arquitectura de fondo._
 
-### Activar o descartar el canal de breaking news
-
-`AlertPolicy.breaking_enabled` existe, `ForexFactoryClient` puede parsear breaking news, y los modelos de dominio ya soportan el tipo `is_breaking=True`. `[inferencia]` Sin embargo, el worker nunca invoca ese canal en producción: sólo aparece en la ruta de preview de la API local.
-
-**Decidir:** integrar breaking news al ciclo productivo con su propia lógica de dispatch, o eliminarlo del código y del modelo para evitar confusión sobre qué está activo.
-
----
-
 ### Estados de salud intermedios (WARN)
 
 El sistema tiene `RuntimeProbeStatus.WARN` definido en el modelo de observabilidad pero ningún código lo emite. `[inferencia]` El estado salta directamente de OK a ERROR. Esto hace que el dashboard muestre verde hasta el momento del fallo total, sin señal de degradación progresiva.
@@ -102,7 +94,7 @@ Mientras el uso sea personal esto no es un problema. Si se comparte con un equip
 |---|---|---|
 | Fallo de scraping silencioso para el operador | Baja | Mitigado con alerta Telegram al alcanzar el umbral de fallos consecutivos |
 | `runtime.json` muy grande ralentiza ciclos del worker | Baja | Mitigado con poda por TTL de dispatches antiguos |
-| Breaking news activo en config pero no en worker genera confusión en diagnóstico | Baja | Bajo |
+| Breaking news de Forex Factory usa `currency=NEWS` | Baja | Mitigado: los eventos `is_breaking=True` saltan el filtro de moneda y siguen respetando impacto |
 
 ---
 
@@ -111,6 +103,5 @@ Mientras el uso sea personal esto no es un problema. Si se comparte con un equip
 Ordenados por relación impacto / esfuerzo:
 
 1. **Completar tests para mensajes Telegram** — mayor riesgo de regresión silenciosa; parte de la cobertura se valida día a día con escenarios reales.
-2. **Decidir sobre breaking news** — activar o eliminar; el estado actual genera ambigüedad.
-3. **Estados WARN en observabilidad** — mejora la legibilidad del dashboard en degradación parcial.
-4. **Límite de registros renderizados en dashboard** — mantiene pequeño el artefacto publicado si el historial operativo crece.
+2. **Estados WARN en observabilidad** — mejora la legibilidad del dashboard en degradación parcial.
+3. **Límite de registros renderizados en dashboard** — mantiene pequeño el artefacto publicado si el historial operativo crece.

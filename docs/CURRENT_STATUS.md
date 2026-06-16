@@ -15,11 +15,11 @@
 El sistema está **operativo en producción** sobre GitHub Actions + GitHub Pages en la rama `main`. `[doc]`
 
 - Cron `sync-and-publish` corre cada 5 minutos, persiste estado en `.state/` y publica dashboard. `[doc]`
-- Último redeploy manual validado: run `27214972059`. `[doc]`
+- Último redeploy manual validado: run `27646570556`. `[doc]`
 - `keepalive` mensual validado; genera commit automático para evitar que GH desactive schedules. `[doc]`
 - Dashboard publicado en modo `Live` y `Demo`. `[doc]`
 - Canal Telegram activo y validado con 5 mensajes sample reales. `[doc]`
-- Todos los tests pasan: **46/46** (`pytest tests/`). `[test]`
+- Todos los tests pasan: **60/60** (`pytest tests/`). `[test]`
 
 ---
 
@@ -29,6 +29,7 @@ El sistema está **operativo en producción** sobre GitHub Actions + GitHub Page
 
 - Sincronización periódica del calendario de Forex Factory (HTML scraping con `cloudscraper`)
 - Filtrado de eventos por impacto y moneda según `AlertPolicy` del usuario
+- Breaking news de Forex Factory integrado al ciclo productivo cuando `breaking_enabled=true`; las noticias `NEWS` no se bloquean por filtro de moneda. `[código + test]`
 - Retención de eventos de hoy y mañana únicamente en `.state/events.json`
 - Cálculo de timestamps `precheck`, `alert` y `result_check` por evento
 - Deduplicación completa: cada dispatch se registra en `runtime.json`; ningún mensaje se duplica entre re-ejecuciones del cron
@@ -75,11 +76,18 @@ El sistema está **operativo en producción** sobre GitHub Actions + GitHub Page
 
 ---
 
+## Configuracion productiva actual
+
+El estado productivo versionado en `.state/settings.json` vuelve a los defaults operativos:
+
+- `high_impact_only=true` y `allowed_impacts=null`: sólo noticias de impacto alto.
+- `currencies=[]`: sin filtro por moneda; entra cualquier moneda de Forex Factory que pase impacto.
+- `daily_summary_enabled=true`: el resumen diario se envía haya o no noticias para reportar estado.
+- `lead_minutes=15`: alerta principal 15 minutos antes del evento.
+
 ## Funcionalidades en pruebas
 
 No hay funcionalidades en estado experimental explícito al cierre de la última sesión. `[doc: PENDING.md sin pendientes activos]`
-
-**Nota de inferencia `[código]`:** El modelo `AlertPolicy.breaking_enabled = True` existe y `ForexFactoryClient.fetch_breaking_news_events()` está implementado, pero no hay evidencia en el código de que el worker llame a `fetch_breaking_news_events` en el ciclo productivo actual. Sólo se invoca en `preview_live_alerts` de la API local. El canal de breaking news podría estar parcialmente implementado pero no activo en producción.
 
 ---
 
@@ -90,7 +98,6 @@ No hay funcionalidades en estado experimental explícito al cierre de la última
 **Pendientes inferidos del código `[código]`:**
 
 - `build_pre_alert_message`, `build_result_message`, `build_grouped_pre_alert_message`, `build_grouped_result_message` no tienen tests unitarios propios. Son las funciones que construyen exactamente lo que el usuario recibe en Telegram.
-- `preview_forex_factory_live_preview` (ruta API live) no tiene test de integración.
 - `RuntimeProbeStatus.WARN` está definido en el enum pero ningún código lo emite. La observabilidad interna sólo distingue OK/ERROR/IDLE.
 - Worker para modo continuo (`BackgroundScheduler.start()`) está implementado pero no usado en producción. Si se quiere precisión sub-minuto, ese modo necesita validación real.
 - `DeliveryChannel` sólo tiene `TELEGRAM`. El README menciona "Web Push en siguientes iteraciones" como idea no implementada.
@@ -129,15 +136,13 @@ Ordenados por impacto / esfuerzo estimado:
 
 ### Media prioridad
 
-2. **Activar o remover `breaking_enabled`** — la funcionalidad existe en el cliente y en el modelo de política, pero el worker no la invoca. Decidir si se integra al ciclo productivo o se elimina para evitar confusión.
-
-3. **Emitir `WARN` en `RuntimeProbeStatus`** — el estado existe pero no se usa. Implementar umbral intermedio (ej. 1-2 fallos consecutivos = WARN, 3+ = ERROR) para dar visibilidad antes de que el sistema falle del todo.
+2. **Emitir `WARN` en `RuntimeProbeStatus`** — el estado existe pero no se usa. Implementar umbral intermedio (ej. 1-2 fallos consecutivos = WARN, 3+ = ERROR) para dar visibilidad antes de que el sistema falle del todo.
 
 ### Baja prioridad / largo plazo
 
-4. **Worker continuo con infraestructura propia** — GitHub Actions no garantiza precisión sub-minuto. Si se necesita esa precisión, el modo `BackgroundScheduler.start()` ya existe en código y sólo necesita validación en un entorno con uptime real.
+3. **Worker continuo con infraestructura propia** — GitHub Actions no garantiza precisión sub-minuto. Si se necesita esa precisión, el modo `BackgroundScheduler.start()` ya existe en código y sólo necesita validación en un entorno con uptime real.
 
-5. **Auth de lectura para el dashboard** — si el estado operativo (ventanas de riesgo, timing de alertas) se vuelve sensible, mover la UI a una superficie con auth real.
+4. **Auth de lectura para el dashboard** — si el estado operativo (ventanas de riesgo, timing de alertas) se vuelve sensible, mover la UI a una superficie con auth real.
 
 ---
 
@@ -150,7 +155,7 @@ Ordenados por impacto / esfuerzo estimado:
 | Flujo principal (sync → alert → result) | ✅ Operativo y validado |
 | Notificaciones Telegram | ✅ Validadas con mensajes reales |
 | Dashboard operativo | ✅ Publicado en Pages |
-| Cobertura de tests | ⚠️ 46 tests pasan, pero el formateador de mensajes (interfaz con el usuario) no tiene cobertura |
+| Cobertura de tests | ⚠️ 60 tests pasan, pero el formateador de mensajes (interfaz con el usuario) aún tiene riesgo de regresión visual |
 | Observabilidad | ⚠️ Probes registran estado pero no alertan activamente al operador |
 | Resiliencia a cambios upstream | ⚠️ Dos estrategias de parsing, pero sin fallback si ambas fallan |
 | Escalabilidad | ➡️ Diseño para uso individual; sin rate limiting ni compactación de estado |

@@ -28,7 +28,7 @@ Antes de cualquier deploy, rotar el `TELEGRAM_BOT_TOKEN`.
 Si retomas desde cero, el estado real actual es este:
 
 - `sync-and-publish` ya pasa en `main` y Pages ya esta publicado.
-- Ultimo redeploy manual validado: run `27214972059` de `sync-and-publish`, completado con exito.
+- Ultimo redeploy manual validado: run `27646570556` de `sync-and-publish`, completado con exito.
 - `keepalive` ya se valido manualmente y genera commit automatico correcto.
 - `telegram-smoke-test` ya fue probado desde GitHub Actions con exito; ultimo run validado: `27215982457`.
 - `dashboard-control` ya existe y permite cambiar settings basicos desde el dashboard via GitHub API + workflow.

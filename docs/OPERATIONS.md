@@ -77,9 +77,9 @@ Payload base:
   "calendar_enabled": true,
   "breaking_enabled": true,
   "high_impact_only": true,
-  "allowed_impacts": ["high"],
+  "allowed_impacts": null,
   "currencies": [],
-  "lead_minutes": 5,
+  "lead_minutes": 15,
   "revalidate_minutes_before_alert": 2,
   "result_check_delay_minutes": 1,
   "result_retry_minutes": [3, 5],
@@ -90,6 +90,8 @@ Payload base:
   "timezone": "America/Chihuahua"
 }
 ```
+
+Ese payload representa el default operativo: sólo alto impacto, todas las monedas, breaking news activo y resumen diario activo.
 
 Nota sobre `currencies`:
 
