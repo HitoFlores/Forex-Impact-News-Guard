@@ -37,6 +37,23 @@ def test_filter_relevant_events_respects_impacts_and_currencies() -> None:
     assert [event.id for event in filtered] == ["usd-high", "eur-medium"]
 
 
+def test_filter_relevant_events_keeps_breaking_news_with_news_currency() -> None:
+    timezone = ZoneInfo("America/Chihuahua")
+    event = ForexEvent(
+        id="breaking-oil",
+        title="Oil headline",
+        currency="NEWS",
+        impact=ImpactLevel.HIGH,
+        scheduled_at=datetime(2026, 5, 26, 14, 0, tzinfo=timezone),
+        is_breaking=True,
+    )
+    policy = AlertPolicy(allowed_impacts=[ImpactLevel.HIGH], currencies=["USD", "EUR"])
+
+    filtered = filter_relevant_events([event], policy)
+
+    assert [item.id for item in filtered] == ["breaking-oil"]
+
+
 def test_build_event_schedules_creates_precheck_alert_and_result_retries() -> None:
     timezone = ZoneInfo("America/Chihuahua")
     policy = AlertPolicy(

@@ -1,17 +1,12 @@
 {
-  "allowed_impacts": [
-    "high"
-  ],
+  "allowed_impacts": null,
   "breaking_enabled": true,
   "calendar_enabled": true,
-  "currencies": [
-    "USD",
-    "EUR"
-  ],
-  "daily_summary_enabled": false,
+  "currencies": [],
+  "daily_summary_enabled": true,
   "high_impact_only": true,
   "include_results": true,
-  "lead_minutes": 9,
+  "lead_minutes": 15,
   "result_check_delay_minutes": 1,
   "result_retry_minutes": [
     3,

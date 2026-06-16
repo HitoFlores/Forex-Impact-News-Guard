@@ -20,7 +20,7 @@ def filter_relevant_events(events: list[ForexEvent], policy: AlertPolicy) -> lis
             continue
         if event.impact not in allowed_impacts:
             continue
-        if allowed_currencies and event.currency.upper() not in allowed_currencies:
+        if allowed_currencies and not event.is_breaking and event.currency.upper() not in allowed_currencies:
             continue
         filtered.append(event)
     filtered.sort(key=lambda item: item.scheduled_at or datetime.min.replace(tzinfo=policy.timezone_info))
