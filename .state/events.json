@@ -17,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=151081"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T04:56:02.433658-06:00"
+      "stored_at": "2026-06-18T08:10:14.490289-06:00"
     },
     {
       "event": {
@@ -36,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=147409"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T04:56:02.433658-06:00"
+      "stored_at": "2026-06-18T08:10:14.490289-06:00"
     },
     {
       "event": {
@@ -55,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=147407"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T04:56:02.433658-06:00"
+      "stored_at": "2026-06-18T08:10:14.490289-06:00"
     },
     {
       "event": {
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=147408"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T04:56:02.433658-06:00"
+      "stored_at": "2026-06-18T08:10:14.490289-06:00"
     },
     {
       "event": {
@@ -93,12 +93,12 @@
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=150715"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T04:56:02.433658-06:00"
+      "stored_at": "2026-06-18T08:10:14.490289-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "2-0-7",
+        "actual_better_worse": 1,
         "currency": "GBP",
         "forecast": "1-0-8",
         "id": "ff-calendar-150714",
@@ -112,11 +112,11 @@
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=150714"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T04:56:02.433658-06:00"
+      "stored_at": "2026-06-18T08:10:14.490289-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "3.75%",
         "actual_better_worse": 0,
         "currency": "GBP",
         "forecast": "3.75%",
@@ -131,7 +131,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=150713"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T04:56:02.433658-06:00"
+      "stored_at": "2026-06-18T08:10:14.490289-06:00"
     }
   ]
 }
