@@ -2,6 +2,25 @@
   "relevant_events": [
     {
       "event": {
+        "actual": "31.2K",
+        "actual_better_worse": 2,
+        "currency": "GBP",
+        "forecast": "25.8K",
+        "id": "ff-calendar-151081",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "26.5K",
+        "published_at": null,
+        "scheduled_at": "2026-06-18T02:00:00-06:00",
+        "source": "forex_factory",
+        "title": "Claimant Count Change",
+        "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=151081"
+      },
+      "event_date": "2026-06-18",
+      "stored_at": "2026-06-18T15:50:33.103773-06:00"
+    },
+    {
+      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "CHF",
@@ -11,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-06-18T00:30:00-06:00",
+        "scheduled_at": "2026-06-18T03:30:00-06:00",
         "source": "forex_factory",
         "title": "SNB Monetary Policy Assessment",
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=147409"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T13:40:34.507412-06:00"
+      "stored_at": "2026-06-18T15:50:33.103773-06:00"
     },
     {
       "event": {
@@ -30,13 +49,13 @@
         "is_breaking": false,
         "previous": "0.00%",
         "published_at": null,
-        "scheduled_at": "2026-06-18T00:30:00-06:00",
+        "scheduled_at": "2026-06-18T03:30:00-06:00",
         "source": "forex_factory",
         "title": "SNB Policy Rate",
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=147407"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T13:40:34.507412-06:00"
+      "stored_at": "2026-06-18T15:50:33.103773-06:00"
     },
     {
       "event": {
@@ -49,13 +68,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-06-18T01:00:00-06:00",
+        "scheduled_at": "2026-06-18T04:00:00-06:00",
         "source": "forex_factory",
         "title": "SNB Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=147408"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T13:40:34.507412-06:00"
+      "stored_at": "2026-06-18T15:50:33.103773-06:00"
     },
     {
       "event": {
@@ -68,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-06-18T04:00:00-06:00",
+        "scheduled_at": "2026-06-18T07:00:00-06:00",
         "source": "forex_factory",
         "title": "Monetary Policy Summary",
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=150715"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T13:40:34.507412-06:00"
+      "stored_at": "2026-06-18T15:50:33.103773-06:00"
     },
     {
       "event": {
@@ -87,13 +106,13 @@
         "is_breaking": false,
         "previous": "1-0-8",
         "published_at": null,
-        "scheduled_at": "2026-06-18T04:00:00-06:00",
+        "scheduled_at": "2026-06-18T07:00:00-06:00",
         "source": "forex_factory",
         "title": "MPC Official Bank Rate Votes",
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=150714"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T13:40:34.507412-06:00"
+      "stored_at": "2026-06-18T15:50:33.103773-06:00"
     },
     {
       "event": {
@@ -106,13 +125,13 @@
         "is_breaking": false,
         "previous": "3.75%",
         "published_at": null,
-        "scheduled_at": "2026-06-18T04:00:00-06:00",
+        "scheduled_at": "2026-06-18T07:00:00-06:00",
         "source": "forex_factory",
         "title": "Official Bank Rate",
         "url": "https://www.forexfactory.com/calendar?day=jun18.2026#detail=150713"
       },
       "event_date": "2026-06-18",
-      "stored_at": "2026-06-18T13:40:34.507412-06:00"
+      "stored_at": "2026-06-18T15:50:33.103773-06:00"
     }
   ]
 }
