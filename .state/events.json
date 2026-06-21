@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-06-22T08:30:00-06:00",
+        "scheduled_at": "2026-06-22T07:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jun22.2026#detail=149150"
       },
       "event_date": "2026-06-22",
-      "stored_at": "2026-06-21T16:47:35.041319-06:00"
+      "stored_at": "2026-06-21T17:59:30.870281-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "2.1%",
         "published_at": null,
-        "scheduled_at": "2026-06-22T08:30:00-06:00",
+        "scheduled_at": "2026-06-22T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Median CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jun22.2026#detail=149151"
       },
       "event_date": "2026-06-22",
-      "stored_at": "2026-06-21T16:47:35.041319-06:00"
+      "stored_at": "2026-06-21T17:59:30.870281-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "2.0%",
         "published_at": null,
-        "scheduled_at": "2026-06-22T08:30:00-06:00",
+        "scheduled_at": "2026-06-22T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jun22.2026#detail=149152"
       },
       "event_date": "2026-06-22",
-      "stored_at": "2026-06-21T16:47:35.041319-06:00"
+      "stored_at": "2026-06-21T17:59:30.870281-06:00"
     }
   ]
 }
