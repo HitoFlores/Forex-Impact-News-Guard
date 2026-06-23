@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-06-23T21:30:00-06:00",
+        "scheduled_at": "2026-06-23T20:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jun23.2026#detail=152596"
       },
       "event_date": "2026-06-23",
-      "stored_at": "2026-06-23T08:00:53.592009-06:00"
+      "stored_at": "2026-06-23T10:32:01.969221-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "4.2%",
         "published_at": null,
-        "scheduled_at": "2026-06-23T21:30:00-06:00",
+        "scheduled_at": "2026-06-23T20:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jun23.2026#detail=149097"
       },
       "event_date": "2026-06-23",
-      "stored_at": "2026-06-23T08:00:53.592009-06:00"
+      "stored_at": "2026-06-23T10:32:01.969221-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-06-23T21:30:00-06:00",
+        "scheduled_at": "2026-06-23T20:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed Mean CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jun23.2026#detail=152597"
       },
       "event_date": "2026-06-23",
-      "stored_at": "2026-06-23T08:00:53.592009-06:00"
+      "stored_at": "2026-06-23T10:32:01.969221-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "-18.6K",
         "published_at": null,
-        "scheduled_at": "2026-06-24T21:30:00-06:00",
+        "scheduled_at": "2026-06-24T20:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=jun24.2026#detail=148140"
       },
       "event_date": "2026-06-24",
-      "stored_at": "2026-06-23T08:00:53.592009-06:00"
+      "stored_at": "2026-06-23T10:32:01.969221-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": "4.5%",
         "published_at": null,
-        "scheduled_at": "2026-06-24T21:30:00-06:00",
+        "scheduled_at": "2026-06-24T20:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=jun24.2026#detail=148141"
       },
       "event_date": "2026-06-24",
-      "stored_at": "2026-06-23T08:00:53.592009-06:00"
+      "stored_at": "2026-06-23T10:32:01.969221-06:00"
     }
   ]
 }
