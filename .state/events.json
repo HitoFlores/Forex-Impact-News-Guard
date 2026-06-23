@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-06-22T05:30:00-06:00",
+        "scheduled_at": "2026-06-22T14:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jun22.2026#detail=149150"
       },
       "event_date": "2026-06-22",
-      "stored_at": "2026-06-22T18:19:25.224291-06:00"
+      "stored_at": "2026-06-22T22:34:56.531828-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "2.1%",
         "published_at": null,
-        "scheduled_at": "2026-06-22T05:30:00-06:00",
+        "scheduled_at": "2026-06-22T14:30:00-06:00",
         "source": "forex_factory",
         "title": "Median CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jun22.2026#detail=149151"
       },
       "event_date": "2026-06-22",
-      "stored_at": "2026-06-22T18:19:25.224291-06:00"
+      "stored_at": "2026-06-22T22:34:56.531828-06:00"
     },
     {
       "event": {
@@ -49,70 +49,13 @@
         "is_breaking": false,
         "previous": "2.0%",
         "published_at": null,
-        "scheduled_at": "2026-06-22T05:30:00-06:00",
+        "scheduled_at": "2026-06-22T14:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jun22.2026#detail=149152"
       },
       "event_date": "2026-06-22",
-      "stored_at": "2026-06-22T18:19:25.224291-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "AUD",
-        "forecast": "-0.4%",
-        "id": "ff-calendar-152596",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.4%",
-        "published_at": null,
-        "scheduled_at": "2026-06-23T18:30:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=jun23.2026#detail=152596"
-      },
-      "event_date": "2026-06-23",
-      "stored_at": "2026-06-22T18:19:25.224291-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "AUD",
-        "forecast": "4.3%",
-        "id": "ff-calendar-149097",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "4.2%",
-        "published_at": null,
-        "scheduled_at": "2026-06-23T18:30:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=jun23.2026#detail=149097"
-      },
-      "event_date": "2026-06-23",
-      "stored_at": "2026-06-22T18:19:25.224291-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "AUD",
-        "forecast": "0.3%",
-        "id": "ff-calendar-152597",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.3%",
-        "published_at": null,
-        "scheduled_at": "2026-06-23T18:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Trimmed Mean CPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=jun23.2026#detail=152597"
-      },
-      "event_date": "2026-06-23",
-      "stored_at": "2026-06-22T18:19:25.224291-06:00"
+      "stored_at": "2026-06-22T22:34:56.531828-06:00"
     }
   ]
 }
