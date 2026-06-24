@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "-18.6K",
         "published_at": null,
-        "scheduled_at": "2026-06-24T20:30:00-06:00",
+        "scheduled_at": "2026-06-24T21:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=jun24.2026#detail=148140"
       },
       "event_date": "2026-06-24",
-      "stored_at": "2026-06-24T05:13:59.256076-06:00"
+      "stored_at": "2026-06-24T07:29:31.152468-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "4.5%",
         "published_at": null,
-        "scheduled_at": "2026-06-24T20:30:00-06:00",
+        "scheduled_at": "2026-06-24T21:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=jun24.2026#detail=148141"
       },
       "event_date": "2026-06-24",
-      "stored_at": "2026-06-24T05:13:59.256076-06:00"
+      "stored_at": "2026-06-24T07:29:31.152468-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-06-25T07:30:00-06:00",
+        "scheduled_at": "2026-06-25T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PCE Price Index m/m",
         "url": "https://www.forexfactory.com/calendar?day=jun25.2026#detail=148232"
       },
       "event_date": "2026-06-25",
-      "stored_at": "2026-06-24T05:13:59.256076-06:00"
+      "stored_at": "2026-06-24T07:29:31.152468-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "1.6%",
         "published_at": null,
-        "scheduled_at": "2026-06-25T07:30:00-06:00",
+        "scheduled_at": "2026-06-25T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Final GDP q/q",
         "url": "https://www.forexfactory.com/calendar?day=jun25.2026#detail=148308"
       },
       "event_date": "2026-06-25",
-      "stored_at": "2026-06-24T05:13:59.256076-06:00"
+      "stored_at": "2026-06-24T07:29:31.152468-06:00"
     }
   ]
 }
