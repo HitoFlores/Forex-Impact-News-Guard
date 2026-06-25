@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-06-25T06:30:00-06:00",
+        "scheduled_at": "2026-06-25T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PCE Price Index m/m",
         "url": "https://www.forexfactory.com/calendar?day=jun25.2026#detail=148232"
       },
       "event_date": "2026-06-25",
-      "stored_at": "2026-06-25T16:07:44.626932-06:00"
+      "stored_at": "2026-06-25T17:43:23.107351-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "1.6%",
         "published_at": null,
-        "scheduled_at": "2026-06-25T06:30:00-06:00",
+        "scheduled_at": "2026-06-25T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Final GDP q/q",
         "url": "https://www.forexfactory.com/calendar?day=jun25.2026#detail=148308"
       },
       "event_date": "2026-06-25",
-      "stored_at": "2026-06-25T16:07:44.626932-06:00"
+      "stored_at": "2026-06-25T17:43:23.107351-06:00"
     }
   ]
 }
