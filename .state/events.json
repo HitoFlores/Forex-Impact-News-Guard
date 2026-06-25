@@ -2,7 +2,7 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
+        "actual": "0.3%",
         "actual_better_worse": 0,
         "currency": "USD",
         "forecast": "0.3%",
@@ -17,12 +17,12 @@
         "url": "https://www.forexfactory.com/calendar?day=jun25.2026#detail=148232"
       },
       "event_date": "2026-06-25",
-      "stored_at": "2026-06-25T05:41:42.915131-06:00"
+      "stored_at": "2026-06-25T07:50:53.432707-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "2.1%",
+        "actual_better_worse": 1,
         "currency": "USD",
         "forecast": "1.6%",
         "id": "ff-calendar-148308",
@@ -36,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jun25.2026#detail=148308"
       },
       "event_date": "2026-06-25",
-      "stored_at": "2026-06-25T05:41:42.915131-06:00"
+      "stored_at": "2026-06-25T07:50:53.432707-06:00"
     }
   ]
 }
