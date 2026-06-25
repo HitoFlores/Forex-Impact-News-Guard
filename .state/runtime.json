@@ -3,38 +3,6 @@
     {
       "attempt": 1,
       "channel": "telegram",
-      "event_id": "ff-calendar-150020",
-      "kind": "precheck",
-      "scheduled_for": "2026-06-17T17:28:00-06:00",
-      "sent_at": "2026-06-17T19:41:51.418167-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
-      "event_id": "ff-calendar-150020",
-      "kind": "result",
-      "scheduled_for": "2026-06-17T17:46:00-06:00",
-      "sent_at": "2026-06-17T19:41:51.418167-06:00"
-    },
-    {
-      "attempt": 2,
-      "channel": "telegram",
-      "event_id": "ff-calendar-150020",
-      "kind": "result",
-      "scheduled_for": "2026-06-17T17:48:00-06:00",
-      "sent_at": "2026-06-17T19:41:51.418167-06:00"
-    },
-    {
-      "attempt": 3,
-      "channel": "telegram",
-      "event_id": "ff-calendar-150020",
-      "kind": "result",
-      "scheduled_for": "2026-06-17T17:50:00-06:00",
-      "sent_at": "2026-06-17T19:41:51.418167-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
       "event_id": "daily-summary-2026-06-18",
       "kind": "daily_summary",
       "scheduled_for": "2026-06-18T00:00:00-06:00",
@@ -1127,31 +1095,95 @@
       "kind": "result",
       "scheduled_for": "2026-06-23T21:35:00-06:00",
       "sent_at": "2026-06-23T22:38:28.723738-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148140",
+      "kind": "precheck",
+      "scheduled_for": "2026-06-24T18:13:00-06:00",
+      "sent_at": "2026-06-24T19:51:39.753527-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148141",
+      "kind": "precheck",
+      "scheduled_for": "2026-06-24T18:13:00-06:00",
+      "sent_at": "2026-06-24T19:51:39.753527-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148140",
+      "kind": "result",
+      "scheduled_for": "2026-06-24T18:31:00-06:00",
+      "sent_at": "2026-06-24T19:51:39.753527-06:00"
+    },
+    {
+      "attempt": 2,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148140",
+      "kind": "result",
+      "scheduled_for": "2026-06-24T18:33:00-06:00",
+      "sent_at": "2026-06-24T19:51:39.753527-06:00"
+    },
+    {
+      "attempt": 3,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148140",
+      "kind": "result",
+      "scheduled_for": "2026-06-24T18:35:00-06:00",
+      "sent_at": "2026-06-24T19:51:39.753527-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148141",
+      "kind": "result",
+      "scheduled_for": "2026-06-24T18:31:00-06:00",
+      "sent_at": "2026-06-24T19:51:39.753527-06:00"
+    },
+    {
+      "attempt": 2,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148141",
+      "kind": "result",
+      "scheduled_for": "2026-06-24T18:33:00-06:00",
+      "sent_at": "2026-06-24T19:51:39.753527-06:00"
+    },
+    {
+      "attempt": 3,
+      "channel": "telegram",
+      "event_id": "ff-calendar-148141",
+      "kind": "result",
+      "scheduled_for": "2026-06-24T18:35:00-06:00",
+      "sent_at": "2026-06-24T19:51:39.753527-06:00"
     }
   ],
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-24T17:47:10.700018-06:00",
+      "last_attempt_at": "2026-06-24T19:51:39.753527-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-24T17:47:10.700018-06:00",
+      "last_success_at": "2026-06-24T19:51:39.753527-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-24T17:47:10.700018-06:00",
+      "last_attempt_at": "2026-06-24T19:51:39.753527-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-24T17:47:10.700018-06:00",
+      "last_success_at": "2026-06-24T19:51:39.753527-06:00",
       "status": "ok"
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-23T22:38:28.723738-06:00",
+      "last_attempt_at": "2026-06-24T19:51:39.753527-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-23T22:38:28.723738-06:00",
+      "last_success_at": "2026-06-24T19:51:39.753527-06:00",
       "status": "ok"
     }
   }

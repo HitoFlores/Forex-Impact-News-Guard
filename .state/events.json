@@ -2,8 +2,8 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "40.3K",
+        "actual_better_worse": 1,
         "currency": "AUD",
         "forecast": "31.2K",
         "id": "ff-calendar-148140",
@@ -11,17 +11,17 @@
         "is_breaking": false,
         "previous": "-18.6K",
         "published_at": null,
-        "scheduled_at": "2026-06-24T21:30:00-06:00",
+        "scheduled_at": "2026-06-24T18:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=jun24.2026#detail=148140"
       },
       "event_date": "2026-06-24",
-      "stored_at": "2026-06-24T17:47:10.700018-06:00"
+      "stored_at": "2026-06-24T19:51:39.753527-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "4.4%",
         "actual_better_worse": 0,
         "currency": "AUD",
         "forecast": "4.4%",
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "4.5%",
         "published_at": null,
-        "scheduled_at": "2026-06-24T21:30:00-06:00",
+        "scheduled_at": "2026-06-24T18:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=jun24.2026#detail=148141"
       },
       "event_date": "2026-06-24",
-      "stored_at": "2026-06-24T17:47:10.700018-06:00"
+      "stored_at": "2026-06-24T19:51:39.753527-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-06-25T08:30:00-06:00",
+        "scheduled_at": "2026-06-25T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PCE Price Index m/m",
         "url": "https://www.forexfactory.com/calendar?day=jun25.2026#detail=148232"
       },
       "event_date": "2026-06-25",
-      "stored_at": "2026-06-24T17:47:10.700018-06:00"
+      "stored_at": "2026-06-24T19:51:39.753527-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "1.6%",
         "published_at": null,
-        "scheduled_at": "2026-06-25T08:30:00-06:00",
+        "scheduled_at": "2026-06-25T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Final GDP q/q",
         "url": "https://www.forexfactory.com/calendar?day=jun25.2026#detail=148308"
       },
       "event_date": "2026-06-25",
-      "stored_at": "2026-06-24T17:47:10.700018-06:00"
+      "stored_at": "2026-06-24T19:51:39.753527-06:00"
     }
   ]
 }
