@@ -908,18 +908,18 @@
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-26T16:51:07.628220-06:00",
+      "last_attempt_at": "2026-06-26T17:51:29.128166-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-26T16:51:07.628220-06:00",
+      "last_success_at": "2026-06-26T17:51:29.128166-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-26T16:51:07.628220-06:00",
+      "last_attempt_at": "2026-06-26T17:51:29.128166-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-26T16:51:07.628220-06:00",
+      "last_success_at": "2026-06-26T17:51:29.128166-06:00",
       "status": "ok"
     },
     "telegram": {
