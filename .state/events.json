@@ -1,3 +1,23 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": "0.4%",
+        "id": "ff-calendar-149224",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "-0.1%",
+        "published_at": null,
+        "scheduled_at": "2026-06-30T05:30:00-06:00",
+        "source": "forex_factory",
+        "title": "GDP m/m",
+        "url": "https://www.forexfactory.com/calendar?day=jun30.2026#detail=149224"
+      },
+      "event_date": "2026-06-30",
+      "stored_at": "2026-06-29T01:14:08.886683-06:00"
+    }
+  ]
 }
