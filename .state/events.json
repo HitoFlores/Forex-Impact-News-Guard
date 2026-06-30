@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "-0.1%",
         "published_at": null,
-        "scheduled_at": "2026-06-30T08:30:00-06:00",
+        "scheduled_at": "2026-06-30T06:30:00-06:00",
         "source": "forex_factory",
         "title": "GDP m/m",
         "url": "https://www.forexfactory.com/calendar?day=jun30.2026#detail=149224"
       },
       "event_date": "2026-06-30",
-      "stored_at": "2026-06-29T19:50:48.189825-06:00"
+      "stored_at": "2026-06-29T23:58:09.300001-06:00"
     }
   ]
 }
