@@ -11,13 +11,70 @@
         "is_breaking": false,
         "previous": "-0.1%",
         "published_at": null,
-        "scheduled_at": "2026-06-30T06:30:00-06:00",
+        "scheduled_at": "2026-06-30T05:30:00-06:00",
         "source": "forex_factory",
         "title": "GDP m/m",
         "url": "https://www.forexfactory.com/calendar?day=jun30.2026#detail=149224"
       },
       "event_date": "2026-06-30",
-      "stored_at": "2026-06-29T23:58:09.300001-06:00"
+      "stored_at": "2026-06-30T03:49:26.586190-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": null,
+        "id": "ff-calendar-153342",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-01T06:00:00-06:00",
+        "source": "forex_factory",
+        "title": "BOE Gov Bailey Speaks",
+        "url": "https://www.forexfactory.com/calendar?day=jul1.2026#detail=153342"
+      },
+      "event_date": "2026-07-01",
+      "stored_at": "2026-06-30T03:49:26.586190-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": null,
+        "id": "ff-calendar-153341",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-01T06:00:00-06:00",
+        "source": "forex_factory",
+        "title": "Fed Chairman Warsh Speaks",
+        "url": "https://www.forexfactory.com/calendar?day=jul1.2026#detail=153341"
+      },
+      "event_date": "2026-07-01",
+      "stored_at": "2026-06-30T03:49:26.586190-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "53.8",
+        "id": "ff-calendar-146581",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "54.0",
+        "published_at": null,
+        "scheduled_at": "2026-07-01T07:00:00-06:00",
+        "source": "forex_factory",
+        "title": "ISM Manufacturing PMI",
+        "url": "https://www.forexfactory.com/calendar?day=jul1.2026#detail=146581"
+      },
+      "event_date": "2026-07-01",
+      "stored_at": "2026-06-30T03:49:26.586190-06:00"
     }
   ]
 }
