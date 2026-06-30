@@ -551,31 +551,63 @@
       "kind": "result",
       "scheduled_for": "2026-06-30T08:35:00-06:00",
       "sent_at": "2026-06-30T08:39:09.380396-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-149224",
+      "kind": "precheck",
+      "scheduled_for": "2026-06-30T05:13:00-06:00",
+      "sent_at": "2026-06-30T12:29:54.679376-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-149224",
+      "kind": "result",
+      "scheduled_for": "2026-06-30T05:31:00-06:00",
+      "sent_at": "2026-06-30T12:29:54.679376-06:00"
+    },
+    {
+      "attempt": 2,
+      "channel": "telegram",
+      "event_id": "ff-calendar-149224",
+      "kind": "result",
+      "scheduled_for": "2026-06-30T05:33:00-06:00",
+      "sent_at": "2026-06-30T12:29:54.679376-06:00"
+    },
+    {
+      "attempt": 3,
+      "channel": "telegram",
+      "event_id": "ff-calendar-149224",
+      "kind": "result",
+      "scheduled_for": "2026-06-30T05:35:00-06:00",
+      "sent_at": "2026-06-30T12:29:54.679376-06:00"
     }
   ],
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-30T10:53:12.404937-06:00",
+      "last_attempt_at": "2026-06-30T12:29:54.679376-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-30T10:53:12.404937-06:00",
+      "last_success_at": "2026-06-30T12:29:54.679376-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-30T10:53:12.404937-06:00",
+      "last_attempt_at": "2026-06-30T12:29:54.679376-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-30T10:53:12.404937-06:00",
+      "last_success_at": "2026-06-30T12:29:54.679376-06:00",
       "status": "ok"
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-06-30T08:39:09.380396-06:00",
+      "last_attempt_at": "2026-06-30T12:29:54.679376-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-06-30T08:39:09.380396-06:00",
+      "last_success_at": "2026-06-30T12:29:54.679376-06:00",
       "status": "ok"
     }
   }
