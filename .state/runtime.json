@@ -551,31 +551,55 @@
       "kind": "precheck",
       "scheduled_for": "2026-07-01T08:43:00-06:00",
       "sent_at": "2026-07-01T09:32:29.567979-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-146581",
+      "kind": "result",
+      "scheduled_for": "2026-07-01T07:01:00-06:00",
+      "sent_at": "2026-07-01T11:31:38.582958-06:00"
+    },
+    {
+      "attempt": 2,
+      "channel": "telegram",
+      "event_id": "ff-calendar-146581",
+      "kind": "result",
+      "scheduled_for": "2026-07-01T07:03:00-06:00",
+      "sent_at": "2026-07-01T11:31:38.582958-06:00"
+    },
+    {
+      "attempt": 3,
+      "channel": "telegram",
+      "event_id": "ff-calendar-146581",
+      "kind": "result",
+      "scheduled_for": "2026-07-01T07:05:00-06:00",
+      "sent_at": "2026-07-01T11:31:38.582958-06:00"
     }
   ],
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-01T09:32:29.567979-06:00",
+      "last_attempt_at": "2026-07-01T11:31:38.582958-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-01T09:32:29.567979-06:00",
+      "last_success_at": "2026-07-01T11:31:38.582958-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-01T09:32:29.567979-06:00",
+      "last_attempt_at": "2026-07-01T11:31:38.582958-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-01T09:32:29.567979-06:00",
+      "last_success_at": "2026-07-01T11:31:38.582958-06:00",
       "status": "ok"
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-01T06:47:57.358755-06:00",
+      "last_attempt_at": "2026-07-01T11:31:38.582958-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-01T06:47:57.358755-06:00",
+      "last_success_at": "2026-07-01T11:31:38.582958-06:00",
       "status": "ok"
     }
   }
