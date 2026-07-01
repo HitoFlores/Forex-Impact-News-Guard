@@ -2,25 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "0.5%",
-        "actual_better_worse": 1,
-        "currency": "CAD",
-        "forecast": "0.4%",
-        "id": "ff-calendar-149224",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "-0.1%",
-        "published_at": null,
-        "scheduled_at": "2026-06-30T05:30:00-06:00",
-        "source": "forex_factory",
-        "title": "GDP m/m",
-        "url": "https://www.forexfactory.com/calendar?day=jun30.2026#detail=149224"
-      },
-      "event_date": "2026-06-30",
-      "stored_at": "2026-06-30T19:36:50.506685-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "GBP",
@@ -30,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-01T06:00:00-06:00",
+        "scheduled_at": "2026-07-01T09:00:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=jul1.2026#detail=153342"
       },
       "event_date": "2026-07-01",
-      "stored_at": "2026-06-30T19:36:50.506685-06:00"
+      "stored_at": "2026-07-01T00:09:13.905039-06:00"
     },
     {
       "event": {
@@ -49,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-01T06:00:00-06:00",
+        "scheduled_at": "2026-07-01T09:00:00-06:00",
         "source": "forex_factory",
         "title": "Fed Chairman Warsh Speaks",
         "url": "https://www.forexfactory.com/calendar?day=jul1.2026#detail=153341"
       },
       "event_date": "2026-07-01",
-      "stored_at": "2026-06-30T19:36:50.506685-06:00"
+      "stored_at": "2026-07-01T00:09:13.905039-06:00"
     },
     {
       "event": {
@@ -68,13 +49,70 @@
         "is_breaking": false,
         "previous": "54.0",
         "published_at": null,
-        "scheduled_at": "2026-07-01T07:00:00-06:00",
+        "scheduled_at": "2026-07-01T10:00:00-06:00",
         "source": "forex_factory",
         "title": "ISM Manufacturing PMI",
         "url": "https://www.forexfactory.com/calendar?day=jul1.2026#detail=146581"
       },
       "event_date": "2026-07-01",
-      "stored_at": "2026-06-30T19:36:50.506685-06:00"
+      "stored_at": "2026-07-01T00:09:13.905039-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "0.3%",
+        "id": "ff-calendar-146933",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.3%",
+        "published_at": null,
+        "scheduled_at": "2026-07-02T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Average Hourly Earnings m/m",
+        "url": "https://www.forexfactory.com/calendar?day=jul2.2026#detail=146933"
+      },
+      "event_date": "2026-07-02",
+      "stored_at": "2026-07-01T00:09:13.905039-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "114K",
+        "id": "ff-calendar-146909",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "172K",
+        "published_at": null,
+        "scheduled_at": "2026-07-02T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Non-Farm Employment Change",
+        "url": "https://www.forexfactory.com/calendar?day=jul2.2026#detail=146909"
+      },
+      "event_date": "2026-07-02",
+      "stored_at": "2026-07-01T00:09:13.905039-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "4.3%",
+        "id": "ff-calendar-146921",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.3%",
+        "published_at": null,
+        "scheduled_at": "2026-07-02T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Unemployment Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jul2.2026#detail=146921"
+      },
+      "event_date": "2026-07-02",
+      "stored_at": "2026-07-01T00:09:13.905039-06:00"
     }
   ]
 }
