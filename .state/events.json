@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-07-02T07:30:00-06:00",
+        "scheduled_at": "2026-07-02T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Average Hourly Earnings m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul2.2026#detail=146933"
       },
       "event_date": "2026-07-02",
-      "stored_at": "2026-07-02T09:30:38.393377-06:00"
+      "stored_at": "2026-07-02T11:13:20.060253-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "172K",
         "published_at": null,
-        "scheduled_at": "2026-07-02T07:30:00-06:00",
+        "scheduled_at": "2026-07-02T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Non-Farm Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=jul2.2026#detail=146909"
       },
       "event_date": "2026-07-02",
-      "stored_at": "2026-07-02T09:30:38.393377-06:00"
+      "stored_at": "2026-07-02T11:13:20.060253-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "4.3%",
         "published_at": null,
-        "scheduled_at": "2026-07-02T07:30:00-06:00",
+        "scheduled_at": "2026-07-02T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul2.2026#detail=146921"
       },
       "event_date": "2026-07-02",
-      "stored_at": "2026-07-02T09:30:38.393377-06:00"
+      "stored_at": "2026-07-02T11:13:20.060253-06:00"
     }
   ]
 }
