@@ -2,7 +2,7 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
+        "actual": "0.3%",
         "actual_better_worse": 0,
         "currency": "USD",
         "forecast": "0.3%",
@@ -11,18 +11,18 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-07-02T05:30:00-06:00",
+        "scheduled_at": "2026-07-02T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Average Hourly Earnings m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul2.2026#detail=146933"
       },
       "event_date": "2026-07-02",
-      "stored_at": "2026-07-02T05:17:30.903260-06:00"
+      "stored_at": "2026-07-02T07:11:42.441010-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "57K",
+        "actual_better_worse": 2,
         "currency": "USD",
         "forecast": "114K",
         "id": "ff-calendar-146909",
@@ -30,18 +30,18 @@
         "is_breaking": false,
         "previous": "172K",
         "published_at": null,
-        "scheduled_at": "2026-07-02T05:30:00-06:00",
+        "scheduled_at": "2026-07-02T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Non-Farm Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=jul2.2026#detail=146909"
       },
       "event_date": "2026-07-02",
-      "stored_at": "2026-07-02T05:17:30.903260-06:00"
+      "stored_at": "2026-07-02T07:11:42.441010-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "4.2%",
+        "actual_better_worse": 1,
         "currency": "USD",
         "forecast": "4.3%",
         "id": "ff-calendar-146921",
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "4.3%",
         "published_at": null,
-        "scheduled_at": "2026-07-02T05:30:00-06:00",
+        "scheduled_at": "2026-07-02T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul2.2026#detail=146921"
       },
       "event_date": "2026-07-02",
-      "stored_at": "2026-07-02T05:17:30.903260-06:00"
+      "stored_at": "2026-07-02T07:11:42.441010-06:00"
     }
   ]
 }
