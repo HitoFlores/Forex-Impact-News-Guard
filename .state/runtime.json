@@ -3,70 +3,6 @@
     {
       "attempt": 1,
       "channel": "telegram",
-      "event_id": "ff-calendar-148232",
-      "kind": "precheck",
-      "scheduled_for": "2026-06-25T07:13:00-06:00",
-      "sent_at": "2026-06-25T17:43:23.107351-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
-      "event_id": "ff-calendar-148308",
-      "kind": "precheck",
-      "scheduled_for": "2026-06-25T07:13:00-06:00",
-      "sent_at": "2026-06-25T17:43:23.107351-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
-      "event_id": "ff-calendar-148232",
-      "kind": "result",
-      "scheduled_for": "2026-06-25T07:31:00-06:00",
-      "sent_at": "2026-06-25T17:43:23.107351-06:00"
-    },
-    {
-      "attempt": 2,
-      "channel": "telegram",
-      "event_id": "ff-calendar-148232",
-      "kind": "result",
-      "scheduled_for": "2026-06-25T07:33:00-06:00",
-      "sent_at": "2026-06-25T17:43:23.107351-06:00"
-    },
-    {
-      "attempt": 3,
-      "channel": "telegram",
-      "event_id": "ff-calendar-148232",
-      "kind": "result",
-      "scheduled_for": "2026-06-25T07:35:00-06:00",
-      "sent_at": "2026-06-25T17:43:23.107351-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
-      "event_id": "ff-calendar-148308",
-      "kind": "result",
-      "scheduled_for": "2026-06-25T07:31:00-06:00",
-      "sent_at": "2026-06-25T17:43:23.107351-06:00"
-    },
-    {
-      "attempt": 2,
-      "channel": "telegram",
-      "event_id": "ff-calendar-148308",
-      "kind": "result",
-      "scheduled_for": "2026-06-25T07:33:00-06:00",
-      "sent_at": "2026-06-25T17:43:23.107351-06:00"
-    },
-    {
-      "attempt": 3,
-      "channel": "telegram",
-      "event_id": "ff-calendar-148308",
-      "kind": "result",
-      "scheduled_for": "2026-06-25T07:35:00-06:00",
-      "sent_at": "2026-06-25T17:43:23.107351-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
       "event_id": "daily-summary-2026-06-26",
       "kind": "daily_summary",
       "scheduled_for": "2026-06-26T00:00:00-06:00",
@@ -652,18 +588,18 @@
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-02T16:41:58.339891-06:00",
+      "last_attempt_at": "2026-07-02T17:45:22.707895-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-02T16:41:58.339891-06:00",
+      "last_success_at": "2026-07-02T17:45:22.707895-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-02T16:41:58.339891-06:00",
+      "last_attempt_at": "2026-07-02T17:45:22.707895-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-02T16:41:58.339891-06:00",
+      "last_success_at": "2026-07-02T17:45:22.707895-06:00",
       "status": "ok"
     },
     "telegram": {
