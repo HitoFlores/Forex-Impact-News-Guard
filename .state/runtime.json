@@ -588,18 +588,18 @@
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-02T19:19:44.244024-06:00",
+      "last_attempt_at": "2026-07-02T23:03:01.317485-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-02T19:19:44.244024-06:00",
+      "last_success_at": "2026-07-02T23:03:01.317485-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-02T19:19:44.244024-06:00",
+      "last_attempt_at": "2026-07-02T23:03:01.317485-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-02T19:19:44.244024-06:00",
+      "last_success_at": "2026-07-02T23:03:01.317485-06:00",
       "status": "ok"
     },
     "telegram": {
