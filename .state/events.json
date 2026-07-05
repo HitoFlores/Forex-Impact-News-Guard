@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "54.5",
         "published_at": null,
-        "scheduled_at": "2026-07-06T10:00:00-06:00",
+        "scheduled_at": "2026-07-06T09:00:00-06:00",
         "source": "forex_factory",
         "title": "ISM Services PMI",
         "url": "https://www.forexfactory.com/calendar?day=jul6.2026#detail=146605"
       },
       "event_date": "2026-07-06",
-      "stored_at": "2026-07-05T02:29:37.025976-06:00"
+      "stored_at": "2026-07-05T04:40:24.401130-06:00"
     }
   ]
 }
