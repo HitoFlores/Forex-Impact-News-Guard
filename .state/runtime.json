@@ -3,38 +3,6 @@
     {
       "attempt": 1,
       "channel": "telegram",
-      "event_id": "ff-calendar-149224",
-      "kind": "precheck",
-      "scheduled_for": "2026-06-30T06:13:00-06:00",
-      "sent_at": "2026-06-30T16:00:43.787627-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
-      "event_id": "ff-calendar-149224",
-      "kind": "result",
-      "scheduled_for": "2026-06-30T06:31:00-06:00",
-      "sent_at": "2026-06-30T16:00:43.787627-06:00"
-    },
-    {
-      "attempt": 2,
-      "channel": "telegram",
-      "event_id": "ff-calendar-149224",
-      "kind": "result",
-      "scheduled_for": "2026-06-30T06:33:00-06:00",
-      "sent_at": "2026-06-30T16:00:43.787627-06:00"
-    },
-    {
-      "attempt": 3,
-      "channel": "telegram",
-      "event_id": "ff-calendar-149224",
-      "kind": "result",
-      "scheduled_for": "2026-06-30T06:35:00-06:00",
-      "sent_at": "2026-06-30T16:00:43.787627-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
       "event_id": "daily-summary-2026-07-01",
       "kind": "daily_summary",
       "scheduled_for": "2026-07-01T00:00:00-06:00",
@@ -636,18 +604,18 @@
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-07T15:44:33.033277-06:00",
+      "last_attempt_at": "2026-07-07T16:45:14.120179-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-07T15:44:33.033277-06:00",
+      "last_success_at": "2026-07-07T16:45:14.120179-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-07T15:44:33.033277-06:00",
+      "last_attempt_at": "2026-07-07T16:45:14.120179-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-07T15:44:33.033277-06:00",
+      "last_success_at": "2026-07-07T16:45:14.120179-06:00",
       "status": "ok"
     },
     "telegram": {
