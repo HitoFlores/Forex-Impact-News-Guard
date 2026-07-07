@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "2.25%",
         "published_at": null,
-        "scheduled_at": "2026-07-07T20:00:00-06:00",
+        "scheduled_at": "2026-07-07T22:00:00-06:00",
         "source": "forex_factory",
         "title": "Official Cash Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul7.2026#detail=148862"
       },
       "event_date": "2026-07-07",
-      "stored_at": "2026-07-07T16:45:14.120179-06:00"
+      "stored_at": "2026-07-07T17:40:04.332773-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-07T20:00:00-06:00",
+        "scheduled_at": "2026-07-07T22:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Rate Statement",
         "url": "https://www.forexfactory.com/calendar?day=jul7.2026#detail=148863"
       },
       "event_date": "2026-07-07",
-      "stored_at": "2026-07-07T16:45:14.120179-06:00"
+      "stored_at": "2026-07-07T17:40:04.332773-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-07T21:00:00-06:00",
+        "scheduled_at": "2026-07-07T23:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=jul7.2026#detail=152806"
       },
       "event_date": "2026-07-07",
-      "stored_at": "2026-07-07T16:45:14.120179-06:00"
+      "stored_at": "2026-07-07T17:40:04.332773-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-08T12:00:00-06:00",
+        "scheduled_at": "2026-07-08T14:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Meeting Minutes",
         "url": "https://www.forexfactory.com/calendar?day=jul8.2026#detail=146526"
       },
       "event_date": "2026-07-08",
-      "stored_at": "2026-07-07T16:45:14.120179-06:00"
+      "stored_at": "2026-07-07T17:40:04.332773-06:00"
     }
   ]
 }
