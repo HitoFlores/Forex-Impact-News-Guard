@@ -2,25 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "54.0",
-        "actual_better_worse": 0,
-        "currency": "USD",
-        "forecast": "54.2",
-        "id": "ff-calendar-146605",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "54.5",
-        "published_at": null,
-        "scheduled_at": "2026-07-06T09:00:00-06:00",
-        "source": "forex_factory",
-        "title": "ISM Services PMI",
-        "url": "https://www.forexfactory.com/calendar?day=jul6.2026#detail=146605"
-      },
-      "event_date": "2026-07-06",
-      "stored_at": "2026-07-06T22:28:53.254719-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "NZD",
@@ -30,13 +11,13 @@
         "is_breaking": false,
         "previous": "2.25%",
         "published_at": null,
-        "scheduled_at": "2026-07-07T21:00:00-06:00",
+        "scheduled_at": "2026-07-07T22:00:00-06:00",
         "source": "forex_factory",
         "title": "Official Cash Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul7.2026#detail=148862"
       },
       "event_date": "2026-07-07",
-      "stored_at": "2026-07-06T22:28:53.254719-06:00"
+      "stored_at": "2026-07-07T02:00:13.354794-06:00"
     },
     {
       "event": {
@@ -49,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-07T21:00:00-06:00",
+        "scheduled_at": "2026-07-07T22:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Rate Statement",
         "url": "https://www.forexfactory.com/calendar?day=jul7.2026#detail=148863"
       },
       "event_date": "2026-07-07",
-      "stored_at": "2026-07-06T22:28:53.254719-06:00"
+      "stored_at": "2026-07-07T02:00:13.354794-06:00"
     },
     {
       "event": {
@@ -68,13 +49,32 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-07T22:00:00-06:00",
+        "scheduled_at": "2026-07-07T23:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=jul7.2026#detail=152806"
       },
       "event_date": "2026-07-07",
-      "stored_at": "2026-07-06T22:28:53.254719-06:00"
+      "stored_at": "2026-07-07T02:00:13.354794-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": null,
+        "id": "ff-calendar-146526",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-08T14:00:00-06:00",
+        "source": "forex_factory",
+        "title": "FOMC Meeting Minutes",
+        "url": "https://www.forexfactory.com/calendar?day=jul8.2026#detail=146526"
+      },
+      "event_date": "2026-07-08",
+      "stored_at": "2026-07-07T02:00:13.354794-06:00"
     }
   ]
 }
