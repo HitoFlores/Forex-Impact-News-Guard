@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-08T13:00:00-06:00",
+        "scheduled_at": "2026-07-08T11:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Meeting Minutes",
         "url": "https://www.forexfactory.com/calendar?day=jul8.2026#detail=146526"
       },
       "event_date": "2026-07-08",
-      "stored_at": "2026-07-08T14:02:52.829688-06:00"
+      "stored_at": "2026-07-08T15:19:53.949013-06:00"
     }
   ]
 }
