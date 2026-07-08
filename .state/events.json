@@ -2,63 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "2.50%",
-        "actual_better_worse": 0,
-        "currency": "NZD",
-        "forecast": "2.50%",
-        "id": "ff-calendar-148862",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "2.25%",
-        "published_at": null,
-        "scheduled_at": "2026-07-07T21:00:00-06:00",
-        "source": "forex_factory",
-        "title": "Official Cash Rate",
-        "url": "https://www.forexfactory.com/calendar?day=jul7.2026#detail=148862"
-      },
-      "event_date": "2026-07-07",
-      "stored_at": "2026-07-07T22:31:23.682914-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "NZD",
-        "forecast": null,
-        "id": "ff-calendar-148863",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-07-07T21:00:00-06:00",
-        "source": "forex_factory",
-        "title": "RBNZ Rate Statement",
-        "url": "https://www.forexfactory.com/calendar?day=jul7.2026#detail=148863"
-      },
-      "event_date": "2026-07-07",
-      "stored_at": "2026-07-07T22:31:23.682914-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "NZD",
-        "forecast": null,
-        "id": "ff-calendar-152806",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-07-07T22:00:00-06:00",
-        "source": "forex_factory",
-        "title": "RBNZ Press Conference",
-        "url": "https://www.forexfactory.com/calendar?day=jul7.2026#detail=152806"
-      },
-      "event_date": "2026-07-07",
-      "stored_at": "2026-07-07T22:31:23.682914-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "USD",
@@ -68,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-08T13:00:00-06:00",
+        "scheduled_at": "2026-07-08T11:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Meeting Minutes",
         "url": "https://www.forexfactory.com/calendar?day=jul8.2026#detail=146526"
       },
       "event_date": "2026-07-08",
-      "stored_at": "2026-07-07T22:31:23.682914-06:00"
+      "stored_at": "2026-07-08T01:08:28.352724-06:00"
     }
   ]
 }
