@@ -4,20 +4,39 @@
       "event": {
         "actual": null,
         "actual_better_worse": 0,
-        "currency": "USD",
-        "forecast": null,
-        "id": "ff-calendar-146526",
+        "currency": "CAD",
+        "forecast": "11.2K",
+        "id": "ff-calendar-149192",
         "impact": "high",
         "is_breaking": false,
-        "previous": null,
+        "previous": "87.8K",
         "published_at": null,
-        "scheduled_at": "2026-07-08T13:00:00-06:00",
+        "scheduled_at": "2026-07-10T08:30:00-06:00",
         "source": "forex_factory",
-        "title": "FOMC Meeting Minutes",
-        "url": "https://www.forexfactory.com/calendar?day=jul8.2026#detail=146526"
+        "title": "Employment Change",
+        "url": "https://www.forexfactory.com/calendar?day=jul10.2026#detail=149192"
       },
-      "event_date": "2026-07-08",
-      "stored_at": "2026-07-08T23:08:46.811133-06:00"
+      "event_date": "2026-07-10",
+      "stored_at": "2026-07-09T02:43:01.590646-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": "6.6%",
+        "id": "ff-calendar-149193",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "6.6%",
+        "published_at": null,
+        "scheduled_at": "2026-07-10T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Unemployment Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jul10.2026#detail=149193"
+      },
+      "event_date": "2026-07-10",
+      "stored_at": "2026-07-09T02:43:01.590646-06:00"
     }
   ]
 }
