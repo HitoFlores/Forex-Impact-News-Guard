@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "87.8K",
         "published_at": null,
-        "scheduled_at": "2026-07-10T05:30:00-06:00",
+        "scheduled_at": "2026-07-10T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=jul10.2026#detail=149192"
       },
       "event_date": "2026-07-10",
-      "stored_at": "2026-07-10T12:59:40.053220-06:00"
+      "stored_at": "2026-07-10T14:38:27.462500-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "6.6%",
         "published_at": null,
-        "scheduled_at": "2026-07-10T05:30:00-06:00",
+        "scheduled_at": "2026-07-10T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul10.2026#detail=149193"
       },
       "event_date": "2026-07-10",
-      "stored_at": "2026-07-10T12:59:40.053220-06:00"
+      "stored_at": "2026-07-10T14:38:27.462500-06:00"
     }
   ]
 }
