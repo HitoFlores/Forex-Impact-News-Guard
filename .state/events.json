@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-07-14T07:30:00-06:00",
+        "scheduled_at": "2026-07-14T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Core CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul14.2026#detail=148364"
       },
       "event_date": "2026-07-14",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "2.9%",
         "published_at": null,
-        "scheduled_at": "2026-07-14T07:30:00-06:00",
+        "scheduled_at": "2026-07-14T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Core CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jul14.2026#detail=153054"
       },
       "event_date": "2026-07-14",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "0.5%",
         "published_at": null,
-        "scheduled_at": "2026-07-14T07:30:00-06:00",
+        "scheduled_at": "2026-07-14T08:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul14.2026#detail=148333"
       },
       "event_date": "2026-07-14",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "4.2%",
         "published_at": null,
-        "scheduled_at": "2026-07-14T07:30:00-06:00",
+        "scheduled_at": "2026-07-14T08:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jul14.2026#detail=148349"
       },
       "event_date": "2026-07-14",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-14T09:00:00-06:00",
+        "scheduled_at": "2026-07-14T10:00:00-06:00",
         "source": "forex_factory",
         "title": "Fed Chairman Warsh Testifies",
         "url": "https://www.forexfactory.com/calendar?day=jul14.2026#detail=153330"
       },
       "event_date": "2026-07-14",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -106,13 +106,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-14T15:00:00-06:00",
+        "scheduled_at": "2026-07-14T16:00:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=jul14.2026#detail=153384"
       },
       "event_date": "2026-07-14",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -125,13 +125,13 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-07-15T07:30:00-06:00",
+        "scheduled_at": "2026-07-15T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul15.2026#detail=148401"
       },
       "event_date": "2026-07-15",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -144,13 +144,13 @@
         "is_breaking": false,
         "previous": "1.1%",
         "published_at": null,
-        "scheduled_at": "2026-07-15T07:30:00-06:00",
+        "scheduled_at": "2026-07-15T08:30:00-06:00",
         "source": "forex_factory",
         "title": "PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul15.2026#detail=148384"
       },
       "event_date": "2026-07-15",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -163,13 +163,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-15T08:45:00-06:00",
+        "scheduled_at": "2026-07-15T09:45:00-06:00",
         "source": "forex_factory",
         "title": "BOC Monetary Policy Report",
         "url": "https://www.forexfactory.com/calendar?day=jul15.2026#detail=146549"
       },
       "event_date": "2026-07-15",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -182,13 +182,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-15T08:45:00-06:00",
+        "scheduled_at": "2026-07-15T09:45:00-06:00",
         "source": "forex_factory",
         "title": "BOC Rate Statement",
         "url": "https://www.forexfactory.com/calendar?day=jul15.2026#detail=146543"
       },
       "event_date": "2026-07-15",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -201,13 +201,13 @@
         "is_breaking": false,
         "previous": "2.25%",
         "published_at": null,
-        "scheduled_at": "2026-07-15T08:45:00-06:00",
+        "scheduled_at": "2026-07-15T09:45:00-06:00",
         "source": "forex_factory",
         "title": "Overnight Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul15.2026#detail=146535"
       },
       "event_date": "2026-07-15",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -220,13 +220,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-15T09:00:00-06:00",
+        "scheduled_at": "2026-07-15T10:00:00-06:00",
         "source": "forex_factory",
         "title": "Fed Chairman Warsh Testifies",
         "url": "https://www.forexfactory.com/calendar?day=jul15.2026#detail=153380"
       },
       "event_date": "2026-07-15",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     },
     {
       "event": {
@@ -239,13 +239,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-15T09:45:00-06:00",
+        "scheduled_at": "2026-07-15T10:45:00-06:00",
         "source": "forex_factory",
         "title": "BOC Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=jul15.2026#detail=146555"
       },
       "event_date": "2026-07-15",
-      "stored_at": "2026-07-14T06:55:07.129843-06:00"
+      "stored_at": "2026-07-14T08:46:22.509780-06:00"
     }
   ]
 }
