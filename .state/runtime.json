@@ -1148,18 +1148,18 @@
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-17T21:31:56.816358-06:00",
+      "last_attempt_at": "2026-07-17T23:49:34.080727-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-17T21:31:56.816358-06:00",
+      "last_success_at": "2026-07-17T23:49:34.080727-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-17T21:31:56.816358-06:00",
+      "last_attempt_at": "2026-07-17T23:49:34.080727-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-17T21:31:56.816358-06:00",
+      "last_success_at": "2026-07-17T23:49:34.080727-06:00",
       "status": "ok"
     },
     "telegram": {
