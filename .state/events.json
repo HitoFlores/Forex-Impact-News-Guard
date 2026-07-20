@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "1.0%",
         "published_at": null,
-        "scheduled_at": "2026-07-20T07:30:00-06:00",
+        "scheduled_at": "2026-07-20T05:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=149155"
       },
       "event_date": "2026-07-20",
-      "stored_at": "2026-07-20T16:26:20.206144-06:00"
+      "stored_at": "2026-07-20T17:30:45.991960-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "2.1%",
         "published_at": null,
-        "scheduled_at": "2026-07-20T07:30:00-06:00",
+        "scheduled_at": "2026-07-20T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Median CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=149156"
       },
       "event_date": "2026-07-20",
-      "stored_at": "2026-07-20T16:26:20.206144-06:00"
+      "stored_at": "2026-07-20T17:30:45.991960-06:00"
     },
     {
       "event": {
@@ -49,18 +49,18 @@
         "is_breaking": false,
         "previous": "2.0%",
         "published_at": null,
-        "scheduled_at": "2026-07-20T07:30:00-06:00",
+        "scheduled_at": "2026-07-20T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=149157"
       },
       "event_date": "2026-07-20",
-      "stored_at": "2026-07-20T16:26:20.206144-06:00"
+      "stored_at": "2026-07-20T17:30:45.991960-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "1.5%",
+        "actual_better_worse": 1,
         "currency": "NZD",
         "forecast": "1.4%",
         "id": "ff-calendar-150037",
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "0.9%",
         "published_at": null,
-        "scheduled_at": "2026-07-20T17:45:00-06:00",
+        "scheduled_at": "2026-07-20T15:45:00-06:00",
         "source": "forex_factory",
         "title": "CPI q/q",
         "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=150037"
       },
       "event_date": "2026-07-20",
-      "stored_at": "2026-07-20T16:26:20.206144-06:00"
+      "stored_at": "2026-07-20T17:30:45.991960-06:00"
     },
     {
       "event": {
@@ -87,13 +87,32 @@
         "is_breaking": false,
         "previous": "31.2K",
         "published_at": null,
-        "scheduled_at": "2026-07-21T01:00:00-06:00",
+        "scheduled_at": "2026-07-20T23:00:00-06:00",
         "source": "forex_factory",
         "title": "Claimant Count Change",
-        "url": "https://www.forexfactory.com/calendar?day=jul21.2026#detail=151084"
+        "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=151084"
+      },
+      "event_date": "2026-07-20",
+      "stored_at": "2026-07-20T17:30:45.991960-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": "2.7%",
+        "id": "ff-calendar-151440",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2.8%",
+        "published_at": null,
+        "scheduled_at": "2026-07-21T23:00:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=jul21.2026#detail=151440"
       },
       "event_date": "2026-07-21",
-      "stored_at": "2026-07-20T16:26:20.206144-06:00"
+      "stored_at": "2026-07-20T17:30:45.991960-06:00"
     }
   ]
 }
