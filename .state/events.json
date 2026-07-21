@@ -2,101 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "-0.4%",
-        "actual_better_worse": 2,
-        "currency": "CAD",
-        "forecast": "-0.2%",
-        "id": "ff-calendar-149155",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "1.0%",
-        "published_at": null,
-        "scheduled_at": "2026-07-20T05:30:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=149155"
-      },
-      "event_date": "2026-07-20",
-      "stored_at": "2026-07-20T22:23:05.926184-06:00"
-    },
-    {
-      "event": {
-        "actual": "1.9%",
-        "actual_better_worse": 2,
-        "currency": "CAD",
-        "forecast": "2.1%",
-        "id": "ff-calendar-149156",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "2.1%",
-        "published_at": null,
-        "scheduled_at": "2026-07-20T05:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Median CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=149156"
-      },
-      "event_date": "2026-07-20",
-      "stored_at": "2026-07-20T22:23:05.926184-06:00"
-    },
-    {
-      "event": {
-        "actual": "1.8%",
-        "actual_better_worse": 2,
-        "currency": "CAD",
-        "forecast": "2.0%",
-        "id": "ff-calendar-149157",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "2.0%",
-        "published_at": null,
-        "scheduled_at": "2026-07-20T05:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Trimmed CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=149157"
-      },
-      "event_date": "2026-07-20",
-      "stored_at": "2026-07-20T22:23:05.926184-06:00"
-    },
-    {
-      "event": {
-        "actual": "1.5%",
-        "actual_better_worse": 1,
-        "currency": "NZD",
-        "forecast": "1.4%",
-        "id": "ff-calendar-150037",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.9%",
-        "published_at": null,
-        "scheduled_at": "2026-07-20T15:45:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI q/q",
-        "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=150037"
-      },
-      "event_date": "2026-07-20",
-      "stored_at": "2026-07-20T22:23:05.926184-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "GBP",
-        "forecast": "29.4K",
-        "id": "ff-calendar-151084",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "31.2K",
-        "published_at": null,
-        "scheduled_at": "2026-07-20T23:00:00-06:00",
-        "source": "forex_factory",
-        "title": "Claimant Count Change",
-        "url": "https://www.forexfactory.com/calendar?day=jul20.2026#detail=151084"
-      },
-      "event_date": "2026-07-20",
-      "stored_at": "2026-07-20T22:23:05.926184-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "GBP",
@@ -112,7 +17,45 @@
         "url": "https://www.forexfactory.com/calendar?day=jul21.2026#detail=151440"
       },
       "event_date": "2026-07-21",
-      "stored_at": "2026-07-20T22:23:05.926184-06:00"
+      "stored_at": "2026-07-21T01:04:16.361397-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "16.4K",
+        "id": "ff-calendar-148142",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "40.3K",
+        "published_at": null,
+        "scheduled_at": "2026-07-22T18:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Employment Change",
+        "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=148142"
+      },
+      "event_date": "2026-07-22",
+      "stored_at": "2026-07-21T01:04:16.361397-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "4.4%",
+        "id": "ff-calendar-148143",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.4%",
+        "published_at": null,
+        "scheduled_at": "2026-07-22T18:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Unemployment Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=148143"
+      },
+      "event_date": "2026-07-22",
+      "stored_at": "2026-07-21T01:04:16.361397-06:00"
     }
   ]
 }
