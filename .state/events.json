@@ -2,6 +2,25 @@
   "relevant_events": [
     {
       "event": {
+        "actual": "6.7K",
+        "actual_better_worse": 1,
+        "currency": "GBP",
+        "forecast": "29.4K",
+        "id": "ff-calendar-151084",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "31.2K",
+        "published_at": null,
+        "scheduled_at": "2026-07-21T01:00:00-06:00",
+        "source": "forex_factory",
+        "title": "Claimant Count Change",
+        "url": "https://www.forexfactory.com/calendar?day=jul21.2026#detail=151084"
+      },
+      "event_date": "2026-07-21",
+      "stored_at": "2026-07-21T08:55:18.164828-06:00"
+    },
+    {
+      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "GBP",
@@ -11,13 +30,13 @@
         "is_breaking": false,
         "previous": "2.8%",
         "published_at": null,
-        "scheduled_at": "2026-07-21T23:00:00-06:00",
+        "scheduled_at": "2026-07-22T01:00:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=jul21.2026#detail=151440"
+        "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=151440"
       },
-      "event_date": "2026-07-21",
-      "stored_at": "2026-07-21T06:52:50.473458-06:00"
+      "event_date": "2026-07-22",
+      "stored_at": "2026-07-21T08:55:18.164828-06:00"
     },
     {
       "event": {
@@ -30,13 +49,13 @@
         "is_breaking": false,
         "previous": "40.3K",
         "published_at": null,
-        "scheduled_at": "2026-07-22T18:30:00-06:00",
+        "scheduled_at": "2026-07-22T20:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=148142"
       },
       "event_date": "2026-07-22",
-      "stored_at": "2026-07-21T06:52:50.473458-06:00"
+      "stored_at": "2026-07-21T08:55:18.164828-06:00"
     },
     {
       "event": {
@@ -49,13 +68,13 @@
         "is_breaking": false,
         "previous": "4.4%",
         "published_at": null,
-        "scheduled_at": "2026-07-22T18:30:00-06:00",
+        "scheduled_at": "2026-07-22T20:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=148143"
       },
       "event_date": "2026-07-22",
-      "stored_at": "2026-07-21T06:52:50.473458-06:00"
+      "stored_at": "2026-07-21T08:55:18.164828-06:00"
     }
   ]
 }
