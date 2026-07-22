@@ -2,44 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "6.7K",
-        "actual_better_worse": 1,
-        "currency": "GBP",
-        "forecast": "29.4K",
-        "id": "ff-calendar-151084",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "31.2K",
-        "published_at": null,
-        "scheduled_at": "2026-07-21T01:00:00-06:00",
-        "source": "forex_factory",
-        "title": "Claimant Count Change",
-        "url": "https://www.forexfactory.com/calendar?day=jul21.2026#detail=151084"
-      },
-      "event_date": "2026-07-21",
-      "stored_at": "2026-07-21T22:27:16.587712-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "GBP",
-        "forecast": "2.7%",
-        "id": "ff-calendar-151440",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "2.8%",
-        "published_at": null,
-        "scheduled_at": "2026-07-22T01:00:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=151440"
-      },
-      "event_date": "2026-07-22",
-      "stored_at": "2026-07-21T22:27:16.587712-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "AUD",
@@ -49,13 +11,13 @@
         "is_breaking": false,
         "previous": "40.3K",
         "published_at": null,
-        "scheduled_at": "2026-07-22T20:30:00-06:00",
+        "scheduled_at": "2026-07-22T18:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=148142"
       },
       "event_date": "2026-07-22",
-      "stored_at": "2026-07-21T22:27:16.587712-06:00"
+      "stored_at": "2026-07-22T01:12:10.978731-06:00"
     },
     {
       "event": {
@@ -68,13 +30,70 @@
         "is_breaking": false,
         "previous": "4.4%",
         "published_at": null,
-        "scheduled_at": "2026-07-22T20:30:00-06:00",
+        "scheduled_at": "2026-07-22T18:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=148143"
       },
       "event_date": "2026-07-22",
-      "stored_at": "2026-07-21T22:27:16.587712-06:00"
+      "stored_at": "2026-07-22T01:12:10.978731-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "EUR",
+        "forecast": "2.40%",
+        "id": "ff-calendar-150535",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2.40%",
+        "published_at": null,
+        "scheduled_at": "2026-07-23T05:15:00-06:00",
+        "source": "forex_factory",
+        "title": "Main Refinancing Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150535"
+      },
+      "event_date": "2026-07-23",
+      "stored_at": "2026-07-22T01:12:10.978731-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "EUR",
+        "forecast": null,
+        "id": "ff-calendar-150536",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-23T05:15:00-06:00",
+        "source": "forex_factory",
+        "title": "Monetary Policy Statement",
+        "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150536"
+      },
+      "event_date": "2026-07-23",
+      "stored_at": "2026-07-22T01:12:10.978731-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "EUR",
+        "forecast": null,
+        "id": "ff-calendar-150534",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-23T05:45:00-06:00",
+        "source": "forex_factory",
+        "title": "ECB Press Conference",
+        "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150534"
+      },
+      "event_date": "2026-07-23",
+      "stored_at": "2026-07-22T01:12:10.978731-06:00"
     }
   ]
 }
