@@ -2,7 +2,7 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
+        "actual": "2.40%",
         "actual_better_worse": 0,
         "currency": "EUR",
         "forecast": "2.40%",
@@ -17,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150535"
       },
       "event_date": "2026-07-23",
-      "stored_at": "2026-07-23T05:30:31.086520-06:00"
+      "stored_at": "2026-07-23T07:06:34.456602-06:00"
     },
     {
       "event": {
@@ -36,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150536"
       },
       "event_date": "2026-07-23",
-      "stored_at": "2026-07-23T05:30:31.086520-06:00"
+      "stored_at": "2026-07-23T07:06:34.456602-06:00"
     },
     {
       "event": {
@@ -55,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150534"
       },
       "event_date": "2026-07-23",
-      "stored_at": "2026-07-23T05:30:31.086520-06:00"
+      "stored_at": "2026-07-23T07:06:34.456602-06:00"
     }
   ]
 }
