@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "2.40%",
         "published_at": null,
-        "scheduled_at": "2026-07-23T06:15:00-06:00",
+        "scheduled_at": "2026-07-23T05:15:00-06:00",
         "source": "forex_factory",
         "title": "Main Refinancing Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150535"
       },
       "event_date": "2026-07-23",
-      "stored_at": "2026-07-23T10:52:29.412336-06:00"
+      "stored_at": "2026-07-23T12:06:50.182706-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-23T06:15:00-06:00",
+        "scheduled_at": "2026-07-23T05:15:00-06:00",
         "source": "forex_factory",
         "title": "Monetary Policy Statement",
         "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150536"
       },
       "event_date": "2026-07-23",
-      "stored_at": "2026-07-23T10:52:29.412336-06:00"
+      "stored_at": "2026-07-23T12:06:50.182706-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-23T06:45:00-06:00",
+        "scheduled_at": "2026-07-23T05:45:00-06:00",
         "source": "forex_factory",
         "title": "ECB Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150534"
       },
       "event_date": "2026-07-23",
-      "stored_at": "2026-07-23T10:52:29.412336-06:00"
+      "stored_at": "2026-07-23T12:06:50.182706-06:00"
     }
   ]
 }
