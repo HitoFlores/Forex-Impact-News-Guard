@@ -804,18 +804,18 @@
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-23T15:44:23.947089-06:00",
+      "last_attempt_at": "2026-07-23T16:39:36.785568-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-23T15:44:23.947089-06:00",
+      "last_success_at": "2026-07-23T16:39:36.785568-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-07-23T15:44:23.947089-06:00",
+      "last_attempt_at": "2026-07-23T16:39:36.785568-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-07-23T15:44:23.947089-06:00",
+      "last_success_at": "2026-07-23T16:39:36.785568-06:00",
       "status": "ok"
     },
     "telegram": {
