@@ -2,8 +2,8 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "76.3K",
+        "actual_better_worse": 1,
         "currency": "AUD",
         "forecast": "16.4K",
         "id": "ff-calendar-148142",
@@ -17,11 +17,11 @@
         "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=148142"
       },
       "event_date": "2026-07-22",
-      "stored_at": "2026-07-22T19:12:20.722196-06:00"
+      "stored_at": "2026-07-22T22:34:54.451036-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "4.4%",
         "actual_better_worse": 0,
         "currency": "AUD",
         "forecast": "4.4%",
@@ -36,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul22.2026#detail=148143"
       },
       "event_date": "2026-07-22",
-      "stored_at": "2026-07-22T19:12:20.722196-06:00"
+      "stored_at": "2026-07-22T22:34:54.451036-06:00"
     },
     {
       "event": {
@@ -55,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150535"
       },
       "event_date": "2026-07-23",
-      "stored_at": "2026-07-22T19:12:20.722196-06:00"
+      "stored_at": "2026-07-22T22:34:54.451036-06:00"
     },
     {
       "event": {
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150536"
       },
       "event_date": "2026-07-23",
-      "stored_at": "2026-07-22T19:12:20.722196-06:00"
+      "stored_at": "2026-07-22T22:34:54.451036-06:00"
     },
     {
       "event": {
@@ -93,7 +93,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul23.2026#detail=150534"
       },
       "event_date": "2026-07-23",
-      "stored_at": "2026-07-22T19:12:20.722196-06:00"
+      "stored_at": "2026-07-22T22:34:54.451036-06:00"
     }
   ]
 }
