@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-27T22:05:00-06:00",
+        "scheduled_at": "2026-07-27T20:05:00-06:00",
         "source": "forex_factory",
         "title": "RBA Gov Bullock Speaks",
         "url": "https://www.forexfactory.com/calendar?day=jul27.2026#detail=153404"
       },
       "event_date": "2026-07-27",
-      "stored_at": "2026-07-26T12:14:50.076194-06:00"
+      "stored_at": "2026-07-26T13:37:31.850408-06:00"
     }
   ]
 }
