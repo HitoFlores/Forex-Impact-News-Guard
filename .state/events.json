@@ -1,23 +1,3 @@
 {
-  "relevant_events": [
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "AUD",
-        "forecast": null,
-        "id": "ff-calendar-153404",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-07-27T20:05:00-06:00",
-        "source": "forex_factory",
-        "title": "RBA Gov Bullock Speaks",
-        "url": "https://www.forexfactory.com/calendar?day=jul27.2026#detail=153404"
-      },
-      "event_date": "2026-07-27",
-      "stored_at": "2026-07-26T03:28:05.570817-06:00"
-    }
-  ]
+  "relevant_events": []
 }
