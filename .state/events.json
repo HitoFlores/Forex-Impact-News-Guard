@@ -11,13 +11,70 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-27T23:05:00-06:00",
+        "scheduled_at": "2026-07-27T20:05:00-06:00",
         "source": "forex_factory",
         "title": "RBA Gov Bullock Speaks",
         "url": "https://www.forexfactory.com/calendar?day=jul27.2026#detail=153404"
       },
       "event_date": "2026-07-27",
-      "stored_at": "2026-07-26T22:55:24.342038-06:00"
+      "stored_at": "2026-07-27T02:28:35.592115-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "0.2%",
+        "id": "ff-calendar-149107",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "-0.7%",
+        "published_at": null,
+        "scheduled_at": "2026-07-28T18:30:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149107"
+      },
+      "event_date": "2026-07-28",
+      "stored_at": "2026-07-27T02:28:35.592115-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "4.0%",
+        "id": "ff-calendar-149098",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.0%",
+        "published_at": null,
+        "scheduled_at": "2026-07-28T18:30:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149098"
+      },
+      "event_date": "2026-07-28",
+      "stored_at": "2026-07-27T02:28:35.592115-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "0.4%",
+        "id": "ff-calendar-149111",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.4%",
+        "published_at": null,
+        "scheduled_at": "2026-07-28T18:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Trimmed Mean CPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149111"
+      },
+      "event_date": "2026-07-28",
+      "stored_at": "2026-07-27T02:28:35.592115-06:00"
     }
   ]
 }
