@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "-0.7%",
         "published_at": null,
-        "scheduled_at": "2026-07-28T21:30:00-06:00",
+        "scheduled_at": "2026-07-28T18:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149107"
       },
       "event_date": "2026-07-28",
-      "stored_at": "2026-07-28T00:40:12.827634-06:00"
+      "stored_at": "2026-07-28T03:23:27.266667-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "4.0%",
         "published_at": null,
-        "scheduled_at": "2026-07-28T21:30:00-06:00",
+        "scheduled_at": "2026-07-28T18:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149098"
       },
       "event_date": "2026-07-28",
-      "stored_at": "2026-07-28T00:40:12.827634-06:00"
+      "stored_at": "2026-07-28T03:23:27.266667-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-07-28T21:30:00-06:00",
+        "scheduled_at": "2026-07-28T18:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed Mean CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149111"
       },
       "event_date": "2026-07-28",
-      "stored_at": "2026-07-28T00:40:12.827634-06:00"
+      "stored_at": "2026-07-28T03:23:27.266667-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "3.75%",
         "published_at": null,
-        "scheduled_at": "2026-07-29T14:00:00-06:00",
+        "scheduled_at": "2026-07-29T11:00:00-06:00",
         "source": "forex_factory",
         "title": "Federal Funds Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul29.2026#detail=146498"
       },
       "event_date": "2026-07-29",
-      "stored_at": "2026-07-28T00:40:12.827634-06:00"
+      "stored_at": "2026-07-28T03:23:27.266667-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-29T14:00:00-06:00",
+        "scheduled_at": "2026-07-29T11:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Statement",
         "url": "https://www.forexfactory.com/calendar?day=jul29.2026#detail=146506"
       },
       "event_date": "2026-07-29",
-      "stored_at": "2026-07-28T00:40:12.827634-06:00"
+      "stored_at": "2026-07-28T03:23:27.266667-06:00"
     },
     {
       "event": {
@@ -106,13 +106,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-29T14:30:00-06:00",
+        "scheduled_at": "2026-07-29T11:30:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=jul29.2026#detail=146518"
       },
       "event_date": "2026-07-29",
-      "stored_at": "2026-07-28T00:40:12.827634-06:00"
+      "stored_at": "2026-07-28T03:23:27.266667-06:00"
     }
   ]
 }
