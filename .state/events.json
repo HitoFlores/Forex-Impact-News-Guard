@@ -2,8 +2,8 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "-0.1%",
+        "actual_better_worse": 2,
         "currency": "AUD",
         "forecast": "0.2%",
         "id": "ff-calendar-149107",
@@ -17,12 +17,12 @@
         "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149107"
       },
       "event_date": "2026-07-28",
-      "stored_at": "2026-07-28T19:02:32.750652-06:00"
+      "stored_at": "2026-07-28T22:22:19.958698-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "3.8%",
+        "actual_better_worse": 2,
         "currency": "AUD",
         "forecast": "4.0%",
         "id": "ff-calendar-149098",
@@ -36,11 +36,11 @@
         "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149098"
       },
       "event_date": "2026-07-28",
-      "stored_at": "2026-07-28T19:02:32.750652-06:00"
+      "stored_at": "2026-07-28T22:22:19.958698-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "0.3%",
         "actual_better_worse": 0,
         "currency": "AUD",
         "forecast": "0.3%",
@@ -55,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149111"
       },
       "event_date": "2026-07-28",
-      "stored_at": "2026-07-28T19:02:32.750652-06:00"
+      "stored_at": "2026-07-28T22:22:19.958698-06:00"
     },
     {
       "event": {
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul29.2026#detail=146498"
       },
       "event_date": "2026-07-29",
-      "stored_at": "2026-07-28T19:02:32.750652-06:00"
+      "stored_at": "2026-07-28T22:22:19.958698-06:00"
     },
     {
       "event": {
@@ -93,7 +93,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul29.2026#detail=146506"
       },
       "event_date": "2026-07-29",
-      "stored_at": "2026-07-28T19:02:32.750652-06:00"
+      "stored_at": "2026-07-28T22:22:19.958698-06:00"
     },
     {
       "event": {
@@ -112,7 +112,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul29.2026#detail=146518"
       },
       "event_date": "2026-07-29",
-      "stored_at": "2026-07-28T19:02:32.750652-06:00"
+      "stored_at": "2026-07-28T22:22:19.958698-06:00"
     }
   ]
 }
