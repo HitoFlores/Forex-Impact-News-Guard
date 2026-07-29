@@ -2,63 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "-0.1%",
-        "actual_better_worse": 2,
-        "currency": "AUD",
-        "forecast": "0.2%",
-        "id": "ff-calendar-149107",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "-0.7%",
-        "published_at": null,
-        "scheduled_at": "2026-07-28T18:30:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149107"
-      },
-      "event_date": "2026-07-28",
-      "stored_at": "2026-07-28T22:22:19.958698-06:00"
-    },
-    {
-      "event": {
-        "actual": "3.8%",
-        "actual_better_worse": 2,
-        "currency": "AUD",
-        "forecast": "4.0%",
-        "id": "ff-calendar-149098",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "4.0%",
-        "published_at": null,
-        "scheduled_at": "2026-07-28T18:30:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149098"
-      },
-      "event_date": "2026-07-28",
-      "stored_at": "2026-07-28T22:22:19.958698-06:00"
-    },
-    {
-      "event": {
-        "actual": "0.3%",
-        "actual_better_worse": 0,
-        "currency": "AUD",
-        "forecast": "0.3%",
-        "id": "ff-calendar-149111",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.4%",
-        "published_at": null,
-        "scheduled_at": "2026-07-28T18:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Trimmed Mean CPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=jul28.2026#detail=149111"
-      },
-      "event_date": "2026-07-28",
-      "stored_at": "2026-07-28T22:22:19.958698-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "USD",
@@ -74,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul29.2026#detail=146498"
       },
       "event_date": "2026-07-29",
-      "stored_at": "2026-07-28T22:22:19.958698-06:00"
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
     },
     {
       "event": {
@@ -93,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul29.2026#detail=146506"
       },
       "event_date": "2026-07-29",
-      "stored_at": "2026-07-28T22:22:19.958698-06:00"
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
     },
     {
       "event": {
@@ -112,7 +55,216 @@
         "url": "https://www.forexfactory.com/calendar?day=jul29.2026#detail=146518"
       },
       "event_date": "2026-07-29",
-      "stored_at": "2026-07-28T22:22:19.958698-06:00"
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": null,
+        "id": "ff-calendar-150716",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-30T04:00:00-06:00",
+        "source": "forex_factory",
+        "title": "BOE Monetary Policy Report",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150716"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": null,
+        "id": "ff-calendar-150718",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-30T04:00:00-06:00",
+        "source": "forex_factory",
+        "title": "Monetary Policy Summary",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150718"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": "2-0-7",
+        "id": "ff-calendar-150719",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2-0-7",
+        "published_at": null,
+        "scheduled_at": "2026-07-30T04:00:00-06:00",
+        "source": "forex_factory",
+        "title": "MPC Official Bank Rate Votes",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150719"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": "3.75%",
+        "id": "ff-calendar-150717",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "3.75%",
+        "published_at": null,
+        "scheduled_at": "2026-07-30T04:00:00-06:00",
+        "source": "forex_factory",
+        "title": "Official Bank Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150717"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": null,
+        "id": "ff-calendar-153409",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-30T04:30:00-06:00",
+        "source": "forex_factory",
+        "title": "BOE Gov Bailey Speaks",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=153409"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "2.1%",
+        "id": "ff-calendar-148273",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2.0%",
+        "published_at": null,
+        "scheduled_at": "2026-07-30T05:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Advance GDP q/q",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148273"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "0.2%",
+        "id": "ff-calendar-148233",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.3%",
+        "published_at": null,
+        "scheduled_at": "2026-07-30T05:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Core PCE Price Index m/m",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148233"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "JPY",
+        "forecast": "<1.00%",
+        "id": "ff-calendar-148555",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "<1.00%",
+        "published_at": null,
+        "scheduled_at": "2026-07-30T20:30:00-06:00",
+        "source": "forex_factory",
+        "title": "BOJ Policy Rate",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148555"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "JPY",
+        "forecast": null,
+        "id": "ff-calendar-148556",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-30T20:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Monetary Policy Statement",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148556"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "JPY",
+        "forecast": null,
+        "id": "ff-calendar-148557",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-30T20:31:00-06:00",
+        "source": "forex_factory",
+        "title": "BOJ Outlook Report",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148557"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "JPY",
+        "forecast": null,
+        "id": "ff-calendar-148558",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-07-30T23:30:00-06:00",
+        "source": "forex_factory",
+        "title": "BOJ Press Conference",
+        "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148558"
+      },
+      "event_date": "2026-07-30",
+      "stored_at": "2026-07-29T01:11:10.029818-06:00"
     }
   ]
 }
