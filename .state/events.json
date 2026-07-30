@@ -17,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150716"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
@@ -36,12 +36,12 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150718"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "3-0-6",
+        "actual_better_worse": 1,
         "currency": "GBP",
         "forecast": "2-0-7",
         "id": "ff-calendar-150719",
@@ -55,11 +55,11 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150719"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "3.75%",
         "actual_better_worse": 0,
         "currency": "GBP",
         "forecast": "3.75%",
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150717"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-30T04:30:00-06:00",
+        "scheduled_at": "2026-07-30T05:00:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=153409"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
@@ -112,7 +112,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148273"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
@@ -131,7 +131,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148233"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
@@ -150,7 +150,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148555"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
@@ -169,7 +169,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148556"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
@@ -188,7 +188,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148557"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
@@ -207,7 +207,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148558"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     },
     {
       "event": {
@@ -226,7 +226,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul31.2026#detail=149225"
       },
       "event_date": "2026-07-31",
-      "stored_at": "2026-07-30T03:18:24.421827-06:00"
+      "stored_at": "2026-07-30T05:24:09.136325-06:00"
     }
   ]
 }
