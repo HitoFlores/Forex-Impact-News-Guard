@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-30T07:00:00-06:00",
+        "scheduled_at": "2026-07-30T06:00:00-06:00",
         "source": "forex_factory",
         "title": "BOE Monetary Policy Report",
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150716"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-30T07:00:00-06:00",
+        "scheduled_at": "2026-07-30T06:00:00-06:00",
         "source": "forex_factory",
         "title": "Monetary Policy Summary",
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150718"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "2-0-7",
         "published_at": null,
-        "scheduled_at": "2026-07-30T07:00:00-06:00",
+        "scheduled_at": "2026-07-30T06:00:00-06:00",
         "source": "forex_factory",
         "title": "MPC Official Bank Rate Votes",
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150719"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "3.75%",
         "published_at": null,
-        "scheduled_at": "2026-07-30T07:00:00-06:00",
+        "scheduled_at": "2026-07-30T06:00:00-06:00",
         "source": "forex_factory",
         "title": "Official Bank Rate",
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=150717"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-07-30T08:00:00-06:00",
+        "scheduled_at": "2026-07-30T07:00:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=153409"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -106,13 +106,13 @@
         "is_breaking": false,
         "previous": "2.0%",
         "published_at": null,
-        "scheduled_at": "2026-07-30T08:30:00-06:00",
+        "scheduled_at": "2026-07-30T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Advance GDP q/q",
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148273"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -125,13 +125,13 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-07-30T08:30:00-06:00",
+        "scheduled_at": "2026-07-30T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PCE Price Index m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148233"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -150,7 +150,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148555"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -169,7 +169,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148556"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -188,7 +188,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul30.2026#detail=148557"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -207,7 +207,7 @@
         "url": "https://www.forexfactory.com/calendar?day=jul31.2026#detail=148558"
       },
       "event_date": "2026-07-30",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     },
     {
       "event": {
@@ -220,13 +220,13 @@
         "is_breaking": false,
         "previous": "0.5%",
         "published_at": null,
-        "scheduled_at": "2026-07-31T08:30:00-06:00",
+        "scheduled_at": "2026-07-31T07:30:00-06:00",
         "source": "forex_factory",
         "title": "GDP m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul31.2026#detail=149225"
       },
       "event_date": "2026-07-31",
-      "stored_at": "2026-07-30T17:14:02.457352-06:00"
+      "stored_at": "2026-07-30T18:16:34.110367-06:00"
     }
   ]
 }
