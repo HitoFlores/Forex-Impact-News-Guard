@@ -2,25 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "JPY",
-        "forecast": null,
-        "id": "ff-calendar-148558",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-07-31T02:30:00-06:00",
-        "source": "forex_factory",
-        "title": "BOJ Press Conference",
-        "url": "https://www.forexfactory.com/calendar?day=jul31.2026#detail=148558"
-      },
-      "event_date": "2026-07-31",
-      "stored_at": "2026-07-31T12:43:19.516537-06:00"
-    },
-    {
-      "event": {
         "actual": "0.3%",
         "actual_better_worse": 1,
         "currency": "CAD",
@@ -30,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.5%",
         "published_at": null,
-        "scheduled_at": "2026-07-31T08:30:00-06:00",
+        "scheduled_at": "2026-07-31T05:30:00-06:00",
         "source": "forex_factory",
         "title": "GDP m/m",
         "url": "https://www.forexfactory.com/calendar?day=jul31.2026#detail=149225"
       },
       "event_date": "2026-07-31",
-      "stored_at": "2026-07-31T12:43:19.516537-06:00"
+      "stored_at": "2026-07-31T14:09:42.439947-06:00"
     }
   ]
 }
