@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "53.3",
         "published_at": null,
-        "scheduled_at": "2026-08-03T07:00:00-06:00",
+        "scheduled_at": "2026-08-03T08:00:00-06:00",
         "source": "forex_factory",
         "title": "ISM Manufacturing PMI",
         "url": "https://www.forexfactory.com/calendar?day=aug3.2026#detail=146582"
       },
       "event_date": "2026-08-03",
-      "stored_at": "2026-08-02T07:48:15.418771-06:00"
+      "stored_at": "2026-08-02T08:51:19.373877-06:00"
     }
   ]
 }
