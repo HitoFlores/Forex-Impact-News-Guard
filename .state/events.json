@@ -2,25 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "55.6",
-        "actual_better_worse": 1,
-        "currency": "USD",
-        "forecast": "54.0",
-        "id": "ff-calendar-146582",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "53.3",
-        "published_at": null,
-        "scheduled_at": "2026-08-03T07:00:00-06:00",
-        "source": "forex_factory",
-        "title": "ISM Manufacturing PMI",
-        "url": "https://www.forexfactory.com/calendar?day=aug3.2026#detail=146582"
-      },
-      "event_date": "2026-08-03",
-      "stored_at": "2026-08-03T21:18:06.204536-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "NZD",
@@ -30,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-08-04T15:45:00-06:00",
+        "scheduled_at": "2026-08-04T17:45:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change q/q",
         "url": "https://www.forexfactory.com/calendar?day=aug4.2026#detail=149117"
       },
       "event_date": "2026-08-04",
-      "stored_at": "2026-08-03T21:18:06.204536-06:00"
+      "stored_at": "2026-08-04T00:06:57.047861-06:00"
     },
     {
       "event": {
@@ -49,13 +30,13 @@
         "is_breaking": false,
         "previous": "5.3%",
         "published_at": null,
-        "scheduled_at": "2026-08-04T15:45:00-06:00",
+        "scheduled_at": "2026-08-04T17:45:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=aug4.2026#detail=149118"
       },
       "event_date": "2026-08-04",
-      "stored_at": "2026-08-03T21:18:06.204536-06:00"
+      "stored_at": "2026-08-04T00:06:57.047861-06:00"
     }
   ]
 }
