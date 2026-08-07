@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "18.2K",
         "published_at": null,
-        "scheduled_at": "2026-08-07T07:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=149194"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T00:37:16.185424-06:00"
+      "stored_at": "2026-08-07T01:56:36.543627-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "6.5%",
         "published_at": null,
-        "scheduled_at": "2026-08-07T07:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=149195"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T00:37:16.185424-06:00"
+      "stored_at": "2026-08-07T01:56:36.543627-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-08-07T07:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Average Hourly Earnings m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=146934"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T00:37:16.185424-06:00"
+      "stored_at": "2026-08-07T01:56:36.543627-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "57K",
         "published_at": null,
-        "scheduled_at": "2026-08-07T07:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Non-Farm Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=146910"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T00:37:16.185424-06:00"
+      "stored_at": "2026-08-07T01:56:36.543627-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": "4.2%",
         "published_at": null,
-        "scheduled_at": "2026-08-07T07:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=146922"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T00:37:16.185424-06:00"
+      "stored_at": "2026-08-07T01:56:36.543627-06:00"
     }
   ]
 }
