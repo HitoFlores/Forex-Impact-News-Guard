@@ -2,8 +2,8 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "75.1K",
+        "actual_better_worse": 1,
         "currency": "CAD",
         "forecast": "17.8K",
         "id": "ff-calendar-149194",
@@ -11,18 +11,18 @@
         "is_breaking": false,
         "previous": "18.2K",
         "published_at": null,
-        "scheduled_at": "2026-08-07T08:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=149194"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T05:53:21.699708-06:00"
+      "stored_at": "2026-08-07T06:42:03.207288-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "6.4%",
+        "actual_better_worse": 1,
         "currency": "CAD",
         "forecast": "6.5%",
         "id": "ff-calendar-149195",
@@ -30,18 +30,18 @@
         "is_breaking": false,
         "previous": "6.5%",
         "published_at": null,
-        "scheduled_at": "2026-08-07T08:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=149195"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T05:53:21.699708-06:00"
+      "stored_at": "2026-08-07T06:42:03.207288-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "0.1%",
+        "actual_better_worse": 2,
         "currency": "USD",
         "forecast": "0.3%",
         "id": "ff-calendar-146934",
@@ -49,18 +49,18 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-08-07T08:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Average Hourly Earnings m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=146934"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T05:53:21.699708-06:00"
+      "stored_at": "2026-08-07T06:42:03.207288-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "-23K",
+        "actual_better_worse": 2,
         "currency": "USD",
         "forecast": "85K",
         "id": "ff-calendar-146910",
@@ -68,18 +68,18 @@
         "is_breaking": false,
         "previous": "57K",
         "published_at": null,
-        "scheduled_at": "2026-08-07T08:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Non-Farm Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=146910"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T05:53:21.699708-06:00"
+      "stored_at": "2026-08-07T06:42:03.207288-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "4.1%",
+        "actual_better_worse": 1,
         "currency": "USD",
         "forecast": "4.2%",
         "id": "ff-calendar-146922",
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": "4.2%",
         "published_at": null,
-        "scheduled_at": "2026-08-07T08:30:00-06:00",
+        "scheduled_at": "2026-08-07T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=aug7.2026#detail=146922"
       },
       "event_date": "2026-08-07",
-      "stored_at": "2026-08-07T05:53:21.699708-06:00"
+      "stored_at": "2026-08-07T06:42:03.207288-06:00"
     }
   ]
 }
