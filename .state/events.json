@@ -1,3 +1,61 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "4.35%",
+        "id": "ff-calendar-147787",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.35%",
+        "published_at": null,
+        "scheduled_at": "2026-08-10T23:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Cash Rate",
+        "url": "https://www.forexfactory.com/calendar?day=aug10.2026#detail=147787"
+      },
+      "event_date": "2026-08-10",
+      "stored_at": "2026-08-09T06:01:00.691294-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": null,
+        "id": "ff-calendar-148539",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-08-10T23:30:00-06:00",
+        "source": "forex_factory",
+        "title": "RBA Monetary Policy Statement",
+        "url": "https://www.forexfactory.com/calendar?day=aug10.2026#detail=148539"
+      },
+      "event_date": "2026-08-10",
+      "stored_at": "2026-08-09T06:01:00.691294-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": null,
+        "id": "ff-calendar-147788",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-08-10T23:30:00-06:00",
+        "source": "forex_factory",
+        "title": "RBA Rate Statement",
+        "url": "https://www.forexfactory.com/calendar?day=aug10.2026#detail=147788"
+      },
+      "event_date": "2026-08-10",
+      "stored_at": "2026-08-09T06:01:00.691294-06:00"
+    }
+  ]
 }
