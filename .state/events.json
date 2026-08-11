@@ -2,63 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "4.35%",
-        "actual_better_worse": 0,
-        "currency": "AUD",
-        "forecast": "4.35%",
-        "id": "ff-calendar-147787",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "4.35%",
-        "published_at": null,
-        "scheduled_at": "2026-08-11T00:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Cash Rate",
-        "url": "https://www.forexfactory.com/calendar?day=aug11.2026#detail=147787"
-      },
-      "event_date": "2026-08-11",
-      "stored_at": "2026-08-11T05:23:22.722881-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "AUD",
-        "forecast": null,
-        "id": "ff-calendar-148539",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-08-11T00:30:00-06:00",
-        "source": "forex_factory",
-        "title": "RBA Monetary Policy Statement",
-        "url": "https://www.forexfactory.com/calendar?day=aug11.2026#detail=148539"
-      },
-      "event_date": "2026-08-11",
-      "stored_at": "2026-08-11T05:23:22.722881-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "AUD",
-        "forecast": null,
-        "id": "ff-calendar-147788",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-08-11T00:30:00-06:00",
-        "source": "forex_factory",
-        "title": "RBA Rate Statement",
-        "url": "https://www.forexfactory.com/calendar?day=aug11.2026#detail=147788"
-      },
-      "event_date": "2026-08-11",
-      "stored_at": "2026-08-11T05:23:22.722881-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "AUD",
@@ -68,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-08-11T01:30:00-06:00",
+        "scheduled_at": "2026-08-11T00:30:00-06:00",
         "source": "forex_factory",
         "title": "RBA Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=aug11.2026#detail=147799"
       },
       "event_date": "2026-08-11",
-      "stored_at": "2026-08-11T05:23:22.722881-06:00"
+      "stored_at": "2026-08-11T06:05:52.029771-06:00"
     },
     {
       "event": {
@@ -87,13 +30,13 @@
         "is_breaking": false,
         "previous": "0.0%",
         "published_at": null,
-        "scheduled_at": "2026-08-12T08:30:00-06:00",
+        "scheduled_at": "2026-08-12T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Core CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug12.2026#detail=148365"
       },
       "event_date": "2026-08-12",
-      "stored_at": "2026-08-11T05:23:22.722881-06:00"
+      "stored_at": "2026-08-11T06:05:52.029771-06:00"
     },
     {
       "event": {
@@ -106,13 +49,13 @@
         "is_breaking": false,
         "previous": "2.6%",
         "published_at": null,
-        "scheduled_at": "2026-08-12T08:30:00-06:00",
+        "scheduled_at": "2026-08-12T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Core CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=aug12.2026#detail=153055"
       },
       "event_date": "2026-08-12",
-      "stored_at": "2026-08-11T05:23:22.722881-06:00"
+      "stored_at": "2026-08-11T06:05:52.029771-06:00"
     },
     {
       "event": {
@@ -125,13 +68,13 @@
         "is_breaking": false,
         "previous": "-0.4%",
         "published_at": null,
-        "scheduled_at": "2026-08-12T08:30:00-06:00",
+        "scheduled_at": "2026-08-12T07:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug12.2026#detail=148334"
       },
       "event_date": "2026-08-12",
-      "stored_at": "2026-08-11T05:23:22.722881-06:00"
+      "stored_at": "2026-08-11T06:05:52.029771-06:00"
     },
     {
       "event": {
@@ -144,13 +87,13 @@
         "is_breaking": false,
         "previous": "3.5%",
         "published_at": null,
-        "scheduled_at": "2026-08-12T08:30:00-06:00",
+        "scheduled_at": "2026-08-12T07:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=aug12.2026#detail=148350"
       },
       "event_date": "2026-08-12",
-      "stored_at": "2026-08-11T05:23:22.722881-06:00"
+      "stored_at": "2026-08-11T06:05:52.029771-06:00"
     }
   ]
 }
