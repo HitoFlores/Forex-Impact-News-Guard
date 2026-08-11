@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "4.35%",
         "published_at": null,
-        "scheduled_at": "2026-08-10T21:30:00-06:00",
+        "scheduled_at": "2026-08-11T00:30:00-06:00",
         "source": "forex_factory",
         "title": "Cash Rate",
-        "url": "https://www.forexfactory.com/calendar?day=aug10.2026#detail=147787"
+        "url": "https://www.forexfactory.com/calendar?day=aug11.2026#detail=147787"
       },
-      "event_date": "2026-08-10",
-      "stored_at": "2026-08-10T17:46:44.359455-06:00"
+      "event_date": "2026-08-11",
+      "stored_at": "2026-08-10T18:36:56.574939-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-08-10T21:30:00-06:00",
+        "scheduled_at": "2026-08-11T00:30:00-06:00",
         "source": "forex_factory",
         "title": "RBA Monetary Policy Statement",
-        "url": "https://www.forexfactory.com/calendar?day=aug10.2026#detail=148539"
+        "url": "https://www.forexfactory.com/calendar?day=aug11.2026#detail=148539"
       },
-      "event_date": "2026-08-10",
-      "stored_at": "2026-08-10T17:46:44.359455-06:00"
+      "event_date": "2026-08-11",
+      "stored_at": "2026-08-10T18:36:56.574939-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-08-10T21:30:00-06:00",
+        "scheduled_at": "2026-08-11T00:30:00-06:00",
         "source": "forex_factory",
         "title": "RBA Rate Statement",
-        "url": "https://www.forexfactory.com/calendar?day=aug10.2026#detail=147788"
+        "url": "https://www.forexfactory.com/calendar?day=aug11.2026#detail=147788"
       },
-      "event_date": "2026-08-10",
-      "stored_at": "2026-08-10T17:46:44.359455-06:00"
+      "event_date": "2026-08-11",
+      "stored_at": "2026-08-10T18:36:56.574939-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-08-10T22:30:00-06:00",
+        "scheduled_at": "2026-08-11T01:30:00-06:00",
         "source": "forex_factory",
         "title": "RBA Press Conference",
-        "url": "https://www.forexfactory.com/calendar?day=aug10.2026#detail=147799"
+        "url": "https://www.forexfactory.com/calendar?day=aug11.2026#detail=147799"
       },
-      "event_date": "2026-08-10",
-      "stored_at": "2026-08-10T17:46:44.359455-06:00"
+      "event_date": "2026-08-11",
+      "stored_at": "2026-08-10T18:36:56.574939-06:00"
     }
   ]
 }
