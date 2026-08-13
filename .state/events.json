@@ -2,25 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "0.3%",
-        "actual_better_worse": 1,
-        "currency": "GBP",
-        "forecast": "0.0%",
-        "id": "ff-calendar-151554",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.1%",
-        "published_at": null,
-        "scheduled_at": "2026-08-13T01:00:00-06:00",
-        "source": "forex_factory",
-        "title": "GDP m/m",
-        "url": "https://www.forexfactory.com/calendar?day=aug13.2026#detail=151554"
-      },
-      "event_date": "2026-08-13",
-      "stored_at": "2026-08-13T09:33:23.035870-06:00"
-    },
-    {
-      "event": {
         "actual": "0.2%",
         "actual_better_worse": 2,
         "currency": "USD",
@@ -30,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-08-13T07:30:00-06:00",
+        "scheduled_at": "2026-08-13T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug13.2026#detail=148402"
       },
       "event_date": "2026-08-13",
-      "stored_at": "2026-08-13T09:33:23.035870-06:00"
+      "stored_at": "2026-08-13T10:29:28.671895-06:00"
     },
     {
       "event": {
@@ -49,13 +30,13 @@
         "is_breaking": false,
         "previous": "-0.3%",
         "published_at": null,
-        "scheduled_at": "2026-08-13T07:30:00-06:00",
+        "scheduled_at": "2026-08-13T05:30:00-06:00",
         "source": "forex_factory",
         "title": "PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug13.2026#detail=148387"
       },
       "event_date": "2026-08-13",
-      "stored_at": "2026-08-13T09:33:23.035870-06:00"
+      "stored_at": "2026-08-13T10:29:28.671895-06:00"
     }
   ]
 }
