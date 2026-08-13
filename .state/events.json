@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.1%",
         "published_at": null,
-        "scheduled_at": "2026-08-13T01:00:00-06:00",
+        "scheduled_at": "2026-08-13T00:00:00-06:00",
         "source": "forex_factory",
         "title": "GDP m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug13.2026#detail=151554"
       },
       "event_date": "2026-08-13",
-      "stored_at": "2026-08-13T14:17:47.188218-06:00"
+      "stored_at": "2026-08-13T15:07:50.040281-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-08-13T07:30:00-06:00",
+        "scheduled_at": "2026-08-13T06:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug13.2026#detail=148402"
       },
       "event_date": "2026-08-13",
-      "stored_at": "2026-08-13T14:17:47.188218-06:00"
+      "stored_at": "2026-08-13T15:07:50.040281-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "-0.3%",
         "published_at": null,
-        "scheduled_at": "2026-08-13T07:30:00-06:00",
+        "scheduled_at": "2026-08-13T06:30:00-06:00",
         "source": "forex_factory",
         "title": "PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug13.2026#detail=148387"
       },
       "event_date": "2026-08-13",
-      "stored_at": "2026-08-13T14:17:47.188218-06:00"
+      "stored_at": "2026-08-13T15:07:50.040281-06:00"
     }
   ]
 }
