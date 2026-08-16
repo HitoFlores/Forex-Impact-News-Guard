@@ -1,3 +1,61 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": "0.4%",
+        "id": "ff-calendar-149160",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "-0.4%",
+        "published_at": null,
+        "scheduled_at": "2026-08-17T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=149160"
+      },
+      "event_date": "2026-08-17",
+      "stored_at": "2026-08-16T00:13:49.356492-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": "2.0%",
+        "id": "ff-calendar-149161",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "1.9%",
+        "published_at": null,
+        "scheduled_at": "2026-08-17T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Median CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=149161"
+      },
+      "event_date": "2026-08-17",
+      "stored_at": "2026-08-16T00:13:49.356492-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": "1.8%",
+        "id": "ff-calendar-149162",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "1.8%",
+        "published_at": null,
+        "scheduled_at": "2026-08-17T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Trimmed CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=149162"
+      },
+      "event_date": "2026-08-17",
+      "stored_at": "2026-08-16T00:13:49.356492-06:00"
+    }
+  ]
 }
