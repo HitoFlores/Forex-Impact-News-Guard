@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "-0.4%",
         "published_at": null,
-        "scheduled_at": "2026-08-17T05:30:00-06:00",
+        "scheduled_at": "2026-08-17T08:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=149160"
       },
       "event_date": "2026-08-17",
-      "stored_at": "2026-08-16T16:51:25.386165-06:00"
+      "stored_at": "2026-08-16T17:07:08.090594-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "1.9%",
         "published_at": null,
-        "scheduled_at": "2026-08-17T05:30:00-06:00",
+        "scheduled_at": "2026-08-17T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Median CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=149161"
       },
       "event_date": "2026-08-17",
-      "stored_at": "2026-08-16T16:51:25.386165-06:00"
+      "stored_at": "2026-08-16T17:07:08.090594-06:00"
     },
     {
       "event": {
@@ -49,32 +49,13 @@
         "is_breaking": false,
         "previous": "1.8%",
         "published_at": null,
-        "scheduled_at": "2026-08-17T05:30:00-06:00",
+        "scheduled_at": "2026-08-17T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=149162"
       },
       "event_date": "2026-08-17",
-      "stored_at": "2026-08-16T16:51:25.386165-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "GBP",
-        "forecast": "11.2K",
-        "id": "ff-calendar-151085",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "6.7K",
-        "published_at": null,
-        "scheduled_at": "2026-08-17T23:00:00-06:00",
-        "source": "forex_factory",
-        "title": "Claimant Count Change",
-        "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=151085"
-      },
-      "event_date": "2026-08-17",
-      "stored_at": "2026-08-16T16:51:25.386165-06:00"
+      "stored_at": "2026-08-16T17:07:08.090594-06:00"
     }
   ]
 }
