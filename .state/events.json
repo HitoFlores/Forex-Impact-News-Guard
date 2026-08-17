@@ -17,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=149160"
       },
       "event_date": "2026-08-17",
-      "stored_at": "2026-08-17T12:14:56.080614-06:00"
+      "stored_at": "2026-08-17T13:00:04.898471-06:00"
     },
     {
       "event": {
@@ -36,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=149161"
       },
       "event_date": "2026-08-17",
-      "stored_at": "2026-08-17T12:14:56.080614-06:00"
+      "stored_at": "2026-08-17T13:00:04.898471-06:00"
     },
     {
       "event": {
@@ -55,14 +55,14 @@
         "url": "https://www.forexfactory.com/calendar?day=aug17.2026#detail=149162"
       },
       "event_date": "2026-08-17",
-      "stored_at": "2026-08-17T12:14:56.080614-06:00"
+      "stored_at": "2026-08-17T13:00:04.898471-06:00"
     },
     {
       "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "GBP",
-        "forecast": "11.2K",
+        "forecast": "16.5K",
         "id": "ff-calendar-151085",
         "impact": "high",
         "is_breaking": false,
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=aug18.2026#detail=151085"
       },
       "event_date": "2026-08-18",
-      "stored_at": "2026-08-17T12:14:56.080614-06:00"
+      "stored_at": "2026-08-17T13:00:04.898471-06:00"
     }
   ]
 }
