@@ -3,14 +3,6 @@
     {
       "attempt": 1,
       "channel": "telegram",
-      "event_id": "daily-summary-2026-08-11",
-      "kind": "daily_summary",
-      "scheduled_for": "2026-08-11T00:00:00-06:00",
-      "sent_at": "2026-08-11T00:10:15.895144-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
       "event_id": "ff-calendar-147799",
       "kind": "precheck",
       "scheduled_for": "2026-08-11T00:13:00-06:00",
@@ -1519,31 +1511,39 @@
       "kind": "alert",
       "scheduled_for": "2026-08-17T23:45:00-06:00",
       "sent_at": "2026-08-17T23:48:05.283801-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "daily-summary-2026-08-18",
+      "kind": "daily_summary",
+      "scheduled_for": "2026-08-18T00:00:00-06:00",
+      "sent_at": "2026-08-18T00:17:19.268678-06:00"
     }
   ],
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-08-17T23:48:05.283801-06:00",
+      "last_attempt_at": "2026-08-18T00:17:19.268678-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-08-17T23:48:05.283801-06:00",
+      "last_success_at": "2026-08-18T00:17:19.268678-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-08-17T23:48:05.283801-06:00",
+      "last_attempt_at": "2026-08-18T00:17:19.268678-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-08-17T23:48:05.283801-06:00",
+      "last_success_at": "2026-08-18T00:17:19.268678-06:00",
       "status": "ok"
     },
     "telegram": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-08-17T23:48:05.283801-06:00",
+      "last_attempt_at": "2026-08-18T00:17:19.268678-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-08-17T23:48:05.283801-06:00",
+      "last_success_at": "2026-08-18T00:17:19.268678-06:00",
       "status": "ok"
     }
   }
