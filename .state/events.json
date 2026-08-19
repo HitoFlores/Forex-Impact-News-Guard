@@ -2,6 +2,25 @@
   "relevant_events": [
     {
       "event": {
+        "actual": "2.9%",
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": "2.9%",
+        "id": "ff-calendar-151443",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2.6%",
+        "published_at": null,
+        "scheduled_at": "2026-08-19T01:00:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=aug19.2026#detail=151443"
+      },
+      "event_date": "2026-08-19",
+      "stored_at": "2026-08-19T02:02:37.884558-06:00"
+    },
+    {
+      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "USD",
@@ -11,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-08-19T11:00:00-06:00",
+        "scheduled_at": "2026-08-19T13:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Meeting Minutes",
         "url": "https://www.forexfactory.com/calendar?day=aug19.2026#detail=146527"
       },
       "event_date": "2026-08-19",
-      "stored_at": "2026-08-19T01:25:16.318295-06:00"
+      "stored_at": "2026-08-19T02:02:37.884558-06:00"
     },
     {
       "event": {
@@ -30,13 +49,13 @@
         "is_breaking": false,
         "previous": "76.3K",
         "published_at": null,
-        "scheduled_at": "2026-08-19T18:30:00-06:00",
+        "scheduled_at": "2026-08-19T20:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=aug19.2026#detail=148144"
       },
       "event_date": "2026-08-19",
-      "stored_at": "2026-08-19T01:25:16.318295-06:00"
+      "stored_at": "2026-08-19T02:02:37.884558-06:00"
     },
     {
       "event": {
@@ -49,13 +68,13 @@
         "is_breaking": false,
         "previous": "4.4%",
         "published_at": null,
-        "scheduled_at": "2026-08-19T18:30:00-06:00",
+        "scheduled_at": "2026-08-19T20:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=aug19.2026#detail=148145"
       },
       "event_date": "2026-08-19",
-      "stored_at": "2026-08-19T01:25:16.318295-06:00"
+      "stored_at": "2026-08-19T02:02:37.884558-06:00"
     }
   ]
 }
