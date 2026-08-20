@@ -1012,18 +1012,18 @@
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-08-20T10:56:26.738738-06:00",
+      "last_attempt_at": "2026-08-20T11:28:30.186578-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-08-20T10:56:26.738738-06:00",
+      "last_success_at": "2026-08-20T11:28:30.186578-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-08-20T10:56:26.738738-06:00",
+      "last_attempt_at": "2026-08-20T11:28:30.186578-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-08-20T10:56:26.738738-06:00",
+      "last_success_at": "2026-08-20T11:28:30.186578-06:00",
       "status": "ok"
     },
     "telegram": {
