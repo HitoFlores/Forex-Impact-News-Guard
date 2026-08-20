@@ -17,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=aug19.2026#detail=151443"
       },
       "event_date": "2026-08-19",
-      "stored_at": "2026-08-19T17:58:41.788174-06:00"
+      "stored_at": "2026-08-19T19:39:01.601718-06:00"
     },
     {
       "event": {
@@ -36,12 +36,12 @@
         "url": "https://www.forexfactory.com/calendar?day=aug19.2026#detail=146527"
       },
       "event_date": "2026-08-19",
-      "stored_at": "2026-08-19T17:58:41.788174-06:00"
+      "stored_at": "2026-08-19T19:39:01.601718-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "-15.8K",
+        "actual_better_worse": 2,
         "currency": "AUD",
         "forecast": "11.7K",
         "id": "ff-calendar-148144",
@@ -55,12 +55,12 @@
         "url": "https://www.forexfactory.com/calendar?day=aug19.2026#detail=148144"
       },
       "event_date": "2026-08-19",
-      "stored_at": "2026-08-19T17:58:41.788174-06:00"
+      "stored_at": "2026-08-19T19:39:01.601718-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "4.5%",
+        "actual_better_worse": 2,
         "currency": "AUD",
         "forecast": "4.4%",
         "id": "ff-calendar-148145",
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=aug19.2026#detail=148145"
       },
       "event_date": "2026-08-19",
-      "stored_at": "2026-08-19T17:58:41.788174-06:00"
+      "stored_at": "2026-08-19T19:39:01.601718-06:00"
     }
   ]
 }
