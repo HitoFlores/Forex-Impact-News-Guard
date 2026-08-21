@@ -1,3 +1,42 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": "-15.8K",
+        "actual_better_worse": 2,
+        "currency": "AUD",
+        "forecast": "11.7K",
+        "id": "ff-calendar-148144",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "76.3K",
+        "published_at": null,
+        "scheduled_at": "2026-08-20T02:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Employment Change",
+        "url": "https://www.forexfactory.com/calendar?day=aug20.2026#detail=148144"
+      },
+      "event_date": "2026-08-20",
+      "stored_at": "2026-08-20T22:19:15.052315-06:00"
+    },
+    {
+      "event": {
+        "actual": "4.5%",
+        "actual_better_worse": 2,
+        "currency": "AUD",
+        "forecast": "4.4%",
+        "id": "ff-calendar-148145",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.4%",
+        "published_at": null,
+        "scheduled_at": "2026-08-20T02:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Unemployment Rate",
+        "url": "https://www.forexfactory.com/calendar?day=aug20.2026#detail=148145"
+      },
+      "event_date": "2026-08-20",
+      "stored_at": "2026-08-20T22:19:15.052315-06:00"
+    }
+  ]
 }
