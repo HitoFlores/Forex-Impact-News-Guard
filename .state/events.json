@@ -1,3 +1,61 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "0.9%",
+        "id": "ff-calendar-152598",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "-0.1%",
+        "published_at": null,
+        "scheduled_at": "2026-08-25T18:30:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=aug25.2026#detail=152598"
+      },
+      "event_date": "2026-08-25",
+      "stored_at": "2026-08-24T01:08:31.854602-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "3.3%",
+        "id": "ff-calendar-149099",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "3.8%",
+        "published_at": null,
+        "scheduled_at": "2026-08-25T18:30:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=aug25.2026#detail=149099"
+      },
+      "event_date": "2026-08-25",
+      "stored_at": "2026-08-24T01:08:31.854602-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "0.3%",
+        "id": "ff-calendar-152599",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.3%",
+        "published_at": null,
+        "scheduled_at": "2026-08-25T18:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Trimmed Mean CPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=aug25.2026#detail=152599"
+      },
+      "event_date": "2026-08-25",
+      "stored_at": "2026-08-24T01:08:31.854602-06:00"
+    }
+  ]
 }
