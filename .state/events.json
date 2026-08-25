@@ -17,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=aug25.2026#detail=152598"
       },
       "event_date": "2026-08-25",
-      "stored_at": "2026-08-24T23:38:03.381408-06:00"
+      "stored_at": "2026-08-25T00:02:49.395649-06:00"
     },
     {
       "event": {
@@ -36,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=aug25.2026#detail=149099"
       },
       "event_date": "2026-08-25",
-      "stored_at": "2026-08-24T23:38:03.381408-06:00"
+      "stored_at": "2026-08-25T00:02:49.395649-06:00"
     },
     {
       "event": {
@@ -55,7 +55,45 @@
         "url": "https://www.forexfactory.com/calendar?day=aug25.2026#detail=152599"
       },
       "event_date": "2026-08-25",
-      "stored_at": "2026-08-24T23:38:03.381408-06:00"
+      "stored_at": "2026-08-25T00:02:49.395649-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "0.2%",
+        "id": "ff-calendar-148234",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.1%",
+        "published_at": null,
+        "scheduled_at": "2026-08-26T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Core PCE Price Index m/m",
+        "url": "https://www.forexfactory.com/calendar?day=aug26.2026#detail=148234"
+      },
+      "event_date": "2026-08-26",
+      "stored_at": "2026-08-25T00:02:49.395649-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "1.5%",
+        "id": "ff-calendar-148290",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "1.5%",
+        "published_at": null,
+        "scheduled_at": "2026-08-26T08:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Prelim GDP q/q",
+        "url": "https://www.forexfactory.com/calendar?day=aug26.2026#detail=148290"
+      },
+      "event_date": "2026-08-26",
+      "stored_at": "2026-08-25T00:02:49.395649-06:00"
     }
   ]
 }
