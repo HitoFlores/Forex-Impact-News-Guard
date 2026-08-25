@@ -4,38 +4,6 @@
       "attempt": 1,
       "channel": "telegram",
       "event_id": "ff-calendar-151085",
-      "kind": "precheck",
-      "scheduled_for": "2026-08-18T00:43:00-06:00",
-      "sent_at": "2026-08-18T02:21:08.425117-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
-      "event_id": "ff-calendar-151085",
-      "kind": "result",
-      "scheduled_for": "2026-08-18T01:01:00-06:00",
-      "sent_at": "2026-08-18T02:21:08.425117-06:00"
-    },
-    {
-      "attempt": 2,
-      "channel": "telegram",
-      "event_id": "ff-calendar-151085",
-      "kind": "result",
-      "scheduled_for": "2026-08-18T01:03:00-06:00",
-      "sent_at": "2026-08-18T02:21:08.425117-06:00"
-    },
-    {
-      "attempt": 3,
-      "channel": "telegram",
-      "event_id": "ff-calendar-151085",
-      "kind": "result",
-      "scheduled_for": "2026-08-18T01:05:00-06:00",
-      "sent_at": "2026-08-18T02:21:08.425117-06:00"
-    },
-    {
-      "attempt": 1,
-      "channel": "telegram",
-      "event_id": "ff-calendar-151085",
       "kind": "result",
       "scheduled_for": "2026-08-18T00:01:00-06:00",
       "sent_at": "2026-08-18T03:39:51.905729-06:00"
@@ -532,18 +500,18 @@
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-08-25T01:52:56.799884-06:00",
+      "last_attempt_at": "2026-08-25T02:30:50.048436-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-08-25T01:52:56.799884-06:00",
+      "last_success_at": "2026-08-25T02:30:50.048436-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-08-25T01:52:56.799884-06:00",
+      "last_attempt_at": "2026-08-25T02:30:50.048436-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-08-25T01:52:56.799884-06:00",
+      "last_success_at": "2026-08-25T02:30:50.048436-06:00",
       "status": "ok"
     },
     "telegram": {
