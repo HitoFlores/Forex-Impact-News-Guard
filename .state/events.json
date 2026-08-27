@@ -2,41 +2,79 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "0.2%",
+        "actual": null,
         "actual_better_worse": 0,
-        "currency": "USD",
+        "currency": "CAD",
         "forecast": "0.2%",
-        "id": "ff-calendar-148234",
+        "id": "ff-calendar-149226",
         "impact": "high",
         "is_breaking": false,
-        "previous": "0.1%",
+        "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-08-26T07:30:00-06:00",
+        "scheduled_at": "2026-08-28T08:30:00-06:00",
         "source": "forex_factory",
-        "title": "Core PCE Price Index m/m",
-        "url": "https://www.forexfactory.com/calendar?day=aug26.2026#detail=148234"
+        "title": "GDP m/m",
+        "url": "https://www.forexfactory.com/calendar?day=aug28.2026#detail=149226"
       },
-      "event_date": "2026-08-26",
-      "stored_at": "2026-08-26T18:03:45.504489-06:00"
+      "event_date": "2026-08-28",
+      "stored_at": "2026-08-27T03:32:09.376174-06:00"
     },
     {
       "event": {
-        "actual": "1.5%",
+        "actual": null,
         "actual_better_worse": 0,
         "currency": "USD",
-        "forecast": "1.5%",
-        "id": "ff-calendar-148290",
+        "forecast": null,
+        "id": "ff-calendar-153433",
         "impact": "high",
         "is_breaking": false,
-        "previous": "1.5%",
+        "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-08-26T07:30:00-06:00",
+        "scheduled_at": "2026-08-28T10:00:00-06:00",
         "source": "forex_factory",
-        "title": "Prelim GDP q/q",
-        "url": "https://www.forexfactory.com/calendar?day=aug26.2026#detail=148290"
+        "title": "Fed Chairman Warsh Speaks",
+        "url": "https://www.forexfactory.com/calendar?day=aug28.2026#detail=153433"
       },
-      "event_date": "2026-08-26",
-      "stored_at": "2026-08-26T18:03:45.504489-06:00"
+      "event_date": "2026-08-28",
+      "stored_at": "2026-08-27T03:32:09.376174-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": null,
+        "id": "ff-calendar-148508",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "-911K",
+        "published_at": null,
+        "scheduled_at": "2026-08-28T10:00:00-06:00",
+        "source": "forex_factory",
+        "title": "Prelim Benchmark Payrolls Revision",
+        "url": "https://www.forexfactory.com/calendar?day=aug28.2026#detail=148508"
+      },
+      "event_date": "2026-08-28",
+      "stored_at": "2026-08-27T03:32:09.376174-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "All",
+        "forecast": null,
+        "id": "ff-calendar-148675",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-08-28T10:15:00-06:00",
+        "source": "forex_factory",
+        "title": "Jackson Hole Symposium",
+        "url": "https://www.forexfactory.com/calendar?day=aug28.2026#detail=148675"
+      },
+      "event_date": "2026-08-28",
+      "stored_at": "2026-08-27T03:32:09.376174-06:00"
     }
   ]
 }
