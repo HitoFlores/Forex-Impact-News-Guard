@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-08-28T07:30:00-06:00",
+        "scheduled_at": "2026-08-28T05:30:00-06:00",
         "source": "forex_factory",
         "title": "GDP m/m",
         "url": "https://www.forexfactory.com/calendar?day=aug28.2026#detail=149226"
       },
       "event_date": "2026-08-28",
-      "stored_at": "2026-08-27T13:56:53.644352-06:00"
+      "stored_at": "2026-08-27T22:05:08.913124-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-08-28T09:00:00-06:00",
+        "scheduled_at": "2026-08-28T07:00:00-06:00",
         "source": "forex_factory",
         "title": "Fed Chairman Warsh Speaks",
         "url": "https://www.forexfactory.com/calendar?day=aug28.2026#detail=153433"
       },
       "event_date": "2026-08-28",
-      "stored_at": "2026-08-27T13:56:53.644352-06:00"
+      "stored_at": "2026-08-27T22:05:08.913124-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "-911K",
         "published_at": null,
-        "scheduled_at": "2026-08-28T09:00:00-06:00",
+        "scheduled_at": "2026-08-28T07:00:00-06:00",
         "source": "forex_factory",
         "title": "Prelim Benchmark Payrolls Revision",
         "url": "https://www.forexfactory.com/calendar?day=aug28.2026#detail=148508"
       },
       "event_date": "2026-08-28",
-      "stored_at": "2026-08-27T13:56:53.644352-06:00"
+      "stored_at": "2026-08-27T22:05:08.913124-06:00"
     },
     {
       "event": {
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=aug28.2026#detail=148675"
       },
       "event_date": "2026-08-28",
-      "stored_at": "2026-08-27T13:56:53.644352-06:00"
+      "stored_at": "2026-08-27T22:05:08.913124-06:00"
     }
   ]
 }
