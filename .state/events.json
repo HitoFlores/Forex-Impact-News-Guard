@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "55.6",
         "published_at": null,
-        "scheduled_at": "2026-09-01T07:00:00-06:00",
+        "scheduled_at": "2026-09-01T10:00:00-06:00",
         "source": "forex_factory",
         "title": "ISM Manufacturing PMI",
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=146583"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T12:20:44.622099-06:00"
+      "stored_at": "2026-09-01T15:08:41.793097-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-09-01T18:30:00-06:00",
+        "scheduled_at": "2026-09-01T21:30:00-06:00",
         "source": "forex_factory",
         "title": "GDP q/q",
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148164"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T12:20:44.622099-06:00"
+      "stored_at": "2026-09-01T15:08:41.793097-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "2.50%",
         "published_at": null,
-        "scheduled_at": "2026-09-01T19:00:00-06:00",
+        "scheduled_at": "2026-09-01T22:00:00-06:00",
         "source": "forex_factory",
         "title": "Official Cash Rate",
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148864"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T12:20:44.622099-06:00"
+      "stored_at": "2026-09-01T15:08:41.793097-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-01T19:00:00-06:00",
+        "scheduled_at": "2026-09-01T22:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Monetary Policy Statement",
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148866"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T12:20:44.622099-06:00"
+      "stored_at": "2026-09-01T15:08:41.793097-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-01T19:00:00-06:00",
+        "scheduled_at": "2026-09-01T22:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Rate Statement",
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148865"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T12:20:44.622099-06:00"
+      "stored_at": "2026-09-01T15:08:41.793097-06:00"
     },
     {
       "event": {
@@ -106,13 +106,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-01T20:00:00-06:00",
+        "scheduled_at": "2026-09-01T23:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148867"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T12:20:44.622099-06:00"
+      "stored_at": "2026-09-01T15:08:41.793097-06:00"
     },
     {
       "event": {
@@ -125,13 +125,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-02T06:45:00-06:00",
+        "scheduled_at": "2026-09-02T09:45:00-06:00",
         "source": "forex_factory",
         "title": "BOC Rate Statement",
         "url": "https://www.forexfactory.com/calendar?day=sep2.2026#detail=146544"
       },
       "event_date": "2026-09-02",
-      "stored_at": "2026-09-01T12:20:44.622099-06:00"
+      "stored_at": "2026-09-01T15:08:41.793097-06:00"
     },
     {
       "event": {
@@ -144,13 +144,13 @@
         "is_breaking": false,
         "previous": "2.25%",
         "published_at": null,
-        "scheduled_at": "2026-09-02T06:45:00-06:00",
+        "scheduled_at": "2026-09-02T09:45:00-06:00",
         "source": "forex_factory",
         "title": "Overnight Rate",
         "url": "https://www.forexfactory.com/calendar?day=sep2.2026#detail=146536"
       },
       "event_date": "2026-09-02",
-      "stored_at": "2026-09-01T12:20:44.622099-06:00"
+      "stored_at": "2026-09-01T15:08:41.793097-06:00"
     },
     {
       "event": {
@@ -163,13 +163,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-02T07:30:00-06:00",
+        "scheduled_at": "2026-09-02T10:30:00-06:00",
         "source": "forex_factory",
         "title": "BOC Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=sep2.2026#detail=146556"
       },
       "event_date": "2026-09-02",
-      "stored_at": "2026-09-01T12:20:44.622099-06:00"
+      "stored_at": "2026-09-01T15:08:41.793097-06:00"
     }
   ]
 }
