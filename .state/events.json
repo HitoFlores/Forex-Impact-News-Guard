@@ -17,12 +17,12 @@
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=146583"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T19:04:40.396392-06:00"
+      "stored_at": "2026-09-01T23:44:24.019740-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "0.4%",
+        "actual_better_worse": 1,
         "currency": "AUD",
         "forecast": "0.3%",
         "id": "ff-calendar-148164",
@@ -36,11 +36,11 @@
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148164"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T19:04:40.396392-06:00"
+      "stored_at": "2026-09-01T23:44:24.019740-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "2.75%",
         "actual_better_worse": 0,
         "currency": "NZD",
         "forecast": "2.75%",
@@ -55,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148864"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T19:04:40.396392-06:00"
+      "stored_at": "2026-09-01T23:44:24.019740-06:00"
     },
     {
       "event": {
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148866"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T19:04:40.396392-06:00"
+      "stored_at": "2026-09-01T23:44:24.019740-06:00"
     },
     {
       "event": {
@@ -93,7 +93,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148865"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T19:04:40.396392-06:00"
+      "stored_at": "2026-09-01T23:44:24.019740-06:00"
     },
     {
       "event": {
@@ -112,7 +112,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep1.2026#detail=148867"
       },
       "event_date": "2026-09-01",
-      "stored_at": "2026-09-01T19:04:40.396392-06:00"
+      "stored_at": "2026-09-01T23:44:24.019740-06:00"
     },
     {
       "event": {
@@ -131,7 +131,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep2.2026#detail=146544"
       },
       "event_date": "2026-09-02",
-      "stored_at": "2026-09-01T19:04:40.396392-06:00"
+      "stored_at": "2026-09-01T23:44:24.019740-06:00"
     },
     {
       "event": {
@@ -150,7 +150,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep2.2026#detail=146536"
       },
       "event_date": "2026-09-02",
-      "stored_at": "2026-09-01T19:04:40.396392-06:00"
+      "stored_at": "2026-09-01T23:44:24.019740-06:00"
     },
     {
       "event": {
@@ -169,7 +169,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep2.2026#detail=146556"
       },
       "event_date": "2026-09-02",
-      "stored_at": "2026-09-01T19:04:40.396392-06:00"
+      "stored_at": "2026-09-01T23:44:24.019740-06:00"
     }
   ]
 }
