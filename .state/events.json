@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-02T06:45:00-06:00",
+        "scheduled_at": "2026-09-02T08:45:00-06:00",
         "source": "forex_factory",
         "title": "BOC Rate Statement",
         "url": "https://www.forexfactory.com/calendar?day=sep2.2026#detail=146544"
       },
       "event_date": "2026-09-02",
-      "stored_at": "2026-09-02T14:17:45.134722-06:00"
+      "stored_at": "2026-09-02T16:42:00.549939-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "2.25%",
         "published_at": null,
-        "scheduled_at": "2026-09-02T06:45:00-06:00",
+        "scheduled_at": "2026-09-02T08:45:00-06:00",
         "source": "forex_factory",
         "title": "Overnight Rate",
         "url": "https://www.forexfactory.com/calendar?day=sep2.2026#detail=146536"
       },
       "event_date": "2026-09-02",
-      "stored_at": "2026-09-02T14:17:45.134722-06:00"
+      "stored_at": "2026-09-02T16:42:00.549939-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-02T07:30:00-06:00",
+        "scheduled_at": "2026-09-02T09:30:00-06:00",
         "source": "forex_factory",
         "title": "BOC Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=sep2.2026#detail=146556"
       },
       "event_date": "2026-09-02",
-      "stored_at": "2026-09-02T14:17:45.134722-06:00"
+      "stored_at": "2026-09-02T16:42:00.549939-06:00"
     }
   ]
 }
