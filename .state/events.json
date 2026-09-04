@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-04T01:50:00-06:00",
+        "scheduled_at": "2026-09-04T04:50:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=sep4.2026#detail=153446"
       },
       "event_date": "2026-09-04",
-      "stored_at": "2026-09-03T16:29:18.978802-06:00"
+      "stored_at": "2026-09-03T18:18:03.265038-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "75.1K",
         "published_at": null,
-        "scheduled_at": "2026-09-04T05:30:00-06:00",
+        "scheduled_at": "2026-09-04T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=sep4.2026#detail=149196"
       },
       "event_date": "2026-09-04",
-      "stored_at": "2026-09-03T16:29:18.978802-06:00"
+      "stored_at": "2026-09-03T18:18:03.265038-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "6.4%",
         "published_at": null,
-        "scheduled_at": "2026-09-04T05:30:00-06:00",
+        "scheduled_at": "2026-09-04T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=sep4.2026#detail=149197"
       },
       "event_date": "2026-09-04",
-      "stored_at": "2026-09-03T16:29:18.978802-06:00"
+      "stored_at": "2026-09-03T18:18:03.265038-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "0.1%",
         "published_at": null,
-        "scheduled_at": "2026-09-04T05:30:00-06:00",
+        "scheduled_at": "2026-09-04T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Average Hourly Earnings m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep4.2026#detail=146935"
       },
       "event_date": "2026-09-04",
-      "stored_at": "2026-09-03T16:29:18.978802-06:00"
+      "stored_at": "2026-09-03T18:18:03.265038-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": "-23K",
         "published_at": null,
-        "scheduled_at": "2026-09-04T05:30:00-06:00",
+        "scheduled_at": "2026-09-04T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Non-Farm Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=sep4.2026#detail=146911"
       },
       "event_date": "2026-09-04",
-      "stored_at": "2026-09-03T16:29:18.978802-06:00"
+      "stored_at": "2026-09-03T18:18:03.265038-06:00"
     },
     {
       "event": {
@@ -106,13 +106,13 @@
         "is_breaking": false,
         "previous": "4.1%",
         "published_at": null,
-        "scheduled_at": "2026-09-04T05:30:00-06:00",
+        "scheduled_at": "2026-09-04T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=sep4.2026#detail=146923"
       },
       "event_date": "2026-09-04",
-      "stored_at": "2026-09-03T16:29:18.978802-06:00"
+      "stored_at": "2026-09-03T18:18:03.265038-06:00"
     }
   ]
 }
