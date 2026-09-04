@@ -431,23 +431,31 @@
       "kind": "result",
       "scheduled_for": "2026-09-02T08:50:00-06:00",
       "sent_at": "2026-09-02T16:42:00.549939-06:00"
+    },
+    {
+      "attempt": 1,
+      "channel": "telegram",
+      "event_id": "ff-calendar-153446",
+      "kind": "precheck",
+      "scheduled_for": "2026-09-04T01:33:00-06:00",
+      "sent_at": "2026-09-04T03:04:45.562639-06:00"
     }
   ],
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-09-03T22:43:15.981812-06:00",
+      "last_attempt_at": "2026-09-04T03:04:45.562639-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-09-03T22:43:15.981812-06:00",
+      "last_success_at": "2026-09-04T03:04:45.562639-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-09-03T22:43:15.981812-06:00",
+      "last_attempt_at": "2026-09-04T03:04:45.562639-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-09-03T22:43:15.981812-06:00",
+      "last_success_at": "2026-09-04T03:04:45.562639-06:00",
       "status": "ok"
     },
     "telegram": {
