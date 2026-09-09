@@ -1,3 +1,99 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "EUR",
+        "forecast": "2.65%",
+        "id": "ff-calendar-150538",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2.40%",
+        "published_at": null,
+        "scheduled_at": "2026-09-10T07:15:00-06:00",
+        "source": "forex_factory",
+        "title": "Main Refinancing Rate",
+        "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=150538"
+      },
+      "event_date": "2026-09-10",
+      "stored_at": "2026-09-09T03:39:51.144719-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "EUR",
+        "forecast": null,
+        "id": "ff-calendar-150539",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-09-10T07:15:00-06:00",
+        "source": "forex_factory",
+        "title": "Monetary Policy Statement",
+        "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=150539"
+      },
+      "event_date": "2026-09-10",
+      "stored_at": "2026-09-09T03:39:51.144719-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "0.3%",
+        "id": "ff-calendar-148403",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.2%",
+        "published_at": null,
+        "scheduled_at": "2026-09-10T07:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Core PPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=148403"
+      },
+      "event_date": "2026-09-10",
+      "stored_at": "2026-09-09T03:39:51.144719-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "0.4%",
+        "id": "ff-calendar-148388",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.0%",
+        "published_at": null,
+        "scheduled_at": "2026-09-10T07:30:00-06:00",
+        "source": "forex_factory",
+        "title": "PPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=148388"
+      },
+      "event_date": "2026-09-10",
+      "stored_at": "2026-09-09T03:39:51.144719-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "EUR",
+        "forecast": null,
+        "id": "ff-calendar-150537",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-09-10T07:45:00-06:00",
+        "source": "forex_factory",
+        "title": "ECB Press Conference",
+        "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=150537"
+      },
+      "event_date": "2026-09-10",
+      "stored_at": "2026-09-09T03:39:51.144719-06:00"
+    }
+  ]
 }
