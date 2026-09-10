@@ -2,7 +2,7 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
+        "actual": "2.65%",
         "actual_better_worse": 0,
         "currency": "EUR",
         "forecast": "2.65%",
@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "2.40%",
         "published_at": null,
-        "scheduled_at": "2026-09-10T06:15:00-06:00",
+        "scheduled_at": "2026-09-10T05:15:00-06:00",
         "source": "forex_factory",
         "title": "Main Refinancing Rate",
         "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=150538"
       },
       "event_date": "2026-09-10",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     },
     {
       "event": {
@@ -30,18 +30,18 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-10T06:15:00-06:00",
+        "scheduled_at": "2026-09-10T05:15:00-06:00",
         "source": "forex_factory",
         "title": "Monetary Policy Statement",
         "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=150539"
       },
       "event_date": "2026-09-10",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "0.2%",
+        "actual_better_worse": 2,
         "currency": "USD",
         "forecast": "0.3%",
         "id": "ff-calendar-148403",
@@ -49,17 +49,17 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-09-10T06:30:00-06:00",
+        "scheduled_at": "2026-09-10T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=148403"
       },
       "event_date": "2026-09-10",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "0.4%",
         "actual_better_worse": 0,
         "currency": "USD",
         "forecast": "0.4%",
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "0.0%",
         "published_at": null,
-        "scheduled_at": "2026-09-10T06:30:00-06:00",
+        "scheduled_at": "2026-09-10T05:30:00-06:00",
         "source": "forex_factory",
         "title": "PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=148388"
       },
       "event_date": "2026-09-10",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-10T06:45:00-06:00",
+        "scheduled_at": "2026-09-10T05:45:00-06:00",
         "source": "forex_factory",
         "title": "ECB Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=150537"
       },
       "event_date": "2026-09-10",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     },
     {
       "event": {
@@ -106,13 +106,13 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-09-11T00:00:00-06:00",
+        "scheduled_at": "2026-09-10T23:00:00-06:00",
         "source": "forex_factory",
         "title": "GDP m/m",
-        "url": "https://www.forexfactory.com/calendar?day=sep11.2026#detail=151558"
+        "url": "https://www.forexfactory.com/calendar?day=sep10.2026#detail=151558"
       },
-      "event_date": "2026-09-11",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "event_date": "2026-09-10",
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     },
     {
       "event": {
@@ -125,13 +125,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-09-11T06:30:00-06:00",
+        "scheduled_at": "2026-09-11T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Core CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep11.2026#detail=148367"
       },
       "event_date": "2026-09-11",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     },
     {
       "event": {
@@ -144,13 +144,13 @@
         "is_breaking": false,
         "previous": "2.5%",
         "published_at": null,
-        "scheduled_at": "2026-09-11T06:30:00-06:00",
+        "scheduled_at": "2026-09-11T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Core CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=sep11.2026#detail=153056"
       },
       "event_date": "2026-09-11",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     },
     {
       "event": {
@@ -163,13 +163,13 @@
         "is_breaking": false,
         "previous": "0.1%",
         "published_at": null,
-        "scheduled_at": "2026-09-11T06:30:00-06:00",
+        "scheduled_at": "2026-09-11T05:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep11.2026#detail=148336"
       },
       "event_date": "2026-09-11",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     },
     {
       "event": {
@@ -182,13 +182,13 @@
         "is_breaking": false,
         "previous": "3.4%",
         "published_at": null,
-        "scheduled_at": "2026-09-11T06:30:00-06:00",
+        "scheduled_at": "2026-09-11T05:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=sep11.2026#detail=148351"
       },
       "event_date": "2026-09-11",
-      "stored_at": "2026-09-10T03:35:09.914305-06:00"
+      "stored_at": "2026-09-10T07:46:53.574954-06:00"
     }
   ]
 }
