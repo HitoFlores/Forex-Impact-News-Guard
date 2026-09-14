@@ -17,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep14.2026#detail=149166"
       },
       "event_date": "2026-09-14",
-      "stored_at": "2026-09-13T19:40:06.163348-06:00"
+      "stored_at": "2026-09-14T01:06:11.697527-06:00"
     },
     {
       "event": {
@@ -36,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep14.2026#detail=149167"
       },
       "event_date": "2026-09-14",
-      "stored_at": "2026-09-13T19:40:06.163348-06:00"
+      "stored_at": "2026-09-14T01:06:11.697527-06:00"
     },
     {
       "event": {
@@ -55,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep14.2026#detail=149168"
       },
       "event_date": "2026-09-14",
-      "stored_at": "2026-09-13T19:40:06.163348-06:00"
+      "stored_at": "2026-09-14T01:06:11.697527-06:00"
     },
     {
       "event": {
@@ -74,7 +74,26 @@
         "url": "https://www.forexfactory.com/calendar?day=sep14.2026#detail=151090"
       },
       "event_date": "2026-09-14",
-      "stored_at": "2026-09-13T19:40:06.163348-06:00"
+      "stored_at": "2026-09-14T01:06:11.697527-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": "3.1%",
+        "id": "ff-calendar-151448",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2.9%",
+        "published_at": null,
+        "scheduled_at": "2026-09-15T23:00:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=sep15.2026#detail=151448"
+      },
+      "event_date": "2026-09-15",
+      "stored_at": "2026-09-14T01:06:11.697527-06:00"
     }
   ]
 }
