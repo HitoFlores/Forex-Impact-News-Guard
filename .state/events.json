@@ -11,17 +11,17 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-17T04:00:00-06:00",
+        "scheduled_at": "2026-09-17T07:00:00-06:00",
         "source": "forex_factory",
         "title": "Monetary Policy Summary",
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=150721"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-17T00:41:05.273180-06:00"
+      "stored_at": "2026-09-17T06:06:29.314627-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "3-0-6",
         "actual_better_worse": 0,
         "currency": "GBP",
         "forecast": "3-0-6",
@@ -30,17 +30,17 @@
         "is_breaking": false,
         "previous": "3-0-6",
         "published_at": null,
-        "scheduled_at": "2026-09-17T04:00:00-06:00",
+        "scheduled_at": "2026-09-17T07:00:00-06:00",
         "source": "forex_factory",
         "title": "MPC Official Bank Rate Votes",
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=150722"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-17T00:41:05.273180-06:00"
+      "stored_at": "2026-09-17T06:06:29.314627-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "3.75%",
         "actual_better_worse": 0,
         "currency": "GBP",
         "forecast": "3.75%",
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "3.75%",
         "published_at": null,
-        "scheduled_at": "2026-09-17T04:00:00-06:00",
+        "scheduled_at": "2026-09-17T07:00:00-06:00",
         "source": "forex_factory",
         "title": "Official Bank Rate",
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=150720"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-17T00:41:05.273180-06:00"
+      "stored_at": "2026-09-17T06:06:29.314627-06:00"
     },
     {
       "event": {
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=148559"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-17T00:41:05.273180-06:00"
+      "stored_at": "2026-09-17T06:06:29.314627-06:00"
     },
     {
       "event": {
@@ -93,7 +93,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=148560"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-17T00:41:05.273180-06:00"
+      "stored_at": "2026-09-17T06:06:29.314627-06:00"
     },
     {
       "event": {
@@ -109,10 +109,10 @@
         "scheduled_at": "2026-09-17T23:30:00-06:00",
         "source": "forex_factory",
         "title": "BOJ Press Conference",
-        "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=148561"
+        "url": "https://www.forexfactory.com/calendar?day=sep18.2026#detail=148561"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-17T00:41:05.273180-06:00"
+      "stored_at": "2026-09-17T06:06:29.314627-06:00"
     }
   ]
 }
