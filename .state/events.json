@@ -2,101 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "4.00%",
-        "actual_better_worse": 0,
-        "currency": "USD",
-        "forecast": "4.00%",
-        "id": "ff-calendar-146499",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "3.75%",
-        "published_at": null,
-        "scheduled_at": "2026-09-16T11:00:00-06:00",
-        "source": "forex_factory",
-        "title": "Federal Funds Rate",
-        "url": "https://www.forexfactory.com/calendar?day=sep16.2026#detail=146499"
-      },
-      "event_date": "2026-09-16",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "USD",
-        "forecast": null,
-        "id": "ff-calendar-146512",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-09-16T11:00:00-06:00",
-        "source": "forex_factory",
-        "title": "FOMC Economic Projections",
-        "url": "https://www.forexfactory.com/calendar?day=sep16.2026#detail=146512"
-      },
-      "event_date": "2026-09-16",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "USD",
-        "forecast": null,
-        "id": "ff-calendar-146507",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-09-16T11:00:00-06:00",
-        "source": "forex_factory",
-        "title": "FOMC Statement",
-        "url": "https://www.forexfactory.com/calendar?day=sep16.2026#detail=146507"
-      },
-      "event_date": "2026-09-16",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "USD",
-        "forecast": null,
-        "id": "ff-calendar-146519",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-09-16T11:30:00-06:00",
-        "source": "forex_factory",
-        "title": "FOMC Press Conference",
-        "url": "https://www.forexfactory.com/calendar?day=sep16.2026#detail=146519"
-      },
-      "event_date": "2026-09-16",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
-    },
-    {
-      "event": {
-        "actual": "0.2%",
-        "actual_better_worse": 1,
-        "currency": "NZD",
-        "forecast": "0.1%",
-        "id": "ff-calendar-150021",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.8%",
-        "published_at": null,
-        "scheduled_at": "2026-09-16T15:45:00-06:00",
-        "source": "forex_factory",
-        "title": "GDP q/q",
-        "url": "https://www.forexfactory.com/calendar?day=sep16.2026#detail=150021"
-      },
-      "event_date": "2026-09-16",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "GBP",
@@ -112,7 +17,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=150721"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
+      "stored_at": "2026-09-17T00:41:05.273180-06:00"
     },
     {
       "event": {
@@ -131,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=150722"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
+      "stored_at": "2026-09-17T00:41:05.273180-06:00"
     },
     {
       "event": {
@@ -150,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=150720"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
+      "stored_at": "2026-09-17T00:41:05.273180-06:00"
     },
     {
       "event": {
@@ -169,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=148559"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
+      "stored_at": "2026-09-17T00:41:05.273180-06:00"
     },
     {
       "event": {
@@ -188,7 +93,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=148560"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
+      "stored_at": "2026-09-17T00:41:05.273180-06:00"
     },
     {
       "event": {
@@ -207,7 +112,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep17.2026#detail=148561"
       },
       "event_date": "2026-09-17",
-      "stored_at": "2026-09-16T19:42:49.847718-06:00"
+      "stored_at": "2026-09-17T00:41:05.273180-06:00"
     }
   ]
 }
