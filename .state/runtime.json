@@ -844,18 +844,18 @@
   "observability": {
     "precheck": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-09-19T12:40:59.644310-06:00",
+      "last_attempt_at": "2026-09-19T15:01:50.143844-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-09-19T12:40:59.644310-06:00",
+      "last_success_at": "2026-09-19T15:01:50.143844-06:00",
       "status": "ok"
     },
     "scraping": {
       "consecutive_failures": 0,
-      "last_attempt_at": "2026-09-19T12:40:59.644310-06:00",
+      "last_attempt_at": "2026-09-19T15:01:50.143844-06:00",
       "last_error_at": null,
       "last_error_message": null,
-      "last_success_at": "2026-09-19T12:40:59.644310-06:00",
+      "last_success_at": "2026-09-19T15:01:50.143844-06:00",
       "status": "ok"
     },
     "telegram": {
