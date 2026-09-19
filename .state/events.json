@@ -1,3 +1,23 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "JPY",
+        "forecast": null,
+        "id": "ff-calendar-148561",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-09-18T02:30:00-06:00",
+        "source": "forex_factory",
+        "title": "BOJ Press Conference",
+        "url": "https://www.forexfactory.com/calendar?day=sep18.2026#detail=148561"
+      },
+      "event_date": "2026-09-18",
+      "stored_at": "2026-09-18T18:25:36.066594-06:00"
+    }
+  ]
 }
