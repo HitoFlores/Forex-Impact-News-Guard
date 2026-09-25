@@ -4,63 +4,6 @@
       "event": {
         "actual": null,
         "actual_better_worse": 0,
-        "currency": "CHF",
-        "forecast": null,
-        "id": "ff-calendar-147410",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-09-24T02:30:00-06:00",
-        "source": "forex_factory",
-        "title": "SNB Monetary Policy Assessment",
-        "url": "https://www.forexfactory.com/calendar?day=sep24.2026#detail=147410"
-      },
-      "event_date": "2026-09-24",
-      "stored_at": "2026-09-24T22:44:52.765415-06:00"
-    },
-    {
-      "event": {
-        "actual": "0.00%",
-        "actual_better_worse": 0,
-        "currency": "CHF",
-        "forecast": "0.00%",
-        "id": "ff-calendar-147411",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.00%",
-        "published_at": null,
-        "scheduled_at": "2026-09-24T02:30:00-06:00",
-        "source": "forex_factory",
-        "title": "SNB Policy Rate",
-        "url": "https://www.forexfactory.com/calendar?day=sep24.2026#detail=147411"
-      },
-      "event_date": "2026-09-24",
-      "stored_at": "2026-09-24T22:44:52.765415-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
-        "currency": "CHF",
-        "forecast": null,
-        "id": "ff-calendar-147412",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-09-24T03:00:00-06:00",
-        "source": "forex_factory",
-        "title": "SNB Press Conference",
-        "url": "https://www.forexfactory.com/calendar?day=sep24.2026#detail=147412"
-      },
-      "event_date": "2026-09-24",
-      "stored_at": "2026-09-24T22:44:52.765415-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
         "currency": "GBP",
         "forecast": null,
         "id": "ff-calendar-153559",
@@ -68,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-25T04:15:00-06:00",
+        "scheduled_at": "2026-09-25T02:15:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=sep25.2026#detail=153559"
       },
       "event_date": "2026-09-25",
-      "stored_at": "2026-09-24T22:44:52.765415-06:00"
+      "stored_at": "2026-09-25T03:49:53.873262-06:00"
     }
   ]
 }
