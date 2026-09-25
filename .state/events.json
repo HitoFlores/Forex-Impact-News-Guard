@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-25T05:15:00-06:00",
+        "scheduled_at": "2026-09-25T04:15:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=sep25.2026#detail=153559"
       },
       "event_date": "2026-09-25",
-      "stored_at": "2026-09-25T12:56:55.856682-06:00"
+      "stored_at": "2026-09-25T16:02:00.421818-06:00"
     }
   ]
 }
