@@ -1,3 +1,42 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "4.60%",
+        "id": "ff-calendar-147789",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.35%",
+        "published_at": null,
+        "scheduled_at": "2026-09-28T22:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Cash Rate",
+        "url": "https://www.forexfactory.com/calendar?day=sep28.2026#detail=147789"
+      },
+      "event_date": "2026-09-28",
+      "stored_at": "2026-09-27T19:31:58.373850-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": null,
+        "id": "ff-calendar-147790",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-09-28T22:30:00-06:00",
+        "source": "forex_factory",
+        "title": "RBA Rate Statement",
+        "url": "https://www.forexfactory.com/calendar?day=sep28.2026#detail=147790"
+      },
+      "event_date": "2026-09-28",
+      "stored_at": "2026-09-27T19:31:58.373850-06:00"
+    }
+  ]
 }
