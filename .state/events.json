@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "4.35%",
         "published_at": null,
-        "scheduled_at": "2026-09-28T23:30:00-06:00",
+        "scheduled_at": "2026-09-29T00:30:00-06:00",
         "source": "forex_factory",
         "title": "Cash Rate",
-        "url": "https://www.forexfactory.com/calendar?day=sep28.2026#detail=147789"
+        "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=147789"
       },
-      "event_date": "2026-09-28",
-      "stored_at": "2026-09-28T09:51:00.461075-06:00"
+      "event_date": "2026-09-29",
+      "stored_at": "2026-09-28T15:25:07.766370-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-09-28T23:30:00-06:00",
+        "scheduled_at": "2026-09-29T00:30:00-06:00",
         "source": "forex_factory",
         "title": "RBA Rate Statement",
-        "url": "https://www.forexfactory.com/calendar?day=sep28.2026#detail=147790"
+        "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=147790"
       },
-      "event_date": "2026-09-28",
-      "stored_at": "2026-09-28T09:51:00.461075-06:00"
+      "event_date": "2026-09-29",
+      "stored_at": "2026-09-28T15:25:07.766370-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "1.0%",
         "published_at": null,
-        "scheduled_at": "2026-09-29T20:30:00-06:00",
+        "scheduled_at": "2026-09-29T21:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=152600"
       },
       "event_date": "2026-09-29",
-      "stored_at": "2026-09-28T09:51:00.461075-06:00"
+      "stored_at": "2026-09-28T15:25:07.766370-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "3.5%",
         "published_at": null,
-        "scheduled_at": "2026-09-29T20:30:00-06:00",
+        "scheduled_at": "2026-09-29T21:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=149100"
       },
       "event_date": "2026-09-29",
-      "stored_at": "2026-09-28T09:51:00.461075-06:00"
+      "stored_at": "2026-09-28T15:25:07.766370-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": "0.5%",
         "published_at": null,
-        "scheduled_at": "2026-09-29T20:30:00-06:00",
+        "scheduled_at": "2026-09-29T21:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed Mean CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=152601"
       },
       "event_date": "2026-09-29",
-      "stored_at": "2026-09-28T09:51:00.461075-06:00"
+      "stored_at": "2026-09-28T15:25:07.766370-06:00"
     }
   ]
 }
