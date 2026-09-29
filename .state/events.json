@@ -2,6 +2,44 @@
   "relevant_events": [
     {
       "event": {
+        "actual": "4.60%",
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "4.60%",
+        "id": "ff-calendar-147789",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.35%",
+        "published_at": null,
+        "scheduled_at": "2026-09-29T00:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Cash Rate",
+        "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=147789"
+      },
+      "event_date": "2026-09-29",
+      "stored_at": "2026-09-29T07:31:21.828657-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": null,
+        "id": "ff-calendar-147790",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-09-29T00:30:00-06:00",
+        "source": "forex_factory",
+        "title": "RBA Rate Statement",
+        "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=147790"
+      },
+      "event_date": "2026-09-29",
+      "stored_at": "2026-09-29T07:31:21.828657-06:00"
+    },
+    {
+      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "AUD",
@@ -11,13 +49,13 @@
         "is_breaking": false,
         "previous": "1.0%",
         "published_at": null,
-        "scheduled_at": "2026-09-29T18:30:00-06:00",
+        "scheduled_at": "2026-09-29T21:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=152600"
       },
       "event_date": "2026-09-29",
-      "stored_at": "2026-09-29T00:52:20.227807-06:00"
+      "stored_at": "2026-09-29T07:31:21.828657-06:00"
     },
     {
       "event": {
@@ -30,13 +68,13 @@
         "is_breaking": false,
         "previous": "3.5%",
         "published_at": null,
-        "scheduled_at": "2026-09-29T18:30:00-06:00",
+        "scheduled_at": "2026-09-29T21:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=149100"
       },
       "event_date": "2026-09-29",
-      "stored_at": "2026-09-29T00:52:20.227807-06:00"
+      "stored_at": "2026-09-29T07:31:21.828657-06:00"
     },
     {
       "event": {
@@ -49,13 +87,13 @@
         "is_breaking": false,
         "previous": "0.5%",
         "published_at": null,
-        "scheduled_at": "2026-09-29T18:30:00-06:00",
+        "scheduled_at": "2026-09-29T21:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed Mean CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=152601"
       },
       "event_date": "2026-09-29",
-      "stored_at": "2026-09-29T00:52:20.227807-06:00"
+      "stored_at": "2026-09-29T07:31:21.828657-06:00"
     },
     {
       "event": {
@@ -68,13 +106,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-09-30T05:30:00-06:00",
+        "scheduled_at": "2026-09-30T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PCE Price Index m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148235"
       },
       "event_date": "2026-09-30",
-      "stored_at": "2026-09-29T00:52:20.227807-06:00"
+      "stored_at": "2026-09-29T07:31:21.828657-06:00"
     },
     {
       "event": {
@@ -87,13 +125,13 @@
         "is_breaking": false,
         "previous": "1.5%",
         "published_at": null,
-        "scheduled_at": "2026-09-30T05:30:00-06:00",
+        "scheduled_at": "2026-09-30T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Final GDP q/q",
         "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148310"
       },
       "event_date": "2026-09-30",
-      "stored_at": "2026-09-29T00:52:20.227807-06:00"
+      "stored_at": "2026-09-29T07:31:21.828657-06:00"
     }
   ]
 }
