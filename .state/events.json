@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-09-30T07:30:00-06:00",
+        "scheduled_at": "2026-09-30T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PCE Price Index m/m",
         "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148235"
       },
       "event_date": "2026-09-30",
-      "stored_at": "2026-09-30T13:08:51.180635-06:00"
+      "stored_at": "2026-09-30T16:59:31.767006-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "1.5%",
         "published_at": null,
-        "scheduled_at": "2026-09-30T07:30:00-06:00",
+        "scheduled_at": "2026-09-30T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Final GDP q/q",
         "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148310"
       },
       "event_date": "2026-09-30",
-      "stored_at": "2026-09-30T13:08:51.180635-06:00"
+      "stored_at": "2026-09-30T16:59:31.767006-06:00"
     }
   ]
 }
