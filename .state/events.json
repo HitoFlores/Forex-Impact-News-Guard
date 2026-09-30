@@ -2,8 +2,8 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "0.4%",
+        "actual_better_worse": 2,
         "currency": "AUD",
         "forecast": "0.5%",
         "id": "ff-calendar-152600",
@@ -17,12 +17,12 @@
         "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=152600"
       },
       "event_date": "2026-09-29",
-      "stored_at": "2026-09-29T16:42:04.522038-06:00"
+      "stored_at": "2026-09-29T19:37:05.086286-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "4.0%",
+        "actual_better_worse": 2,
         "currency": "AUD",
         "forecast": "4.1%",
         "id": "ff-calendar-149100",
@@ -36,12 +36,12 @@
         "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=149100"
       },
       "event_date": "2026-09-29",
-      "stored_at": "2026-09-29T16:42:04.522038-06:00"
+      "stored_at": "2026-09-29T19:37:05.086286-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "0.2%",
+        "actual_better_worse": 2,
         "currency": "AUD",
         "forecast": "0.3%",
         "id": "ff-calendar-152601",
@@ -55,7 +55,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep29.2026#detail=152601"
       },
       "event_date": "2026-09-29",
-      "stored_at": "2026-09-29T16:42:04.522038-06:00"
+      "stored_at": "2026-09-29T19:37:05.086286-06:00"
     },
     {
       "event": {
@@ -74,7 +74,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148235"
       },
       "event_date": "2026-09-30",
-      "stored_at": "2026-09-29T16:42:04.522038-06:00"
+      "stored_at": "2026-09-29T19:37:05.086286-06:00"
     },
     {
       "event": {
@@ -93,7 +93,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148310"
       },
       "event_date": "2026-09-30",
-      "stored_at": "2026-09-29T16:42:04.522038-06:00"
+      "stored_at": "2026-09-29T19:37:05.086286-06:00"
     }
   ]
 }
