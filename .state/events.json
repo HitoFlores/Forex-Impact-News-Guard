@@ -2,8 +2,8 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "0.2%",
+        "actual_better_worse": 2,
         "currency": "USD",
         "forecast": "0.3%",
         "id": "ff-calendar-148235",
@@ -17,12 +17,12 @@
         "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148235"
       },
       "event_date": "2026-09-30",
-      "stored_at": "2026-09-30T01:24:55.697523-06:00"
+      "stored_at": "2026-09-30T08:02:54.725498-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "2.2%",
+        "actual_better_worse": 1,
         "currency": "USD",
         "forecast": "1.5%",
         "id": "ff-calendar-148310",
@@ -36,7 +36,7 @@
         "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148310"
       },
       "event_date": "2026-09-30",
-      "stored_at": "2026-09-30T01:24:55.697523-06:00"
+      "stored_at": "2026-09-30T08:02:54.725498-06:00"
     }
   ]
 }
