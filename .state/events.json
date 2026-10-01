@@ -2,41 +2,60 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "0.2%",
-        "actual_better_worse": 2,
+        "actual": null,
+        "actual_better_worse": 0,
         "currency": "USD",
         "forecast": "0.3%",
-        "id": "ff-calendar-148235",
+        "id": "ff-calendar-146936",
         "impact": "high",
         "is_breaking": false,
-        "previous": "0.2%",
+        "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-09-30T08:30:00-06:00",
+        "scheduled_at": "2026-10-02T05:30:00-06:00",
         "source": "forex_factory",
-        "title": "Core PCE Price Index m/m",
-        "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148235"
+        "title": "Average Hourly Earnings m/m",
+        "url": "https://www.forexfactory.com/calendar?day=oct2.2026#detail=146936"
       },
-      "event_date": "2026-09-30",
-      "stored_at": "2026-09-30T19:59:33.178048-06:00"
+      "event_date": "2026-10-02",
+      "stored_at": "2026-10-01T02:42:49.169410-06:00"
     },
     {
       "event": {
-        "actual": "2.2%",
-        "actual_better_worse": 1,
+        "actual": null,
+        "actual_better_worse": 0,
         "currency": "USD",
-        "forecast": "1.5%",
-        "id": "ff-calendar-148310",
+        "forecast": "89K",
+        "id": "ff-calendar-146912",
         "impact": "high",
         "is_breaking": false,
-        "previous": "1.5%",
+        "previous": "162K",
         "published_at": null,
-        "scheduled_at": "2026-09-30T08:30:00-06:00",
+        "scheduled_at": "2026-10-02T05:30:00-06:00",
         "source": "forex_factory",
-        "title": "Final GDP q/q",
-        "url": "https://www.forexfactory.com/calendar?day=sep30.2026#detail=148310"
+        "title": "Non-Farm Employment Change",
+        "url": "https://www.forexfactory.com/calendar?day=oct2.2026#detail=146912"
       },
-      "event_date": "2026-09-30",
-      "stored_at": "2026-09-30T19:59:33.178048-06:00"
+      "event_date": "2026-10-02",
+      "stored_at": "2026-10-01T02:42:49.169410-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": "4.1%",
+        "id": "ff-calendar-146924",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.1%",
+        "published_at": null,
+        "scheduled_at": "2026-10-02T05:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Unemployment Rate",
+        "url": "https://www.forexfactory.com/calendar?day=oct2.2026#detail=146924"
+      },
+      "event_date": "2026-10-02",
+      "stored_at": "2026-10-01T02:42:49.169410-06:00"
     }
   ]
 }
