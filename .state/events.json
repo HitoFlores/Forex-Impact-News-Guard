@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.3%",
         "published_at": null,
-        "scheduled_at": "2026-10-02T07:30:00-06:00",
+        "scheduled_at": "2026-10-02T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Average Hourly Earnings m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct2.2026#detail=146936"
       },
       "event_date": "2026-10-02",
-      "stored_at": "2026-10-02T14:59:20.232012-06:00"
+      "stored_at": "2026-10-02T18:21:57.398266-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "162K",
         "published_at": null,
-        "scheduled_at": "2026-10-02T07:30:00-06:00",
+        "scheduled_at": "2026-10-02T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Non-Farm Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=oct2.2026#detail=146912"
       },
       "event_date": "2026-10-02",
-      "stored_at": "2026-10-02T14:59:20.232012-06:00"
+      "stored_at": "2026-10-02T18:21:57.398266-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "4.1%",
         "published_at": null,
-        "scheduled_at": "2026-10-02T07:30:00-06:00",
+        "scheduled_at": "2026-10-02T08:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=oct2.2026#detail=146924"
       },
       "event_date": "2026-10-02",
-      "stored_at": "2026-10-02T14:59:20.232012-06:00"
+      "stored_at": "2026-10-02T18:21:57.398266-06:00"
     }
   ]
 }
