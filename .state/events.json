@@ -1,3 +1,23 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "JPY",
+        "forecast": null,
+        "id": "ff-calendar-154045",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-10-05T23:35:00-06:00",
+        "source": "forex_factory",
+        "title": "BOJ Gov Ueda Speaks",
+        "url": "https://www.forexfactory.com/calendar?day=oct5.2026#detail=154045"
+      },
+      "event_date": "2026-10-05",
+      "stored_at": "2026-10-04T09:50:32.408110-06:00"
+    }
+  ]
 }
