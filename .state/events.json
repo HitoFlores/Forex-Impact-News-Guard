@@ -4,25 +4,6 @@
       "event": {
         "actual": null,
         "actual_better_worse": 0,
-        "currency": "JPY",
-        "forecast": null,
-        "id": "ff-calendar-154045",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-10-06T07:35:00-06:00",
-        "source": "forex_factory",
-        "title": "BOJ Gov Ueda Speaks",
-        "url": "https://www.forexfactory.com/calendar?day=oct6.2026#detail=154045"
-      },
-      "event_date": "2026-10-06",
-      "stored_at": "2026-10-06T02:39:56.974453-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
         "currency": "USD",
         "forecast": null,
         "id": "ff-calendar-146528",
@@ -30,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-07T19:00:00-06:00",
+        "scheduled_at": "2026-10-07T11:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Meeting Minutes",
         "url": "https://www.forexfactory.com/calendar?day=oct7.2026#detail=146528"
       },
       "event_date": "2026-10-07",
-      "stored_at": "2026-10-06T02:39:56.974453-06:00"
+      "stored_at": "2026-10-06T09:26:46.894506-06:00"
     }
   ]
 }
