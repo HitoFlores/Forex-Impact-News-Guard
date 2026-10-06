@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-05T23:35:00-06:00",
+        "scheduled_at": "2026-10-06T01:35:00-06:00",
         "source": "forex_factory",
         "title": "BOJ Gov Ueda Speaks",
-        "url": "https://www.forexfactory.com/calendar?day=oct5.2026#detail=154045"
+        "url": "https://www.forexfactory.com/calendar?day=oct6.2026#detail=154045"
       },
-      "event_date": "2026-10-05",
-      "stored_at": "2026-10-05T15:50:19.624285-06:00"
+      "event_date": "2026-10-06",
+      "stored_at": "2026-10-05T19:56:48.435714-06:00"
     }
   ]
 }
