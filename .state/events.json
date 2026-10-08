@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-07T14:00:00-06:00",
+        "scheduled_at": "2026-10-07T19:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Meeting Minutes",
         "url": "https://www.forexfactory.com/calendar?day=oct7.2026#detail=146528"
       },
       "event_date": "2026-10-07",
-      "stored_at": "2026-10-07T17:21:10.402536-06:00"
+      "stored_at": "2026-10-07T20:45:24.610718-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-08T08:15:00-06:00",
+        "scheduled_at": "2026-10-08T13:15:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=oct8.2026#detail=154102"
       },
       "event_date": "2026-10-08",
-      "stored_at": "2026-10-07T17:21:10.402536-06:00"
+      "stored_at": "2026-10-07T20:45:24.610718-06:00"
     }
   ]
 }
