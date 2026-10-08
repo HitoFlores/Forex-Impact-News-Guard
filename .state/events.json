@@ -4,25 +4,6 @@
       "event": {
         "actual": null,
         "actual_better_worse": 0,
-        "currency": "USD",
-        "forecast": null,
-        "id": "ff-calendar-146528",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-10-07T19:00:00-06:00",
-        "source": "forex_factory",
-        "title": "FOMC Meeting Minutes",
-        "url": "https://www.forexfactory.com/calendar?day=oct7.2026#detail=146528"
-      },
-      "event_date": "2026-10-07",
-      "stored_at": "2026-10-07T20:45:24.610718-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
         "currency": "GBP",
         "forecast": null,
         "id": "ff-calendar-154102",
@@ -30,13 +11,51 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-08T13:15:00-06:00",
+        "scheduled_at": "2026-10-08T05:15:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=oct8.2026#detail=154102"
       },
       "event_date": "2026-10-08",
-      "stored_at": "2026-10-07T20:45:24.610718-06:00"
+      "stored_at": "2026-10-08T03:31:45.890825-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": "6.3K",
+        "id": "ff-calendar-149198",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "-41.7K",
+        "published_at": null,
+        "scheduled_at": "2026-10-09T05:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Employment Change",
+        "url": "https://www.forexfactory.com/calendar?day=oct9.2026#detail=149198"
+      },
+      "event_date": "2026-10-09",
+      "stored_at": "2026-10-08T03:31:45.890825-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "CAD",
+        "forecast": "6.5%",
+        "id": "ff-calendar-149199",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "6.4%",
+        "published_at": null,
+        "scheduled_at": "2026-10-09T05:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Unemployment Rate",
+        "url": "https://www.forexfactory.com/calendar?day=oct9.2026#detail=149199"
+      },
+      "event_date": "2026-10-09",
+      "stored_at": "2026-10-08T03:31:45.890825-06:00"
     }
   ]
 }
