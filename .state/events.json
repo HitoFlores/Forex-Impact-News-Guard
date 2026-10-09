@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "-41.7K",
         "published_at": null,
-        "scheduled_at": "2026-10-09T08:30:00-06:00",
+        "scheduled_at": "2026-10-09T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=oct9.2026#detail=149198"
       },
       "event_date": "2026-10-09",
-      "stored_at": "2026-10-09T13:47:11.576803-06:00"
+      "stored_at": "2026-10-09T17:35:28.098113-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "6.4%",
         "published_at": null,
-        "scheduled_at": "2026-10-09T08:30:00-06:00",
+        "scheduled_at": "2026-10-09T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=oct9.2026#detail=149199"
       },
       "event_date": "2026-10-09",
-      "stored_at": "2026-10-09T13:47:11.576803-06:00"
+      "stored_at": "2026-10-09T17:35:28.098113-06:00"
     }
   ]
 }
