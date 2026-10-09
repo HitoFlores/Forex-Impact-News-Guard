@@ -4,25 +4,6 @@
       "event": {
         "actual": null,
         "actual_better_worse": 0,
-        "currency": "GBP",
-        "forecast": null,
-        "id": "ff-calendar-154102",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": null,
-        "published_at": null,
-        "scheduled_at": "2026-10-08T05:15:00-06:00",
-        "source": "forex_factory",
-        "title": "BOE Gov Bailey Speaks",
-        "url": "https://www.forexfactory.com/calendar?day=oct8.2026#detail=154102"
-      },
-      "event_date": "2026-10-08",
-      "stored_at": "2026-10-08T19:24:48.654460-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
         "currency": "CAD",
         "forecast": "6.1K",
         "id": "ff-calendar-149198",
@@ -30,13 +11,13 @@
         "is_breaking": false,
         "previous": "-41.7K",
         "published_at": null,
-        "scheduled_at": "2026-10-09T05:30:00-06:00",
+        "scheduled_at": "2026-10-09T06:30:00-06:00",
         "source": "forex_factory",
         "title": "Employment Change",
         "url": "https://www.forexfactory.com/calendar?day=oct9.2026#detail=149198"
       },
       "event_date": "2026-10-09",
-      "stored_at": "2026-10-08T19:24:48.654460-06:00"
+      "stored_at": "2026-10-09T01:41:29.937664-06:00"
     },
     {
       "event": {
@@ -49,13 +30,13 @@
         "is_breaking": false,
         "previous": "6.4%",
         "published_at": null,
-        "scheduled_at": "2026-10-09T05:30:00-06:00",
+        "scheduled_at": "2026-10-09T06:30:00-06:00",
         "source": "forex_factory",
         "title": "Unemployment Rate",
         "url": "https://www.forexfactory.com/calendar?day=oct9.2026#detail=149199"
       },
       "event_date": "2026-10-09",
-      "stored_at": "2026-10-08T19:24:48.654460-06:00"
+      "stored_at": "2026-10-09T01:41:29.937664-06:00"
     }
   ]
 }
