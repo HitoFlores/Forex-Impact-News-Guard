@@ -2,122 +2,8 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "0.3%",
+        "actual": "0.1%",
         "actual_better_worse": 1,
-        "currency": "USD",
-        "forecast": "0.2%",
-        "id": "ff-calendar-148368",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.3%",
-        "published_at": null,
-        "scheduled_at": "2026-10-14T14:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Core CPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=oct14.2026#detail=148368"
-      },
-      "event_date": "2026-10-14",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
-    },
-    {
-      "event": {
-        "actual": "2.6%",
-        "actual_better_worse": 1,
-        "currency": "USD",
-        "forecast": "2.5%",
-        "id": "ff-calendar-153057",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "2.4%",
-        "published_at": null,
-        "scheduled_at": "2026-10-14T14:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Core CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=oct14.2026#detail=153057"
-      },
-      "event_date": "2026-10-14",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
-    },
-    {
-      "event": {
-        "actual": "0.6%",
-        "actual_better_worse": 0,
-        "currency": "USD",
-        "forecast": "0.6%",
-        "id": "ff-calendar-148337",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.4%",
-        "published_at": null,
-        "scheduled_at": "2026-10-14T14:30:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=oct14.2026#detail=148337"
-      },
-      "event_date": "2026-10-14",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
-    },
-    {
-      "event": {
-        "actual": "3.7%",
-        "actual_better_worse": 1,
-        "currency": "USD",
-        "forecast": "3.6%",
-        "id": "ff-calendar-148352",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "3.4%",
-        "published_at": null,
-        "scheduled_at": "2026-10-14T14:30:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=oct14.2026#detail=148352"
-      },
-      "event_date": "2026-10-14",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
-    },
-    {
-      "event": {
-        "actual": "-39.3K",
-        "actual_better_worse": 2,
-        "currency": "AUD",
-        "forecast": "19.6K",
-        "id": "ff-calendar-148148",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "39.5K",
-        "published_at": null,
-        "scheduled_at": "2026-10-15T02:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Employment Change",
-        "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148148"
-      },
-      "event_date": "2026-10-15",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
-    },
-    {
-      "event": {
-        "actual": "4.7%",
-        "actual_better_worse": 2,
-        "currency": "AUD",
-        "forecast": "4.6%",
-        "id": "ff-calendar-148149",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "4.6%",
-        "published_at": null,
-        "scheduled_at": "2026-10-15T02:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Unemployment Rate",
-        "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148149"
-      },
-      "event_date": "2026-10-15",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
-    },
-    {
-      "event": {
-        "actual": null,
-        "actual_better_worse": 0,
         "currency": "GBP",
         "forecast": "-0.1%",
         "id": "ff-calendar-151564",
@@ -125,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-10-15T08:00:00-06:00",
+        "scheduled_at": "2026-10-15T01:00:00-06:00",
         "source": "forex_factory",
         "title": "GDP m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=151564"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
+      "stored_at": "2026-10-15T00:32:43.299276-06:00"
     },
     {
       "event": {
@@ -144,13 +30,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-10-15T14:30:00-06:00",
+        "scheduled_at": "2026-10-15T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148404"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
+      "stored_at": "2026-10-15T00:32:43.299276-06:00"
     },
     {
       "event": {
@@ -163,13 +49,13 @@
         "is_breaking": false,
         "previous": "1.4%",
         "published_at": null,
-        "scheduled_at": "2026-10-15T14:30:00-06:00",
+        "scheduled_at": "2026-10-15T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Core Retail Sales m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148046"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
+      "stored_at": "2026-10-15T00:32:43.299276-06:00"
     },
     {
       "event": {
@@ -182,13 +68,13 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-10-15T14:30:00-06:00",
+        "scheduled_at": "2026-10-15T07:30:00-06:00",
         "source": "forex_factory",
         "title": "PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148390"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
+      "stored_at": "2026-10-15T00:32:43.299276-06:00"
     },
     {
       "event": {
@@ -201,13 +87,51 @@
         "is_breaking": false,
         "previous": "1.2%",
         "published_at": null,
-        "scheduled_at": "2026-10-15T14:30:00-06:00",
+        "scheduled_at": "2026-10-15T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Retail Sales m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148034"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-14T19:48:04.101677-06:00"
+      "stored_at": "2026-10-15T00:32:43.299276-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": null,
+        "id": "ff-calendar-154973",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-10-15T21:00:00-06:00",
+        "source": "forex_factory",
+        "title": "BOE Gov Bailey Speaks",
+        "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=154973"
+      },
+      "event_date": "2026-10-15",
+      "stored_at": "2026-10-15T00:32:43.299276-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "USD",
+        "forecast": null,
+        "id": "ff-calendar-154994",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-10-15T22:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Fed Chairman Warsh Speaks",
+        "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=154994"
+      },
+      "event_date": "2026-10-15",
+      "stored_at": "2026-10-15T00:32:43.299276-06:00"
     }
   ]
 }
