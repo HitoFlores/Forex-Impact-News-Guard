@@ -2,25 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "0.1%",
-        "actual_better_worse": 1,
-        "currency": "GBP",
-        "forecast": "-0.1%",
-        "id": "ff-calendar-151564",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "0.4%",
-        "published_at": null,
-        "scheduled_at": "2026-10-15T02:00:00-06:00",
-        "source": "forex_factory",
-        "title": "GDP m/m",
-        "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=151564"
-      },
-      "event_date": "2026-10-15",
-      "stored_at": "2026-10-15T10:49:48.872575-06:00"
-    },
-    {
-      "event": {
         "actual": "0.7%",
         "actual_better_worse": 1,
         "currency": "USD",
@@ -30,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-10-15T08:30:00-06:00",
+        "scheduled_at": "2026-10-15T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Core PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148404"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-15T10:49:48.872575-06:00"
+      "stored_at": "2026-10-15T14:04:26.138794-06:00"
     },
     {
       "event": {
@@ -49,13 +30,13 @@
         "is_breaking": false,
         "previous": "1.4%",
         "published_at": null,
-        "scheduled_at": "2026-10-15T08:30:00-06:00",
+        "scheduled_at": "2026-10-15T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Core Retail Sales m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148046"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-15T10:49:48.872575-06:00"
+      "stored_at": "2026-10-15T14:04:26.138794-06:00"
     },
     {
       "event": {
@@ -68,13 +49,13 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-10-15T08:30:00-06:00",
+        "scheduled_at": "2026-10-15T05:30:00-06:00",
         "source": "forex_factory",
         "title": "PPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148390"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-15T10:49:48.872575-06:00"
+      "stored_at": "2026-10-15T14:04:26.138794-06:00"
     },
     {
       "event": {
@@ -87,13 +68,13 @@
         "is_breaking": false,
         "previous": "1.2%",
         "published_at": null,
-        "scheduled_at": "2026-10-15T08:30:00-06:00",
+        "scheduled_at": "2026-10-15T05:30:00-06:00",
         "source": "forex_factory",
         "title": "Retail Sales m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=148034"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-15T10:49:48.872575-06:00"
+      "stored_at": "2026-10-15T14:04:26.138794-06:00"
     },
     {
       "event": {
@@ -106,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-15T22:00:00-06:00",
+        "scheduled_at": "2026-10-15T19:00:00-06:00",
         "source": "forex_factory",
         "title": "BOE Gov Bailey Speaks",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=154973"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-15T10:49:48.872575-06:00"
+      "stored_at": "2026-10-15T14:04:26.138794-06:00"
     },
     {
       "event": {
@@ -125,13 +106,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-15T23:30:00-06:00",
+        "scheduled_at": "2026-10-15T20:30:00-06:00",
         "source": "forex_factory",
         "title": "Fed Chairman Warsh Speaks",
         "url": "https://www.forexfactory.com/calendar?day=oct15.2026#detail=154994"
       },
       "event_date": "2026-10-15",
-      "stored_at": "2026-10-15T10:49:48.872575-06:00"
+      "stored_at": "2026-10-15T14:04:26.138794-06:00"
     }
   ]
 }
