@@ -2,60 +2,41 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "0.1%",
-        "actual_better_worse": 2,
-        "currency": "CAD",
-        "forecast": "0.2%",
-        "id": "ff-calendar-149171",
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "GBP",
+        "forecast": "3.4%",
+        "id": "ff-calendar-151457",
         "impact": "high",
         "is_breaking": false,
-        "previous": "-0.1%",
+        "previous": "3.1%",
         "published_at": null,
-        "scheduled_at": "2026-10-19T07:30:00-06:00",
+        "scheduled_at": "2026-10-20T23:00:00-06:00",
         "source": "forex_factory",
-        "title": "CPI m/m",
-        "url": "https://www.forexfactory.com/calendar?day=oct19.2026#detail=149171"
+        "title": "CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=oct20.2026#detail=151457"
       },
-      "event_date": "2026-10-19",
-      "stored_at": "2026-10-19T19:48:16.904613-06:00"
+      "event_date": "2026-10-20",
+      "stored_at": "2026-10-20T00:43:07.159451-06:00"
     },
     {
       "event": {
-        "actual": "1.9%",
-        "actual_better_worse": 2,
-        "currency": "CAD",
-        "forecast": "2.0%",
-        "id": "ff-calendar-149172",
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "NZD",
+        "forecast": "0.8%",
+        "id": "ff-calendar-150038",
         "impact": "high",
         "is_breaking": false,
-        "previous": "2.0%",
+        "previous": "1.5%",
         "published_at": null,
-        "scheduled_at": "2026-10-19T07:30:00-06:00",
+        "scheduled_at": "2026-10-21T14:45:00-06:00",
         "source": "forex_factory",
-        "title": "Median CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=oct19.2026#detail=149172"
+        "title": "CPI q/q",
+        "url": "https://www.forexfactory.com/calendar?day=oct21.2026#detail=150038"
       },
-      "event_date": "2026-10-19",
-      "stored_at": "2026-10-19T19:48:16.904613-06:00"
-    },
-    {
-      "event": {
-        "actual": "1.8%",
-        "actual_better_worse": 2,
-        "currency": "CAD",
-        "forecast": "1.9%",
-        "id": "ff-calendar-149173",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "1.9%",
-        "published_at": null,
-        "scheduled_at": "2026-10-19T07:30:00-06:00",
-        "source": "forex_factory",
-        "title": "Trimmed CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=oct19.2026#detail=149173"
-      },
-      "event_date": "2026-10-19",
-      "stored_at": "2026-10-19T19:48:16.904613-06:00"
+      "event_date": "2026-10-21",
+      "stored_at": "2026-10-20T00:43:07.159451-06:00"
     }
   ]
 }
