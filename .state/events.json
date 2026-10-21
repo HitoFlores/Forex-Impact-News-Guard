@@ -2,25 +2,6 @@
   "relevant_events": [
     {
       "event": {
-        "actual": "3.5%",
-        "actual_better_worse": 1,
-        "currency": "GBP",
-        "forecast": "3.4%",
-        "id": "ff-calendar-151457",
-        "impact": "high",
-        "is_breaking": false,
-        "previous": "3.1%",
-        "published_at": null,
-        "scheduled_at": "2026-10-21T08:00:00-06:00",
-        "source": "forex_factory",
-        "title": "CPI y/y",
-        "url": "https://www.forexfactory.com/calendar?day=oct21.2026#detail=151457"
-      },
-      "event_date": "2026-10-21",
-      "stored_at": "2026-10-21T00:38:33.007076-06:00"
-    },
-    {
-      "event": {
         "actual": null,
         "actual_better_worse": 0,
         "currency": "NZD",
@@ -30,13 +11,13 @@
         "is_breaking": false,
         "previous": "1.5%",
         "published_at": null,
-        "scheduled_at": "2026-10-21T23:45:00-06:00",
+        "scheduled_at": "2026-10-21T14:45:00-06:00",
         "source": "forex_factory",
         "title": "CPI q/q",
         "url": "https://www.forexfactory.com/calendar?day=oct21.2026#detail=150038"
       },
       "event_date": "2026-10-21",
-      "stored_at": "2026-10-21T00:38:33.007076-06:00"
+      "stored_at": "2026-10-21T06:24:24.378267-06:00"
     }
   ]
 }
