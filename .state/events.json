@@ -1,3 +1,118 @@
 {
-  "relevant_events": []
+  "relevant_events": [
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "0.7%",
+        "id": "ff-calendar-149108",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.4%",
+        "published_at": null,
+        "scheduled_at": "2026-10-27T19:30:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=149108"
+      },
+      "event_date": "2026-10-27",
+      "stored_at": "2026-10-26T06:27:01.754871-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "4.2%",
+        "id": "ff-calendar-149101",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "4.0%",
+        "published_at": null,
+        "scheduled_at": "2026-10-27T19:30:00-06:00",
+        "source": "forex_factory",
+        "title": "CPI y/y",
+        "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=149101"
+      },
+      "event_date": "2026-10-27",
+      "stored_at": "2026-10-26T06:27:01.754871-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "AUD",
+        "forecast": "0.3%",
+        "id": "ff-calendar-149112",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "0.2%",
+        "published_at": null,
+        "scheduled_at": "2026-10-27T19:30:00-06:00",
+        "source": "forex_factory",
+        "title": "Trimmed Mean CPI m/m",
+        "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=149112"
+      },
+      "event_date": "2026-10-27",
+      "stored_at": "2026-10-26T06:27:01.754871-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "NZD",
+        "forecast": "3.00%",
+        "id": "ff-calendar-148868",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": "2.75%",
+        "published_at": null,
+        "scheduled_at": "2026-10-27T20:00:00-06:00",
+        "source": "forex_factory",
+        "title": "Official Cash Rate",
+        "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=148868"
+      },
+      "event_date": "2026-10-27",
+      "stored_at": "2026-10-26T06:27:01.754871-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "NZD",
+        "forecast": null,
+        "id": "ff-calendar-148869",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-10-27T20:00:00-06:00",
+        "source": "forex_factory",
+        "title": "RBNZ Rate Statement",
+        "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=148869"
+      },
+      "event_date": "2026-10-27",
+      "stored_at": "2026-10-26T06:27:01.754871-06:00"
+    },
+    {
+      "event": {
+        "actual": null,
+        "actual_better_worse": 0,
+        "currency": "NZD",
+        "forecast": null,
+        "id": "ff-calendar-152807",
+        "impact": "high",
+        "is_breaking": false,
+        "previous": null,
+        "published_at": null,
+        "scheduled_at": "2026-10-27T21:00:00-06:00",
+        "source": "forex_factory",
+        "title": "RBNZ Press Conference",
+        "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=152807"
+      },
+      "event_date": "2026-10-27",
+      "stored_at": "2026-10-26T06:27:01.754871-06:00"
+    }
+  ]
 }
