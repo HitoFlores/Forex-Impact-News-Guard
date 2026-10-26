@@ -11,13 +11,13 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-10-27T19:30:00-06:00",
+        "scheduled_at": "2026-10-27T20:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=149108"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-26T12:49:08.922865-06:00"
+      "stored_at": "2026-10-26T16:53:44.415591-06:00"
     },
     {
       "event": {
@@ -30,13 +30,13 @@
         "is_breaking": false,
         "previous": "4.0%",
         "published_at": null,
-        "scheduled_at": "2026-10-27T19:30:00-06:00",
+        "scheduled_at": "2026-10-27T20:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=149101"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-26T12:49:08.922865-06:00"
+      "stored_at": "2026-10-26T16:53:44.415591-06:00"
     },
     {
       "event": {
@@ -49,13 +49,13 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-10-27T19:30:00-06:00",
+        "scheduled_at": "2026-10-27T20:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed Mean CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=149112"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-26T12:49:08.922865-06:00"
+      "stored_at": "2026-10-26T16:53:44.415591-06:00"
     },
     {
       "event": {
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "2.75%",
         "published_at": null,
-        "scheduled_at": "2026-10-27T20:00:00-06:00",
+        "scheduled_at": "2026-10-27T21:00:00-06:00",
         "source": "forex_factory",
         "title": "Official Cash Rate",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=148868"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-26T12:49:08.922865-06:00"
+      "stored_at": "2026-10-26T16:53:44.415591-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-27T20:00:00-06:00",
+        "scheduled_at": "2026-10-27T21:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Rate Statement",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=148869"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-26T12:49:08.922865-06:00"
+      "stored_at": "2026-10-26T16:53:44.415591-06:00"
     },
     {
       "event": {
@@ -106,13 +106,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-27T21:00:00-06:00",
+        "scheduled_at": "2026-10-27T22:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=152807"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-26T12:49:08.922865-06:00"
+      "stored_at": "2026-10-26T16:53:44.415591-06:00"
     }
   ]
 }
