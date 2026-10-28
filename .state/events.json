@@ -2,8 +2,8 @@
   "relevant_events": [
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "0.8%",
+        "actual_better_worse": 1,
         "currency": "AUD",
         "forecast": "0.7%",
         "id": "ff-calendar-149108",
@@ -11,18 +11,18 @@
         "is_breaking": false,
         "previous": "0.4%",
         "published_at": null,
-        "scheduled_at": "2026-10-27T18:30:00-06:00",
+        "scheduled_at": "2026-10-27T19:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=149108"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "4.3%",
+        "actual_better_worse": 1,
         "currency": "AUD",
         "forecast": "4.2%",
         "id": "ff-calendar-149101",
@@ -30,17 +30,17 @@
         "is_breaking": false,
         "previous": "4.0%",
         "published_at": null,
-        "scheduled_at": "2026-10-27T18:30:00-06:00",
+        "scheduled_at": "2026-10-27T19:30:00-06:00",
         "source": "forex_factory",
         "title": "CPI y/y",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=149101"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
-        "actual": null,
+        "actual": "0.3%",
         "actual_better_worse": 0,
         "currency": "AUD",
         "forecast": "0.3%",
@@ -49,18 +49,18 @@
         "is_breaking": false,
         "previous": "0.2%",
         "published_at": null,
-        "scheduled_at": "2026-10-27T18:30:00-06:00",
+        "scheduled_at": "2026-10-27T19:30:00-06:00",
         "source": "forex_factory",
         "title": "Trimmed Mean CPI m/m",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=149112"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
-        "actual": null,
-        "actual_better_worse": 0,
+        "actual": "2.75%",
+        "actual_better_worse": 2,
         "currency": "NZD",
         "forecast": "3.00%",
         "id": "ff-calendar-148868",
@@ -68,13 +68,13 @@
         "is_breaking": false,
         "previous": "2.75%",
         "published_at": null,
-        "scheduled_at": "2026-10-27T19:00:00-06:00",
+        "scheduled_at": "2026-10-27T20:00:00-06:00",
         "source": "forex_factory",
         "title": "Official Cash Rate",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=148868"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -87,13 +87,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-27T19:00:00-06:00",
+        "scheduled_at": "2026-10-27T20:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Rate Statement",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=148869"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -106,13 +106,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-27T20:00:00-06:00",
+        "scheduled_at": "2026-10-27T21:00:00-06:00",
         "source": "forex_factory",
         "title": "RBNZ Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=oct27.2026#detail=152807"
       },
       "event_date": "2026-10-27",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -125,13 +125,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-28T06:30:00-06:00",
+        "scheduled_at": "2026-10-28T07:30:00-06:00",
         "source": "forex_factory",
         "title": "Annual Budget Release",
         "url": "https://www.forexfactory.com/calendar?day=oct28.2026#detail=155200"
       },
       "event_date": "2026-10-28",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -144,13 +144,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-28T07:45:00-06:00",
+        "scheduled_at": "2026-10-28T08:45:00-06:00",
         "source": "forex_factory",
         "title": "BOC Monetary Policy Report",
         "url": "https://www.forexfactory.com/calendar?day=oct28.2026#detail=146550"
       },
       "event_date": "2026-10-28",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -163,13 +163,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-28T07:45:00-06:00",
+        "scheduled_at": "2026-10-28T08:45:00-06:00",
         "source": "forex_factory",
         "title": "BOC Rate Statement",
         "url": "https://www.forexfactory.com/calendar?day=oct28.2026#detail=146545"
       },
       "event_date": "2026-10-28",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -182,13 +182,13 @@
         "is_breaking": false,
         "previous": "2.25%",
         "published_at": null,
-        "scheduled_at": "2026-10-28T07:45:00-06:00",
+        "scheduled_at": "2026-10-28T08:45:00-06:00",
         "source": "forex_factory",
         "title": "Overnight Rate",
         "url": "https://www.forexfactory.com/calendar?day=oct28.2026#detail=146537"
       },
       "event_date": "2026-10-28",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -201,13 +201,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-28T08:30:00-06:00",
+        "scheduled_at": "2026-10-28T09:30:00-06:00",
         "source": "forex_factory",
         "title": "BOC Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=oct28.2026#detail=146557"
       },
       "event_date": "2026-10-28",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -220,13 +220,13 @@
         "is_breaking": false,
         "previous": "4.00%",
         "published_at": null,
-        "scheduled_at": "2026-10-28T12:00:00-06:00",
+        "scheduled_at": "2026-10-28T13:00:00-06:00",
         "source": "forex_factory",
         "title": "Federal Funds Rate",
         "url": "https://www.forexfactory.com/calendar?day=oct28.2026#detail=146500"
       },
       "event_date": "2026-10-28",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -239,13 +239,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-28T12:00:00-06:00",
+        "scheduled_at": "2026-10-28T13:00:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Statement",
         "url": "https://www.forexfactory.com/calendar?day=oct28.2026#detail=146508"
       },
       "event_date": "2026-10-28",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     },
     {
       "event": {
@@ -258,13 +258,13 @@
         "is_breaking": false,
         "previous": null,
         "published_at": null,
-        "scheduled_at": "2026-10-28T12:30:00-06:00",
+        "scheduled_at": "2026-10-28T13:30:00-06:00",
         "source": "forex_factory",
         "title": "FOMC Press Conference",
         "url": "https://www.forexfactory.com/calendar?day=oct28.2026#detail=146520"
       },
       "event_date": "2026-10-28",
-      "stored_at": "2026-10-27T16:27:25.202496-06:00"
+      "stored_at": "2026-10-27T19:33:01.635766-06:00"
     }
   ]
 }
